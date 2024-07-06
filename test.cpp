@@ -22,8 +22,8 @@ int main() {
     tree.insert(25);
 
     // Print in-order traversal of the AVL tree
-    std::cout << "In-order traversal of the constructed AVL tree is: ";
-    tree.printTree();
+    std::cout << "In-order traversal of the constructed AVL tree is: \n"<<std::endl;
+    tree.treePrint(tree.getRoot(),4);
     std::cout << std::endl;
 
     return 0;
