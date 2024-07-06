@@ -234,7 +234,7 @@ public:
     AVLTree() : root(nullptr) {}
 
     ~AVLTree() {
-        deleteTree(root);
+        clear();
     }
 
     void insert(const T& key) {
@@ -280,5 +280,10 @@ public:
     void printInOrder() const {
         inOrder(root);
         std::cout << std::endl;
+    }
+
+    void clear() {
+        deleteTree(root);
+        root = nullptr;
     }
 };
