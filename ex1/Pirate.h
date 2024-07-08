@@ -1,4 +1,5 @@
-#include "Pirate.h"
+#ifndef PIRATE_HW1
+#define PIRATE_HW1
 #include "Ship.h"
 
 // Class representing a Pirate
@@ -69,3 +70,5 @@ private:
     Pirate* next_pirate;       ///< Pointer to the next pirate in the linked list.
     Pirate* prev_pirate;       ///< Pointer to the previous pirate in the linked list.
 };
+
+#endif // PIRATE_HW1

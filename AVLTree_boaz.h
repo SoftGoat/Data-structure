@@ -14,6 +14,11 @@ public:
     void remove(const T& val);
     AVLNode<T>* search(const T& val) const;
     void print() const;
+    bool isEmpty() const;
+    T& findMinVal() const;
+    T& findMaxVal() const;
+    AVLNode<T>* findMinNode() const;
+    AVLNode<T>* findMaxVal() const;
 
 private:
     // Private methods for various operations
