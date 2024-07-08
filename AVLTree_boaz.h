@@ -39,11 +39,16 @@ private:
 };
 
 template<class T>
-void AVLTree<T>::isEmpty() const{
+bool AVLTree<T>::isEmpty() const{
     if(size == 0){
         return true;
     }
     return false;
+}
+
+template<class T>
+AVLNode<T>* findMinNode() const{
+
 }
 
 /*
