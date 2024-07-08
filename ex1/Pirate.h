@@ -48,7 +48,7 @@ public:
      * Gets the next pirate in the linked list.
      * @return Pointer to the next pirate.
      */
-    Pirate* getNext();
+    Pirate* getNext() const;
 
     /**
      * Sets the previous pirate in the linked list.
@@ -60,7 +60,7 @@ public:
      * Gets the previous pirate in the linked list.
      * @return Pointer to the previous pirate.
      */
-    Pirate* getPrev();
+    Pirate* getPrev() const;
 
 private:
     int id;                    ///< The unique ID of the pirate.
