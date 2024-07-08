@@ -58,12 +58,20 @@ AVLNode<T>* AVLTree<T>::findMaxNode() const{
 
 template<class T>
 T& AVLTree<T>::findMinVal() const{
-    return findMinNode()->getData();
+    AVLNode<T>* min_node = this->findMinNode();
+    if(min_node == nullptr){
+        return nullptr;
+    }
+    return min_node->getData();
 }
 
 template<class T>
 T& AVLTree<T>::findMaxVal() const{
-    return findMaxNode()->getData();
+    AVLNode<T>* max_node = this->findMaxNode();
+    if(max_node == nullptr){
+        return nullptr;
+    }
+    return max_node->getData();
 }
 
 /*
