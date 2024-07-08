@@ -56,6 +56,16 @@ AVLNode<T>* AVLTree<T>::findMaxNode() const{
     return getLargestSon(root);
 }
 
+template<class T>
+T& AVLTree<T>::findMinVal() const{
+    return findMinNode()->getData();
+}
+
+template<class T>
+T& AVLTree<T>::findMaxVal() const{
+    return findMaxNode()->getData();
+}
+
 /*
  * Public print method: calls the private recursive print method.
  */
