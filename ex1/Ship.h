@@ -3,7 +3,6 @@
 
 #include "../AVLTree_boaz.h"
 #include <iostream>
-#include "Pirate.h"
 #include "wet1util.h"
 
 // Forward declaration of the Pirate class
@@ -29,20 +28,6 @@ public:
      */
     Ship(int shipId, int cannons);
 
-    /**
-     * @brief Adds a new ship with the given shipId and number of cannons.
-     * @param shipId Unique identifier for the ship.
-     * @param cannons Number of cannons on the ship.
-     * @return StatusType indicating the success or failure of the operation.
-     */
-    StatusType add_ship(int shipId, int cannons);
-
-    /**
-     * @brief Removes the ship with the given shipId.
-     * @param shipId Unique identifier for the ship to be removed.
-     * @return StatusType indicating the success or failure of the operation.
-     */
-    StatusType remove_ship(int shipId);
 
     /**
      * @brief Adds a pirate to the ship.
