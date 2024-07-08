@@ -47,8 +47,13 @@ bool AVLTree<T>::isEmpty() const{
 }
 
 template<class T>
-AVLNode<T>* findMinNode() const{
+AVLNode<T>* AVLTree<T>::findMinNode() const{
+    return getSmallestSon(root);
+}
 
+template<class T>
+AVLNode<T>* AVLTree<T>::findMaxNode() const{
+    return getLargestSon(root);
 }
 
 /*
@@ -403,6 +408,17 @@ AVLNode<T>* getSmallestSon(AVLNode<T>* node) {
         return node;
     }
     return getSmallestSon(node->getLeft());
+}
+
+template<class T>
+AVLNode<T>* getLargestSon(AVLNode<T>* node){
+    if (node == nullptr) {
+        return node;
+    }
+    if (node->getRight() == nullptr) {
+        return node;
+    }
+    return getLargestSon(node->getRight());
 }
 
 /*
