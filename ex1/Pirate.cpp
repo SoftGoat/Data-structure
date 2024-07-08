@@ -1,5 +1,4 @@
 #include "Pirate.h"
-#include "Ship.h"
 
 class Pirate {
 public:
