@@ -15,10 +15,10 @@ public:
     AVLNode<T>* search(const T& val) const;
     void print() const;
     bool isEmpty() const;
-    T& findMinVal() const;
-    T& findMaxVal() const;
     AVLNode<T>* findMinNode() const;
     AVLNode<T>* findMaxVal() const;
+    T& findMinVal() const;
+    T& findMaxVal() const;
 
 private:
     // Private methods for various operations
@@ -37,6 +37,14 @@ private:
     AVLNode<T>* root;                             // Root node of the AVL tree
     int size;                                     // Number of nodes in the tree
 };
+
+template<class T>
+void AVLTree<T>::isEmpty() const{
+    if(size == 0){
+        return true;
+    }
+    return false;
+}
 
 /*
  * Public print method: calls the private recursive print method.
