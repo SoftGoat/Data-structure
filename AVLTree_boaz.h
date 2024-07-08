@@ -16,7 +16,7 @@ public:
     void print() const;
     bool isEmpty() const;
     AVLNode<T>* findMinNode() const;
-    AVLNode<T>* findMaxVal() const;
+    AVLNode<T>* findMaxNode() const;
     T& findMinVal() const;
     T& findMaxVal() const;
 
