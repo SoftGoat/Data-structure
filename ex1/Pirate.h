@@ -31,13 +31,13 @@ public:
      * Sets the ship the pirate is associated with.
      * @param ship - Pointer to the AVLNode containing the ship.
      */
-    void setShip(AVLNode<Ship>* ship);
+    void setShip(AVLNode<Ship*>* ship); //zohar - changed from AVLNode<Ship> to AVLNode<Ship*>
 
     /**
      * Gets the ship the pirate is associated with.
      * @return Pointer to the AVLNode containing the ship.
      */
-    AVLNode<Ship>* getShip() const;
+    AVLNode<Ship*>* getShip() const; //zohar - changed from AVLNode<Ship> to AVLNode<Ship*>
 
     /**
      * Sets the next pirate in the linked list.
@@ -63,10 +63,16 @@ public:
      */
     Pirate* getPrev() const;
 
+    /**
+     * Gets the unique ID of the pirate.
+     * @return The unique ID of the pirate.
+     */
+    int getId() const;
+
 private:
     int id;                    ///< The unique ID of the pirate.
     int treasure;              ///< The amount of treasure the pirate possesses.
-    AVLNode<Ship>* ship;       ///< Pointer to the AVLNode containing the ship the pirate is associated with.
+    AVLNode<Ship*>* ship;       ///< Pointer to the AVLNode containing the ship the pirate is associated with. //zohar - changed from AVLNode<Ship> to AVLNode<Ship*>
     Pirate* next_pirate;       ///< Pointer to the next pirate in the linked list.
     Pirate* prev_pirate;       ///< Pointer to the previous pirate in the linked list.
 };

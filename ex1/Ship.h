@@ -31,37 +31,87 @@ public:
 
     /**
      * @brief Adds a pirate to the ship.
-     * @param pirateId Unique identifier for the pirate.
-     * @param shipId Unique identifier for the ship.
-     * @param treasure Initial amount of treasure for the pirate.
+     * @param pirate Pointer to the pirate to be added.
      * @return StatusType indicating the success or failure of the operation.
      */
-    StatusType add_pirate(int pirateId, int shipId, int treasure);
+    bool add_pirate(Pirate* pirate);
+
+    /**
+     * @brief Gets the cannons of the ship.
+     * @return The number of cannons on the ship.
+     */
+    int getCannons() const;
+
+    /**
+     * @brief Gets the richest pirate on the ship.
+     * @return Pointer to the richest pirate on the ship.
+     */
+    Pirate* getRichestPirate() const;
+
+    /**
+     * @brief Gets the treasure of a pirate.
+     * @param pirateId Unique identifier for the pirate.
+     * @return The amount of treasure the pirate has.
+     */
+    int getPirateTreasure(int pirateId) const;
+
+    /**
+     * @brief ship is empty.
+     * @return true if the ship is empty, false otherwise.
+     */
+    bool empty() const;
+
+    /**
+     * @brief Gets the treasure of the ship.
+     * @return The total treasure on the ship.
+     */
+    int getTreasureBonus() const;
+
+    /**
+     * @brief Gets the unique identifier of the ship.
+     * @return The unique identifier of the ship.
+     */
+    int getId() const;
 
     /**
      * @brief Removes a pirate from the ship.
-     * @param pirateId Unique identifier for the pirate to be removed.
-     * @return StatusType indicating the success or failure of the operation.
+     * @param pirate Pointer to the pirate to be removed.
+     * @return true if the pirate was removed successfully, false otherwise.
      */
-    StatusType remove_pirate(int pirateId);
+    bool remove_pirate(Pirate* pirate);
 
     /**
      * @brief Handles treason between two ships.
-     * @param sourceShipId Unique identifier for the source ship.
-     * @param destShipId Unique identifier for the destination ship.
-     * @return StatusType indicating the success or failure of the operation.
+     * @param other Pointer to the ship to commit treason with.
+     * @return true if the operation was successful, false otherwise.
      */
-    StatusType treason(int sourceShipId, int destShipId);
+    bool treason(Ship* other);
 
     /**
      * @brief Updates the treasure of a pirate.
-     * @param pirateId Unique identifier for the pirate.
+     * @param pirate Pointer to the pirate to update.
      * @param change Amount to change the pirate's treasure by.
-     * @return StatusType indicating the success or failure of the operation.
+     * @return true if the operation was successful, false otherwise.
      */
-    StatusType update_pirate_treasure(int pirateId, int change);
+    bool update_pirate_treasure(Pirate* pirate, int change);
 
-    // Additional member functions for managing the ship and pirates can be added here
+    /**
+     * @brief Gets the number of pirates on the ship.
+     * @return The number of pirates on the ship.
+     */
+    int getCrewSize() const;
+
+    /**
+     * @brief Battle between two ships.
+     * @param other Pointer to the ship to battle with.
+     * @return BattleResult indicating the outcome of the battle.
+     */
+    BattleResult battle(Ship* other);
 };
 
-#endif // SHIP_H
+enum struct BattleResult {
+	WIN = 0,
+    LOSS = 1,
+    TIE = 2
+};
+#endif 
