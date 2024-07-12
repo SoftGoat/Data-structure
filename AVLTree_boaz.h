@@ -11,7 +11,7 @@ public:
 
     // Public methods for inserting, removing, searching, and printing the tree
     AVLNode<T>* insert(const T& val);
-    void remove(const T& val);
+    bool remove(const T& val); // Zohar edited the function: change to bool
     AVLNode<T>* search(const T& val) const;
     void print() const;
     bool isEmpty() const;
@@ -23,7 +23,7 @@ public:
 private:
     // Private methods for various operations
     AVLNode<T>* BSTRemove(const T& val);          // Binary Search Tree removal
-    void removeRotations(AVLNode<T>* node);       // Adjust tree rotations after removal
+    bool removeRotations(AVLNode<T>* node);       // Adjust tree rotations after removal
     void print(AVLNode<T>* node) const;           // Recursive print function
     AVLNode<T>* search(const T& val, AVLNode<T>* node) const; // Recursive search function
     AVLNode<T>* BSTInsert(const T& val, AVLNode<T>* node);    // Binary Search Tree insertion
@@ -443,20 +443,21 @@ AVLNode<T>* getLargestSon(AVLNode<T>* node){
  * Public remove method: removes a node with the given value and adjusts rotations.
  */
 template<class T>
-void AVLTree<T>::remove(const T& val) {
-    this->removeRotations(this->BSTRemove(val));
+bool AVLTree<T>::remove(const T& val) {
+    return this->removeRotations(this->BSTRemove(val));
 }
 
 /*
  * Private method to adjust tree rotations after a removal.
  */
 template<class T>
-void AVLTree<T>::removeRotations(AVLNode<T>* node) {
+bool AVLTree<T>::removeRotations(AVLNode<T>* node) {
     if (node == nullptr) {
-        return;
+        return false;
     }
     if (node->getBF() == 2 || node->getBF() == -2) {
         this->rotate(node);
     }
     removeRotations(node->getParent());
+    return true;
 }
