@@ -5,8 +5,13 @@
 #include <iostream>
 #include "wet1util.h"
 
-// Forward declaration of the Pirate class
-class Pirate;
+class Pirate; // Forward declaration of the Pirate class
+enum struct BattleResult {
+	WIN = 0,
+    LOSS = 1,
+    TIE = 2
+};
+
 
 /**
  * @class Ship
@@ -14,13 +19,20 @@ class Pirate;
  */
 class Ship {
 private:
-    int m_shipId;                /**< @brief Unique identifier for the ship */
-    int m_cannons;               /**< @brief Number of cannons on the ship */
-    int m_treasure;              /**< @brief Total treasure on the ship */
-    AVLTree<Pirate> m_pirates;   /**< @brief AVL tree of pirates on the ship */
-    Pirate* m_richestPirate;     /**< @brief Pointer to the richest pirate on the ship */
+private:
+    int m_shipId; // Unique identifier for the ship.
+    int m_cannons; // Number of cannons on the ship.
+    int m_treasureBonus; // Bonus treasure for the ship.
+    int m_crewSize; // Number of pirates on the ship.
+    AVLTree<Pirate*> m_pirates; // AVL tree of pirates on the ship.
+    Pirate* m_richestPirate; // Pointer to the richest pirate on the ship.
+    Pirate* m_pirateWithMostTimeServed; // Pointer to the pirate with the most time served on the ship.
+    Pirate* m_pirateWithLeastTimeServed; // Pointer to the pirate with the least time served on the ship.
+    AVLTree<Pirate*>* m_piratesOrderdById; // AVL tree of pirates on the ship ordered by ID.
+    AVLTree<Pirate*>* m_piratesOrderdByTreasure; // AVL tree of pirates on the ship ordered by treasure.
 
 public:
+   
     /**
      * @brief Constructor for the Ship class.
      * @param shipId Unique identifier for the ship.
@@ -54,6 +66,24 @@ public:
      * @return The amount of treasure the pirate has.
      */
     int getPirateTreasure(int pirateId) const;
+
+    /**
+     * @brief Gets the pirate with the most time served on the ship.
+     * @return Pointer to the pirate with the most time served on the ship.
+     */
+    Pirate* getPirateWithMostTimeServed() const;
+
+    /**
+     * @brief Gets the pirate with the least time served on the ship.
+     * @return Pointer to the pirate with the least time served on the ship.
+     */
+    Pirate* getPirateWithLeastTimeServed() const;
+
+    /**
+     * @brief Gets the ship's unique identifier.
+     * @return The unique identifier of the ship.
+     */
+    int getShipId() const;
 
     /**
      * @brief ship is empty.
@@ -107,11 +137,30 @@ public:
      * @return BattleResult indicating the outcome of the battle.
      */
     BattleResult battle(Ship* other);
+
+    /**
+     * @brief Destructor for the Ship class.
+     */
+    ~Ship();
+
+    /**
+     * @brief Sets the treasure bonus of the ship.
+     * @param treasure The new treasure bonus.
+     */
+    void setTreasureBonus(int treasure);
+
+    /**
+     * @brief Gets the AVL tree of pirates on the ship.
+     * @return Pointer to the AVL tree of pirates on the ship.
+     */
+    AVLTree<Pirate*>* getPirates();
+
+    /**
+     * @brief Gets the AVL tree of pirates on the ship ordered by ID.
+     * @return Pointer to the AVL tree of pirates on the ship ordered by ID.
+     */
+    AVLTree<Pirate*>* getPiratesOrderdById();
 };
 
-enum struct BattleResult {
-	WIN = 0,
-    LOSS = 1,
-    TIE = 2
-};
+
 #endif 
