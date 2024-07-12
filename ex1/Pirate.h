@@ -12,8 +12,7 @@ public:
      * Note: The shipId is not used in the Pirate class.
      *       The caller to the constructor will update the Pirate->ship field.
      */
-    Pirate(int pirateId, int treasure) 
-        : id(pirateId), treasure(treasure), ship(nullptr), prev_pirate(nullptr), next_pirate(nullptr) {}
+    Pirate(int pirateId, int treasure);
 
     /**
      * Sets the amount of treasure the pirate possesses.

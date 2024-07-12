@@ -1,7 +1,7 @@
 #include "pirates24b1.h"
 #include "Ship.h"
 #include "Pirate.h"
-#include "AVLTree_boaz.h"
+
 
 Ship* idToPointer(int id, const AVLNode<Ship*>& current, const AVLTree<Ship*>& tree);
 
