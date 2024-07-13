@@ -25,12 +25,13 @@ private:
     int m_cannons; // Number of cannons on the ship.
     int m_treasureBonus; // Bonus treasure for the ship.
     int m_crewSize; // Number of pirates on the ship.
-     AVLTree<Pirate*,Pirate::Comparator> m_pirates; // AVL tree of pirates on the ship.
+    AVLTree<Pirate*,Pirate::Comparator> m_pirates; // AVL tree of pirates on the ship.
     Pirate* m_richestPirate; // Pointer to the richest pirate on the ship.
     Pirate* m_pirateWithMostTimeServed; // Pointer to the pirate with the most time served on the ship.
     Pirate* m_pirateWithLeastTimeServed; // Pointer to the pirate with the least time served on the ship.
     AVLTree<Pirate*,Pirate::Comparator>* m_piratesOrderdById; // AVL tree of pirates on the ship ordered by ID.
     AVLTree<Pirate*,Pirate::Comparator>* m_piratesOrderdByTreasure; // AVL tree of pirates on the ship ordered by treasure.
+    bool richPirateChange (Pirate* pirate); // check if the richest pirate need to be updated, true mean swap is happened false otherwise
 
 public:
    

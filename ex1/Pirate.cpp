@@ -24,6 +24,9 @@ AVLNode<Ship*>* Pirate::getShip() const {
 
 void Pirate::setNext(Pirate* next_pirate) {
     this->next_pirate = next_pirate;
+    if(next_pirate != nullptr){
+    next_pirate->prev_pirate = this;
+    }
 }
 
 Pirate* Pirate::getNext() const {
@@ -32,6 +35,9 @@ Pirate* Pirate::getNext() const {
 
 void Pirate::setPrev(Pirate* prev_pirate) {
     this->prev_pirate = prev_pirate;
+    if(prev_pirate != nullptr){
+        prev_pirate->next_pirate = this;
+    }
 }
 
 Pirate* Pirate::getPrev() const {
