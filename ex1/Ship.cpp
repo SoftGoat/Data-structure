@@ -11,7 +11,7 @@
         m_richestPirate = nullptr;
         m_pirateWithMostTimeServed = nullptr;
         m_pirateWithLeastTimeServed = nullptr;
-        m_piratesOrderdById = new AVLTree<Pirate*>();
+        m_piratesOrderdById = new AVLTree<Pirate*,Pirate::Comparator>();
     }
     Ship::~Ship(){
     }
@@ -87,7 +87,7 @@
     Pirate* Ship::getRichestPirate() const {
         return m_richestPirate;
     }
-    AVLTree<Pirate*>* Ship::getPirates() {
+    AVLTree<Pirate*,Pirate::Comparator>* Ship::getPirates() {
         return m_piratesOrderdById;
     }
     

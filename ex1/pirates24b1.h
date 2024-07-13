@@ -20,8 +20,8 @@
 
 class Ocean {
 private:
-    AVLTree<Ship*> m_shipsById;
-    AVLTree<Pirate*> m_piratesById;
+    AVLTree<Ship*,Ship::Comparator> m_shipsById;
+    AVLTree<Pirate*,Pirate::Comparator> m_piratesById;
     
 public:
     // <DO-NOT-MODIFY> {

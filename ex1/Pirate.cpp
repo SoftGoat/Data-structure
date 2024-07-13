@@ -1,5 +1,9 @@
 #include "Pirate.h"
 
+
+
+
+
 Pirate::Pirate(int pirateId, int treasure)
     : id(pirateId), treasure(treasure), ship(nullptr), next_pirate(nullptr), prev_pirate(nullptr) {}
 

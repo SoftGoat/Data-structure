@@ -5,22 +5,3 @@ get_cannons: SUCCESS, 10
 add_ship: SUCCESS
 add_pirate: SUCCESS
 add_pirate: SUCCESS
-add_pirate: SUCCESS
-add_pirate: SUCCESS
-add_ship: SUCCESS
-add_pirate: FAILURE
-add_pirate: FAILURE
-ships_battle: FAILURE
-get_treasure: SUCCESS, 5
-get_treasure: SUCCESS, 4
-get_treasure: SUCCESS, 0
-get_treasure: SUCCESS, 2
-get_treasure: FAILURE
-get_treasure: FAILURE
-remove_pirate: FAILURE
-treason: FAILURE
-get_richest_pirate: SUCCESS, 6
-get_treasure: SUCCESS, 4
-update_pirate_treasure: SUCCESS
-get_treasure: SUCCESS, 8
-remove_pirate: FAILURE

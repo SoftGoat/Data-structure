@@ -1,6 +1,8 @@
 #ifndef PIRATE_HW1
 #define PIRATE_HW1
-#include "Ship.h"
+#include "../AVLTree.h"
+class Ship; // Forward declaration of the Ship class
+
 
 // Class representing a Pirate
 class Pirate {
@@ -68,6 +70,13 @@ public:
      */
     int getId() const;
 
+    // Comparator for Ship pointers
+    struct Comparator {
+        bool operator()(const Pirate* lhs, const Pirate* rhs) const {
+            return lhs->getId() < rhs->getId();
+        }
+    };
+
 private:
     int id;                    ///< The unique ID of the pirate.
     int treasure;              ///< The amount of treasure the pirate possesses.
@@ -75,5 +84,7 @@ private:
     Pirate* next_pirate;       ///< Pointer to the next pirate in the linked list.
     Pirate* prev_pirate;       ///< Pointer to the previous pirate in the linked list.
 };
+
+
 
 #endif // PIRATE_HW1

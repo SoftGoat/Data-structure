@@ -1,17 +1,17 @@
+#ifndef AVLTREE_H
+#define AVLTREE_H
+
 #include "AVLNode.h"
 
-template<class T>
+template<typename T, typename Comparator = typename T::Comparator>
 class AVLTree {
 public:
-    // Constructor to initialize the AVL tree
-    AVLTree() : root(nullptr), size(0) {};
+    AVLTree() : root(nullptr), size(0), comp(Comparator()) {}
 
-    // Getter for the root node
     AVLNode<T>* getRoot() { return root; }
 
-    // Public methods for inserting, removing, searching, and printing the tree
     AVLNode<T>* insert(const T& val);
-    bool remove(const T& val); // Zohar edited the function: change to bool
+    bool remove(const T& val);
     AVLNode<T>* search(const T& val) const;
     void print() const;
     bool isEmpty() const;
@@ -19,31 +19,33 @@ public:
     AVLNode<T>* findMaxNode() const;
     T& findMinVal() const;
     T& findMaxVal() const;
-    int getSize() const {return size;};
+    int getSize() const { return size; }
     void clearTree();
 
 private:
-    // Private methods for various operations
     void clearTree(AVLNode<T>* left, AVLNode<T>* right);
-    AVLNode<T>* BSTRemove(const T& val);          // Binary Search Tree removal
-    bool removeRotations(AVLNode<T>* node);       // Adjust tree rotations after removal
-    void print(AVLNode<T>* node) const;           // Recursive print function
-    AVLNode<T>* search(const T& val, AVLNode<T>* node) const; // Recursive search function
-    AVLNode<T>* BSTInsert(const T& val, AVLNode<T>* node);    // Binary Search Tree insertion
-    void rotate(AVLNode<T>* node);                // Determine and apply the correct rotation
-    void rotateLL(AVLNode<T>* node);              // Left-Left rotation
-    void rotateLR(AVLNode<T>* node);              // Left-Right rotation
-    void rotateRR(AVLNode<T>* node);              // Right-Right rotation
-    void rotateRL(AVLNode<T>* node);              // Right-Left rotation
+    AVLNode<T>* BSTRemove(const T& val);
+    bool removeRotations(AVLNode<T>* node);
+    void print(AVLNode<T>* node) const;
+    AVLNode<T>* search(const T& val, AVLNode<T>* node) const;
+    AVLNode<T>* BSTInsert(const T& val, AVLNode<T>* node);
+    void rotate(AVLNode<T>* node);
+    void rotateLL(AVLNode<T>* node);
+    void rotateLR(AVLNode<T>* node);
+    void rotateRR(AVLNode<T>* node);
+    void rotateRL(AVLNode<T>* node);
+    AVLNode<T>* getSmallestSon(AVLNode<T>* node) const;
+    AVLNode<T>* getLargestSon(AVLNode<T>* node) const;
+    void updateHeights(AVLNode<T>* node);
 
-    // Member variables
-    AVLNode<T>* root;                             // Root node of the AVL tree
-    int size;                                     // Number of nodes in the tree
+    AVLNode<T>* root;
+    int size;
+    Comparator comp;
 };
 
-template<class T>
-void AVLTree<T>::clearTree() {
-    if(root == nullptr){
+template<typename T, typename Comparator>
+void AVLTree<T, Comparator>::clearTree() {
+    if (root == nullptr) {
         return;
     }
     clearTree(root->getLeft(), root->getRight());
@@ -51,68 +53,58 @@ void AVLTree<T>::clearTree() {
     root = nullptr;
 }
 
-template<class T>
-void AVLTree<T>::clearTree(AVLNode<T>* left, AVLNode<T>* right){
-    if(left != nullptr){
+template<typename T, typename Comparator>
+void AVLTree<T, Comparator>::clearTree(AVLNode<T>* left, AVLNode<T>* right) {
+    if (left != nullptr) {
         clearTree(left->getLeft(), left->getRight());
         delete left;
     }
-    if(right != nullptr){
+    if (right != nullptr) {
         clearTree(right->getLeft(), right->getRight());
         delete right;
     }
-    return;
 }
 
-template<class T>
-bool AVLTree<T>::isEmpty() const{
-    if(size == 0){
-        return true;
-    }
-    return false;
+template<typename T, typename Comparator>
+bool AVLTree<T, Comparator>::isEmpty() const {
+    return size == 0;
 }
 
-template<class T>
-AVLNode<T>* AVLTree<T>::findMinNode() const{
+template<typename T, typename Comparator>
+AVLNode<T>* AVLTree<T, Comparator>::findMinNode() const {
     return getSmallestSon(root);
 }
 
-template<class T>
-AVLNode<T>* AVLTree<T>::findMaxNode() const{
+template<typename T, typename Comparator>
+AVLNode<T>* AVLTree<T, Comparator>::findMaxNode() const {
     return getLargestSon(root);
 }
 
-template<class T>
-T& AVLTree<T>::findMinVal() const{
+template<typename T, typename Comparator>
+T& AVLTree<T, Comparator>::findMinVal() const {
     AVLNode<T>* min_node = this->findMinNode();
-    if(min_node == nullptr){
-        return nullptr;
+    if (min_node == nullptr) {
+        throw std::runtime_error("Tree is empty");
     }
     return min_node->getData();
 }
 
-template<class T>
-T& AVLTree<T>::findMaxVal() const{
+template<typename T, typename Comparator>
+T& AVLTree<T, Comparator>::findMaxVal() const {
     AVLNode<T>* max_node = this->findMaxNode();
-    if(max_node == nullptr){
-        return nullptr;
+    if (max_node == nullptr) {
+        throw std::runtime_error("Tree is empty");
     }
     return max_node->getData();
 }
 
-/*
- * Public print method: calls the private recursive print method.
- */
-template<class T>
-void AVLTree<T>::print() const {
+template<typename T, typename Comparator>
+void AVLTree<T, Comparator>::print() const {
     this->print(root);
 }
 
-/*
- * Private recursive print method: performs an in-order traversal.
- */
-template<class T>
-void AVLTree<T>::print(AVLNode<T>* node) const {
+template<typename T, typename Comparator>
+void AVLTree<T, Comparator>::print(AVLNode<T>* node) const {
     if (node == nullptr) {
         return;
     }
@@ -121,26 +113,22 @@ void AVLTree<T>::print(AVLNode<T>* node) const {
     std::cout << node->getData() << std::endl;
 }
 
-/*
- * Private Binary Search Tree style insert method.
- * Returns a pointer to the newly inserted node.
- */
-template<class T>
-AVLNode<T>* AVLTree<T>::BSTInsert(const T& val, AVLNode<T>* node) {
+template<typename T, typename Comparator>
+AVLNode<T>* AVLTree<T, Comparator>::BSTInsert(const T& val, AVLNode<T>* node) {
     if (node == nullptr) { // The tree is empty, add val to root.
         AVLNode<T>* new_root = new AVLNode<T>(val);
         root = new_root;
         return root;
     }
 
-    if (val < node->getData()) {
+    if (comp(val, node->getData())) {
         if (node->getLeft() == nullptr) { // Create a new node and add it as the left child.
             AVLNode<T>* new_node = new AVLNode<T>(val);
             node->setLeft(new_node);
             return new_node;
         }
         return BSTInsert(val, node->getLeft()); // Continue recursion.
-    } else if (val > node->getData()) {
+    } else if (comp(node->getData(), val)) {
         if (node->getRight() == nullptr) {
             AVLNode<T>* new_node = new AVLNode<T>(val);
             node->setRight(new_node);
@@ -152,12 +140,8 @@ AVLNode<T>* AVLTree<T>::BSTInsert(const T& val, AVLNode<T>* node) {
     return nullptr; // Do not add the same node twice.
 }
 
-/*
- * Public AVL Tree style insert method.
- * Returns a pointer to the newly inserted node.
- */
-template<class T>
-AVLNode<T>* AVLTree<T>::insert(const T& val) {
+template<typename T, typename Comparator>
+AVLNode<T>* AVLTree<T, Comparator>::insert(const T& val) {
     AVLNode<T>* new_node;
     this->size++;
     new_node = BSTInsert(val, root);
@@ -187,11 +171,8 @@ AVLNode<T>* AVLTree<T>::insert(const T& val) {
     return new_node;
 }
 
-/*
- * Private method to specify the correct rotation and call the appropriate function.
- */
-template<class T>
-void AVLTree<T>::rotate(AVLNode<T>* node) {
+template<typename T, typename Comparator>
+void AVLTree<T, Comparator>::rotate(AVLNode<T>* node) {
     // Determine the balance factor of the node and its children
     int nodeBF = node->getBF();
     AVLNode<T>* left_son = node->getLeft();
@@ -217,11 +198,8 @@ void AVLTree<T>::rotate(AVLNode<T>* node) {
     }
 }
 
-/*
- * Private method for Left-Left rotation.
- */
-template<class T>
-void AVLTree<T>::rotateLL(AVLNode<T>* node) {
+template<typename T, typename Comparator>
+void AVLTree<T, Comparator>::rotateLL(AVLNode<T>* node) {
     AVLNode<T>* left_son = node->getLeft();
     AVLNode<T>* parent = node->getParent();
     if (parent != nullptr) {
@@ -242,11 +220,8 @@ void AVLTree<T>::rotateLL(AVLNode<T>* node) {
     }
 }
 
-/*
- * Private method for Right-Right rotation.
- */
-template<class T>
-void AVLTree<T>::rotateRR(AVLNode<T>* node) {
+template<typename T, typename Comparator>
+void AVLTree<T, Comparator>::rotateRR(AVLNode<T>* node) {
     AVLNode<T>* right_son = node->getRight();
     AVLNode<T>* right_son_left = right_son->getLeft();
     AVLNode<T>* parent = node->getParent();
@@ -269,58 +244,41 @@ void AVLTree<T>::rotateRR(AVLNode<T>* node) {
     }
 }
 
-/*
- * Private method for Left-Right rotation.
- */
-template<class T>
-void AVLTree<T>::rotateLR(AVLNode<T>* node) {
+template<typename T, typename Comparator>
+void AVLTree<T, Comparator>::rotateLR(AVLNode<T>* node) {
     AVLNode<T>* left_son = node->getLeft();
     rotateRR(left_son);
     rotateLL(node);
 }
 
-/*
- * Private method for Right-Left rotation.
- */
-template<class T>
-void AVLTree<T>::rotateRL(AVLNode<T>* node) {
+template<typename T, typename Comparator>
+void AVLTree<T, Comparator>::rotateRL(AVLNode<T>* node) {
     AVLNode<T>* right_son = node->getRight();
     rotateLL(right_son);
     rotateRR(node);
 }
 
-/*
- * Public search method: calls the private recursive search method.
- */
-template<class T>
-AVLNode<T>* AVLTree<T>::search(const T& val) const {
+template<typename T, typename Comparator>
+AVLNode<T>* AVLTree<T, Comparator>::search(const T& val) const {
     return search(val, this->root);
 }
 
-/*
- * Private recursive search method.
- * Returns a pointer to the node containing the value.
- */
-template<class T>
-AVLNode<T>* AVLTree<T>::search(const T& val, AVLNode<T>* node) const {
+template<typename T, typename Comparator>
+AVLNode<T>* AVLTree<T, Comparator>::search(const T& val, AVLNode<T>* node) const {
     if (node == nullptr) { // The tree is empty.
         return nullptr;
     }
 
-    if (val < node->getData()) {
+    if (comp(val, node->getData())) {
         return search(val, node->getLeft()); // Continue recursion with the left child.
-    } else if (val > node->getData()) {
+    } else if (comp(node->getData(), val)) {
         return search(val, node->getRight()); // Continue recursion with the right child.
     }
     return node; // val == node->getData().
 }
 
-/*
- * Private Binary Search Tree removal method.
- * Returns the parent of the removed node.
- */
-template<class T>
-AVLNode<T>* AVLTree<T>::BSTRemove(const T& val) {
+template<typename T, typename Comparator>
+AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
     AVLNode<T>* rm = this->search(val);
     if (rm == nullptr) { // The value is not in the tree.
         return nullptr;
@@ -414,11 +372,8 @@ AVLNode<T>* AVLTree<T>::BSTRemove(const T& val) {
     }
 }
 
-/*
- * Private method to update heights of the nodes.
- */
-template<class T>
-void updateHeights(AVLNode<T>* node) {
+template<typename T, typename Comparator>
+void AVLTree<T, Comparator>::updateHeights(AVLNode<T>* node) {
     if (node == nullptr) {
         return;
     }
@@ -442,11 +397,8 @@ void updateHeights(AVLNode<T>* node) {
     updateHeights(node->getParent()); // Update parent height.
 }
 
-/*
- * Private method to return the smallest child of the given node.
- */
-template<class T>
-AVLNode<T>* getSmallestSon(AVLNode<T>* node) {
+template<typename T, typename Comparator>
+AVLNode<T>* AVLTree<T, Comparator>::getSmallestSon(AVLNode<T>* node) const{
     if (node == nullptr) {
         return node;
     }
@@ -456,8 +408,8 @@ AVLNode<T>* getSmallestSon(AVLNode<T>* node) {
     return getSmallestSon(node->getLeft());
 }
 
-template<class T>
-AVLNode<T>* getLargestSon(AVLNode<T>* node){
+template<typename T, typename Comparator>
+AVLNode<T>* AVLTree<T, Comparator>::getLargestSon(AVLNode<T>* node) const{
     if (node == nullptr) {
         return node;
     }
@@ -467,19 +419,13 @@ AVLNode<T>* getLargestSon(AVLNode<T>* node){
     return getLargestSon(node->getRight());
 }
 
-/*
- * Public remove method: removes a node with the given value and adjusts rotations.
- */
-template<class T>
-bool AVLTree<T>::remove(const T& val) {
+template<typename T, typename Comparator>
+bool AVLTree<T, Comparator>::remove(const T& val) {
     return this->removeRotations(this->BSTRemove(val));
 }
 
-/*
- * Private method to adjust tree rotations after a removal.
- */
-template<class T>
-bool AVLTree<T>::removeRotations(AVLNode<T>* node) {
+template<typename T, typename Comparator>
+bool AVLTree<T, Comparator>::removeRotations(AVLNode<T>* node) {
     if (node == nullptr) {
         return false;
     }
@@ -489,3 +435,5 @@ bool AVLTree<T>::removeRotations(AVLNode<T>* node) {
     removeRotations(node->getParent());
     return true;
 }
+
+#endif // AVLTREE_H
