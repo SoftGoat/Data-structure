@@ -7,7 +7,6 @@
 #include "wet1util.h"
 #include "Pirate.h"
 
-class Pirate; // Forward declaration 
 
 enum struct BattleResult {
 	WIN = 0,
@@ -132,6 +131,18 @@ public:
      * @return The number of pirates on the ship.
      */
     int getCrewSize() const;
+    /**
+     * @brief Sets the pirate treasure.
+     * @param pirate Pointer to the pirate.
+     * @param treasure The new amount of treasure.
+     * @return true if the operation was successful, false otherwise.
+     */
+    bool setPirateTreasure(Pirate* pirate, int treasure);
+    /**
+     * @brief Gets pirate treasure.
+     * @return The amount of treasure the pirate has.
+     */
+    int getPirateTreasure(Pirate* pirate) const;
 
     /**
      * @brief Battle between two ships.
