@@ -1,8 +1,6 @@
 #include "Pirate.h"
 
-
-
-
+class Ship; // Forward declaration of the Ship class
 
 Pirate::Pirate(int pirateId, int treasure)
     : id(pirateId), treasure(treasure), ship(nullptr), next_pirate(nullptr), prev_pirate(nullptr) {}
@@ -20,6 +18,7 @@ void Pirate::setShip(AVLNode<Ship*>* ship) {
 }
 
 AVLNode<Ship*>* Pirate::getShip() const {
+
     return ship;
 }
 

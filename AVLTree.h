@@ -1,5 +1,10 @@
-#include "AVLNode.h"
+#ifndef AVLTREE_IMPL_H
 
+
+
+
+#include "AVLNode.h"
+#include <iostream>
 template<class T, typename Comparator = typename T::Comparator>
 class AVLTree {
 public:
@@ -22,6 +27,7 @@ public:
     int getSize() const {return size;};
     void clearTree();
 
+
 private:
     // Private methods for various operations
     void clearTree(AVLNode<T>* left, AVLNode<T>* right);
@@ -35,6 +41,9 @@ private:
     void rotateLR(AVLNode<T>* node);              // Left-Right rotation
     void rotateRR(AVLNode<T>* node);              // Right-Right rotation
     void rotateRL(AVLNode<T>* node);              // Right-Left rotation
+    void updateHeights(AVLNode<T>* node);         // Update the heights of the nodes
+    AVLNode<T>* getSmallestSon(AVLNode<T>* node) const; // Get the smallest child of a node
+    AVLNode<T>* getLargestSon(AVLNode<T>* node) const; // Get the largest child of a node
 
     // Member variables
     AVLNode<T>* root;                             // Root node of the AVL tree
@@ -420,7 +429,7 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
  * Private method to update heights of the nodes.
  */
 template<class T, typename Comparator>
-void updateHeights(AVLNode<T>* node) {
+void AVLTree<T, Comparator>::updateHeights(AVLNode<T>* node) {
     if (node == nullptr) {
         return;
     }
@@ -448,7 +457,7 @@ void updateHeights(AVLNode<T>* node) {
  * Private method to return the smallest child of the given node.
  */
 template<class T, typename Comparator>
-AVLNode<T>* getSmallestSon(AVLNode<T>* node) {
+AVLNode<T>* AVLTree<T, Comparator>::getSmallestSon(AVLNode<T>* node) const{
     if (node == nullptr) {
         return node;
     }
@@ -459,7 +468,7 @@ AVLNode<T>* getSmallestSon(AVLNode<T>* node) {
 }
 
 template<class T, typename Comparator>
-AVLNode<T>* getLargestSon(AVLNode<T>* node){
+AVLNode<T>* AVLTree<T, Comparator>::getLargestSon(AVLNode<T>* node)const{
     if (node == nullptr) {
         return node;
     }
@@ -491,3 +500,6 @@ bool AVLTree<T, Comparator>::removeRotations(AVLNode<T>* node) {
     removeRotations(node->getParent());
     return true;
 }
+
+#endif // AVLTREE_IMPL_H
+#define AVLTREE_IMPL_H

@@ -59,6 +59,7 @@ StatusType Ocean::add_pirate(int pirateId, int shipId, int treasure) {
         delete newPirate;
         return StatusType::FAILURE;
     }
+    newPirate->setShip(m_shipsById.search(ship));
     return StatusType::SUCCESS;
 }
 
@@ -70,14 +71,14 @@ StatusType Ocean::remove_pirate(int pirateId) {
     if(pirate == nullptr){
         return StatusType::FAILURE;
     }
+    if(pirate->getShip() == nullptr){
+        return StatusType::FAILURE;
+    }
     Ship* ship = pirate->getShip()->getData();
-    if(ship == nullptr){
+    if(!m_piratesById.remove(pirate)){
         return StatusType::FAILURE;
     }
-    if(m_piratesById.remove(pirate)){
-        return StatusType::FAILURE;
-    }
-    if(ship->remove_pirate(pirate)){
+    if(!ship->remove_pirate(pirate)){
         m_piratesById.insert(pirate);
         return StatusType::FAILURE;
     }
@@ -94,7 +95,7 @@ StatusType Ocean::treason(int sourceShipId, int destShipId) {
     if(sourceShip == nullptr || destShip == nullptr || sourceShip->empty()){
         return StatusType::FAILURE;
     }
-    if(sourceShip->treason(destShip)){
+    if(!sourceShip->treason(destShip)){
         return StatusType::FAILURE;
     }
     return StatusType::SUCCESS;
@@ -120,7 +121,11 @@ output_t<int> Ocean::get_treasure(int pirateId) {
     if(pirate == nullptr){
         return output_t<int>(StatusType::FAILURE);
     }
-    return output_t<int>(pirate->getTreasure());
+    if(pirate->getShip() == nullptr){
+        return output_t<int>(pirate->getTreasure());
+    }
+    Ship* ship = pirate->getShip()->getData();
+    return output_t<int>(ship->getPirateTreasure(pirate));
 }
 
 output_t<int> Ocean::get_cannons(int shipId) {
