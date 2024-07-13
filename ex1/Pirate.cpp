@@ -2,23 +2,22 @@
 
 class Ship; // Forward declaration of the Ship class
 
-Pirate::Pirate(int pirateId, int treasure)
-    : id(pirateId), treasure(treasure), ship(nullptr), next_pirate(nullptr), prev_pirate(nullptr) {}
+Pirate::Pirate(int pirateId, int t)
+    : id(pirateId), treasure(t), ship(nullptr), next_pirate(nullptr), prev_pirate(nullptr) {}
 
-void Pirate::setTreasure(int treasure) {
-    this->treasure = treasure;
+void Pirate::setTreasure(int t) {
+    this->treasure = t;
 }
 
 int Pirate::getTreasure() const {
     return treasure;
 }
 
-void Pirate::setShip(AVLNode<Ship*>* ship) {
-    this->ship = ship;
+void Pirate::setShip(AVLNode<Ship*>* new_ship) {
+    this->ship = new_ship;
 }
 
 AVLNode<Ship*>* Pirate::getShip() const {
-
     return ship;
 }
 
