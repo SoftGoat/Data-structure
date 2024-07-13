@@ -34,3 +34,9 @@ void Pirate::setPrev(Pirate* prev_pirate) {
 Pirate* Pirate::getPrev() const {
     return prev_pirate;
 }
+
+int Pirate::getId() const {
+    return id;
+}
+
+

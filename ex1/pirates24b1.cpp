@@ -2,22 +2,17 @@
 #include "Ship.h"
 #include "Pirate.h"
 
+Ship* idToPointer(int id, const AVLNode<Ship*>* current, const AVLTree<Ship*>& tree);
+Pirate* idToPointer(int id, const AVLNode<Pirate*>* current, const AVLTree<Pirate*>& tree);
 
-Ship* idToPointer(int id, const AVLNode<Ship*>& current, const AVLTree<Ship*>& tree);
-
-Ocean::Ocean()
-{
+Ocean::Ocean() {
     m_shipsById = AVLTree<Ship*>();
     m_piratesById = AVLTree<Pirate*>();
 }
 
-Ocean::~Ocean()
-{
-    
-}
+Ocean::~Ocean() {}
 
-StatusType Ocean::add_ship(int shipId, int cannons)
-{
+StatusType Ocean::add_ship(int shipId, int cannons) {
     if(shipId <= 0 || cannons <= 0){
         return StatusType::INVALID_INPUT;
     }
@@ -25,29 +20,25 @@ StatusType Ocean::add_ship(int shipId, int cannons)
     if(newShip == nullptr){
         return StatusType::ALLOCATION_ERROR;
     }
-    if(m_shipsById.insert(newShip)){
+    if(m_shipsById.insert(newShip)== nullptr){
         return StatusType::FAILURE;
     }
     return StatusType::SUCCESS;
-    
 }
 
-StatusType Ocean::remove_ship(int shipId)
-{
+StatusType Ocean::remove_ship(int shipId) {
     if(shipId <= 0){
         return StatusType::INVALID_INPUT;
     }
     Ship* ship = idToPointer(shipId, m_shipsById.getRoot(), m_shipsById);
-    if(ship->empty() || m_shipsById.remove(ship)){
+    if(!ship->empty() || m_shipsById.remove(ship)){
         return StatusType::FAILURE;
     }
     delete ship;
     return StatusType::SUCCESS;
-
 }
 
-StatusType Ocean::add_pirate(int pirateId, int shipId, int treasure)
-{
+StatusType Ocean::add_pirate(int pirateId, int shipId, int treasure) {
     if(pirateId <= 0 || shipId <= 0){
         return StatusType::INVALID_INPUT;
     }
@@ -59,21 +50,19 @@ StatusType Ocean::add_pirate(int pirateId, int shipId, int treasure)
     if(newPirate == nullptr){
         return StatusType::ALLOCATION_ERROR;
     }
-    if(ship->add_pirate(newPirate)){
+    if(!ship->add_pirate(newPirate)){
         delete newPirate;
         return StatusType::FAILURE;
     }
-    if (m_piratesById.insert(newPirate)){
-        ship->remove_pirate(newPirate);
+    if (m_piratesById.insert(newPirate)== nullptr){
+        ship->remove_pirate(newPirate); // whats happend if the remove failed?
         delete newPirate;
         return StatusType::FAILURE;
     }
-    
     return StatusType::SUCCESS;
 }
 
-StatusType Ocean::remove_pirate(int pirateId)
-{
+StatusType Ocean::remove_pirate(int pirateId) {
     if(pirateId <= 0){
         return StatusType::INVALID_INPUT;
     }
@@ -96,8 +85,7 @@ StatusType Ocean::remove_pirate(int pirateId)
     return StatusType::SUCCESS;
 }
 
-StatusType Ocean::treason(int sourceShipId, int destShipId)
-{
+StatusType Ocean::treason(int sourceShipId, int destShipId) {
     if (sourceShipId <= 0 || destShipId <= 0 || sourceShipId == destShipId){
         return StatusType::INVALID_INPUT;
     }
@@ -112,8 +100,7 @@ StatusType Ocean::treason(int sourceShipId, int destShipId)
     return StatusType::SUCCESS;
 }
 
-StatusType Ocean::update_pirate_treasure(int pirateId, int change)
-{
+StatusType Ocean::update_pirate_treasure(int pirateId, int change) {
     if (pirateId <= 0){
         return StatusType::INVALID_INPUT;
     }
@@ -125,8 +112,7 @@ StatusType Ocean::update_pirate_treasure(int pirateId, int change)
     return StatusType::SUCCESS;
 }
 
-output_t<int> Ocean::get_treasure(int pirateId)
-{
+output_t<int> Ocean::get_treasure(int pirateId) {
     if (pirateId <= 0){
         return output_t<int>(StatusType::INVALID_INPUT);
     }
@@ -137,8 +123,7 @@ output_t<int> Ocean::get_treasure(int pirateId)
     return output_t<int>(pirate->getTreasure());
 }
 
-output_t<int> Ocean::get_cannons(int shipId)
-{
+output_t<int> Ocean::get_cannons(int shipId) {
     if (shipId <= 0){
         return output_t<int>(StatusType::INVALID_INPUT);
     }
@@ -149,8 +134,7 @@ output_t<int> Ocean::get_cannons(int shipId)
     return output_t<int>(ship->getCannons());
 }
 
-output_t<int> Ocean::get_richest_pirate(int shipId)
-{
+output_t<int> Ocean::get_richest_pirate(int shipId) {
     if (shipId <= 0){
         return output_t<int>(StatusType::INVALID_INPUT);
     }
@@ -165,9 +149,7 @@ output_t<int> Ocean::get_richest_pirate(int shipId)
     return output_t<int>(richestPirate->getId());
 }
 
-StatusType Ocean::ships_battle(int shipId1,int shipId2)
-{
-
+StatusType Ocean::ships_battle(int shipId1, int shipId2) {
     if (shipId1 <= 0 || shipId2 <= 0 || shipId1 == shipId2){
         return StatusType::INVALID_INPUT;
     }
@@ -180,12 +162,8 @@ StatusType Ocean::ships_battle(int shipId1,int shipId2)
     return StatusType::SUCCESS;
 }
 
-
-
-
-Pirate* idToPointer(int id, const AVLNode<Pirate*>* current,  const AVLTree<Pirate*>& tree){ 
-
-    if(current->getData() == nullptr){
+Pirate* idToPointer(int id, const AVLNode<Pirate*>* current, const AVLTree<Pirate*>& tree) {
+    if(current == nullptr || current->getData() == nullptr){
         return nullptr;
     }
     if(current->getData()->getId() == id){
@@ -195,17 +173,16 @@ Pirate* idToPointer(int id, const AVLNode<Pirate*>* current,  const AVLTree<Pira
         return idToPointer(id, current->getLeft(), tree);
     }
     return idToPointer(id, current->getRight(), tree);
-
 }
 
 Ship* idToPointer(int id, const AVLNode<Ship*>* current, const AVLTree<Ship*>& tree) {
-    if (current->getData() == nullptr) {
+    if(current == nullptr || current->getData() == nullptr) {
         return nullptr;
     }
-    if (current->getData()->getId() == id) {
+    if(current->getData()->getId() == id) {
         return current->getData();
     }
-    if (current->getData()->getId() > id) {
+    if(current->getData()->getId() > id) {
         return idToPointer(id, current->getLeft(), tree);
     }
     return idToPointer(id, current->getRight(), tree);

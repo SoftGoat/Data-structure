@@ -3,8 +3,6 @@
 
 
 
-
-
     Ship::Ship(int shipId, int cannons) {
         m_shipId = shipId;
         m_cannons = cannons;
@@ -14,12 +12,11 @@
         m_pirateWithMostTimeServed = nullptr;
         m_pirateWithLeastTimeServed = nullptr;
         m_piratesOrderdById = new AVLTree<Pirate*>();
-        m_piratesOrderdByTreasure = new AVLTree<Pirate*>();
     }
     Ship::~Ship(){
     }
     bool Ship::add_pirate(Pirate* pirate){
-        if(m_pirates.insert(pirate)){
+        if(m_pirates.insert(pirate)==nullptr){
             return false;
         }
         pirate->setTreasure(pirate->getTreasure() + m_treasureBonus);
