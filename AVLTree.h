@@ -33,7 +33,7 @@ private:
     void clearTree(AVLNode<T>* left, AVLNode<T>* right);
     AVLNode<T>* BSTRemove(const T& val);          // Binary Search Tree removal
     bool removeRotations(AVLNode<T>* node);       // Adjust tree rotations after removal
-    void printTree(AVLNode<T>* node, int space) const         // Recursive print function
+    void printTree(AVLNode<T>* node, int space) const;        // Recursive print function
     AVLNode<T>* search(const T& val, AVLNode<T>* node) const; // Recursive search function
     AVLNode<T>* BSTInsert(const T& val, AVLNode<T>* node);    // Binary Search Tree insertion
     void rotate(AVLNode<T>* node);                // Determine and apply the correct rotation
@@ -354,7 +354,6 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
         return nullptr;
     }
     AVLNode<T>* parent = rm->getParent();
-    int rm_height = rm->getHeight();
     bool is_left = false;
     if (parent != nullptr) {
         is_left = (parent->getLeft() == rm);

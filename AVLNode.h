@@ -4,7 +4,7 @@
 template<class T>
 class AVLNode{
     public:
-    AVLNode(const T& val) : data(val), left_son(nullptr), right_son(nullptr), parent(nullptr), height(0) {};
+    AVLNode(const T& val) : data(val), parent(nullptr) ,left_son(nullptr), right_son(nullptr) , height(0) {};
     const T& getData() const { return data; }; 
     void setParent(AVLNode* node) { parent = node; };
     AVLNode* getParent() const { return parent; };
