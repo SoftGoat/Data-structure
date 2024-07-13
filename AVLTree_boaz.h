@@ -1,4 +1,4 @@
-#include "AVLNode_boaz.h"
+#include "AVLNode.h"
 
 template<class T>
 class AVLTree {
@@ -11,7 +11,7 @@ public:
 
     // Public methods for inserting, removing, searching, and printing the tree
     AVLNode<T>* insert(const T& val);
-    void remove(const T& val);
+    bool remove(const T& val); // Zohar edited the function: change to bool
     AVLNode<T>* search(const T& val) const;
     void print() const;
     bool isEmpty() const;
@@ -19,11 +19,14 @@ public:
     AVLNode<T>* findMaxNode() const;
     T& findMinVal() const;
     T& findMaxVal() const;
+    int getSize() const {return size;};
+    void clearTree();
 
 private:
     // Private methods for various operations
+    void clearTree(AVLNode<T>* left, AVLNode<T>* right);
     AVLNode<T>* BSTRemove(const T& val);          // Binary Search Tree removal
-    void removeRotations(AVLNode<T>* node);       // Adjust tree rotations after removal
+    bool removeRotations(AVLNode<T>* node);       // Adjust tree rotations after removal
     void print(AVLNode<T>* node) const;           // Recursive print function
     AVLNode<T>* search(const T& val, AVLNode<T>* node) const; // Recursive search function
     AVLNode<T>* BSTInsert(const T& val, AVLNode<T>* node);    // Binary Search Tree insertion
@@ -37,6 +40,29 @@ private:
     AVLNode<T>* root;                             // Root node of the AVL tree
     int size;                                     // Number of nodes in the tree
 };
+
+template<class T>
+void AVLTree<T>::clearTree() {
+    if(root == nullptr){
+        return;
+    }
+    clearTree(root->getLeft(), root->getRight());
+    delete root;
+    root = nullptr;
+}
+
+template<class T>
+void AVLTree<T>::clearTree(AVLNode<T>* left, AVLNode<T>* right){
+    if(left != nullptr){
+        clearTree(left->getLeft(), left->getRight());
+        delete left;
+    }
+    if(right != nullptr){
+        clearTree(right->getLeft(), right->getRight());
+        delete right;
+    }
+    return;
+}
 
 template<class T>
 bool AVLTree<T>::isEmpty() const{
@@ -60,7 +86,7 @@ template<class T>
 T& AVLTree<T>::findMinVal() const{
     AVLNode<T>* min_node = this->findMinNode();
     if(min_node == nullptr){
-        throw std::runtime_error("Tree is empty");
+        return nullptr;
     }
     return min_node->getData();
 }
@@ -69,7 +95,7 @@ template<class T>
 T& AVLTree<T>::findMaxVal() const{
     AVLNode<T>* max_node = this->findMaxNode();
     if(max_node == nullptr){
-        throw std::runtime_error("Tree is empty");
+        return nullptr;
     }
     return max_node->getData();
 }
@@ -222,6 +248,7 @@ void AVLTree<T>::rotateLL(AVLNode<T>* node) {
 template<class T>
 void AVLTree<T>::rotateRR(AVLNode<T>* node) {
     AVLNode<T>* right_son = node->getRight();
+    AVLNode<T>* right_son_left = right_son->getLeft();
     AVLNode<T>* parent = node->getParent();
     if (parent != nullptr) {
         if (node == parent->getRight()) {
@@ -230,12 +257,13 @@ void AVLTree<T>::rotateRR(AVLNode<T>* node) {
             parent->setLeft(right_son);
         }
     }
-    node->setRight(right_son->getLeft());
+    node->setRight(right_son_left);
     right_son->setLeft(node);
     right_son->setParent(parent);
     // Change heights
     node->decreaseHeight();
     node->decreaseHeight();
+    updateHeights(right_son_left->getParent());
     if (node == root) {
         root = right_son;
     }
@@ -367,12 +395,12 @@ AVLNode<T>* AVLTree<T>::BSTRemove(const T& val) {
         // Separate replace node from its parent only if it is not the right child of rm.
         // Update the right child of replace node only if it isn't the right child itself.
         if (replace_node != right_son) {
-            (replace_node->getParent())->setLeft(nullptr);
+            replace_node_parent->setLeft(nullptr);
             replace_node->setRight(right_son);
         } else {
             replace_node->setRight(nullptr);
         }
-        replace_node->setParent(parent);
+        replace_node->setParent(parent); // UNececaery beacuse already done in set right
         replace_node->setLeft(left_son);
         // Update the heights of the affected nodes.
         if (replace_node_parent == rm) {
@@ -443,20 +471,21 @@ AVLNode<T>* getLargestSon(AVLNode<T>* node){
  * Public remove method: removes a node with the given value and adjusts rotations.
  */
 template<class T>
-void AVLTree<T>::remove(const T& val) {
-    this->removeRotations(this->BSTRemove(val));
+bool AVLTree<T>::remove(const T& val) {
+    return this->removeRotations(this->BSTRemove(val));
 }
 
 /*
  * Private method to adjust tree rotations after a removal.
  */
 template<class T>
-void AVLTree<T>::removeRotations(AVLNode<T>* node) {
+bool AVLTree<T>::removeRotations(AVLNode<T>* node) {
     if (node == nullptr) {
-        return;
+        return false;
     }
     if (node->getBF() == 2 || node->getBF() == -2) {
         this->rotate(node);
     }
     removeRotations(node->getParent());
+    return true;
 }
