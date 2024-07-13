@@ -120,7 +120,6 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTInsert(const T& val, AVLNode<T>* node) {
         root = new_root;
         return root;
     }
-
     if (comp(val, node->getData())) {
         if (node->getLeft() == nullptr) { // Create a new node and add it as the left child.
             AVLNode<T>* new_node = new AVLNode<T>(val);
