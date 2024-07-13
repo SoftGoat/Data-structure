@@ -60,7 +60,7 @@ template<class T>
 T& AVLTree<T>::findMinVal() const{
     AVLNode<T>* min_node = this->findMinNode();
     if(min_node == nullptr){
-        return nullptr;
+        throw std::runtime_error("Tree is empty");
     }
     return min_node->getData();
 }
@@ -69,7 +69,7 @@ template<class T>
 T& AVLTree<T>::findMaxVal() const{
     AVLNode<T>* max_node = this->findMaxNode();
     if(max_node == nullptr){
-        return nullptr;
+        throw std::runtime_error("Tree is empty");
     }
     return max_node->getData();
 }
