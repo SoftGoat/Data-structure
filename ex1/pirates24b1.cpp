@@ -107,9 +107,13 @@ StatusType Ocean::update_pirate_treasure(int pirateId, int change) {
     }
     Pirate* pirate = idToPointer(pirateId, m_piratesById.getRoot(), m_piratesById);
     if(pirate == nullptr){
+        
+    }
+    if(pirate->getShip()== nullptr){
         return StatusType::FAILURE;
     }
-    pirate->setTreasure(pirate->getTreasure() + change);
+    Ship* ship = pirate->getShip()->getData();
+    ship->update_pirate_treasure(pirate, change);
     return StatusType::SUCCESS;
 }
 
