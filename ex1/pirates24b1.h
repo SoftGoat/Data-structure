@@ -50,6 +50,11 @@ public:
 
     StatusType ships_battle(int shipId1,int shipId2);
 
+    void print_avl_tree() const
+{
+    m_shipsById.print();
+}
+
     // } </DO-NOT-MODIFY>
 };
 

@@ -33,7 +33,7 @@ private:
     void clearTree(AVLNode<T>* left, AVLNode<T>* right);
     AVLNode<T>* BSTRemove(const T& val);          // Binary Search Tree removal
     bool removeRotations(AVLNode<T>* node);       // Adjust tree rotations after removal
-    void print(AVLNode<T>* node) const;           // Recursive print function
+    void printTree(AVLNode<T>* node, int space) const;        // Recursive print function
     AVLNode<T>* search(const T& val, AVLNode<T>* node) const; // Recursive search function
     AVLNode<T>* BSTInsert(const T& val, AVLNode<T>* node);    // Binary Search Tree insertion
     void rotate(AVLNode<T>* node);                // Determine and apply the correct rotation
@@ -115,21 +115,38 @@ T& AVLTree<T, Comparator>::findMaxVal() const{
  * Public print method: calls the private recursive print method.
  */
 template<class T, typename Comparator>
-void AVLTree<T, Comparator>::print() const {
-    this->print(root);
+void AVLTree<T, Comparator>::print() const
+{
+    if (!root)
+    {
+        std::cout << "Tree is empty.\n";
+        return;
+    }
+    printTree(root, 0);
 }
 
 /*
  * Private recursive print method: performs an in-order traversal.
  */
 template<class T, typename Comparator>
-void AVLTree<T, Comparator>::print(AVLNode<T>* node) const {
-    if (node == nullptr || size == 0) {
+void AVLTree<T, Comparator>::printTree(AVLNode<T>* node, int space) const
+{
+    if (!node)
         return;
+
+    const int COUNT = 5;
+    space += COUNT;
+
+    printTree(node->getRight(), space);
+
+    std::cout << std::endl;
+    for (int i = COUNT; i < space; ++i)
+    {
+        std::cout << " ";
     }
-    print(node->getLeft());
-    print(node->getRight());
-    std::cout << node->getData() << std::endl;
+    std::cout << node->getData() << "\n";
+
+    printTree(node->getLeft(), space);
 }
 
 /*
@@ -337,7 +354,6 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
         return nullptr;
     }
     AVLNode<T>* parent = rm->getParent();
-    int rm_height = rm->getHeight();
     bool is_left = false;
     if (parent != nullptr) {
         is_left = (parent->getLeft() == rm);
