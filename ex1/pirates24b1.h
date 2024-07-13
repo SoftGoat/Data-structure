@@ -52,7 +52,7 @@ public:
 
     void print_avl_tree() const
 {
-    ships.print();
+    m_shipsById.print();
 }
 
     // } </DO-NOT-MODIFY>
