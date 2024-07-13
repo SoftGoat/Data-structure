@@ -1,11 +1,14 @@
 #ifndef SHIP_H
 #define SHIP_H
 
-#include "../AVLTree_boaz.h"
+
+#include "../AVLTree.h"
 #include <iostream>
 #include "wet1util.h"
+#include "Pirate.h"
 
-class Pirate; // Forward declaration of the Pirate class
+class Pirate; // Forward declaration 
+
 enum struct BattleResult {
 	WIN = 0,
     LOSS = 1,
@@ -19,17 +22,16 @@ enum struct BattleResult {
  */
 class Ship {
 private:
-private:
     int m_shipId; // Unique identifier for the ship.
     int m_cannons; // Number of cannons on the ship.
     int m_treasureBonus; // Bonus treasure for the ship.
     int m_crewSize; // Number of pirates on the ship.
-    AVLTree<Pirate*> m_pirates; // AVL tree of pirates on the ship.
+     AVLTree<Pirate*,Pirate::Comparator> m_pirates; // AVL tree of pirates on the ship.
     Pirate* m_richestPirate; // Pointer to the richest pirate on the ship.
     Pirate* m_pirateWithMostTimeServed; // Pointer to the pirate with the most time served on the ship.
     Pirate* m_pirateWithLeastTimeServed; // Pointer to the pirate with the least time served on the ship.
-    AVLTree<Pirate*>* m_piratesOrderdById; // AVL tree of pirates on the ship ordered by ID.
-    AVLTree<Pirate*>* m_piratesOrderdByTreasure; // AVL tree of pirates on the ship ordered by treasure.
+    AVLTree<Pirate*,Pirate::Comparator>* m_piratesOrderdById; // AVL tree of pirates on the ship ordered by ID.
+    AVLTree<Pirate*,Pirate::Comparator>* m_piratesOrderdByTreasure; // AVL tree of pirates on the ship ordered by treasure.
 
 public:
    
@@ -153,13 +155,19 @@ public:
      * @brief Gets the AVL tree of pirates on the ship.
      * @return Pointer to the AVL tree of pirates on the ship.
      */
-    AVLTree<Pirate*>* getPirates();
+    AVLTree<Pirate*,Pirate::Comparator>* getPirates();
 
     /**
      * @brief Gets the AVL tree of pirates on the ship ordered by ID.
      * @return Pointer to the AVL tree of pirates on the ship ordered by ID.
      */
-    AVLTree<Pirate*>* getPiratesOrderdById();
+    AVLTree<Pirate*,Pirate::Comparator>* getPiratesOrderdById();
+
+    struct Comparator {
+        bool operator()(const Ship* lhs, const Ship* rhs) const {
+            return lhs->getId() < rhs->getId();
+        }
+    };
 };
 
 

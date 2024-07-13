@@ -2,12 +2,12 @@
 #include "Ship.h"
 #include "Pirate.h"
 
-Ship* idToPointer(int id, const AVLNode<Ship*>* current, const AVLTree<Ship*>& tree);
-Pirate* idToPointer(int id, const AVLNode<Pirate*>* current, const AVLTree<Pirate*>& tree);
+Ship* idToPointer(int id, const AVLNode<Ship*>* current, const AVLTree<Ship*,Ship::Comparator>& tree);
+Pirate* idToPointer(int id, const AVLNode<Pirate*>* current, const AVLTree<Pirate*,Pirate::Comparator>& tree);
 
 Ocean::Ocean() {
-    m_shipsById = AVLTree<Ship*>();
-    m_piratesById = AVLTree<Pirate*>();
+    m_shipsById = AVLTree<Ship*,Ship::Comparator>();
+    m_piratesById = AVLTree<Pirate*,Pirate::Comparator>();
 }
 
 Ocean::~Ocean() {}
@@ -162,7 +162,7 @@ StatusType Ocean::ships_battle(int shipId1, int shipId2) {
     return StatusType::SUCCESS;
 }
 
-Pirate* idToPointer(int id, const AVLNode<Pirate*>* current, const AVLTree<Pirate*>& tree) {
+Pirate* idToPointer(int id, const AVLNode<Pirate*>* current, const AVLTree<Pirate*,Pirate::Comparator>& tree) {
     if(current == nullptr || current->getData() == nullptr){
         return nullptr;
     }
@@ -175,7 +175,7 @@ Pirate* idToPointer(int id, const AVLNode<Pirate*>* current, const AVLTree<Pirat
     return idToPointer(id, current->getRight(), tree);
 }
 
-Ship* idToPointer(int id, const AVLNode<Ship*>* current, const AVLTree<Ship*>& tree) {
+Ship* idToPointer(int id, const AVLNode<Ship*>* current, const AVLTree<Ship*,Ship::Comparator>& tree) {
     if(current == nullptr || current->getData() == nullptr) {
         return nullptr;
     }
