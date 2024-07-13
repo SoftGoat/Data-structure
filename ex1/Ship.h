@@ -3,11 +3,15 @@
 
 #include "../AVLTree_boaz.h"
 #include <iostream>
-#include "Pirate.h"
 #include "wet1util.h"
 
-// Forward declaration of the Pirate class
-class Pirate;
+class Pirate; // Forward declaration of the Pirate class
+enum struct BattleResult {
+	WIN = 0,
+    LOSS = 1,
+    TIE = 2
+};
+
 
 /**
  * @class Ship
@@ -15,13 +19,20 @@ class Pirate;
  */
 class Ship {
 private:
-    int m_shipId;                /**< @brief Unique identifier for the ship */
-    int m_cannons;               /**< @brief Number of cannons on the ship */
-    int m_treasure;              /**< @brief Total treasure on the ship */
-    AVLTree<Pirate> m_pirates;   /**< @brief AVL tree of pirates on the ship */
-    Pirate* m_richestPirate;     /**< @brief Pointer to the richest pirate on the ship */
+private:
+    int m_shipId; // Unique identifier for the ship.
+    int m_cannons; // Number of cannons on the ship.
+    int m_treasureBonus; // Bonus treasure for the ship.
+    int m_crewSize; // Number of pirates on the ship.
+    AVLTree<Pirate*> m_pirates; // AVL tree of pirates on the ship.
+    Pirate* m_richestPirate; // Pointer to the richest pirate on the ship.
+    Pirate* m_pirateWithMostTimeServed; // Pointer to the pirate with the most time served on the ship.
+    Pirate* m_pirateWithLeastTimeServed; // Pointer to the pirate with the least time served on the ship.
+    AVLTree<Pirate*>* m_piratesOrderdById; // AVL tree of pirates on the ship ordered by ID.
+    AVLTree<Pirate*>* m_piratesOrderdByTreasure; // AVL tree of pirates on the ship ordered by treasure.
 
 public:
+   
     /**
      * @brief Constructor for the Ship class.
      * @param shipId Unique identifier for the ship.
@@ -29,54 +40,127 @@ public:
      */
     Ship(int shipId, int cannons);
 
-    /**
-     * @brief Adds a new ship with the given shipId and number of cannons.
-     * @param shipId Unique identifier for the ship.
-     * @param cannons Number of cannons on the ship.
-     * @return StatusType indicating the success or failure of the operation.
-     */
-    StatusType add_ship(int shipId, int cannons);
-
-    /**
-     * @brief Removes the ship with the given shipId.
-     * @param shipId Unique identifier for the ship to be removed.
-     * @return StatusType indicating the success or failure of the operation.
-     */
-    StatusType remove_ship(int shipId);
 
     /**
      * @brief Adds a pirate to the ship.
-     * @param pirateId Unique identifier for the pirate.
-     * @param shipId Unique identifier for the ship.
-     * @param treasure Initial amount of treasure for the pirate.
+     * @param pirate Pointer to the pirate to be added.
      * @return StatusType indicating the success or failure of the operation.
      */
-    StatusType add_pirate(int pirateId, int shipId, int treasure);
+    bool add_pirate(Pirate* pirate);
+
+    /**
+     * @brief Gets the cannons of the ship.
+     * @return The number of cannons on the ship.
+     */
+    int getCannons() const;
+
+    /**
+     * @brief Gets the richest pirate on the ship.
+     * @return Pointer to the richest pirate on the ship.
+     */
+    Pirate* getRichestPirate() const;
+
+    /**
+     * @brief Gets the treasure of a pirate.
+     * @param pirateId Unique identifier for the pirate.
+     * @return The amount of treasure the pirate has.
+     */
+    int getPirateTreasure(int pirateId) const;
+
+    /**
+     * @brief Gets the pirate with the most time served on the ship.
+     * @return Pointer to the pirate with the most time served on the ship.
+     */
+    Pirate* getPirateWithMostTimeServed() const;
+
+    /**
+     * @brief Gets the pirate with the least time served on the ship.
+     * @return Pointer to the pirate with the least time served on the ship.
+     */
+    Pirate* getPirateWithLeastTimeServed() const;
+
+    /**
+     * @brief Gets the ship's unique identifier.
+     * @return The unique identifier of the ship.
+     */
+    int getShipId() const;
+
+    /**
+     * @brief ship is empty.
+     * @return true if the ship is empty, false otherwise.
+     */
+    bool empty() const;
+
+    /**
+     * @brief Gets the treasure of the ship.
+     * @return The total treasure on the ship.
+     */
+    int getTreasureBonus() const;
+
+    /**
+     * @brief Gets the unique identifier of the ship.
+     * @return The unique identifier of the ship.
+     */
+    int getId() const;
 
     /**
      * @brief Removes a pirate from the ship.
-     * @param pirateId Unique identifier for the pirate to be removed.
-     * @return StatusType indicating the success or failure of the operation.
+     * @param pirate Pointer to the pirate to be removed.
+     * @return true if the pirate was removed successfully, false otherwise.
      */
-    StatusType remove_pirate(int pirateId);
+    bool remove_pirate(Pirate* pirate);
 
     /**
      * @brief Handles treason between two ships.
-     * @param sourceShipId Unique identifier for the source ship.
-     * @param destShipId Unique identifier for the destination ship.
-     * @return StatusType indicating the success or failure of the operation.
+     * @param other Pointer to the ship to commit treason with.
+     * @return true if the operation was successful, false otherwise.
      */
-    StatusType treason(int sourceShipId, int destShipId);
+    bool treason(Ship* other);
 
     /**
      * @brief Updates the treasure of a pirate.
-     * @param pirateId Unique identifier for the pirate.
+     * @param pirate Pointer to the pirate to update.
      * @param change Amount to change the pirate's treasure by.
-     * @return StatusType indicating the success or failure of the operation.
+     * @return true if the operation was successful, false otherwise.
      */
-    StatusType update_pirate_treasure(int pirateId, int change);
+    bool update_pirate_treasure(Pirate* pirate, int change);
 
-    // Additional member functions for managing the ship and pirates can be added here
+    /**
+     * @brief Gets the number of pirates on the ship.
+     * @return The number of pirates on the ship.
+     */
+    int getCrewSize() const;
+
+    /**
+     * @brief Battle between two ships.
+     * @param other Pointer to the ship to battle with.
+     * @return BattleResult indicating the outcome of the battle.
+     */
+    BattleResult battle(Ship* other);
+
+    /**
+     * @brief Destructor for the Ship class.
+     */
+    ~Ship();
+
+    /**
+     * @brief Sets the treasure bonus of the ship.
+     * @param treasure The new treasure bonus.
+     */
+    void setTreasureBonus(int treasure);
+
+    /**
+     * @brief Gets the AVL tree of pirates on the ship.
+     * @return Pointer to the AVL tree of pirates on the ship.
+     */
+    AVLTree<Pirate*>* getPirates();
+
+    /**
+     * @brief Gets the AVL tree of pirates on the ship ordered by ID.
+     * @return Pointer to the AVL tree of pirates on the ship ordered by ID.
+     */
+    AVLTree<Pirate*>* getPiratesOrderdById();
 };
 
-#endif // SHIP_H
+
+#endif 
