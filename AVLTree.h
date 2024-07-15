@@ -4,6 +4,7 @@
 
 
 #include "AVLNode.h"
+#include <stdexcept>
 #include <iostream>
 template<class T, typename Comparator = typename T::Comparator>
 class AVLTree {
@@ -16,7 +17,7 @@ public:
 
     // Public methods for inserting, removing, searching, and printing the tree
     AVLNode<T>* insert(const T& val);
-    bool remove(const T& val);
+    bool remove(const T& val, bool deleteMem);
     AVLNode<T>* search(const T& val) const;
     void print() const;
     bool isEmpty() const;
@@ -30,12 +31,12 @@ public:
 
 private:
     // Private methods for various operations
-    void clearTree(AVLNode<T>* left, AVLNode<T>* right);
-    AVLNode<T>* BSTRemove(const T& val);          // Binary Search Tree removal
-    bool removeRotations(AVLNode<T>* node);       // Adjust tree rotations after removal
+    void clearTree(AVLNode<T>* node);
+    AVLNode<T>* BSTRemove(const T& val, bool deleteMem);          // Binary Search Tree removal
+    AVLNode<T>* BSTInsert(const T& val, AVLNode<T>* node);    // Binary Search Tree insertion
+    void removeRotations(AVLNode<T>* node);       // Adjust tree rotations after removal
     void printTree(AVLNode<T>* node, int space) const;        // Recursive print function
     AVLNode<T>* search(const T& val, AVLNode<T>* node) const; // Recursive search function
-    AVLNode<T>* BSTInsert(const T& val, AVLNode<T>* node);    // Binary Search Tree insertion
     void rotate(AVLNode<T>* node);                // Determine and apply the correct rotation
     void rotateLL(AVLNode<T>* node);              // Left-Left rotation
     void rotateLR(AVLNode<T>* node);              // Left-Right rotation
@@ -53,26 +54,18 @@ private:
 
 template<class T, typename Comparator>
 void AVLTree<T, Comparator>::clearTree() {
-    if(root == nullptr){
-        return;
-    }
-    clearTree(root->getLeft(), root->getRight());
-    delete root;
+    clearTree(root);
     root = nullptr;
     size = 0;
 }
 
 template<class T, typename Comparator>
-void AVLTree<T, Comparator>::clearTree(AVLNode<T>* left, AVLNode<T>* right){
-    if(left != nullptr){
-        clearTree(left->getLeft(), left->getRight());
-        delete left;
+void AVLTree<T, Comparator>::clearTree(AVLNode<T>* node){
+    if(node != nullptr){
+        clearTree(node->getLeft());
+        clearTree(node->getRight());
+        delete node;
     }
-    if(right != nullptr){
-        clearTree(right->getLeft(), right->getRight());
-        delete right;
-    }
-    return;
 }
 
 template<class T, typename Comparator>
@@ -97,7 +90,7 @@ template<class T, typename Comparator>
 T& AVLTree<T, Comparator>::findMinVal() const{
     AVLNode<T>* min_node = this->findMinNode();
     if(min_node == nullptr){
-        throw std::exception("Tree is empty");
+        throw std::exception();
     }
     return min_node->getData();
 }
@@ -106,7 +99,7 @@ template<class T, typename Comparator>
 T& AVLTree<T, Comparator>::findMaxVal() const{
     AVLNode<T>* max_node = this->findMaxNode();
     if(max_node == nullptr){
-        throw std::exception("Tree is empty");
+        throw std::exception();  
     }
     return max_node->getData();
 }
@@ -348,7 +341,7 @@ AVLNode<T>* AVLTree<T, Comparator>::search(const T& val, AVLNode<T>* node) const
  * Returns the parent of the removed node.
  */
 template<class T, typename Comparator>
-AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
+AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val, bool deleteMem) {
     AVLNode<T>* rm = this->search(val);
     if (rm == nullptr) { // The value is not in the tree.
         return nullptr;
@@ -360,7 +353,9 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
     }
     AVLNode<T>* right_son = rm->getRight();
     AVLNode<T>* left_son = rm->getLeft();
-    delete rm;
+    if(deleteMem){
+        delete rm;
+    }
 
     // Case 1: rm node is a leaf. Just delete it.
     if (left_son == nullptr && right_son == nullptr) {
@@ -384,6 +379,7 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
                 parent->setRight(right_son);
             }
         } else { // rm is the root
+            right_son->setParent(nullptr);
             root = right_son;
         }
         updateHeights(parent);
@@ -399,6 +395,7 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
                 parent->setRight(left_son);
             }
         } else { // rm is the root
+            left_son->setParent(nullptr);
             root = left_son;
         }
         updateHeights(parent);
@@ -498,23 +495,26 @@ AVLNode<T>* AVLTree<T, Comparator>::getLargestSon(AVLNode<T>* node)const{
  * Public remove method: removes a node with the given value and adjusts rotations.
  */
 template<class T, typename Comparator>
-bool AVLTree<T, Comparator>::remove(const T& val) {
-    return this->removeRotations(this->BSTRemove(val));
+bool AVLTree<T, Comparator>::remove(const T& val, bool deleteMem) {
+    if(this->search(val) == nullptr){
+        return false;
+    }
+    this->removeRotations(this->BSTRemove(val, deleteMem));
+    return true;
 }
 
 /*
  * Private method to adjust tree rotations after a removal.
  */
 template<class T, typename Comparator>
-bool AVLTree<T, Comparator>::removeRotations(AVLNode<T>* node) {
-    if (node == nullptr) {
-        return false;
+void AVLTree<T, Comparator>::removeRotations(AVLNode<T>* node) {
+    if (node == nullptr) { // Went through the whole tree.
+        return;
     }
     if (node->getBF() == 2 || node->getBF() == -2) {
         this->rotate(node);
     }
-    removeRotations(node->getParent());
-    return true;
+    removeRotations(node->getParent()); // Countinue the recursion upward.
 }
 
 #endif // AVLTREE_IMPL_H

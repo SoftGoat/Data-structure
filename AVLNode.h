@@ -6,6 +6,7 @@ class AVLNode{
     public:
     AVLNode(const T& val) : data(val), parent(nullptr) ,left_son(nullptr), right_son(nullptr) , height(0) {};
     const T& getData() const { return data; }; 
+    T& getData() { return data; }; 
     void setParent(AVLNode* node) { parent = node; };
     AVLNode* getParent() const { return parent; };
     void setLeft(AVLNode* node);
