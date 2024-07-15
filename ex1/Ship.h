@@ -25,13 +25,11 @@ private:
     int m_cannons; // Number of cannons on the ship.
     int m_treasureBonus; // Bonus treasure for the ship.
     int m_crewSize; // Number of pirates on the ship.
-    AVLTree<Pirate*,Pirate::Comparator> m_pirates; // AVL tree of pirates on the ship.
     Pirate* m_richestPirate; // Pointer to the richest pirate on the ship.
     Pirate* m_pirateWithMostTimeServed; // Pointer to the pirate with the most time served on the ship.
     Pirate* m_pirateWithLeastTimeServed; // Pointer to the pirate with the least time served on the ship.
-    AVLTree<Pirate*,Pirate::Comparator>* m_piratesOrderdById; // AVL tree of pirates on the ship ordered by ID.
-    AVLTree<Pirate*,Pirate::Comparator>* m_piratesOrderdByTreasure; // AVL tree of pirates on the ship ordered by treasure.
-    bool richPirateChange (Pirate* pirate); // check if the richest pirate need to be updated, true mean swap is happened false otherwise
+    AVLTree<Pirate*,Pirate::IdComparator>* m_piratesOrderdById; // AVL tree of pirates on the ship ordered by ID.
+    AVLTree<Pirate*,Pirate::TreasureComparator>* m_piratesOrderdByTreasure; // AVL tree of pirates on the ship ordered by treasure.
 
 public:
    
@@ -67,7 +65,7 @@ public:
      * @param pirateId Unique identifier for the pirate.
      * @return The amount of treasure the pirate has.
      */
-    int getPirateTreasure(int pirateId) const;
+    //int getPirateTreasure(int pirateId) const;
 
     /**
      * @brief Gets the pirate with the most time served on the ship.
@@ -120,14 +118,6 @@ public:
     bool treason(Ship* other);
 
     /**
-     * @brief Updates the treasure of a pirate.
-     * @param pirate Pointer to the pirate to update.
-     * @param change Amount to change the pirate's treasure by.
-     * @return true if the operation was successful, false otherwise.
-     */
-    bool update_pirate_treasure(Pirate* pirate, int change);
-
-    /**
      * @brief Gets the number of pirates on the ship.
      * @return The number of pirates on the ship.
      */
@@ -167,13 +157,13 @@ public:
      * @brief Gets the AVL tree of pirates on the ship.
      * @return Pointer to the AVL tree of pirates on the ship.
      */
-    AVLTree<Pirate*,Pirate::Comparator>* getPirates();
+    AVLTree<Pirate*,Pirate::IdComparator>* getPiratesOrderdById();
 
     /**
-     * @brief Gets the AVL tree of pirates on the ship ordered by ID.
-     * @return Pointer to the AVL tree of pirates on the ship ordered by ID.
+     * @brief Gets the AVL tree of pirates on the ship ordered by Treasure.
+     * @return Pointer to the AVL tree of pirates on the ship ordered by Treasure.
      */
-    AVLTree<Pirate*,Pirate::Comparator>* getPiratesOrderdById();
+    AVLTree<Pirate*,Pirate::TreasureComparator>* getPiratesOrderdByTreasure();
 
     struct Comparator {
         bool operator()(const Ship* lhs, const Ship* rhs) const {

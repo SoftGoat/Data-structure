@@ -24,7 +24,7 @@ AVLNode<Ship*>* Pirate::getShip() const {
 void Pirate::setNext(Pirate* next_pirate) {
     this->next_pirate = next_pirate;
     if(next_pirate != nullptr){
-    next_pirate->prev_pirate = this;
+        next_pirate->prev_pirate = this;
     }
 }
 
