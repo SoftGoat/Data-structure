@@ -70,10 +70,17 @@ public:
      */
     int getId() const;
 
-    // Comparator for Ship pointers
-    struct Comparator {
+    // Comparator by ID for Ship pointers 
+    struct IdComparator {
         bool operator()(const Pirate* lhs, const Pirate* rhs) const {
             return lhs->getId() < rhs->getId();
+        }
+    };
+
+    // Comparator by treasure for Ship pointers 
+    struct TreasureComparator {
+        bool operator()(const Pirate* lhs, const Pirate* rhs) const {
+            return lhs->getTreasure() < rhs->getTreasure();
         }
     };
 

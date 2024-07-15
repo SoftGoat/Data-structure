@@ -21,7 +21,7 @@
 class Ocean {
 private:
     AVLTree<Ship*,Ship::Comparator> m_shipsById;
-    AVLTree<Pirate*,Pirate::Comparator> m_piratesById;
+    AVLTree<Pirate*,Pirate::IdComparator> m_piratesById;
     
 public:
     // <DO-NOT-MODIFY> {

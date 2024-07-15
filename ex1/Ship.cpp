@@ -4,77 +4,100 @@
 Ship::Ship(int shipId, int cannons)
     : m_shipId(shipId), m_cannons(cannons), m_treasureBonus(0), m_crewSize(0), 
       m_richestPirate(nullptr), m_pirateWithMostTimeServed(nullptr), m_pirateWithLeastTimeServed(nullptr), 
-      m_piratesOrderdById(new AVLTree<Pirate*, Pirate::Comparator>()) {}
+      m_piratesOrderdById(new AVLTree<Pirate*, Pirate::IdComparator>()),
+      m_piratesOrderdByTreasure(new AVLTree<Pirate*, Pirate::TreasureComparator>()) {}
 
 Ship::~Ship() {
     delete m_piratesOrderdById;
 }
 
 bool Ship::add_pirate(Pirate* pirate) {
-    if (m_pirates.insert(pirate) == nullptr) {
+    if(pirate == nullptr){
         return false;
     }
-    pirate->setTreasure(pirate->getTreasure() + m_treasureBonus);
+
+    // Removing the cuurent treasureBonus so that when we remove the pirate from the ship -
+    // we will add the treasureBonus.
+    pirate->setTreasure(pirate->getTreasure() - m_treasureBonus);
+
+    // Insert new pirate to both trees.
+    if (m_piratesOrderdById->insert(pirate) == nullptr) {
+        return false;
+    }
+    if (m_piratesOrderdByTreasure->insert(pirate) == nullptr) {
+        m_piratesOrderdById->remove(pirate, false); // Remove from Id tree, without deleting the memory.
+        return false;
+    }
+
     if (m_crewSize == 0) {
         m_pirateWithMostTimeServed = pirate;
         m_pirateWithLeastTimeServed = pirate;
         m_richestPirate = pirate;
     } else {
         m_pirateWithLeastTimeServed->setNext(pirate);
+        pirate->setPrev(m_pirateWithLeastTimeServed);
         m_pirateWithLeastTimeServed = pirate;
     }
-    if (m_richestPirate == nullptr || pirate->getTreasure() > m_richestPirate->getTreasure()) {
+    // Update richest pirate if needed. 
+    if (pirate->getTreasure() > m_richestPirate->getTreasure()) {
         m_richestPirate = pirate;
     }
     m_crewSize++;
     return true;
 }
-
+ 
+/*
+    This function removes the pirate from the ship only.
+    It DO NOT deletes the pirate memory!
+*/
 bool Ship::remove_pirate(Pirate* pirate) {
-    if (m_crewSize == 0) {
+    // Check if the pirate is in the ship.
+    if(m_piratesOrderdById->search(pirate) == nullptr || m_piratesOrderdById->search(pirate) == nullptr){
         return false;
     }
-    if (pirate == m_pirateWithMostTimeServed) {
-        m_pirateWithMostTimeServed = pirate->getNext();
-    } else {
-        if (pirate->getPrev() != nullptr) {
-            pirate->getPrev()->setNext(pirate->getNext());
-        }
+    // The pirate is in the ship.
+    // We will remove him from the ship's pirate trees and update the relevant fields accordingly.
+
+    m_piratesOrderdById->remove(pirate, false); // Remove pirate without deleting his memory.
+    m_piratesOrderdByTreasure->remove(pirate, false);
+
+    // Update the Id tree so that it will keep the insert order correct.
+    Pirate* next_pirate = pirate->getNext();
+    Pirate* prev_pirate = pirate->getPrev();
+    if(next_pirate == nullptr){
+        // The pirate is the pirate with the least time served!
+        m_pirateWithLeastTimeServed = prev_pirate; // Set to the pirate inserted before pirate 
+        prev_pirate->setNext(nullptr);
     }
-    pirate->setTreasure(pirate->getTreasure() + m_treasureBonus); // return the treasure to the pirate
-    m_pirates.remove(pirate);
-    if (m_richestPirate == pirate) {
-        m_richestPirate = m_richestPirate->getNext(); // This line is risky. Need better way to find new richest pirate.
+    if(prev_pirate == nullptr){
+        // The pirate is the pirate with the most time served!
+        m_pirateWithMostTimeServed = next_pirate;
+        next_pirate->setPrev(nullptr);
     }
+
+    m_richestPirate = m_piratesOrderdByTreasure->findMaxVal();
+    m_crewSize--;
+
+    // Dispatch the pirate from the ship.
     pirate->setNext(nullptr);
     pirate->setPrev(nullptr);
-    m_crewSize--;
+    pirate->setShip(nullptr);
+    pirate->setTreasure(pirate->getTreasure() + m_treasureBonus);
+
     return true;
 }
 
 bool Ship::treason(Ship* other) {
-    if (m_crewSize == 0) {
-        return false;
-    }
-    Pirate* temp = m_pirateWithMostTimeServed;
-    temp->setTreasure(temp->getTreasure() + m_treasureBonus - other->getTreasureBonus());
-    if (!other->add_pirate(temp)) {
-        return false;
-    }
-    if (!remove_pirate(temp)) {
-        other->remove_pirate(temp); // if the remove failed?
-        return false;
-    }
-    return true;
-}
+    // We are assuming that the ship is not empty.
 
-bool Ship::update_pirate_treasure(Pirate* pirate, int change) {
-    AVLNode<Pirate*>* node = m_pirates.search(pirate);
-    if (node == nullptr) {
+    Pirate* temp = m_pirateWithMostTimeServed;
+    if (!this->remove_pirate(temp)) {
         return false;
     }
-    node->getData()->setTreasure(pirate->getTreasure() + change);
-    richPirateChange(node->getData());
+    if (!other->add_pirate(temp)) {
+        this->add_pirate(temp);
+        return false;
+    }
     return true;
 }
 
@@ -86,15 +109,11 @@ int Ship::getCannons() const {
     return m_cannons;
 }
 
-int Ship::getTreasureBonus() const {
-    return m_treasureBonus;
-}
-
 Pirate* Ship::getRichestPirate() const {
     return m_richestPirate;
 }
 
-AVLTree<Pirate*, Pirate::Comparator>* Ship::getPirates() {
+AVLTree<Pirate*, Pirate::IdComparator>* Ship::getPiratesOrderdById() {
     return m_piratesOrderdById;
 }
 
@@ -106,23 +125,47 @@ int Ship::getCrewSize() const {
     return m_crewSize;
 }
 
+int Ship::getTreasureBonus() const {
+    return m_treasureBonus;
+}
+
 void Ship::setTreasureBonus(int treasure) {
     m_treasureBonus = treasure;
 }
 
 bool Ship::setPirateTreasure(Pirate* pirate, int treasure) {
-    AVLNode<Pirate*>* node = m_pirates.search(pirate);
-    if (node == nullptr) {
+    // We will remove the pirate, update it treasure and then insert it.
+    // This will promise that all the ship fields will be correct.
+
+    if(this->remove_pirate(pirate) == false){ // The pirate is not in the ship
         return false;
     }
-    node->getData()->setTreasure(treasure);
-    richPirateChange(node->getData());
+
+    pirate->setTreasure(treasure + m_treasureBonus);
+
+    this->add_pirate(pirate);
     return true;
 }
 
-int Ship::getPirateTreasure(Pirate* pirate) const {
-    return pirate->getTreasure() + m_treasureBonus;
+int Ship::getShipId() const{
+    return m_shipId;
 }
+
+Pirate* Ship::getPirateWithMostTimeServed() const{
+    return m_pirateWithMostTimeServed;
+}
+
+Pirate* Ship::getPirateWithLeastTimeServed() const{
+    return m_pirateWithLeastTimeServed;
+}
+
+int Ship::getPirateTreasure(Pirate* pirate) const {
+    return pirate->getTreasure() + this->m_treasureBonus;
+}
+
+// int Ship::getPirateTreasure(int pirateId) const{
+//     return getPirateTreasure();
+// }
 
 BattleResult Ship::battle(Ship* other) {
     if (std::min(m_crewSize, m_cannons) > std::min(other->m_crewSize, other->m_cannons)) {
@@ -136,23 +179,4 @@ BattleResult Ship::battle(Ship* other) {
         return BattleResult::LOSS;
     }
     return BattleResult::TIE;
-}
-
-bool Ship::richPirateChange(Pirate* pirate) {
-    if (pirate == nullptr) {
-        return false;
-    }
-    if (m_richestPirate == pirate) {
-        return false;
-    }
-    if (pirate->getTreasure() > m_richestPirate->getTreasure()) {
-        if (pirate->getNext() != nullptr) {
-            pirate->getPrev()->setNext(pirate->getNext());
-        } else {
-            pirate->getPrev()->setNext(nullptr);
-        }
-        pirate->setNext(m_richestPirate);
-        m_richestPirate = pirate;
-    }
-    return true;
 }
