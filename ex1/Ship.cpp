@@ -83,10 +83,18 @@ bool Ship::remove_pirate(Pirate* pirate) {
         next_pirate->setPrev(nullptr);
     }
     else{
-        
+        // The pirate is "In the middle", therefore he is not the pirate with tht emost or the least time served.
+        prev_pirate->setNext(next_pirate);
+        next_pirate->setPrev(prev_pirate);
     }
 
-    m_richestPirate = m_piratesOrderdByTreasure->findMaxVal();
+    AVLNode<Pirate* >* richest_pirate_node = m_piratesOrderdByTreasure->findMaxNode();
+    if(richest_pirate_node != nullptr){
+        m_richestPirate = richest_pirate_node->getData();
+    }
+    else{
+        m_richestPirate = nullptr;
+    }
     m_crewSize--;
 
     // Dispatch the pirate from the ship.
