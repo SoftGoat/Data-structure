@@ -10,7 +10,10 @@ Ocean::Ocean() {
     m_piratesById = AVLTree<Pirate*,Pirate::IdComparator>();
 }
 
-Ocean::~Ocean() {}
+Ocean::~Ocean(){
+    m_shipsById.clearTree(true);
+    m_piratesById.clearTree(true);
+}
 
 StatusType Ocean::add_ship(int shipId, int cannons) {
     if(shipId <= 0 || cannons < 0){
@@ -33,9 +36,14 @@ StatusType Ocean::remove_ship(int shipId) {
         return StatusType::INVALID_INPUT;
     }
     Ship* ship = idToPointer(shipId, m_shipsById.getRoot(), m_shipsById);
-    if(ship == nullptr || !ship->empty() || !m_shipsById.remove(ship,true)){
+    if(ship == nullptr || !ship->empty()){
         return StatusType::FAILURE;
     }
+    if(!m_shipsById.remove(ship)){
+        return StatusType::ALLOCATION_ERROR;
+    }
+    // The above remove do not delete the ship, only the ships node.
+    delete ship;
     return StatusType::SUCCESS;
 }
 
@@ -77,11 +85,14 @@ StatusType Ocean::remove_pirate(int pirateId) {
     }
     
     Ship* ship = pirate->getShip()->getData();
-    if(!ship->remove_pirate(pirate)){
+    if(!ship->remove_pirate(pirate)){ // Remove the pirate from the ship, change next and prev pirate accordingly.
         m_piratesById.insert(pirate); // Return the pirate.
         return StatusType::FAILURE;
     }
-    m_piratesById.remove(pirate, true);
+    // We removed the pirate from the ship, and DID NOT free his memory.
+    // We will free it now, and romve the pirate form the pirates tree.
+    m_piratesById.remove(pirate);
+    delete pirate;
     return StatusType::SUCCESS;
 }
 
