@@ -40,16 +40,14 @@ bool Ship::add_pirate(Pirate* pirate) {
     } else {
         m_pirateWithLeastTimeServed->setNext(pirate);
         pirate->setPrev(m_pirateWithLeastTimeServed);
+        pirate->setNext(nullptr);
         m_pirateWithLeastTimeServed = pirate;
     }
     // Update richest pirate if needed. 
-<<<<<<< HEAD
-    if (pirate->getTreasure() > m_richestPirate->getTreasure()) {
+    if (pirate->getTreasure() > m_richestPirate->getTreasure() || 
+        (pirate->getTreasure() == m_richestPirate->getTreasure() && pirate->getId() > m_richestPirate->getId())) {
         m_richestPirate = pirate;
     }
-=======
-    m_richestPirate = m_piratesOrderdByTreasure->findMaxNode()->getData();
->>>>>>> c54389c3ddef98d0f9e5d67e2742ddaf6a39c260
     m_crewSize++;
     return true;
 }
@@ -67,11 +65,7 @@ bool Ship::remove_pirate(Pirate* pirate) {
     // We will remove him from the ship's pirate trees and update the relevant fields accordingly.
 
     m_piratesOrderdById->remove(pirate);
-<<<<<<< HEAD
     m_piratesOrderdByTreasure->remove(pirate);
-=======
-    m_piratesOrderdByTreasure->remove(pirate); // Remove the pirate from the treasure not by id, problem
->>>>>>> c54389c3ddef98d0f9e5d67e2742ddaf6a39c260
 
     // Update the Id tree so that it will keep the insert order correct.
     Pirate* next_pirate = pirate->getNext();
@@ -163,14 +157,17 @@ void Ship::setTreasureBonus(int treasure) {
 bool Ship::setPirateTreasure(Pirate* pirate, int treasure) {
     // We will remove the pirate, update it treasure and then insert it.
     // This will promise that all the ship fields will be correct.
-
+    if(pirate == nullptr){
+        return false;
+    }
+    AVLNode<Ship* >* pirate_ship = pirate->getShip();
     if(this->remove_pirate(pirate) == false){ // The pirate is not in the ship
         return false;
     }
-
     pirate->setTreasure(treasure + m_treasureBonus);
-
     this->add_pirate(pirate);
+    // Set the ship to the original ship.
+    pirate->setShip(pirate_ship);
     return true;
 }
 
