@@ -28,7 +28,7 @@ public:
     
     Ocean();
 
-    virtual ~Ocean();
+    ~Ocean();
     
     StatusType add_ship(int shipId, int cannons);
 

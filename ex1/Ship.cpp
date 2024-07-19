@@ -8,7 +8,11 @@ Ship::Ship(int shipId, int cannons)
       m_piratesOrderdByTreasure(new AVLTree<Pirate*, Pirate::TreasureComparator>()) {}
 
 Ship::~Ship() {
+    // Deleteing the tree without freeing the pirates memory.
+    m_piratesOrderdById->clearTree(false);
+    m_piratesOrderdByTreasure->clearTree(false);
     delete m_piratesOrderdById;
+    delete m_piratesOrderdByTreasure;
 }
 
 bool Ship::add_pirate(Pirate* pirate) {
@@ -25,7 +29,7 @@ bool Ship::add_pirate(Pirate* pirate) {
         return false;
     }
     if (m_piratesOrderdByTreasure->insert(pirate) == nullptr) {
-        m_piratesOrderdById->remove(pirate, false); // Remove from Id tree, without deleting the memory.
+        m_piratesOrderdById->remove(pirate); // Remove from Id tree, without deleting the memory.
         return false;
     }
 
@@ -58,8 +62,8 @@ bool Ship::remove_pirate(Pirate* pirate) {
     // The pirate is in the ship.
     // We will remove him from the ship's pirate trees and update the relevant fields accordingly.
 
-    m_piratesOrderdById->remove(pirate, false); // Remove pirate without deleting his memory.
-    m_piratesOrderdByTreasure->remove(pirate, false);
+    m_piratesOrderdById->remove(pirate);
+    m_piratesOrderdByTreasure->remove(pirate);
 
     // Update the Id tree so that it will keep the insert order correct.
     Pirate* next_pirate = pirate->getNext();
