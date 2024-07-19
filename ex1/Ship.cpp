@@ -68,15 +68,22 @@ bool Ship::remove_pirate(Pirate* pirate) {
     // Update the Id tree so that it will keep the insert order correct.
     Pirate* next_pirate = pirate->getNext();
     Pirate* prev_pirate = pirate->getPrev();
-    if(next_pirate == nullptr){
+    if(next_pirate == nullptr && prev_pirate == nullptr){
+        m_pirateWithLeastTimeServed = nullptr;
+        m_pirateWithMostTimeServed = nullptr;
+    }
+    else if(next_pirate == nullptr){
         // The pirate is the pirate with the least time served!
         m_pirateWithLeastTimeServed = prev_pirate; // Set to the pirate inserted before pirate 
         prev_pirate->setNext(nullptr);
     }
-    if(prev_pirate == nullptr){
+    else if(prev_pirate == nullptr){
         // The pirate is the pirate with the most time served!
         m_pirateWithMostTimeServed = next_pirate;
         next_pirate->setPrev(nullptr);
+    }
+    else{
+        
     }
 
     m_richestPirate = m_piratesOrderdByTreasure->findMaxVal();
