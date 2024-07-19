@@ -26,6 +26,7 @@ StatusType Ocean::add_ship(int shipId, int cannons) {
         return StatusType::ALLOCATION_ERROR;
     }
     if(m_shipsById.insert(newShip) == nullptr){
+        delete newShip; // Delete the memory allocated previously.
         return StatusType::FAILURE;
     }
     return StatusType::SUCCESS;
@@ -69,6 +70,7 @@ StatusType Ocean::add_pirate(int pirateId, int shipId, int treasure) {
     }
     if (m_piratesById.insert(newPirate) == nullptr){
         ship->remove_pirate(newPirate);
+        delete newPirate;
         return StatusType::FAILURE;
     }
     newPirate->setShip(m_shipsById.search(ship)); 
@@ -126,7 +128,7 @@ StatusType Ocean::update_pirate_treasure(int pirateId, int change) {
     // We will update the pirate treasure through his ship to ensure correct structure -
     // of the ship and correct trasure val(because of the treasure-bonus of the ship).
     Ship* ship = pirate->getShip()->getData();
-    int newTreasure = ship->getPirateTreasure(pirate) + change;
+    int newTreasure = ship->getPirateTreasure(pirate) + change - ship->getTreasureBonus();
     ship->setPirateTreasure(pirate, newTreasure);
     return StatusType::SUCCESS;
 }
