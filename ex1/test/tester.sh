@@ -35,10 +35,17 @@ echo "{" > "$JSON_RESULT_FILE"
 
 # Main loop for running tests
 for ((testNumber=0; testNumber<=TESTS_TO_RUN; testNumber++)); do
+<<<<<<< HEAD
     inFile="fileTests/inFiles/test${testNumber}.in"
     resultFile="fileTests/outFiles/test${testNumber}.result"
     expectedFile="fileTests/outFiles/test${testNumber}.out"
     valgrindLogFile="fileTests/inFiles/test${testNumber}.valgrind_log"
+=======
+    inFile="inFiles/test${testNumber}.in"
+    resultFile="outFiles/test${testNumber}.result"
+    expectedFile="outFiles/test${testNumber}.out"
+    valgrindLogFile="inFiles/test${testNumber}.valgrind_log"
+>>>>>>> c54389c3ddef98d0f9e5d67e2742ddaf6a39c260
 
      echo -e "${BLUE}Running test $testNumber >>>${NC}"
 
@@ -82,7 +89,11 @@ for ((testNumber=0; testNumber<=TESTS_TO_RUN; testNumber++)); do
         echo -e "Memory Leak: ${GREEN}pass${NC}\n"
     else
         echo -e "Memory Leak: ${RED}fail${NC}\n"
+<<<<<<< HEAD
         cat "$valgrindLogFile"
+=======
+     #   cat "$valgrindLogFile" 
+>>>>>>> c54389c3ddef98d0f9e5d67e2742ddaf6a39c260
         ((FAILED_TESTS++))
         FAILED_TEST_NUMBERS+="$testNumber "
     fi

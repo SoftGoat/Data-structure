@@ -2,7 +2,11 @@
 #define SHIP_H
 
 
+<<<<<<< HEAD
 #include "AVLTree.h"
+=======
+#include "../AVLTree.h"
+>>>>>>> c54389c3ddef98d0f9e5d67e2742ddaf6a39c260
 #include <iostream>
 #include "wet1util.h"
 #include "Pirate.h"
