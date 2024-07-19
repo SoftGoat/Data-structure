@@ -10,8 +10,8 @@ fi
 TEST_NUMBER=$1
 
 # Define the paths to the expected output and the actual result files
-EXPECTED_OUTPUT_PATH="fileTests/outFiles/test${TEST_NUMBER}.out"
-ACTUAL_RESULT_PATH="fileTests/outFiles/test${TEST_NUMBER}.result"
+EXPECTED_OUTPUT_PATH="outFiles/test${TEST_NUMBER}.out"
+ACTUAL_RESULT_PATH="outFiles/test${TEST_NUMBER}.result"
 
 # Check if the expected output file exists
 if [ ! -f "$EXPECTED_OUTPUT_PATH" ]; then

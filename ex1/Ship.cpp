@@ -43,9 +43,7 @@ bool Ship::add_pirate(Pirate* pirate) {
         m_pirateWithLeastTimeServed = pirate;
     }
     // Update richest pirate if needed. 
-    if (pirate->getTreasure() > m_richestPirate->getTreasure()) {
-        m_richestPirate = pirate;
-    }
+    m_richestPirate = m_piratesOrderdByTreasure->findMaxNode()->getData();
     m_crewSize++;
     return true;
 }
@@ -63,7 +61,7 @@ bool Ship::remove_pirate(Pirate* pirate) {
     // We will remove him from the ship's pirate trees and update the relevant fields accordingly.
 
     m_piratesOrderdById->remove(pirate);
-    m_piratesOrderdByTreasure->remove(pirate);
+    m_piratesOrderdByTreasure->remove(pirate); // Remove the pirate from the treasure not by id, problem
 
     // Update the Id tree so that it will keep the insert order correct.
     Pirate* next_pirate = pirate->getNext();

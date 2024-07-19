@@ -185,11 +185,15 @@ template<class T, typename Comparator>
 AVLNode<T>* AVLTree<T, Comparator>::insert(const T& val) {
     AVLNode<T>* new_node;
     this->size++;
-    new_node = BSTInsert(val, root);
-    if (!new_node) { // If the node is already in the tree, do not insert it!
+    /*if(search(val) != nullptr){ // If the value is already in the tree, do not insert it!
         this->size--; // Keep the size of the tree the same.
         return nullptr;
-    }
+    }*/
+    new_node = BSTInsert(val, root);
+   /* if (new_node == nullptr) { // 
+        this->size--; // Keep the size of the tree the same.
+        return nullptr;
+    }*/
     // Value added to tree as a normal Binary Search Tree.
     // Do the necessary adjustments for an AVL tree.
     AVLNode<T>* v = new_node;

@@ -1,6 +1,6 @@
 #ifndef PIRATE_HW1
 #define PIRATE_HW1
-#include "AVLTree.h"
+#include "../AVLTree.h"
 class Ship; // Forward declaration of the Ship class
 
 
@@ -80,6 +80,9 @@ public:
     // Comparator by treasure for Ship pointers. 
     struct TreasureComparator {
         bool operator()(const Pirate* lhs, const Pirate* rhs) const {
+            if(lhs->getTreasure() == rhs->getTreasure()) {
+                return lhs->getId() < rhs->getId();
+            }
             return lhs->getTreasure() < rhs->getTreasure();
         }
     };
