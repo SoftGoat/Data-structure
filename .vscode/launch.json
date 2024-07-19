@@ -2,13 +2,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Program",
-      "type": "lldb",
+      "name": "(gdb) Launch",
+      "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/ex1/test/main_test",
-      "args": [],
+      "program": "${fileDirname}/a.out",
+      "args": [
+        "<",
+        "${fileDirname}/test1.in"
+      ],
       "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
+      "cwd": "${fileDirname}",
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
@@ -19,15 +22,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "build",
-      "miDebuggerPath": "/usr/bin/gdb",
-      "logging": {
-        "trace": true,
-        "traceResponse": true,
-        "engineLogging": true,
-        "programOutput": true,
-        "exceptions": true
-      }
+      "preLaunchTask": "C/C++: g++ build active file"
     },
     {
       "name": "C/C++ Runner: Debug Session",
