@@ -107,9 +107,11 @@ StatusType Ocean::treason(int sourceShipId, int destShipId) {
     if(sourceShip == nullptr || destShip == nullptr || sourceShip->empty()){
         return StatusType::FAILURE;
     }
+    Pirate* oldestPirate = sourceShip -> getPirateWithMostTimeServed();
     if(!sourceShip->treason(destShip)){
         return StatusType::FAILURE;
     }
+    oldestPirate->setShip(m_shipsById.search(destShip));
     return StatusType::SUCCESS;
 }
 
