@@ -367,10 +367,12 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
             } else {
                 parent->setRight(nullptr);
             }
+        } else { // rm is the root
+            root = nullptr;
         }
+        delete rm;
         updateHeights(parent);
         this->size--;
-        delete rm;
         return parent;
     }
     // Case 2.1: rm node has only one child and it is the right child.
@@ -382,12 +384,12 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
                 parent->setRight(right_son);
             }
         } else { // rm is the root
-            right_son->setParent(nullptr);
             root = right_son;
         }
+        right_son->setParent(parent);
+        delete rm;
         updateHeights(parent);
         this->size--;
-        delete rm;
         return parent;
     }
     // Case 2.2: rm node has only one child and it is the left child.
@@ -399,18 +401,19 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
                 parent->setRight(left_son);
             }
         } else { // rm is the root
-            left_son->setParent(nullptr);
             root = left_son;
         }
+        left_son->setParent(parent);
+        delete rm;
         updateHeights(parent);
         this->size--;
-        delete rm;
         return parent;
     }
     // Case 3: rm node has two children.
     else {
         AVLNode<T>* replace_node = getSmallestSon(right_son);
-        AVLNode<T>* replace_node_parent = replace_node->getParent(); // We will use this node to update the heights after the removal.
+        AVLNode<T>* replace_node_parent = replace_node->getParent();
+
         // Update replace node as the new child of parent node.
         if (parent != nullptr) {
             if (is_left) {
@@ -421,23 +424,28 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
         } else { // rm is the root
             root = replace_node;
         }
-        // Separate replace node from its parent only if it is not the right child of rm.
-        // Update the right child of replace node only if it isn't the right child itself.
+
         if (replace_node != right_son) {
-            replace_node_parent->setLeft(nullptr);
+            replace_node_parent->setLeft(replace_node->getRight());
+            if (replace_node->getRight() != nullptr) {
+                replace_node->getRight()->setParent(replace_node_parent);
+            }
             replace_node->setRight(right_son);
+            right_son->setParent(replace_node);
         }
-        replace_node->setParent(parent); // UNececaery beacuse already done in set right
+
+        replace_node->setParent(parent);
         replace_node->setLeft(left_son);
-        // Update the heights of the affected nodes.
-        if (replace_node_parent == rm) {
-            // If the parent of replace_node was rm, we will just change the height of replace_node
-            replace_node->setHeight(left_son->getHeight() + 1);
-        } else { // If not, we will go through the tree from the node we changed upward and change each node's height.
+        left_son->setParent(replace_node);
+
+        delete rm;
+
+        if (replace_node_parent != rm) {
             updateHeights(replace_node_parent);
+        } else {
+            updateHeights(replace_node);
         }
         this->size--;
-        delete rm;
         return parent;
     }
 }
