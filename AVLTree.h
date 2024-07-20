@@ -341,11 +341,6 @@ AVLNode<T>* AVLTree<T, Comparator>::search(const T& val, AVLNode<T>* node) const
     return node; // val == node->getData().
 }
 
-
-/*
- * Private Binary Search Tree removal method.
- * Returns the parent of the removed node.
- */
 template<class T, typename Comparator>
 AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
     AVLNode<T>* rm = this->search(val);
@@ -450,6 +445,108 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
         return parent;
     }
 }
+
+
+/*
+ * Private Binary Search Tree removal method.
+ * Returns the parent of the removed node.
+ */
+// template<class T, typename Comparator>
+// AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
+//     AVLNode<T>* rm = this->search(val);
+//     if (rm == nullptr) { // The value is not in the tree.
+//         return nullptr;
+//     }
+//     AVLNode<T>* parent = rm->getParent();
+//     bool is_left = false;
+//     if (parent != nullptr) {
+//         is_left = (parent->getLeft() == rm);
+//     }
+//     AVLNode<T>* right_son = rm->getRight();
+//     AVLNode<T>* left_son = rm->getLeft();
+
+//     // Case 1: rm node is a leaf. Just delete it.
+//     if (left_son == nullptr && right_son == nullptr) {
+//         if (parent != nullptr) {
+//             if (is_left) {
+//                 parent->setLeft(nullptr);
+//             } else {
+//                 parent->setRight(nullptr);
+//             }
+//         }
+//         updateHeights(parent);
+//         this->size--;
+//         delete rm;
+//         return parent;
+//     }
+//     // Case 2.1: rm node has only one child and it is the right child.
+//     else if (left_son == nullptr && right_son != nullptr) {
+//         if (parent != nullptr) {
+//             if (is_left) {
+//                 parent->setLeft(right_son);
+//             } else {
+//                 parent->setRight(right_son);
+//             }
+//         } else { // rm is the root
+//             right_son->setParent(nullptr);
+//             root = right_son;
+//         }
+//         updateHeights(parent);
+//         this->size--;
+//         delete rm;
+//         return parent;
+//     }
+//     // Case 2.2: rm node has only one child and it is the left child.
+//     else if (left_son != nullptr && right_son == nullptr) {
+//         if (parent != nullptr) {
+//             if (is_left) {
+//                 parent->setLeft(left_son);
+//             } else {
+//                 parent->setRight(left_son);
+//             }
+//         } else { // rm is the root
+//             left_son->setParent(nullptr);
+//             root = left_son;
+//         }
+//         updateHeights(parent);
+//         this->size--;
+//         delete rm;
+//         return parent;
+//     }
+//     // Case 3: rm node has two children.
+//     else {
+//         AVLNode<T>* replace_node = getSmallestSon(right_son);
+//         AVLNode<T>* replace_node_parent = replace_node->getParent(); // We will use this node to update the heights after the removal.
+//         // Update replace node as the new child of parent node.
+//         if (parent != nullptr) {
+//             if (is_left) {
+//                 parent->setLeft(replace_node);
+//             } else {
+//                 parent->setRight(replace_node);
+//             }
+//         } else { // rm is the root
+//             root = replace_node;
+//         }
+//         // Separate replace node from its parent only if it is not the right child of rm.
+//         // Update the right child of replace node only if it isn't the right child itself.
+//         if (replace_node != right_son) {
+//             replace_node_parent->setLeft(nullptr);
+//             replace_node->setRight(right_son);
+//         }
+//         replace_node->setParent(parent); // UNececaery beacuse already done in set right
+//         replace_node->setLeft(left_son);
+//         // Update the heights of the affected nodes.
+//         if (replace_node_parent == rm) {
+//             // If the parent of replace_node was rm, we will just change the height of replace_node
+//             replace_node->setHeight(left_son->getHeight() + 1);
+//         } else { // If not, we will go through the tree from the node we changed upward and change each node's height.
+//             updateHeights(replace_node_parent);
+//         }
+//         this->size--;
+//         delete rm;
+//         return parent;
+//     }
+// }
 
 /*
  * Private method to update heights of the nodes.
