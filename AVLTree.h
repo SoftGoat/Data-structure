@@ -358,7 +358,6 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
     }
     AVLNode<T>* right_son = rm->getRight();
     AVLNode<T>* left_son = rm->getLeft();
-    delete rm;
 
     // Case 1: rm node is a leaf. Just delete it.
     if (left_son == nullptr && right_son == nullptr) {
@@ -371,6 +370,7 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
         }
         updateHeights(parent);
         this->size--;
+        delete rm;
         return parent;
     }
     // Case 2.1: rm node has only one child and it is the right child.
@@ -387,6 +387,7 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
         }
         updateHeights(parent);
         this->size--;
+        delete rm;
         return parent;
     }
     // Case 2.2: rm node has only one child and it is the left child.
@@ -403,6 +404,7 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
         }
         updateHeights(parent);
         this->size--;
+        delete rm;
         return parent;
     }
     // Case 3: rm node has two children.
@@ -424,8 +426,6 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
         if (replace_node != right_son) {
             replace_node_parent->setLeft(nullptr);
             replace_node->setRight(right_son);
-        } else {
-            replace_node->setRight(nullptr);
         }
         replace_node->setParent(parent); // UNececaery beacuse already done in set right
         replace_node->setLeft(left_son);
@@ -437,6 +437,7 @@ AVLNode<T>* AVLTree<T, Comparator>::BSTRemove(const T& val) {
             updateHeights(replace_node_parent);
         }
         this->size--;
+        delete rm;
         return parent;
     }
 }
