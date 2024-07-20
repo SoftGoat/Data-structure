@@ -341,6 +341,7 @@ AVLNode<T>* AVLTree<T, Comparator>::search(const T& val, AVLNode<T>* node) const
     return node; // val == node->getData().
 }
 
+
 /*
  * Private Binary Search Tree removal method.
  * Returns the parent of the removed node.
