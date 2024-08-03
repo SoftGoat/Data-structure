@@ -26,13 +26,21 @@ private:
      */
     void resize();
 
+    /**
+     * @brief Returns the closest prime number greater than n.
+     * 
+     * @param n The number to find the closest prime greater than.
+     * @return The closest prime number greater than n.
+     */
+    int closestPrime(int n);
+
 public:
     /**
      * @brief Constructs a new DynamicArray object with an initial capacity.
      * 
      * @param initialCapacity The initial capacity of the array (default is 2).
      */
-    DynamicArray(size_t initialCapacity = 2);
+    DynamicArray(size_t initialCapacity = 101);
 
     /**
      * @brief Destroys the DynamicArray object.
@@ -102,10 +110,25 @@ DynamicArray<T>::~DynamicArray() {
     delete[] data;
 }
 
+template <typename T>
+int DynamicArray<T>::closestPrime(int n) {
+        int i, j;
+        for (i = n + 1; ; i++) {
+            for (j = 2; j < math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    break;
+                }
+            }
+            if (j == i) {
+                return i;
+            }
+        }
+};
+
 // Resize the array by doubling its capacity
 template <typename T>
 void DynamicArray<T>::resize() {
-    capacity *= 2;  // Double the capacity
+    capacity = closestPrime(capacity * 2);  // Double the capacity
     T* newData = new T[capacity];  // Allocate new array
 
     // Copy existing elements to the new array
