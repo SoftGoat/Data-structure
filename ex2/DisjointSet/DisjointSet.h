@@ -4,13 +4,25 @@
 #include "HashTable.h"
 #include "UpTreeNode.h"
 #include "UpTree.h"
+#include <stdexcept>
+
+/**
+ * @brief Default hash function for integers using double hashing.
+ */
+struct IntHash {
+    size_t operator()(int key, size_t i, int m) const {
+        size_t h1 = key % m;          // Primary hash function
+        size_t h2 = 1 + (key % (m-1)); // Secondary hash function for step size
+        return (h1 + i * h2) % m;
+    }
+};
 
 /**
  * @brief A disjoint set data structure using a hash table and up-trees.
  * 
  * This structure allows efficient union and find operations, using a hash table for fast element lookup.
  */
-template <typename T, typename HashFunc>
+template <typename T, typename HashFunc = IntHash>
 class DisjointSet {
 private:
     HashTable<T, Node<T>*, HashFunc> elementMap; ///< Hash table mapping elements to up-tree nodes
@@ -23,7 +35,7 @@ public:
      * @param initialCapacity The initial capacity for the hash table.
      * @param hashFunc The custom hash function for the hash table.
      */
-    DisjointSet(size_t initialCapacity, HashFunc hashFunc);
+    DisjointSet(size_t initialCapacity, HashFunc hashFunc = HashFunc());
 
     /**
      * @brief Adds an element to the disjoint set.
@@ -66,8 +78,6 @@ public:
 
 // Implementation of DisjointSet
 
-#include <stdexcept>
-
 // Constructor
 template <typename T, typename HashFunc>
 DisjointSet<T, HashFunc>::DisjointSet(size_t initialCapacity, HashFunc hashFunc)
@@ -101,11 +111,12 @@ void DisjointSet<T, HashFunc>::unite(const T& element1, const T& element2) {
     Node<T>* node1 = nullptr;
     Node<T>* node2 = nullptr;
 
-    if (!elementMap.contains(element1) || !(node1 = elementMap.get(element1)) ||
-        !elementMap.contains(element2) || !(node2 = elementMap.get(element2))) {
+    if (!(elementMap.contains(element1) && elementMap.contains(element2))) {
         throw std::invalid_argument("One or both elements not found in the disjoint set.");
     }
 
+    node1 = elementMap.get(element1);
+    node2 = elementMap.get(element2);
     upTree.unite(node1, node2);
 }
 
@@ -115,10 +126,12 @@ bool DisjointSet<T, HashFunc>::connected(const T& element1, const T& element2) {
     Node<T>* node1 = nullptr;
     Node<T>* node2 = nullptr;
 
-    if (!elementMap.contains(element1) || !(node1 = elementMap.get(element1)) ||
-        !elementMap.contains(element2) || !(node2 = elementMap.get(element2))) {
+    if (!elementMap.contains(element1) || !elementMap.contains(element2)) {
         return false;
     }
+
+    node1 = elementMap.get(element1);
+    node2 = elementMap.get(element2);
 
     return upTree.findExternal(node1) == upTree.findExternal(node2);
 }

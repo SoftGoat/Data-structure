@@ -5,6 +5,21 @@
 #include <iostream> // For std::cout, std::endl
 #include "DynamicArray.h"
 
+int closestPrime(int n) {
+    for (int i = n + 1;; ++i) {
+        bool isPrime = true;
+        for (int j = 2; j <= std::sqrt(i); ++j) {
+            if (i % j == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            return i;
+        }
+    }
+}
+
 /**
  * @brief A hash table implementation that maps keys to unique values using double hashing.
  * 
@@ -20,6 +35,7 @@ private:
         bool isDeleted; ///< Flag to indicate if the slot is deleted
 
         HashEntry() : isOccupied(false), isDeleted(false) {}
+        HashEntry(const KeyType& key, const ValueType& value) : key(key), value(value), isOccupied(true), isDeleted(false) {}
     };
 
     DynamicArray<HashEntry> table; ///< Dynamic array storing hash table entries
@@ -97,9 +113,7 @@ public:
     void printTable() const;
 };
 
-
 // Implementation of HashTable
-
 
 // Constructor
 template <typename KeyType, typename ValueType, typename HashFunc>
@@ -111,27 +125,24 @@ template <typename KeyType, typename ValueType, typename HashFunc>
 size_t HashTable<KeyType, ValueType, HashFunc>::hash(const KeyType& key, size_t i) const {
     // Use two hash functions: h1 and h2, represented by hashFunc
     // h1 determines the starting slot, h2 determines the step size
-    return (hashFunc(key, 0) + i * hashFunc(key, 1)) % table.getCapacity();
+    return (hashFunc(key, 0, table.getCapacity()) + i * hashFunc(key, 1, table.getCapacity())) % table.getCapacity();
 }
 
 // Resize the hash table when load factor exceeds the threshold
 template <typename KeyType, typename ValueType, typename HashFunc>
 void HashTable<KeyType, ValueType, HashFunc>::resize() {
-    size_t newCapacity = table.getCapacity() * 2;
+    size_t newCapacity = closestPrime(table.getCapacity() * 2);
     DynamicArray<HashEntry> newTable(newCapacity);
 
     // Rehash all existing keys
     for (size_t i = 0; i < table.getCapacity(); ++i) {
-        if (table.get(i).isOccupied && !table.get(i).isDeleted) {
+        if (table.isOccupied(i) && !table.get(i).isDeleted) {
             KeyType key = table.get(i).key;
             ValueType value = table.get(i).value;
             for (size_t j = 0; j < newCapacity; ++j) {
-                size_t index = (hashFunc(key, 0) + j * hashFunc(key, 1)) % newCapacity;
-                HashEntry& entry = newTable.get(index);
-                if (!entry.isOccupied) {
-                    entry.key = key;
-                    entry.value = value;
-                    entry.isOccupied = true;
+                size_t index = (hashFunc(key, 0, table.getCapacity()) + j * hashFunc(key, 1, table.getCapacity())) % newCapacity;
+                if (!newTable.isOccupied(index)) {
+                    newTable.addAt(HashEntry(key, value), index);
                     break;
                 }
             }
@@ -150,7 +161,13 @@ bool HashTable<KeyType, ValueType, HashFunc>::insert(const KeyType& key, const V
 
     for (size_t i = 0; i < table.getCapacity(); ++i) {
         size_t index = hash(key, i);
-        HashEntry& entry = table.get(index); // This should be valid now
+        if (index >= table.getSize()) {
+            table.addAt(HashEntry(key, value), index);
+            ++size;
+            return true;
+        }
+
+        HashEntry& entry = table.get(index);
         if (!entry.isOccupied || entry.isDeleted) {
             entry.key = key;
             entry.value = value;
@@ -165,7 +182,6 @@ bool HashTable<KeyType, ValueType, HashFunc>::insert(const KeyType& key, const V
     return false; // Should not reach here if resizing works correctly
 }
 
-
 // Remove a key from the hash table
 template <typename KeyType, typename ValueType, typename HashFunc>
 bool HashTable<KeyType, ValueType, HashFunc>::remove(const KeyType& key) {
@@ -174,9 +190,11 @@ bool HashTable<KeyType, ValueType, HashFunc>::remove(const KeyType& key) {
         HashEntry& entry = table.get(index);
         if (entry.isOccupied && entry.key == key) {
             entry.isDeleted = true;
+            entry.isOccupied = false;
+            table.removeAt(index);
             --size;
             return true; // Key removed
-        } else if (!entry.isOccupied) {
+        } else if (!entry.isOccupied && !entry.isDeleted) {
             return false; // Slot is empty, key not found
         }
     }
@@ -186,8 +204,11 @@ bool HashTable<KeyType, ValueType, HashFunc>::remove(const KeyType& key) {
 // Check if a key exists in the hash table
 template <typename KeyType, typename ValueType, typename HashFunc>
 bool HashTable<KeyType, ValueType, HashFunc>::contains(const KeyType& key) const {
-    for (size_t i = 0; i < table.getSize(); ++i) {
+    for (size_t i = 0; i < table.getCapacity(); ++i) {
         size_t index = hash(key, i);
+        if (index >= table.getCapacity()) {
+            return false;
+        }
         const HashEntry& entry = table.get(index);
         if (entry.isOccupied && entry.key == key) {
             return true; // Key found

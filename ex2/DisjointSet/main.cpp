@@ -1,29 +1,29 @@
+#include <iostream>
 #include "DisjointSet.h"
 
-// Custom hash function for integers
-struct IntHash {
-    size_t operator()(int key, size_t i) const {
-        size_t h1 = key % 10;  // Primary hash function
-        size_t h2 = 1 + (key % 9); // Secondary hash function for step size
-        return i == 0 ? h1 : h2;
-    }
-};
-
 int main() {
-    // Create a disjoint set with an initial capacity
-    DisjointSet<int, IntHash> ds(10, IntHash());
+    // Create a disjoint set for integers with initial capacity of 10
+    DisjointSet<int> ds(10);
 
     // Add elements to the disjoint set
     ds.makeSet(1);
     ds.makeSet(2);
     ds.makeSet(3);
+    ds.makeSet(4);
 
-    // Unite sets
+    // Unite some sets
     ds.unite(1, 2);
+    ds.unite(3, 4);
 
-    // Check connectivity
-    std::cout << "1 and 2 connected: " << ds.connected(1, 2) << std::endl; // Should be true
-    std::cout << "2 and 3 connected: " << ds.connected(2, 3) << std::endl; // Should be false
+    // Check if elements are connected
+    std::cout << "1 and 2 connected? " << (ds.connected(1, 2) ? "Yes" : "No") << std::endl;
+    std::cout << "1 and 3 connected? " << (ds.connected(1, 3) ? "Yes" : "No") << std::endl;
+
+    // Unite all elements into a single set
+    ds.unite(2, 3);
+
+    // Check connections again
+    std::cout << "1 and 3 connected after union? " << (ds.connected(1, 3) ? "Yes" : "No") << std::endl;
 
     return 0;
 }
