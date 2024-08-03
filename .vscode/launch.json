@@ -7,8 +7,6 @@
       "request": "launch",
       "program": "${fileDirname}/a.out",
       "args": [
-        "<",
-        "${fileDirname}/test1.in"
       ],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
@@ -32,7 +30,7 @@
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": "/workspaces/Data-structure/ex1",
-      "program": "/workspaces/Data-structure/ex1/build/Debug/outDebug",
+      "program": "/workspaces/Data-structure/ex2/DisjointSet/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

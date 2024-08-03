@@ -12,8 +12,6 @@
 template <typename T>
 class UpTree {
 private:
-    Node<T>* root; ///< The root node of the up-tree
-
     /**
      * @brief Finds the root of the node with path compression.
      * 
@@ -26,26 +24,14 @@ private:
 
 public:
     /**
-     * @brief Constructs a new UpTree object with a single element.
-     * 
-     * @param data The element to be stored in the up-tree.
+     * @brief Constructs a new UpTree object.
      */
-    UpTree(const T& data);
+    UpTree();
 
     /**
      * @brief Destroys the UpTree, freeing allocated memory.
      */
     ~UpTree();
-
-    /**
-     * @brief Finds the root of the element x with path compression.
-     * 
-     * This operation returns the root of the set containing x.
-     * 
-     * @param node The node whose root is to be found.
-     * @return The root of the element x.
-     */
-    Node<T>* find(const T& x);
 
     /**
      * @brief Unites the sets containing elements x and y.
@@ -66,20 +52,23 @@ public:
      * @return True if x and y are in the same set, false otherwise.
      */
     bool connected(Node<T>* x, Node<T>* y);
+
+    // Expose find method for external use
+    Node<T>* findExternal(Node<T>* node);
 };
 
 // Implementation of UpTree
 
 // Constructor
 template <typename T>
-UpTree<T>::UpTree(const T& data) {
-    root = new Node<T>(data);
+UpTree<T>::UpTree() {
+    // Initialization if needed
 }
 
 // Destructor
 template <typename T>
 UpTree<T>::~UpTree() {
-    delete root;
+    // Free resources if necessary
 }
 
 // Find with path compression
@@ -91,10 +80,10 @@ Node<T>* UpTree<T>::find(Node<T>* node) {
     return node->parent;
 }
 
-// Find by value
+// Expose find method for external use
 template <typename T>
-Node<T>* UpTree<T>::find(const T& x) {
-    return find(root); // Starting from root to find x
+Node<T>* UpTree<T>::findExternal(Node<T>* node) {
+    return find(node);
 }
 
 // Union by size

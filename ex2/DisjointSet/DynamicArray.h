@@ -3,6 +3,7 @@
 
 #include <cstddef>   // For size_t
 #include <stdexcept> // For std::out_of_range
+#include <cmath> // Include for sqrt function
 
 /**
  * @brief A dynamic array class that automatically resizes as needed.
@@ -54,16 +55,25 @@ public:
      * 
      * @param element The element to add to the array.
      */
-    void add(T element);
+    void add(const T& element);
 
     /**
      * @brief Accesses the element at a given index.
      * 
      * @param index The index of the element to access.
-     * @return The element at the specified index.
+     * @return A non-const reference to the element at the specified index.
      * @throws std::out_of_range if the index is out of bounds.
      */
-    T get(size_t index) const;
+    T& get(size_t index);
+
+    /**
+     * @brief Accesses the element at a given index.
+     * 
+     * @param index The index of the element to access.
+     * @return A const reference to the element at the specified index.
+     * @throws std::out_of_range if the index is out of bounds.
+     */
+    const T& get(size_t index) const;
 
     /**
      * @brief Returns the number of elements in the array.
@@ -114,7 +124,7 @@ template <typename T>
 int DynamicArray<T>::closestPrime(int n) {
         int i, j;
         for (i = n + 1; ; i++) {
-            for (j = 2; j < math.sqrt(i); j++) {
+            for (j = 2; j < std::sqrt(i); j++) {
                 if (i % j == 0) {
                     break;
                 }
@@ -143,20 +153,29 @@ void DynamicArray<T>::resize() {
 
 // Add an element to the dynamic array
 template <typename T>
-void DynamicArray<T>::add(T element) {
+void DynamicArray<T>::add(const T& element) {
     if (size == capacity) {
         resize();  // Resize if the array is full
     }
     data[size++] = element;  // Add element and increase size
 }
 
-// Access element at a given index
+// Access element at a given index (non-const version)
 template <typename T>
-T DynamicArray<T>::get(size_t index) const {
+T& DynamicArray<T>::get(size_t index) {
     if (index >= size) {
         throw std::out_of_range("Index out of range");
     }
-    return data[index];
+    return data[index]; // Return reference
+}
+
+// Access element at a given index (const version)
+template <typename T>
+const T& DynamicArray<T>::get(size_t index) const {
+    if (index >= size) {
+        throw std::out_of_range("Index out of range");
+    }
+    return data[index]; // Return const reference
 }
 
 // Return the number of elements in the array
