@@ -15,14 +15,23 @@
 #ifndef PIRATESA2_H_
 #define PIRATESA2_H_
 
+#include <memory>
 #include "wet2util.h"
+#include "DisjointSet.h" 
+#include "HashTable.h"
+#include "fleet.h"
+#include "pirate.h"
 
 class oceans_t {
 private:
-	//
-	// Here you may add anything you want
-	//
-	
+    /**
+     *  @return pirate rank.
+     */
+    int get_pirate_rank(int pirateId) const;
+
+    DisjointSet<int, std::shared_ptr<fleet>> m_fleet;
+    HashTable<int, std::shared_ptr<pirate>> m_pirates;
+    
 public:
 	// <DO-NOT-MODIFY> {
 
