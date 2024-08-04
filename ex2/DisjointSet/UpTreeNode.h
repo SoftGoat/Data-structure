@@ -11,13 +11,14 @@ struct Node {
     T data;         ///< Data stored in the node
     Node* parent;   ///< Pointer to the parent node
     int size;       ///< Size of the tree if this node is a root
+    int rank;       ///< Rank of the node
 
     /**
      * @brief Constructs a new Node object.
      * 
      * @param value The data to be stored in the node.
      */
-    Node(const T& value) : data(value), parent(this), size(1) {}
+    Node(const T& value) : data(value), parent(this), size(1),rank(1) {}
 };
 
 #endif // UPTREENODE_H

@@ -53,6 +53,14 @@ public:
      */
     bool connected(Node<T>* x, Node<T>* y);
 
+    /**
+     * @brief Gets the rank of a node.
+     * 
+     * @param x The node to get the rank of.
+     * @return The rank of the node.
+     */
+    int getRank(Node<T>* x);
+
     // Expose find method for external use
     Node<T>* findExternal(Node<T>* node);
 };
@@ -99,10 +107,14 @@ void UpTree<T>::unite(Node<T>* x, Node<T>* y) {
     // Attach the smaller tree under the larger tree's root
     if (rootX->size < rootY->size) {
         rootX->parent = rootY;
+        rootX->rank += rootY->size;
         rootY->size += rootX->size;
+        
     } else {
         rootY->parent = rootX;
+        rootY->rank += rootX->size;
         rootX->size += rootY->size;
+        
     }
 }
 
@@ -110,6 +122,21 @@ void UpTree<T>::unite(Node<T>* x, Node<T>* y) {
 template <typename T>
 bool UpTree<T>::connected(Node<T>* x, Node<T>* y) {
     return find(x) == find(y);
+}
+
+// Get the rank of a node
+template <typename T>
+int UpTree<T>::getRank(Node<T>* x) {
+    int realRank = 1;
+    find(x); // Path compression
+    if(x->parent != x){ // should be deleted before submission
+     //   throw std::invalid_argument("problem with the path compression");
+    }
+    while (x->parent != x) {
+        realRank += x->rank;
+        x = x->parent;
+    }
+    return realRank;
 }
 
 #endif // UPTREE_H

@@ -6,7 +6,6 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-std=c++11",
-                "-DNDEBUG",
                 "-Wall",
                 "-g",
                 "*.cpp",

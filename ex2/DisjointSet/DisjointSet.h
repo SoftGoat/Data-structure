@@ -28,6 +28,7 @@ private:
     HashTable<T, Node<T>*, HashFunc> elementMap; ///< Hash table mapping elements to up-tree nodes
     UpTree<T> upTree; ///< UpTree structure to manage the disjoint set
 
+
 public:
     /**
      * @brief Constructs a new DisjointSet object with a given initial capacity.
@@ -74,6 +75,22 @@ public:
      * @return True if both elements are in the same set, false otherwise.
      */
     bool connected(const T& element1, const T& element2);
+
+    /**
+     * @brief Gets the size of the set containing the element.
+     * 
+     * @param element The element to check.
+     * @return The size of the set containing the element.
+     */
+    int getSize(int element);
+
+    /**
+     * @brief Gets the rank of the set containing the element.
+     * 
+     * @param element The element to check.
+     * @return The rank of the set containing the element.
+     */
+    int getRank(const T& element);
 };
 
 // Implementation of DisjointSet
@@ -102,7 +119,7 @@ T DisjointSet<T, HashFunc>::find(const T& element) {
         throw std::invalid_argument("Element not found in the disjoint set.");
     }
 
-    return upTree.findExternal(node)->data;
+    return upTree.findExternal(node)->data; // Return the data of the root node and not the node itself, also path compression
 }
 
 // Unites the sets containing two elements
@@ -133,7 +150,28 @@ bool DisjointSet<T, HashFunc>::connected(const T& element1, const T& element2) {
     node1 = elementMap.get(element1);
     node2 = elementMap.get(element2);
 
-    return upTree.findExternal(node1) == upTree.findExternal(node2);
+    return upTree.findExternal(node1) == upTree.findExternal(node2); // Check if the roots are the same, path compression
+}
+
+template <typename T, typename HashFunc>
+    int DisjointSet<T, HashFunc>::getSize(int element) {
+        Node<T>* node = nullptr;
+        if (!elementMap.contains(element) || !(node = elementMap.get(element))) {
+            throw std::invalid_argument("Element not found in the disjoint set.");
+        }
+
+        return upTree.findExternal(node)->size; // Return the size of the set, also path compression
+}
+
+// Gets the rank of the set containing the element
+template <typename T, typename HashFunc>
+int DisjointSet<T, HashFunc>::getRank(const T& element) {
+    Node<T>* node = nullptr;
+    if (!elementMap.contains(element) || !(node = elementMap.get(element))) {
+        throw std::invalid_argument("Element not found in the disjoint set.");
+    }
+
+    return upTree.getRank(node);
 }
 
 #endif // DISJOINTSET_H

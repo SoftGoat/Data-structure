@@ -18,6 +18,7 @@ private:
     size_t capacity;        ///< Current capacity of the array
     size_t size;            ///< Number of elements in the array
     bool* occupiedFlags;    ///< Array to keep track of which elements are occupied
+    static constexpr size_t INITIAL_CAPACITY = 101; ; ///< Initial capacity of the array
 
     /**
      * @brief Doubles the capacity of the array.
@@ -42,7 +43,7 @@ public:
      * 
      * @param initialCapacity The initial capacity of the array (default is 2).
      */
-    DynamicArray(size_t initialCapacity = 101);
+    DynamicArray(size_t initialCapacity = INITIAL_CAPACITY);
 
     /**
      * @brief Destroys the DynamicArray object.
