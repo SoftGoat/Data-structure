@@ -84,6 +84,9 @@ template <typename T>
 Node<T>* UpTree<T>::find(Node<T>* node) {
     if (node->parent != node) {
         node->parent = find(node->parent); // Path compression
+        if(node->parent->parent != node->parent){
+            node->rank += node->parent->rank;
+        }
     }
     return node->parent;
 }
@@ -91,6 +94,7 @@ Node<T>* UpTree<T>::find(Node<T>* node) {
 // Expose find method for external use
 template <typename T>
 Node<T>* UpTree<T>::findExternal(Node<T>* node) {
+
     return find(node);
 }
 
@@ -107,12 +111,12 @@ void UpTree<T>::unite(Node<T>* x, Node<T>* y) {
     // Attach the smaller tree under the larger tree's root
     if (rootX->size < rootY->size) {
         rootX->parent = rootY;
-        rootX->rank += rootY->size;
+        rootX->rank += rootY->size-1;
         rootY->size += rootX->size;
         
     } else {
         rootY->parent = rootX;
-        rootY->rank += rootX->size;
+        rootY->rank += rootX->size-1;
         rootX->size += rootY->size;
         
     }
@@ -129,9 +133,6 @@ template <typename T>
 int UpTree<T>::getRank(Node<T>* x) {
     int realRank = 1;
     find(x); // Path compression
-    if(x->parent != x){ // should be deleted before submission
-     //   throw std::invalid_argument("problem with the path compression");
-    }
     while (x->parent != x) {
         realRank += x->rank;
         x = x->parent;

@@ -149,10 +149,11 @@ bool DisjointSet<T, HashFunc>::connected(const T& element1, const T& element2) {
 
     node1 = elementMap.get(element1);
     node2 = elementMap.get(element2);
+    Node<T>* root1 = upTree.findExternal(node1); // Find the root of the set containing node1, also path compression
+    Node<T>* root2 = upTree.findExternal(node2); // Find the root of the set containing node2, also path compression
 
-    return upTree.findExternal(node1) == upTree.findExternal(node2); // Check if the roots are the same, path compression
+    return root1 == root2;
 }
-
 template <typename T, typename HashFunc>
     int DisjointSet<T, HashFunc>::getSize(int element) {
         Node<T>* node = nullptr;

@@ -194,11 +194,18 @@ void testRanks() {
     ds.unite(3, 4);
     ds.unite(1, 3); // Unite two sets with two elements each
 
+    printf("Rank of 1: %d\n", ds.getRank(1));
+    printf("Rank of 2: %d\n", ds.getRank(2));
+    printf("Rank of 3: %d\n", ds.getRank(3));
+    printf("Rank of 4: %d\n", ds.getRank(4));
     assert(ds.getRank(1) == 1); // Root's rank should still be 1
-    assert(ds.getRank(2) == 1); // 2 should have same rank as before
+    assert(ds.getRank(2) == 2); // 2 should be 2
+    assert(ds.getRank(3) == 3); // 3 should be 3
+    assert(ds.getRank(4) == 1); // 4 should be 1
+
 
     ds.unite(5, 1); // Add 5 to the bigger set
-    assert(ds.getRank(5) == 1); // Rank should be equal to the size of the set
+    assert(ds.getRank(5) == 5); // Rank should be equal to the size of the set
 
     std::cout << "testRanks passed!" << std::endl;
 }
@@ -223,6 +230,7 @@ void testComplexUnions() {
     ds.unite(5, 6);
     ds.unite(3, 4);
     ds.unite(1, 8);
+    ds.unite(10, 1);
 
     // Validate the connections
     for (size_t i = 1; i < elements.size(); ++i) {
