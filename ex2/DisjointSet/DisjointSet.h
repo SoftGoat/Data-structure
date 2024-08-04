@@ -22,12 +22,11 @@ struct IntHash {
  * 
  * This structure allows efficient union and find operations, using a hash table for fast element lookup.
  */
-template <typename T, typename HashFunc = IntHash>
+template <typename KeyType, typename ValueType ,typename HashFunc = IntHash>
 class DisjointSet {
 private:
-    HashTable<T, Node<T>*, HashFunc> elementMap; ///< Hash table mapping elements to up-tree nodes
-    UpTree<T> upTree; ///< UpTree structure to manage the disjoint set
-
+    HashTable<KeyType, Node<ValueType>*, HashFunc> elementMap; ///< Hash table mapping elements to up-tree nodes
+    UpTree<KeyType> upTree; ///< UpTree structure to manage the disjoint set
 
 public:
     /**
@@ -45,7 +44,7 @@ public:
      * 
      * @param element The element to add.
      */
-    void makeSet(const T& element);
+    void makeSet(const KeyType& KeyElement, const ValueType& ValueElement);
 
     /**
      * @brief Finds the representative of the set containing the element.
@@ -55,7 +54,7 @@ public:
      * @param element The element to find.
      * @return The representative element of the set containing the element.
      */
-    T find(const T& element);
+    ValueType& find(const KeyType& element);
 
     /**
      * @brief Unites the sets containing two elements.
@@ -65,7 +64,7 @@ public:
      * @param element1 The first element.
      * @param element2 The second element.
      */
-    void unite(const T& element1, const T& element2);
+    void unite(const KeyType& element1, const KeyType& element2);
 
     /**
      * @brief Checks if two elements are in the same set.
@@ -74,7 +73,7 @@ public:
      * @param element2 The second element to check.
      * @return True if both elements are in the same set, false otherwise.
      */
-    bool connected(const T& element1, const T& element2);
+    bool connected(const KeyType& element1, const KeyType& element2) const;
 
     /**
      * @brief Gets the size of the set containing the element.
@@ -82,7 +81,7 @@ public:
      * @param element The element to check.
      * @return The size of the set containing the element.
      */
-    int getSize(int element);
+    int getSize(const KeyType& element) const;
 
     /**
      * @brief Gets the rank of the set containing the element.
@@ -90,31 +89,31 @@ public:
      * @param element The element to check.
      * @return The rank of the set containing the element.
      */
-    int getRank(const T& element);
+    int getRank(const KeyType& element) const;
 };
 
 // Implementation of DisjointSet
 
 // Constructor
-template <typename T, typename HashFunc>
-DisjointSet<T, HashFunc>::DisjointSet(size_t initialCapacity, HashFunc hashFunc)
+template <typename KeyType, typename ValueType, typename HashFunc>
+DisjointSet<KeyType, ValueType, HashFunc>::DisjointSet(size_t initialCapacity, HashFunc hashFunc)
     : elementMap(initialCapacity, hashFunc) {}
 
 // Adds an element to the disjoint set
-template <typename T, typename HashFunc>
-void DisjointSet<T, HashFunc>::makeSet(const T& element) {
-    if (elementMap.contains(element)) {
+template <typename KeyType, typename ValueType, typename HashFunc>
+void DisjointSet<KeyType, ValueType, HashFunc>::makeSet(const KeyType& KeyElement, const ValueType& ValueElement) {
+    if (elementMap.contains(KeyElement)) {
         throw std::invalid_argument("Element already exists in the disjoint set.");
     }
 
-    Node<T>* newNode = new Node<T>(element);
+    Node<KeyType>* newNode = new Node<KeyType>(element);
     elementMap.insert(element, newNode); // Use element as key, newNode as value
 }
 
 // Finds the representative of the set containing the element
-template <typename T, typename HashFunc>
-T DisjointSet<T, HashFunc>::find(const T& element) {
-    Node<T>* node = nullptr;
+template <typename KeyType, typename ValueType, typename HashFunc>
+ValueType& DisjointSet<KeyType, ValueType, HashFunc>::find(const KeyType& element) {
+    Node<KeyType>* node = nullptr;
     if (!elementMap.contains(element) || !(node = elementMap.get(element))) {
         throw std::invalid_argument("Element not found in the disjoint set.");
     }
@@ -123,10 +122,10 @@ T DisjointSet<T, HashFunc>::find(const T& element) {
 }
 
 // Unites the sets containing two elements
-template <typename T, typename HashFunc>
-void DisjointSet<T, HashFunc>::unite(const T& element1, const T& element2) {
-    Node<T>* node1 = nullptr;
-    Node<T>* node2 = nullptr;
+template <typename KeyType, typename ValueType, typename HashFunc>
+void DisjointSet<KeyType, ValueType, HashFunc>::unite(const KeyType& element1, const KeyType& element2) {
+    Node<KeyType>* node1 = nullptr;
+    Node<KeyType>* node2 = nullptr;
 
     if (!(elementMap.contains(element1) && elementMap.contains(element2))) {
         throw std::invalid_argument("One or both elements not found in the disjoint set.");
@@ -138,10 +137,10 @@ void DisjointSet<T, HashFunc>::unite(const T& element1, const T& element2) {
 }
 
 // Checks if two elements are in the same set
-template <typename T, typename HashFunc>
-bool DisjointSet<T, HashFunc>::connected(const T& element1, const T& element2) {
-    Node<T>* node1 = nullptr;
-    Node<T>* node2 = nullptr;
+template <typename KeyType, typename ValueType, typename HashFunc>
+bool DisjointSet<KeyType, ValueType, HashFunc>::connected(const KeyType& element1, const KeyType& element2) const{
+    Node<KeyType>* node1 = nullptr;
+    Node<KeyType>* node2 = nullptr;
 
     if (!elementMap.contains(element1) || !elementMap.contains(element2)) {
         return false;
@@ -149,14 +148,14 @@ bool DisjointSet<T, HashFunc>::connected(const T& element1, const T& element2) {
 
     node1 = elementMap.get(element1);
     node2 = elementMap.get(element2);
-    Node<T>* root1 = upTree.findExternal(node1); // Find the root of the set containing node1, also path compression
-    Node<T>* root2 = upTree.findExternal(node2); // Find the root of the set containing node2, also path compression
+    Node<KeyType>* root1 = upTree.findExternal(node1); // Find the root of the set containing node1, also path compression
+    Node<KeyType>* root2 = upTree.findExternal(node2); // Find the root of the set containing node2, also path compression
 
     return root1 == root2;
 }
-template <typename T, typename HashFunc>
-    int DisjointSet<T, HashFunc>::getSize(int element) {
-        Node<T>* node = nullptr;
+template <typename KeyType, typename ValueType, typename HashFunc>
+    int DisjointSet<KeyType, ValueType, HashFunc>::getSize(const KeyType& element) const{
+        Node<KeyType>* node = nullptr;
         if (!elementMap.contains(element) || !(node = elementMap.get(element))) {
             throw std::invalid_argument("Element not found in the disjoint set.");
         }
@@ -165,9 +164,9 @@ template <typename T, typename HashFunc>
 }
 
 // Gets the rank of the set containing the element
-template <typename T, typename HashFunc>
-int DisjointSet<T, HashFunc>::getRank(const T& element) {
-    Node<T>* node = nullptr;
+template <typename KeyType, typename ValueType, typename HashFunc>
+int DisjointSet<KeyType, ValueType, HashFunc>::getRank(const KeyType& element) const{
+    Node<KeyType>* node = nullptr;
     if (!elementMap.contains(element) || !(node = elementMap.get(element))) {
         throw std::invalid_argument("Element not found in the disjoint set.");
     }
