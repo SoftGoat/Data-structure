@@ -6,9 +6,35 @@
 
 // Extended tests for DisjointSet implementation
 
+
+class Example {
+public:
+    int id;
+
+    Example(int id) : id(id) {}
+
+    int get_key() const {
+        return id;
+    }
+    bool operator==(const Example& other) const {
+        return id == other.id;
+    }
+    bool operator==(int n) const {
+        return id == n;
+    }
+    bool operator!=(int n) const {
+        return id != n;
+    }
+        bool operator!=(const Example& other) const {
+        return id != other.id;
+    }
+
+};
+
+
 // Test creation and basic operations of DisjointSet
 void testMakeSet() {
-    DisjointSet<int> ds(10);
+    DisjointSet<Example> ds(10);
     ds.makeSet(1);
     ds.makeSet(2);
     ds.makeSet(3);
@@ -28,7 +54,7 @@ void testMakeSet() {
 
 // Test union and find operations for correctness
 void testUnionAndFind() {
-    DisjointSet<int> ds(10);
+    DisjointSet<Example> ds(10);
     ds.makeSet(1);
     ds.makeSet(2);
     ds.makeSet(3);
@@ -45,7 +71,7 @@ void testUnionAndFind() {
 
 // Test connected method to ensure connectivity checks are correct
 void testConnected() {
-    DisjointSet<int> ds(10);
+    DisjointSet<Example> ds(10);
     ds.makeSet(1);
     ds.makeSet(2);
     ds.makeSet(3);
@@ -62,7 +88,7 @@ void testConnected() {
 
 // Test handling of invalid operations and exception throwing
 void testInvalidOperations() {
-    DisjointSet<int> ds(10);
+    DisjointSet<Example> ds(10);
     ds.makeSet(1);
     
     try {
@@ -91,7 +117,7 @@ void testInvalidOperations() {
 
 // Test path compression to ensure it optimizes the structure
 void testPathCompression() {
-    DisjointSet<int> ds(10);
+    DisjointSet<Example> ds(10);
     ds.makeSet(1);
     ds.makeSet(2);
     ds.makeSet(3);
@@ -110,7 +136,7 @@ void testPathCompression() {
 
 // Test multiple union operations and connectivity checks
 void testMultipleUnions() {
-    DisjointSet<int> ds(10);
+    DisjointSet<Example> ds(10);
     ds.makeSet(1);
     ds.makeSet(2);
     ds.makeSet(3);
@@ -132,7 +158,7 @@ void testMultipleUnions() {
 
 // Test getting the size of the set containing an element
 void testSetSize() {
-    DisjointSet<int> ds(10);
+    DisjointSet<Example> ds(10);
     ds.makeSet(1);
     ds.makeSet(2);
     ds.makeSet(3);
@@ -153,7 +179,7 @@ void testSetSize() {
 // Test performance on large datasets
 void testPerformance() {
     const int numElements = 100000;
-    DisjointSet<int> ds(numElements);
+    DisjointSet<Example> ds(numElements);
     
     // Create sets
     for (int i = 1; i <= numElements; ++i) {
@@ -183,7 +209,7 @@ void testPerformance() {
 
 // Test various union and rank operations
 void testRanks() {
-    DisjointSet<int> ds(10);
+    DisjointSet<Example> ds(10);
     ds.makeSet(1);
     ds.makeSet(2);
     ds.makeSet(3);
@@ -212,7 +238,7 @@ void testRanks() {
 
 // Test multiple makeSet and union operations
 void testComplexUnions() {
-    DisjointSet<int> ds(20);
+    DisjointSet<Example> ds(20);
     std::vector<int> elements = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     
     // Make sets for all elements
