@@ -20,7 +20,7 @@ private:
      * @param node The node whose root is to be found.
      * @return The root node of the set containing the given node.
      */
-    Node<T>* find(Node<T>* node);
+    Node<T>* find(Node<T>* node) const;
 
 public:
     /**
@@ -51,7 +51,7 @@ public:
      * @param y The second element to check.
      * @return True if x and y are in the same set, false otherwise.
      */
-    bool connected(Node<T>* x, Node<T>* y);
+    bool connected(Node<T>* x, Node<T>* y) const;
 
     /**
      * @brief Gets the rank of a node.
@@ -59,10 +59,10 @@ public:
      * @param x The node to get the rank of.
      * @return The rank of the node.
      */
-    int getRank(Node<T>* x);
+    int getRank(Node<T>* x) const;
 
     // Expose find method for external use
-    Node<T>* findExternal(Node<T>* node);
+    Node<T>* findExternal(Node<T>* node) const;
 };
 
 // Implementation of UpTree
@@ -81,7 +81,7 @@ UpTree<T>::~UpTree() {
 
 // Find with path compression
 template <typename T>
-Node<T>* UpTree<T>::find(Node<T>* node) {
+Node<T>* UpTree<T>::find(Node<T>* node) const {
     if (node->parent != node) {
         node->parent = find(node->parent); // Path compression
         if(node->parent->parent != node->parent){
@@ -93,7 +93,7 @@ Node<T>* UpTree<T>::find(Node<T>* node) {
 
 // Expose find method for external use
 template <typename T>
-Node<T>* UpTree<T>::findExternal(Node<T>* node) {
+Node<T>* UpTree<T>::findExternal(Node<T>* node) const {
 
     return find(node);
 }
@@ -124,13 +124,13 @@ void UpTree<T>::unite(Node<T>* x, Node<T>* y) {
 
 // Check if two elements are in the same set
 template <typename T>
-bool UpTree<T>::connected(Node<T>* x, Node<T>* y) {
+bool UpTree<T>::connected(Node<T>* x, Node<T>* y) const {
     return find(x) == find(y);
 }
 
 // Get the rank of a node
 template <typename T>
-int UpTree<T>::getRank(Node<T>* x) {
+int UpTree<T>::getRank(Node<T>* x) const {
     int realRank = 1;
     find(x); // Path compression
     while (x->parent != x) {

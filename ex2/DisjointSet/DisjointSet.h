@@ -22,11 +22,11 @@ struct IntHash {
  * 
  * This structure allows efficient union and find operations, using a hash table for fast element lookup.
  */
-template <typename KeyType, typename ValueType ,typename HashFunc = IntHash>
+template <typename ValueType, typename KeyType=int ,typename HashFunc = IntHash>
 class DisjointSet {
 private:
     HashTable<KeyType, Node<ValueType>*, HashFunc> elementMap; ///< Hash table mapping elements to up-tree nodes
-    UpTree<KeyType> upTree; ///< UpTree structure to manage the disjoint set
+    UpTree<ValueType> upTree; ///< UpTree structure to manage the disjoint set
 
 public:
     /**
@@ -44,7 +44,7 @@ public:
      * 
      * @param element The element to add.
      */
-    void makeSet(const KeyType& KeyElement, const ValueType& ValueElement);
+    void makeSet(const KeyType& KeyElement);
 
     /**
      * @brief Finds the representative of the set containing the element.
@@ -100,9 +100,9 @@ DisjointSet<KeyType, ValueType, HashFunc>::DisjointSet(size_t initialCapacity, H
     : elementMap(initialCapacity, hashFunc) {}
 
 // Adds an element to the disjoint set
-template <typename KeyType, typename ValueType, typename HashFunc>
-void DisjointSet<KeyType, ValueType, HashFunc>::makeSet(const KeyType& KeyElement, const ValueType& ValueElement) {
-    if (elementMap.contains(KeyElement)) {
+template <typename ValueType, typename KeyType, typename HashFunc>
+void DisjointSet<ValueType, KeyType, HashFunc>::makeSet(const KeyType& element) {
+    if (elementMap.contains(element)) {
         throw std::invalid_argument("Element already exists in the disjoint set.");
     }
 
@@ -110,9 +110,10 @@ void DisjointSet<KeyType, ValueType, HashFunc>::makeSet(const KeyType& KeyElemen
     elementMap.insert(element, newNode); // Use element as key, newNode as value
 }
 
+
 // Finds the representative of the set containing the element
-template <typename KeyType, typename ValueType, typename HashFunc>
-ValueType& DisjointSet<KeyType, ValueType, HashFunc>::find(const KeyType& element) {
+template <typename ValueType, typename KeyType, typename HashFunc>
+ValueType& DisjointSet<ValueType, KeyType, HashFunc>::find(const KeyType& element) {
     Node<KeyType>* node = nullptr;
     if (!elementMap.contains(element) || !(node = elementMap.get(element))) {
         throw std::invalid_argument("Element not found in the disjoint set.");
@@ -122,8 +123,8 @@ ValueType& DisjointSet<KeyType, ValueType, HashFunc>::find(const KeyType& elemen
 }
 
 // Unites the sets containing two elements
-template <typename KeyType, typename ValueType, typename HashFunc>
-void DisjointSet<KeyType, ValueType, HashFunc>::unite(const KeyType& element1, const KeyType& element2) {
+template <typename ValueType, typename KeyType, typename HashFunc>
+void DisjointSet<ValueType, KeyType, HashFunc>::unite(const KeyType& element1, const KeyType& element2) {
     Node<KeyType>* node1 = nullptr;
     Node<KeyType>* node2 = nullptr;
 
@@ -137,8 +138,8 @@ void DisjointSet<KeyType, ValueType, HashFunc>::unite(const KeyType& element1, c
 }
 
 // Checks if two elements are in the same set
-template <typename KeyType, typename ValueType, typename HashFunc>
-bool DisjointSet<KeyType, ValueType, HashFunc>::connected(const KeyType& element1, const KeyType& element2) const{
+template <typename ValueType, typename KeyType, typename HashFunc>
+bool DisjointSet<ValueType, KeyType, HashFunc>::connected(const KeyType& element1, const KeyType& element2) const{
     Node<KeyType>* node1 = nullptr;
     Node<KeyType>* node2 = nullptr;
 
@@ -153,8 +154,8 @@ bool DisjointSet<KeyType, ValueType, HashFunc>::connected(const KeyType& element
 
     return root1 == root2;
 }
-template <typename KeyType, typename ValueType, typename HashFunc>
-    int DisjointSet<KeyType, ValueType, HashFunc>::getSize(const KeyType& element) const{
+template <typename ValueType, typename KeyType, typename HashFunc>
+int DisjointSet<ValueType, KeyType, HashFunc>::getSize(const KeyType& element) const{
         Node<KeyType>* node = nullptr;
         if (!elementMap.contains(element) || !(node = elementMap.get(element))) {
             throw std::invalid_argument("Element not found in the disjoint set.");
@@ -164,8 +165,8 @@ template <typename KeyType, typename ValueType, typename HashFunc>
 }
 
 // Gets the rank of the set containing the element
-template <typename KeyType, typename ValueType, typename HashFunc>
-int DisjointSet<KeyType, ValueType, HashFunc>::getRank(const KeyType& element) const{
+template <typename ValueType, typename KeyType, typename HashFunc>
+int DisjointSet<ValueType, KeyType, HashFunc>::getRank(const KeyType& element) const{
     Node<KeyType>* node = nullptr;
     if (!elementMap.contains(element) || !(node = elementMap.get(element))) {
         throw std::invalid_argument("Element not found in the disjoint set.");
