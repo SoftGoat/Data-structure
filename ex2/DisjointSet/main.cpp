@@ -208,32 +208,77 @@ void testPerformance() {
 }
 
 // Test various union and rank operations
+
 void testRanks() {
-    DisjointSet<Example> ds(10);
-    ds.makeSet(1);
-    ds.makeSet(2);
-    ds.makeSet(3);
-    ds.makeSet(4);
-    ds.makeSet(5);
-    
-    ds.unite(1, 2);
-    ds.unite(3, 4);
-    ds.unite(1, 3); // Unite two sets with two elements each
+    DisjointSet<Example> ds(20); // Increase the size to test more elements
 
-    printf("Rank of 1: %d\n", ds.getRank(1));
-    printf("Rank of 2: %d\n", ds.getRank(2));
-    printf("Rank of 3: %d\n", ds.getRank(3));
-    printf("Rank of 4: %d\n", ds.getRank(4));
-    assert(ds.getRank(1) == 1); // Root's rank should still be 1
-    assert(ds.getRank(2) == 2); // 2 should be 2
-    assert(ds.getRank(3) == 3); // 3 should be 3
-    assert(ds.getRank(4) == 1); // 4 should be 1
+    // Initial sets
+    for (int i = 1; i <= 10; ++i) {
+        ds.makeSet(i);
+    }
+
+    // Validate initial ranks
+    for (int i = 1; i <= 10; ++i) {
+        assert(ds.getRank(i) == 1); // Initial ranks should be 1 for all single sets
+    }
+
+    // Union pairs
+    ds.unite(1, 2); // Merge {1} and {2}
+    ds.unite(3, 4); // Merge {3} and {4}
+    ds.unite(5, 6); // Merge {5} and {6}
+
+    // Check ranks after unions
+    assert(ds.getRank(1) == 1); 
+    assert(ds.getRank(2) == 2);
+    assert(ds.getRank(3) == 1); 
+    assert(ds.getRank(4) == 2); 
+    assert(ds.getRank(5) == 1); 
+    assert(ds.getRank(6) == 2); 
+
+    // Further unions
+    ds.unite(1, 3); // Merge {1, 2} and {3, 4}
+    ds.unite(5, 1); // Merge {5, 6} with {1, 2, 3, 4}
+
+    // Check ranks after larger unions
+    assert(ds.getRank(1) == 1); 
+    assert(ds.getRank(2) == 2); 
+    assert(ds.getRank(3) == 3); 
+    assert(ds.getRank(4) == 4); 
+    assert(ds.getRank(5) == 5); 
+    assert(ds.getRank(6) == 6); 
 
 
-    ds.unite(5, 1); // Add 5 to the bigger set
-    assert(ds.getRank(5) == 5); // Rank should be equal to the size of the set
 
-    std::cout << "testRanks passed!" << std::endl;
+    ds.unite(7, 8); // Merge {7} and {8}
+    ds.unite(9, 10); // Merge {9} and {10}
+    ds.unite(7, 9); // Merge {7, 8} with {9, 10}
+
+    // Check ranks in new unions
+    assert(ds.getRank(7) == 1); 
+    assert(ds.getRank(8) == 2); 
+    assert(ds.getRank(9) == 3); 
+    assert(ds.getRank(10) == 4);
+
+    // Validate unions of larger sets
+    ds.unite(1, 7); // Union all sets
+
+    // After this union, 1 becomes the root 
+    assert(ds.getRank(1) == 1); 
+    assert(ds.getRank(7) == 7); 
+    assert(ds.getRank(5) == 5); 
+    assert(ds.getRank(6) == 6); 
+
+    // Validate no two elements in the same set have the same rank
+    for (int i = 1; i <= 10; ++i) {
+        for (int j = i + 1; j <= 10; ++j) {
+            if (ds.find(i) == ds.find(j)) { // Only compare if they are in the same set
+                assert(ds.getRank(i) != ds.getRank(j)); // should not have same rank, except for roots
+            }
+        }
+    }
+
+
+    std::cout << "testRanks Comprehensive Passed!" << std::endl;
 }
 
 // Test multiple makeSet and union operations

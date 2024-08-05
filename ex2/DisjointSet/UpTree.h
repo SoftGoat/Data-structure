@@ -83,10 +83,10 @@ UpTree<T>::~UpTree() {
 template <typename T>
 Node<T>* UpTree<T>::find(Node<T>* node) const {
     if (node->parent != node) {
-        node->parent = find(node->parent); // Path compression
-        if(node->parent->parent != node->parent){
+                if(node->parent->parent != node->parent){
             node->rank += node->parent->rank;
         }
+        node->parent = find(node->parent); // Path compression
     }
     return node->parent;
 }
