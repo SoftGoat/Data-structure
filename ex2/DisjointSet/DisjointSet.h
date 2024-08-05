@@ -21,13 +21,15 @@ private:
     HashTable<KeyType, Node<ValueType>*, HashFunc> elementMap; ///< Hash table mapping keys to up-tree nodes
     UpTree<ValueType> upTree; ///< UpTree structure to manage the disjoint set
 
+
+
 public:
     /**
      * @brief Constructs a new DisjointSet object with a given initial capacity.
      * 
      * @param initialCapacity The initial capacity for the hash table.
      */
-    DisjointSet(size_t initialCapacity);
+    DisjointSet(size_t initialCapacity = 101);
 
     /**
      * @brief Adds an element to the disjoint set.

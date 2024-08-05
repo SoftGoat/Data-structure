@@ -1,6 +1,6 @@
 #include "pirates24b2.h"
 
-oceans_t::oceans_t() : m_fleet(101), m_pirates() {}
+oceans_t::oceans_t() : m_fleet(), m_pirates() {}
 
 oceans_t::~oceans_t()
 {

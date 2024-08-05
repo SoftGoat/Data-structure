@@ -51,6 +51,7 @@ private:
     size_t size;       ///< The current number of elements in the hash table
     HashFunc hashFunc; ///< The custom hash function sequence
     float loadFactorThreshold; ///< Threshold for resizing the hash table
+    static constexpr int INITIAL_CAPACITY = 101; ///< Initial capacity of the hash table, CANNOT BE CHANGED TO CONST
 
     /**
      * @brief Computes the hash index for a given key using the custom hash function sequence.
@@ -74,7 +75,7 @@ public:
      * @param hashFunc The custom hash function sequence.
      * @param loadFactorThreshold The threshold for resizing the hash table.
      */
-    HashTable(size_t initialCapacity, HashFunc hashFunc, float loadFactorThreshold = 0.75f);
+    HashTable(size_t initialCapacity = 101 ,HashFunc hashFunc = HashFunc(), float loadFactorThreshold = 0.75f);
 
     /**
      * @brief Destroys the HashTable, freeing allocated memory.
@@ -128,6 +129,7 @@ public:
 template <typename KeyType, typename ValueType, typename HashFunc>
 HashTable<KeyType, ValueType, HashFunc>::HashTable(size_t initialCapacity, HashFunc hashFunc, float loadFactorThreshold)
     : table(initialCapacity), size(0), hashFunc(hashFunc), loadFactorThreshold(loadFactorThreshold) {}
+
 
 // Computes the hash index for a given key
 template <typename KeyType, typename ValueType, typename HashFunc>

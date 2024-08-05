@@ -30,7 +30,7 @@ private:
     int getPirateRank(int pirateId) const;
 
     DisjointSet<std::shared_ptr<fleet>> m_fleet;
-    HashTable<std::shared_ptr<pirate>,int> m_pirates;
+    HashTable<int,std::shared_ptr<pirate>> m_pirates;
     
 public:
 	// <DO-NOT-MODIFY> {
