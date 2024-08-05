@@ -44,7 +44,7 @@ public:
      * 
      * @param element The element to add.
      */
-    void makeSet(const KeyType& KeyElement);
+    void makeSet(const ValueType& element);
 
     /**
      * @brief Finds the representative of the set containing the element.
@@ -101,8 +101,8 @@ DisjointSet<KeyType, ValueType, HashFunc>::DisjointSet(size_t initialCapacity, H
 
 // Adds an element to the disjoint set
 template <typename ValueType, typename KeyType, typename HashFunc>
-void DisjointSet<ValueType, KeyType, HashFunc>::makeSet(const KeyType& element) {
-    if (elementMap.contains(element)) {
+void DisjointSet<ValueType, KeyType, HashFunc>::makeSet(const ValueType& element) {
+    if (elementMap.contains(element.get_key())) { // assuming element has a get_key() method
         throw std::invalid_argument("Element already exists in the disjoint set.");
     }
 
@@ -139,21 +139,18 @@ void DisjointSet<ValueType, KeyType, HashFunc>::unite(const KeyType& element1, c
 
 // Checks if two elements are in the same set
 template <typename ValueType, typename KeyType, typename HashFunc>
-bool DisjointSet<ValueType, KeyType, HashFunc>::connected(const KeyType& element1, const KeyType& element2) const{
-    Node<KeyType>* node1 = nullptr;
-    Node<KeyType>* node2 = nullptr;
-
+bool DisjointSet<ValueType, KeyType, HashFunc>::connected(const KeyType& element1, const KeyType& element2) const {
     if (!elementMap.contains(element1) || !elementMap.contains(element2)) {
         return false;
     }
 
-    node1 = elementMap.get(element1);
-    node2 = elementMap.get(element2);
+    Node<KeyType>* node1 = elementMap.get(element1);
+    Node<KeyType>* node2 = elementMap.get(element2);
     Node<KeyType>* root1 = upTree.findExternal(node1); // Find the root of the set containing node1, also path compression
     Node<KeyType>* root2 = upTree.findExternal(node2); // Find the root of the set containing node2, also path compression
-
     return root1 == root2;
 }
+
 template <typename ValueType, typename KeyType, typename HashFunc>
 int DisjointSet<ValueType, KeyType, HashFunc>::getSize(const KeyType& element) const{
         Node<KeyType>* node = nullptr;

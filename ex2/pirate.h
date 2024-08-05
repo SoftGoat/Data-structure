@@ -18,5 +18,6 @@ class pirate{
     void set_rank(int rank);
     std::shared_ptr<fleet> get_fleet() const;
     void set_fleet(std::shared_ptr<fleet> fleet);
+    int get_key() const;
 
 };

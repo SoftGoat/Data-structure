@@ -12,4 +12,5 @@ class fleet{
     void increase_ship_count();
     int get_num_of_pirates() const;
     void increase_pirate_count();
+    int get_key() const;
 };

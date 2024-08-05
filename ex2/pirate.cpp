@@ -33,3 +33,7 @@ std::shared_ptr<fleet> pirate::get_fleet() const {
 void pirate::set_fleet(std::shared_ptr<fleet> fleet) {
     m_fleet = fleet;
 }
+
+int pirate::get_key() const {
+    return m_id;
+}

@@ -21,3 +21,7 @@ int fleet::get_num_of_pirates() const {
 void fleet::increase_pirate_count(){
     m_num_of_pirates++;
 }
+
+int fleet::get_key() const {
+    return m_id;
+}
