@@ -28,13 +28,7 @@ private:
      */
     void resize();
 
-    /**
-     * @brief Returns the closest prime number greater than n.
-     * 
-     * @param n The number to find the closest prime greater than.
-     * @return The closest prime number greater than n.
-     */
-    int closestPrime(int n);
+
 
 public:
     /**
@@ -105,6 +99,14 @@ public:
     bool removeAt(int index);
 
     /**
+     * @brief Returns the closest prime number greater than n.
+     * 
+     * @param n The number to find the closest prime greater than.
+     * @return The closest prime number greater than n.
+     */
+    int closestPrime(int n);
+
+    /**
      * @brief Checks if an element is occupied at a given index.
      * 
      * @param index The index to check.
@@ -130,6 +132,8 @@ public:
      * @throws std::out_of_range if the index is out of bounds.
      */
     const T& operator[](size_t index) const;
+
+
 
     // Prevent copying
     DynamicArray(const DynamicArray&) = delete;

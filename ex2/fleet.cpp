@@ -1,6 +1,6 @@
 #include "fleet.h"
 
-fleet::fleet(int id)  : m_id(id), m_num_of_pirates(0), m_num_of_ships(1){};
+fleet::fleet(int id) : m_id(id), m_num_of_ships(1), m_num_of_pirates(0) {}
 
 int fleet::get_id() const {
     return m_id;

@@ -98,7 +98,7 @@ DisjointSet<ValueType, KeyType, HashFunc>::DisjointSet(size_t initialCapacity)
 // Adds an element to the disjoint set
 template <typename ValueType, typename KeyType, typename HashFunc>
 void DisjointSet<ValueType, KeyType, HashFunc>::makeSet(const ValueType& element) {
-    KeyType key = element.get_key(); // Assume ValueType has a get_key() method
+    KeyType key = element->get_key(); // Assume ValueType has a get_key() method
     if (elementMap.contains(key)) {
         throw std::invalid_argument("Element already exists in the disjoint set.");
     }

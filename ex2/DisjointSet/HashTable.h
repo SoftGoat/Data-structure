@@ -14,20 +14,6 @@ struct IntHash {
     }
 };
 
-int closestPrime(int n) {
-    for (int i = n + 1;; ++i) {
-        bool isPrime = true;
-        for (int j = 2; j <= std::sqrt(i); ++j) {
-            if (i % j == 0) {
-                isPrime = false;
-                break;
-            }
-        }
-        if (isPrime) {
-            return i;
-        }
-    }
-}
 
 /**
  * @brief A hash table implementation that maps keys to unique values using double hashing.
@@ -142,7 +128,7 @@ size_t HashTable<KeyType, ValueType, HashFunc>::hash(const KeyType& key, size_t 
 // Resize the hash table when load factor exceeds the threshold
 template <typename KeyType, typename ValueType, typename HashFunc>
 void HashTable<KeyType, ValueType, HashFunc>::resize() {
-    size_t newCapacity = closestPrime(table.getCapacity() * 2);
+    size_t newCapacity = table.closestPrime(table.getCapacity() * 2);
     DynamicArray<HashEntry> newTable(newCapacity);
 
     // Rehash all existing keys
