@@ -246,13 +246,12 @@ void testRanks() {
     assert(ds.getRank(4) == 4); 
     assert(ds.getRank(5) == 5); 
     assert(ds.getRank(6) == 6); 
-
-
+    
 
     ds.unite(7, 8); // Merge {7} and {8}
     ds.unite(9, 10); // Merge {9} and {10}
     ds.unite(7, 9); // Merge {7, 8} with {9, 10}
-
+    
     // Check ranks in new unions
     assert(ds.getRank(7) == 1); 
     assert(ds.getRank(8) == 2); 

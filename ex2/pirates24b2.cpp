@@ -1,15 +1,18 @@
 #include "pirates24b2.h"
 
-oceans_t::oceans_t(){
-	// Initialize containers.
-};
+oceans_t::oceans_t() : m_fleet(101), m_pirates() {}
 
 oceans_t::~oceans_t()
 {
 	// TODO: Your code goes here
 }
 
-int oceans_t::get_pirate_rank(int pirateId) const{
+output_t<int> oceans_t::get_pirate_rank(int pirateId) const
+{
+	return output_t<int>(getPirateRank(pirateId));
+}
+
+int oceans_t::getPirateRank(int pirateId) const{
 	// We will assume that the pirate exsits.
 	std::shared_ptr<pirate> pirate = m_pirates.get(pirateId);
 	int fleet_rank = m_fleet.getRank(pirate->get_fleet()->get_id());
@@ -33,7 +36,7 @@ StatusType oceans_t::add_fleet(int fleetId)
 	
 	// Try to add the new fleet, return failure and delete the fleet if faild.
 	try{
-		m_fleet.makeSet(fleetId);
+		m_fleet.makeSet(newFleet);
 	} catch(const std::invalid_argument& e){
 		return StatusType::FAILURE;
 	}
@@ -157,8 +160,8 @@ StatusType oceans_t::pirate_argument(int pirateId1, int pirateId2)
 		return StatusType::FAILURE;
 	}
 
-	int pirate_1_rank = get_pirate_rank(pirateId1);
-	int pirate_2_rank = get_pirate_rank(pirateId2);
+	int pirate_1_rank = getPirateRank(pirateId1);
+	int pirate_2_rank = getPirateRank(pirateId2);
 	int rank_diff = pirate_2_rank - pirate_1_rank;
 	// This way always the BIG rank pay the small rank, beautifully.
 	pirate_1->add_coins(rank_diff);

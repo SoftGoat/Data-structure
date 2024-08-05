@@ -1,3 +1,6 @@
+#ifndef FLEET_H
+#define FLEET_H
+
 class fleet{
     private:
     int m_id;
@@ -14,3 +17,5 @@ class fleet{
     void increase_pirate_count();
     int get_key() const;
 };
+
+#endif // FLEET_H

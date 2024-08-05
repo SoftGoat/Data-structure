@@ -5,6 +5,15 @@
 #include <iostream> // For std::cout, std::endl
 #include "DynamicArray.h"
 
+
+struct IntHash {
+    size_t operator()(int key, size_t i, int m) const {
+        size_t h1 = key % m;          // Primary hash function
+        size_t h2 = 1 + (key % (m-1)); // Secondary hash function for step size
+        return (h1 + i * h2) % m;
+    }
+};
+
 int closestPrime(int n) {
     for (int i = n + 1;; ++i) {
         bool isPrime = true;
@@ -25,7 +34,7 @@ int closestPrime(int n) {
  * 
  * This hash table uses open addressing with double hashing for collision resolution and supports dynamic resizing.
  */
-template <typename KeyType, typename ValueType, typename HashFunc>
+template <typename KeyType, typename ValueType, typename HashFunc = IntHash>
 class HashTable {
 private:
     struct HashEntry {

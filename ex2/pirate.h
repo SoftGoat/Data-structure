@@ -1,3 +1,5 @@
+#ifndef PIRATE_H
+#define PIRATE_H
 #include <memory>
 #include "fleet.h"
 
@@ -21,3 +23,5 @@ class pirate{
     int get_key() const;
 
 };
+
+#endif // PIRATE_H

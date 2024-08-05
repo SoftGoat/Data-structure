@@ -8,13 +8,7 @@
 
 
 
-struct IntHash {
-    size_t operator()(int key, size_t i, int m) const {
-        size_t h1 = key % m;          // Primary hash function
-        size_t h2 = 1 + (key % (m-1)); // Secondary hash function for step size
-        return (h1 + i * h2) % m;
-    }
-};
+
 
 /**
  * @brief A disjoint set data structure using a hash table and up-trees.
