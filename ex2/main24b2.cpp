@@ -23,6 +23,7 @@ int main()
 {
 	
     int d1, d2;
+    int count = 0;
 
     // Init
     oceans_t *obj = new oceans_t();
@@ -31,6 +32,10 @@ int main()
 	string op;
 	while (cin >> op)
     {
+        count++;
+        if(count == 43){
+            printf("debug\n");
+        }
         if (!op.compare("add_fleet")) {
             cin >> d1;
             print(op, obj->add_fleet(d1));

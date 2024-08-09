@@ -57,7 +57,7 @@ StatusType oceans_t::add_pirate(int pirateId, int fleetId)
 		return StatusType::ALLOCATION_ERROR;
 	}
 
-	if(!m_pirates.contains(pirateId)){
+	if(m_pirates.contains(pirateId)){
 		// There is already a pirate with pirateId.
 		return StatusType::FAILURE;
 	}
@@ -66,6 +66,7 @@ StatusType oceans_t::add_pirate(int pirateId, int fleetId)
 		new_pirate_fleet = m_fleet.find(fleetId);
 	} catch(const std::invalid_argument& e){
 		// There is no fleet with id fleetID.
+		printf("fleetId: %d\n", fleetId);
 		return StatusType::FAILURE;
 	}
 
@@ -130,7 +131,7 @@ StatusType oceans_t::unite_fleets(int fleetId1, int fleetId2)
 	// Check if fleets exist.
 	try{
 		fleet_1 = m_fleet.find(fleetId1);
-		fleet_1 = m_fleet.find(fleetId2);
+		fleet_2 = m_fleet.find(fleetId2);
 	} catch(const std::invalid_argument &e){
 		return StatusType::FAILURE;
 	}

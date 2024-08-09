@@ -111,10 +111,10 @@ void DisjointSet<ValueType, KeyType, HashFunc>::makeSet(const ValueType& element
 template <typename ValueType, typename KeyType, typename HashFunc>
 ValueType& DisjointSet<ValueType, KeyType, HashFunc>::find(const KeyType& element) {
     Node<ValueType>* node = nullptr;
-    if (!elementMap.contains(element) || !(node = elementMap.get(element))) {
+    if (!elementMap.contains(element)) {
         throw std::invalid_argument("Element not found in the disjoint set.");
     }
-
+    node = elementMap.get(element);
     return upTree.findExternal(node)->data;
 }
 
@@ -130,7 +130,7 @@ void DisjointSet<ValueType, KeyType, HashFunc>::unite(const KeyType& element1, c
 
     node1 = elementMap.get(element1);
     node2 = elementMap.get(element2);
-    upTree.unite(node1, node2);
+    upTree.unite(node1, node2, node1->data->get_rank(), node2->data->get_rank()); //Assume ValueType has a get_rank() method
 }
 
 // Checks if two elements are in the same set

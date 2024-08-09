@@ -41,8 +41,10 @@ public:
      * 
      * @param x An element in the first set.
      * @param y An element in the second set.
+     * @param Xrank The rank of the root of the first set.
+     * @param Yrank The rank of the root of the second set.
      */
-    void unite(Node<T>* x, Node<T>* y);
+    void unite(Node<T>* x, Node<T>* y, int Xrank, int Yrank);
 
     /**
      * @brief Checks if two elements are in the same set.
@@ -100,7 +102,7 @@ Node<T>* UpTree<T>::findExternal(Node<T>* node) const {
 
 // Union by size
 template <typename T>
-void UpTree<T>::unite(Node<T>* x, Node<T>* y) {
+void UpTree<T>::unite(Node<T>* x, Node<T>* y, int Xrank, int Yrank) {
     Node<T>* rootX = find(x);
     Node<T>* rootY = find(y);
 
@@ -111,12 +113,22 @@ void UpTree<T>::unite(Node<T>* x, Node<T>* y) {
     // Attach the smaller tree under the larger tree's root
     if (rootX->size < rootY->size) {
         rootX->parent = rootY;
-        rootX->rank += rootY->size-1;
+        if(Xrank < Yrank){
+            rootX->rank += rootY->size-1;
+        }
+        else{
+            rootY->rank += rootX->size-1;
+        }
         rootY->size += rootX->size;
         
     } else {
         rootY->parent = rootX;
-        rootY->rank += rootX->size-1;
+        if(Xrank < Yrank){
+            rootX->rank += rootY->size-1;
+        }
+        else{
+            rootY->rank += rootX->size-1;
+        }
         rootX->size += rootY->size;
         
     }

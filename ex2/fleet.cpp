@@ -25,3 +25,7 @@ void fleet::increase_pirate_count(){
 int fleet::get_key() const {
     return m_id;
 }
+
+int fleet::get_rank() const {
+    return m_num_of_pirates;
+}

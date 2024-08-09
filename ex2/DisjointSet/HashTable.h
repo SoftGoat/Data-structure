@@ -204,7 +204,7 @@ bool HashTable<KeyType, ValueType, HashFunc>::contains(const KeyType& key) const
     for (size_t i = 0; i < table.getCapacity(); ++i) {
         size_t index = hash(key, i);
         if (index >= table.getCapacity()) {
-            return false;
+            return false; // Key not found
         }
         const HashEntry& entry = table.get(index);
         if (entry.isOccupied && entry.key == key) {

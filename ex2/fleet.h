@@ -16,6 +16,7 @@ class fleet{
     int get_num_of_pirates() const;
     void increase_pirate_count();
     int get_key() const;
+    int get_rank() const;
 };
 
 #endif // FLEET_H
