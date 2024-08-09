@@ -171,6 +171,8 @@ bool HashTable<KeyType, ValueType, HashFunc>::insert(const KeyType& key, const V
             entry.isOccupied = true;
             entry.isDeleted = false;
             ++size;
+            table.setSize(size);
+            table.setOccupied(index);
             return true;
         } else if (entry.key == key) {
             return false; // Key already exists
