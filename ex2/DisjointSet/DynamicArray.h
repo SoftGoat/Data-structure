@@ -77,6 +77,8 @@ public:
      */
     size_t getSize() const;
 
+    void setSize(int newSize);
+
     /**
      * @brief Returns the current capacity of the array.
      * 
@@ -114,6 +116,8 @@ public:
      */
 
     bool isOccupied(size_t index) const;
+
+    void setOccupied(size_t index);
 
     /**
      * @brief Provides non-const access to the element at a given index.
@@ -203,9 +207,7 @@ bool DynamicArray<T>::addAt(const T& element, int index) {
     if (size == capacity) {
         resize();  // Resize if the array is full
     }
-    if(occupiedFlags[index]) {
-        return false;
-    }
+    
     data[index] = element;
     occupiedFlags[index] = true;
     size++;
@@ -245,10 +247,18 @@ const T& DynamicArray<T>::get(size_t index) const {
     return data[index]; // Return const reference
 }
 
+
+
 // Return the number of elements in the array
 template <typename T>
 size_t DynamicArray<T>::getSize() const {
     return size;
+}
+
+
+template <typename T>
+size_t DynamicArray<T>::setSize(int newSize) {
+    size = newSize;
 }
 
 // Return the current capacity of the array
@@ -299,6 +309,11 @@ bool DynamicArray<T>::isOccupied(size_t index) const {
     return occupiedFlags[index];
 }
 
+
+template <typename T>
+void DynamicArray<T>::setOccupied(size_t index) {
+    occupiedFlags[index] = true;
+}
 
 // Provides non-const access to the element at a given index
 template <typename T>
