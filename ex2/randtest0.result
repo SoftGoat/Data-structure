@@ -40,6 +40,8 @@ add_fleet: FAILURE
 pay_pirate: SUCCESS
 add_pirate: FAILURE
 unite_fleets: SUCCESS
+debug
+fleetId: 178
 add_pirate: FAILURE
 add_fleet: INVALID_INPUT
 num_ships_for_fleet: SUCCESS, 1
@@ -128,6 +130,7 @@ pirate_argument: FAILURE
 num_ships_for_fleet: FAILURE
 add_fleet: FAILURE
 num_ships_for_fleet: SUCCESS, 1
+fleetId: 497
 add_pirate: FAILURE
 unite_fleets: FAILURE
 add_pirate: SUCCESS
@@ -176,6 +179,7 @@ num_ships_for_fleet: FAILURE
 num_ships_for_fleet: INVALID_INPUT
 get_pirate_money: INVALID_INPUT
 unite_fleets: INVALID_INPUT
+fleetId: 628
 add_pirate: FAILURE
 num_ships_for_fleet: INVALID_INPUT
 get_pirate_money: INVALID_INPUT
@@ -196,5 +200,6 @@ unite_fleets: FAILURE
 num_ships_for_fleet: FAILURE
 unite_fleets: INVALID_INPUT
 get_pirate_money: FAILURE
+fleetId: 444
 add_pirate: FAILURE
 add_pirate: SUCCESS
