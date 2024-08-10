@@ -603,7 +603,6 @@ void testGetSizeAndRank() {
     assert(ds.getSize(1) == 4);
     assert(ds.getSize(3) == 4);
     assert(ds.getRank(1) == 1); // Rank should reflect the merged set's size
-    printf("Rank: %d\n", ds.getRank(3));
     assert(ds.getRank(3) == 3);
 
     // Edge case: Union elements that are already connected
@@ -614,6 +613,7 @@ void testGetSizeAndRank() {
     // Edge case: Rank should stay correct after multiple unions
     ds.unite(4, 5);
     assert(ds.getSize(5) == 5);
+    printf("Rank of 5: %d\n", ds.getRank(5));
     assert(ds.getRank(5) == 5);
 
     // Edge case: Size and rank of an element not in the set should return errors

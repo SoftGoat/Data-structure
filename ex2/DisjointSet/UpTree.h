@@ -104,26 +104,32 @@ void UpTree<T>::unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, in
     if (rootX->size < rootY->size) { // Y becomes the new root
         rootX->parent = rootY;
         rootY->size += rootX->size;
-        rootY->abs_rank += rootX->abs_rank;
-        if(rootX->abs_rank - rootX->abs_rank <= rootY->abs_rank){ // Y has more pirates
-            rootX->rank -= rootX->abs_rank;
+        
+        if(rootX->abs_rank <= rootY->abs_rank){ // Y has more pirates
+            rootY->abs_rank += rootX->abs_rank;
+            rootX->rank = rootX->abs_rank;
+            
         }
         else{  // X has more pirates
-            rootY->rank = rootX->abs_rank+1;
-            rootX->rank = rootX->abs_rank - rootY->abs_rank;
+            rootY->abs_rank += rootX->abs_rank;
+            rootX->rank -= rootY->abs_rank;
         }
 
     } else { // X becomes the new root
         rootY->parent = rootX;
         rootX->size += rootY->size;
-        rootX->abs_rank += rootY->abs_rank;
-        if(rootX->abs_rank - rootY->abs_rank < rootY->abs_rank){ // Y has more pirates
-            rootX->rank = rootY->abs_rank+1;
-            rootY->rank = rootY->abs_rank - rootX->abs_rank;
-        }
-        else{  // X has more pirates
+        
+        if(rootY->abs_rank <= rootX->abs_rank){ // X has more pirates
+            rootX->abs_rank += rootY->abs_rank;
             rootY->rank -= rootY->abs_rank;
+            
+            
         }
+        else{  // Y has more pirates
+            rootX->abs_rank += rootY->abs_rank;
+            rootY->rank -= rootX->abs_rank;
+        }
+        
     
     }
 
@@ -141,7 +147,7 @@ int UpTree<T>::getRank(std::shared_ptr<Node<T>> x) const {
         return x->rank;
     }
     find(x); // path compression
-    return x->rank+x->parent->abs_rank;
+    return x->parent->abs_rank+ x->parent->rank + x->rank-1;
 }
 
 #endif // UPTREE_H
