@@ -40,6 +40,7 @@ add_fleet: FAILURE
 pay_pirate: SUCCESS
 add_pirate: FAILURE
 unite_fleets: SUCCESS
+debug
 add_pirate: SUCCESS
 add_fleet: INVALID_INPUT
 num_ships_for_fleet: SUCCESS, 1
