@@ -155,7 +155,7 @@ size_t HashTable<KeyType, ValueType, HashFunc>::hash(const KeyType& key, size_t 
 // Resize the hash table when load factor exceeds the threshold
 template <typename KeyType, typename ValueType, typename HashFunc>
 void HashTable<KeyType, ValueType, HashFunc>::resize() {
-    size_t newCapacity = capacity * closestPrime(2 * capacity);
+    size_t newCapacity = closestPrime(2 * capacity);
     auto newTable = std::make_unique<HashEntry[]>(newCapacity);
 
     // Rehash all existing keys
