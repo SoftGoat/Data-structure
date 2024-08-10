@@ -83,6 +83,18 @@ public:
      * @return The rank of the set containing the given element.
      */
     int getRank(const KeyType& element) const;
+
+
+    /**
+     * @brief Adds a rank to the element.
+     * 
+     * Adds a rank to the element.
+     * 
+     * @param element The element whose rank is being updated.
+     * @param rank The rank to add to the element.
+     * @return True if the rank was added, false otherwise.
+     */
+    bool addAbsRank(const KeyType& element, int rank);
 };
 
 // Implementation of DisjointSet
@@ -172,5 +184,18 @@ int DisjointSet<ValueType, KeyType, HashFunc>::getRank(const KeyType& element) c
     }
     return -1; // Should not reach here
 }
+
+template <typename ValueType, typename KeyType, typename HashFunc>
+    bool DisjointSet<ValueType, KeyType, HashFunc>::addAbsRank(const KeyType& element, int rank){
+        try{
+            auto node = elementMap.get(element);
+            node->abs_rank += rank;
+            return true;
+        }
+        catch(const std::out_of_range& e)
+        {
+            return false;
+        }
+    }
 
 #endif // DISJOINTSET_H

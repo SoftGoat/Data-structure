@@ -3,6 +3,7 @@
 #include "HashTable.h"
 #include "DisjointSet.h"
 #include <memory>
+#include <vector>
 
 // Forward declarations of test functions
 void runAllTests();
@@ -32,6 +33,19 @@ namespace TestDisjointSet {
     void stressTestDisjointSet();
 }
 
+namespace TestUpTree
+{
+    void run();
+    void testFind();
+    void testUnite();
+    void testConnected();
+    void testGetRank();
+    void testEdgeCases();
+    void stressTestUpTree();
+    
+}
+
+
 // Custom class for testing DisjointSet
 class Element {
 public:
@@ -43,7 +57,7 @@ public:
     }
 
     int get_rank() const {
-        return 0; // For simplicity, assume rank is always 0 for this basic example
+        return 1; // For simplicity, assume rank is always 1 for this basic example
     }
 };
 
@@ -57,6 +71,9 @@ int main() {
 void runAllTests() {
     TestHashTable::run();
     TestDisjointSet::run();
+    TestUpTree::run(); 
+
+
 }
 
 // Implementation of HashTable tests
@@ -586,6 +603,7 @@ void testGetSizeAndRank() {
     assert(ds.getSize(1) == 4);
     assert(ds.getSize(3) == 4);
     assert(ds.getRank(1) == 1); // Rank should reflect the merged set's size
+    printf("Rank: %d\n", ds.getRank(3));
     assert(ds.getRank(3) == 3);
 
     // Edge case: Union elements that are already connected
@@ -758,4 +776,369 @@ void testEdgeCases() {
 }
 
 }
+
+
+namespace TestUpTree {
+
+    void run();
+    void testUnite();
+    void testConnected();
+    void testFind();
+    void stressTestUpTree();
+    void testGetRank();
+
+
+    // Helper function to create nodes
+    template <typename T>
+    std::shared_ptr<Node<T>> createNode(T value) {
+        auto node = std::make_shared<Node<T>>(value); // Pass the value to the constructor
+        node->parent = node; // Initially, a node is its own parent
+        node->size = 1;
+        node->rank = 1;
+        return node;
+    }
+
+
+    void run() {
+        std::cout << "Running UpTree tests..." << std::endl;
+        testUnite();
+        testConnected();
+        testFind();
+        stressTestUpTree();
+        testGetRank();
+
+    }
+
+    void testUnite() {
+    UpTree<int> ut;
+
+    auto node1 = createNode(1);
+    auto node2 = createNode(2);
+    auto node3 = createNode(3);
+    auto node4 = createNode(4);
+    auto node5 = createNode(5);
+
+    // Basic unite and connection test
+    ut.unite(node1, node2, node1->rank, node2->rank);
+    assert(ut.connected(node1, node2));
+
+    ut.unite(node2, node3, node2->rank, node3->rank);
+    assert(ut.connected(node1, node3));
+
+    // Edge case: Unite the same node with itself
+    ut.unite(node1, node1, node1->rank, node1->rank);
+    assert(ut.connected(node1, node1)); // Should always be true
+
+    // Edge case: Unite already connected nodes
+    ut.unite(node1, node3, node1->rank, node3->rank);
+    assert(ut.connected(node1, node3)); // Should not change the connection
+
+    // Edge case: Unite disjoint sets and verify connections
+    ut.unite(node4, node5, node4->rank, node5->rank);
+    assert(ut.connected(node4, node5));
+    assert(!ut.connected(node1, node4)); // Different sets should not be connected
+
+    // Edge case: Connect two larger disjoint sets
+    ut.unite(node3, node4, node3->rank, node4->rank);
+    assert(ut.connected(node1, node5)); // All nodes should now be connected
+
+    // Edge case: Union nodes where one has a much higher rank than the other
+    auto node6 = createNode(6);
+    node6->rank = 10;  // Set a higher rank for node6
+    ut.unite(node5, node6, node5->rank, node6->rank);
+    assert(ut.connected(node1, node6)); // All should be connected
+
+    // Edge case: Attempt to unite nodes that have not been added to the tree
+    auto node7 = std::make_shared<Node<int>>(7);
+    auto node8 = std::make_shared<Node<int>>(8);
+    ut.unite(node7, node8, node7->rank, node8->rank); // No effect since they are not connected to any tree
+    assert(ut.connected(node7, node8)); // Should be connected but isolated
+
+    // Edge case: Unite after a large number of operations
+    for (int i = 8; i <= 100; ++i) {
+        auto node = createNode(i);
+        ut.unite(node6, node, node6->rank, node->rank);
+        assert(ut.connected(node1, node)); // All new nodes should be connected to the original tree
+    }
+
+    // Edge case: Ensure no disruption when reuniting nodes in the same set
+    ut.unite(node3, node5, node3->rank, node5->rank);
+    assert(ut.connected(node1, node5)); // Connection should remain intact
+
+    std::cout << "testUnite passed." << std::endl;
+}
+
+
+void testConnected() {
+    UpTree<int> ut;
+
+    auto node1 = createNode(1);
+    auto node2 = createNode(2);
+    auto node3 = createNode(3);
+    auto node4 = createNode(4);
+    auto node5 = createNode(5);
+    auto node6 = createNode(6);
+
+    // Test basic connections
+    ut.unite(node1, node2, node1->rank, node2->rank);
+    ut.unite(node3, node4, node3->rank, node4->rank);
+
+    assert(ut.connected(node1, node2));
+    assert(ut.connected(node3, node4));
+    assert(!ut.connected(node1, node3));
+
+    // Test connecting multiple components
+    ut.unite(node2, node3, node2->rank, node3->rank);
+    assert(ut.connected(node1, node4)); // Now all should be connected
+
+    // Edge Case: Check connection with itself
+    assert(ut.connected(node1, node1));
+    assert(ut.connected(node2, node2));
+
+    // Edge Case: Non-existent nodes (not in the tree)
+    auto nodeNonExistent = createNode(100);
+    assert(!ut.connected(node1, nodeNonExistent));
+
+    // Edge Case: Node that is in a different tree (simulate by creating a new tree)
+    UpTree<int> ut2;
+    auto node7 = createNode(7);
+    auto node8 = createNode(8);
+    ut2.unite(node7, node8, node7->rank, node8->rank);
+    assert(!ut.connected(node1, node7));
+
+    // Test after multiple unions
+    ut.unite(node1, node5, node1->rank, node5->rank);
+    ut.unite(node4, node6, node4->rank, node6->rank);
+    assert(ut.connected(node5, node6));
+    assert(ut.connected(node1, node6));
+    assert(ut.connected(node2, node5));
+    assert(!ut.connected(node5, node7)); // Different tree should still not connect
+
+    // Edge Case: Chain of connections
+    auto node9 = createNode(9);
+    auto node10 = createNode(10);
+    ut.unite(node9, node10, node9->rank, node10->rank);
+    ut.unite(node10, node1, node10->rank, node1->rank); // Connecting to the main tree
+    assert(ut.connected(node9, node6)); // Should now be connected through node10
+
+    // Edge Case: Disconnected nodes
+    auto node11 = createNode(11);
+    auto node12 = createNode(12);
+    assert(!ut.connected(node11, node12)); // Should not be connected as they are not united
+
+    std::cout << "testConnected passed." << std::endl;
+}
+
+
+
+    void testFind() {
+        UpTree<int> ut;
+
+        auto node1 = createNode(1);
+        auto node2 = createNode(2);
+        auto node3 = createNode(3);
+        auto node4 = createNode(4);
+        auto node5 = createNode(5);
+
+        // Basic case: Unite two nodes and ensure find returns the same root
+        ut.unite(node1, node2, node1->rank, node2->rank);
+        assert(ut.findExternal(node1) == ut.findExternal(node2));
+
+        // Unite another pair and check find
+        ut.unite(node3, node4, node3->rank, node4->rank);
+        assert(ut.findExternal(node3) == ut.findExternal(node4));
+        assert(ut.findExternal(node1) != ut.findExternal(node3)); // They are not connected yet
+
+        // Edge case: Find on a node that has not been united with others
+        assert(ut.findExternal(node5) == node5); // Should return itself as the root
+
+        // Unite two groups and check the root
+        ut.unite(node2, node3, node2->rank, node3->rank);
+        assert(ut.findExternal(node1) == ut.findExternal(node4));
+
+        // Edge case: Unite a node with itself and check find
+        ut.unite(node1, node1, node1->rank, node1->rank);
+        assert(ut.findExternal(node1) == node1);
+
+
+
+        // Edge case: Repeated find operations to ensure path compression
+        auto root = ut.findExternal(node1);
+        for (int i = 0; i < 100; ++i) {
+            assert(ut.findExternal(node1) == root);
+        }
+
+        // Edge case: After multiple unites, ensure all nodes point to the same root
+        assert(ut.findExternal(node1) == ut.findExternal(node2));
+        assert(ut.findExternal(node2) == ut.findExternal(node3));
+        assert(ut.findExternal(node3) == ut.findExternal(node4));
+        assert(ut.findExternal(node4) != ut.findExternal(node5)); // Different group
+
+        // Stress test: Find on a large number of nodes
+        const int numNodes = 10000;
+        std::vector<std::shared_ptr<Node<int>>> nodes;
+        for (int i = 6; i <= numNodes; ++i) {
+            auto node = createNode(i);
+            nodes.push_back(node);
+            ut.unite(node1, node, node1->rank, node->rank);
+            assert(ut.findExternal(node) == ut.findExternal(node1)); // All should point to the same root
+        }
+
+        // Edge case: Find on a disconnected node after many operations
+        auto nodeDisconnected = createNode(numNodes + 1);
+        assert(ut.findExternal(nodeDisconnected) == nodeDisconnected); // Should return itself as the root
+
+        std::cout << "testFind passed." << std::endl;
+    }
+
+
+
+void stressTestUpTree() {
+    UpTree<int> ut;
+    const int numNodes = 10000;
+
+    std::vector<std::shared_ptr<Node<int>>> nodes;
+    for (int i = 1; i <= numNodes; ++i) {
+        nodes.push_back(createNode(i));
+    }
+
+    // Step 1: Randomly unite nodes and verify connections
+    for (int i = 0; i < numNodes - 1; ++i) {
+        ut.unite(nodes[i], nodes[i + 1], nodes[i]->rank, nodes[i + 1]->rank);
+        assert(ut.connected(nodes[i], nodes[i + 1]));
+    }
+
+    // Step 2: Verify that all nodes are connected
+    for (int i = 0; i < numNodes - 1; ++i) {
+        assert(ut.connected(nodes[0], nodes[i + 1]));
+    }
+
+    // Step 3: Verify the rank and size consistency
+    for (int i = 0; i < numNodes; ++i) {
+        int expectedRank = ut.getRank(nodes[i]);
+        assert(expectedRank >= 0); // Ensure rank is non-negative
+        assert(ut.getRank(nodes[i]) == expectedRank); // Rank consistency check
+    }
+
+    // Step 4: Perform additional random unites and verify connections
+    for (int i = 0; i < numNodes / 2; ++i) {
+        int idx1 = rand() % numNodes;
+        int idx2 = rand() % numNodes;
+        ut.unite(nodes[idx1], nodes[idx2], nodes[idx1]->rank, nodes[idx2]->rank);
+        assert(ut.connected(nodes[idx1], nodes[idx2]));
+    }
+
+    // Step 5: Check if all nodes point to the same root after multiple unites
+    auto root = ut.findExternal(nodes[0]);
+    for (int i = 1; i < numNodes; ++i) {
+        assert(ut.findExternal(nodes[i]) == root);
+    }
+
+    // Step 6: Perform stress test with findExternal to ensure path compression works
+    for (int i = 0; i < numNodes; ++i) {
+        for (int j = 0; j < 100; ++j) {
+            assert(ut.findExternal(nodes[i]) == root); // Should all point to the same root
+        }
+    }
+
+    // Step 7: Verify after stress that all nodes still point to the same root
+    for (int i = 1; i < numNodes; ++i) {
+        assert(ut.findExternal(nodes[i]) == root);
+    }
+
+    // Step 8: Randomly check connected status between different pairs
+    for (int i = 0; i < numNodes / 10; ++i) {
+        int idx1 = rand() % numNodes;
+        int idx2 = rand() % numNodes;
+        assert(ut.connected(nodes[idx1], nodes[idx2]));
+    }
+
+    // Step 9: Verify that the size of the up-tree is as expected
+    for (int i = 0; i < numNodes; ++i) {
+        assert(ut.getRank(nodes[i]) <= numNodes);
+    }
+
+    // Step 10: Edge case: Attempt to unite a node with itself
+    for (int i = 0; i < numNodes; ++i) {
+        ut.unite(nodes[i], nodes[i], nodes[i]->rank, nodes[i]->rank);
+        assert(ut.connected(nodes[i], nodes[i]));
+    }
+
+    std::cout << "stressTestUpTree passed with " << numNodes << " nodes and multiple operations." << std::endl;
+}
+
+
+
+    void testGetRank() {
+        UpTree<int> ut;
+
+        auto node1 = createNode(1);
+        auto node2 = createNode(2);
+        auto node3 = createNode(3);
+        auto node4 = createNode(4);
+        auto node5 = createNode(5);
+        auto node6 = createNode(6);
+
+        // Basic unite and rank checks
+        ut.unite(node1, node2, node1->rank, node2->rank);
+        assert(ut.getRank(node1) == 1);
+        assert(ut.getRank(node2) == 2);
+
+        ut.unite(node3, node4, node3->rank, node4->rank);
+        assert(ut.getRank(node3) == 1);
+        assert(ut.getRank(node4) == 2);
+
+        // Unite all nodes together and check ranks
+        ut.unite(node2, node3, node2->rank, node3->rank);
+        assert(ut.getRank(node1) == 1); // Rank should reflect the combined depth
+        assert(ut.getRank(node2) == 2);
+        assert(ut.getRank(node3) == 3);
+        assert(ut.getRank(node4) == 4);
+
+        // Edge case: Unite nodes where one has a higher initial rank
+        node5->rank = 5;
+        ut.unite(node4, node5, node4->rank, node5->rank);
+        printf("node4 rank: %d\n", ut.getRank(node4));
+        assert(ut.getRank(node4) == 4); // Rank should consider node5's higher rank
+        printf("node5 rank: %d\n", ut.getRank(node5));
+        assert(ut.getRank(node5) == 5);
+
+        // Edge case: Unite an entire chain of nodes and check the ranks
+        ut.unite(node1, node6, node1->rank, node6->rank);
+        assert(ut.getRank(node6) == 1);
+        assert(ut.getRank(node1) == 6); // Rank should now reflect the total depth
+
+        // Edge case: Unite two large trees and verify rank calculations
+        auto node7 = createNode(7);
+        auto node8 = createNode(8);
+        node7->rank = 3;
+        node8->rank = 4;
+
+        ut.unite(node7, node8, node7->rank, node8->rank);
+        assert(ut.getRank(node7) == 3); // Check the ranks after union
+        assert(ut.getRank(node8) == 5);
+
+        ut.unite(node6, node7, node6->rank, node7->rank);
+        assert(ut.getRank(node6) == 6); // Combined tree rank check
+        assert(ut.getRank(node8) == 9);
+
+        // Edge case: Unite nodes with equal ranks and verify rank adjustments
+        auto node9 = createNode(9);
+        auto node10 = createNode(10);
+        node9->rank = 3;
+        node10->rank = 3;
+
+        ut.unite(node9, node10, node9->rank, node10->rank);
+        assert(ut.getRank(node9) == 3);
+        assert(ut.getRank(node10) == 4);
+
+        // Edge case: Attempting to get the rank of a node not part of any union
+        auto node11 = createNode(11);
+        assert(ut.getRank(node11) == 1); // A standalone node's rank should be 1
+        std::cout << "testGetRank passed." << std::endl;
+    }
+
+}
+
+
  // namespace TestDisjointSet

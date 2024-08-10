@@ -34,7 +34,7 @@ public:
      * @param Xrank The rank of the first node's set.
      * @param Yrank The rank of the second node's set.
      */
-    void unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, int Xrank , int Yrank);
+    void unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, int Xrank, int Yrank);
 
     /**
      * @brief Checks if two nodes are in the same set.
@@ -78,22 +78,13 @@ UpTree<T>::~UpTree() {}
 
 template <typename T>
 std::shared_ptr<Node<T>> UpTree<T>::find(std::shared_ptr<Node<T>> node) const {
-    if (node->parent != nullptr) {
-        if (node->parent->parent == nullptr) {
-            // The current parent is the root of the Up Tree.
-            // Return the current parent.
-            return node->parent;
-        }
-        // The current parent is NOT the root of the Up Tree.
-        // Therefore, keep searching.
-        else{
+    if (node->parent != node) {
+        if (node->parent->parent != node->parent){
             node->rank += node->parent->rank;
-            node->parent = find(node->parent);
-            return node->parent;
         }
+        node->parent = find(node->parent);
     }
-    // The current parent is the node, return.
-    return node;
+    return node->parent;
 }
 
 template <typename T>
@@ -102,7 +93,7 @@ std::shared_ptr<Node<T>> UpTree<T>::findExternal(std::shared_ptr<Node<T>> node) 
 }
 
 template <typename T>
-void UpTree<T>::unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, int Xrank , int Yrank) {
+void UpTree<T>::unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, int Xrank, int Yrank) {
     auto rootX = find(x);
     auto rootY = find(y);
 
@@ -110,25 +101,33 @@ void UpTree<T>::unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, in
         return;
     }
 
-    if (rootX->size < rootY->size) {
+    if (rootX->size < rootY->size) { // Y becomes the new root
         rootX->parent = rootY;
-        if (Xrank < Yrank) {
-            rootX->rank += Yrank;
-        } else {
-            rootY->rank += Xrank;
-            rootX->rank -= Xrank;
-        }
         rootY->size += rootX->size;
-    } else {
-        rootY->parent = rootX;
-        if (Yrank < Xrank) {
-            rootY->rank += Xrank;
-        } else {
-            rootX->rank += Yrank;
-            rootY->rank -= Yrank;
+        rootY->abs_rank += rootX->abs_rank;
+        if(rootX->abs_rank - rootX->abs_rank <= rootY->abs_rank){ // Y has more pirates
+            rootX->rank -= rootX->abs_rank;
         }
+        else{  // X has more pirates
+            rootY->rank = rootX->abs_rank+1;
+            rootX->rank = rootX->abs_rank - rootY->abs_rank;
+        }
+
+    } else { // X becomes the new root
+        rootY->parent = rootX;
         rootX->size += rootY->size;
+        rootX->abs_rank += rootY->abs_rank;
+        if(rootX->abs_rank - rootY->abs_rank < rootY->abs_rank){ // Y has more pirates
+            rootX->rank = rootY->abs_rank+1;
+            rootY->rank = rootY->abs_rank - rootX->abs_rank;
+        }
+        else{  // X has more pirates
+            rootY->rank -= rootY->abs_rank;
+        }
+    
     }
+
+
 }
 
 template <typename T>
@@ -138,14 +137,11 @@ bool UpTree<T>::connected(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y
 
 template <typename T>
 int UpTree<T>::getRank(std::shared_ptr<Node<T>> x) const {
-    int realRank = 0;
-    realRank += x->rank;
-    x = x->parent;
-    while (x != nullptr) {
-        realRank += x->rank;
-        x = x->parent;
+    if(x->parent == x){
+        return x->rank;
     }
-    return realRank;
+    find(x); // path compression
+    return x->rank+x->parent->abs_rank;
 }
 
 #endif // UPTREE_H
