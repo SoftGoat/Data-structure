@@ -4,14 +4,17 @@
 #include <cstddef> // For size_t
 #include <iostream> // For std::cout, std::endl
 #include <memory> // For std::unique_ptr
+#include <cmath> // For std::sqrt
 
 struct IntHash {
     size_t operator()(int key, size_t i, int m) const {
         size_t h1 = key % m;          // Primary hash function
         size_t h2 = 1 + (key % (m-1)); // Secondary hash function for step size
-        return (h1 + i * h2) % m;
+        return 1 + (h1 + i * h2) % (m-1);
     }
 };
+
+
 
 /**
  * @brief A hash table implementation that maps keys to unique values using double hashing.
@@ -52,15 +55,23 @@ private:
      */
     void resize();
 
+    /**
+     * @brief Finds the closest prime number to a given integer.
+     * 
+     * @param n The integer to find the closest prime to.
+     * @return The closest prime number to the given integer.
+     */
+    int closestPrime(int n);
+
 public:
     /**
      * @brief Constructs a new HashTable object with a given capacity.
      * 
-     * @param initialCapacity The initial capacity of the hash table.
+     * @param capacity The initial capacity of the hash table.
      * @param hashFunc The custom hash function sequence.
      * @param loadFactorThreshold The threshold for resizing the hash table.
      */
-    HashTable(size_t initialCapacity = INITIAL_CAPACITY, HashFunc hashFunc = HashFunc(), float loadFactorThreshold = 0.75f);
+    HashTable(size_t capacity = INITIAL_CAPACITY, HashFunc hashFunc = HashFunc(), float loadFactorThreshold = 0.75f);
 
     /**
      * @brief Destroys the HashTable, freeing allocated memory.
@@ -117,16 +128,34 @@ HashTable<KeyType, ValueType, HashFunc>::HashTable(size_t initialCapacity, HashF
     table = std::make_unique<HashEntry[]>(capacity);
 }
 
+
+template <typename KeyType, typename ValueType, typename HashFunc>
+int HashTable<KeyType, ValueType, HashFunc>::closestPrime(int n) {
+    int i, j;
+    for (i = n + 1; ; i++) {
+        for (j = 2; j <= std::sqrt(i); j++) {
+            if (i % j == 0) {
+                break;
+            }
+        }
+        if (j > std::sqrt(i)) {
+            return i;
+        }
+    }
+}
+
 // Computes the hash index for a given key
 template <typename KeyType, typename ValueType, typename HashFunc>
 size_t HashTable<KeyType, ValueType, HashFunc>::hash(const KeyType& key, size_t i) const {
-    return (hashFunc(key, 0, capacity) + i * hashFunc(key, 1, capacity)) % capacity;
+    int h0 = hashFunc(key, 0, capacity);
+    int h1 = hashFunc(key, 1, capacity);
+    return (h0 + i * h1) % capacity;
 }
 
 // Resize the hash table when load factor exceeds the threshold
 template <typename KeyType, typename ValueType, typename HashFunc>
 void HashTable<KeyType, ValueType, HashFunc>::resize() {
-    size_t newCapacity = capacity * 2;
+    size_t newCapacity = capacity * closestPrime(2 * capacity);
     auto newTable = std::make_unique<HashEntry[]>(newCapacity);
 
     // Rehash all existing keys
