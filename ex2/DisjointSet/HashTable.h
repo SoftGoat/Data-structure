@@ -219,6 +219,9 @@ template <typename KeyType, typename ValueType, typename HashFunc>
 bool HashTable<KeyType, ValueType, HashFunc>::contains(const KeyType& key) const {
     for (size_t i = 0; i < capacity; ++i) {
         size_t index = hash(key, i);
+        if(table[index].isDeleted){ 
+            continue;   // The element is deleted and therefore we need to countinue with the hash table.
+        }
         if (!table[index].isOccupied) {
             return false; // Slot is empty, key not found
         } else if (table[index].key == key) {
