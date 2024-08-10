@@ -450,10 +450,12 @@ void testUnion() {
     for (int i = 5; i <= 1000; ++i) {
         auto element = std::make_shared<Element>(i);
         assert(ds.makeSet(element));  // Expect true
+        assert(ds.getSize(i) == 1); // Initial size should be 1
         assert(ds.unite(1, i));  // Expect true
+        assert(ds.getSize(1) == i); // Size should increase by 1
     }
     for (int i = 5; i <= 1000; ++i) {
-        assert(ds.find(i)->get_key() == ds.find(1)->get_key());
+        assert(ds.find(i)->get_key() == ds.find(1)->get_key()); 
     }
 
     // Edge case: Union an already connected element with a new one

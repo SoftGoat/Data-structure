@@ -35,11 +35,10 @@ StatusType oceans_t::add_fleet(int fleetId)
 	}
 	
 	// Try to add the new fleet, return failure and delete the fleet if faild.
-	try{
-		m_fleet.makeSet(newFleet);
-	} catch(const std::invalid_argument& e){
+	if(!m_fleet.makeSet(newFleet)){
 		return StatusType::FAILURE;
 	}
+
 
 	return StatusType::SUCCESS;
 }

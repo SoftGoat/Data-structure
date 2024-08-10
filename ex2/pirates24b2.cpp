@@ -35,9 +35,7 @@ StatusType oceans_t::add_fleet(int fleetId)
 	}
 	
 	// Try to add the new fleet, return failure and delete the fleet if faild.
-	try{
-		m_fleet.makeSet(newFleet);
-	} catch(const std::invalid_argument& e){
+	if(!m_fleet.makeSet(newFleet)){
 		return StatusType::FAILURE;
 	}
 
@@ -66,7 +64,6 @@ StatusType oceans_t::add_pirate(int pirateId, int fleetId)
 		new_pirate_fleet = m_fleet.find(fleetId);
 	} catch(const std::invalid_argument& e){
 		// There is no fleet with id fleetID.
-		printf("fleetId: %d\n", fleetId);
 		return StatusType::FAILURE;
 	}
 
@@ -105,7 +102,7 @@ output_t<int> oceans_t::num_ships_for_fleet(int fleetId)
 		return output_t<int>(StatusType::FAILURE);
 	}
 
-	return output_t<int>(our_fleet->get_num_of_ships());
+	return output_t<int>(m_fleet.getSize(fleetId));
 }
 
 output_t<int> oceans_t::get_pirate_money(int pirateId)
