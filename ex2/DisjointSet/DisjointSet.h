@@ -14,12 +14,73 @@ private:
     UpTree<ValueType> upTree;
 
 public:
+    /**
+     * @brief Constructs a new DisjointSet object with a given initial capacity.
+     * 
+     * Initializes the hash table and up-trees with the specified capacity.
+     * 
+     * @param initialCapacity The initial capacity for the hash table.
+     */
     DisjointSet(size_t initialCapacity = 101);
+
+    /**
+     * @brief Adds an element to the disjoint set.
+     * 
+     * Initializes the element as its own set within the disjoint set structure.
+     * 
+     * @param element The element to add to the disjoint set.
+     */
     void makeSet(const ValueType& element);
+
+    /**
+     * @brief Finds the representative of the set containing the given element.
+     * 
+     * Uses path compression to optimize future queries and returns the representative element.
+     * 
+     * @param element The element to find within the disjoint set.
+     * @return The representative element of the set containing the given element.
+     */
     ValueType& find(const KeyType& element);
+
+    /**
+     * @brief Unites the sets containing two elements.
+     * 
+     * Merges the sets containing the two specified elements, using the rank to determine the structure of the merged set.
+     * 
+     * @param element1 The first element to unite.
+     * @param element2 The second element to unite.
+     */
     void unite(const KeyType& element1, const KeyType& element2);
+
+    /**
+     * @brief Checks if two elements are in the same set.
+     * 
+     * Determines if the two specified elements are part of the same connected component in the disjoint set.
+     * 
+     * @param element1 The first element to check.
+     * @param element2 The second element to check.
+     * @return True if both elements are in the same set, false otherwise.
+     */
     bool connected(const KeyType& element1, const KeyType& element2) const;
+
+    /**
+     * @brief Gets the size of the set containing the given element.
+     * 
+     * Returns the number of elements in the set that contains the specified element.
+     * 
+     * @param element The element whose set size is being queried.
+     * @return The size of the set containing the given element.
+     */
     int getSize(const KeyType& element) const;
+
+    /**
+     * @brief Gets the rank of the set containing the given element.
+     * 
+     * Returns the rank of the set that contains the specified element.
+     * 
+     * @param element The element whose set rank is being queried.
+     * @return The rank of the set containing the given element.
+     */
     int getRank(const KeyType& element) const;
 };
 
