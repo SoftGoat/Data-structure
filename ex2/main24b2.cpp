@@ -33,9 +33,6 @@ int main()
 	while (cin >> op)
     {
         count++;
-        if(count == 43){
-            printf("debug\n");
-        }
         if (!op.compare("add_fleet")) {
             cin >> d1;
             print(op, obj->add_fleet(d1));

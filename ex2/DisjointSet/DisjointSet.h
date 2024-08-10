@@ -94,12 +94,10 @@ DisjointSet<ValueType, KeyType, HashFunc>::DisjointSet(size_t initialCapacity)
 template <typename ValueType, typename KeyType, typename HashFunc>
 bool DisjointSet<ValueType, KeyType, HashFunc>::makeSet(const ValueType& element) {
     if (!element) {
-        printf("Element is null.");
         return false;
     }  
     KeyType key = element->get_key();
     if (elementMap.contains(key)) {
-        printf("Element already exists.");
         return false;
     }
 
@@ -131,24 +129,48 @@ bool DisjointSet<ValueType, KeyType, HashFunc>::unite(const KeyType& element1, c
 
 template <typename ValueType, typename KeyType, typename HashFunc>
 bool DisjointSet<ValueType, KeyType, HashFunc>::connected(const KeyType& element1, const KeyType& element2) const {
-    auto node1 = elementMap.get(element1);
-    auto node2 = elementMap.get(element2);
-    auto root1 = upTree.findExternal(node1);
-    auto root2 = upTree.findExternal(node2);
-
+    try
+    {
+        auto node1 = elementMap.get(element1);
+        auto node2 = elementMap.get(element2);
+        auto root1 = upTree.findExternal(node1);
+        auto root2 = upTree.findExternal(node2);
     return root1 == root2;
+    }
+    catch(const std::out_of_range& e)
+    {
+        std::cerr << e.what() << '\n';
+        return false;
+    }
+    return false; // Should not reach here
 }
 
 template <typename ValueType, typename KeyType, typename HashFunc>
 int DisjointSet<ValueType, KeyType, HashFunc>::getSize(const KeyType& element) const {
-    auto node = elementMap.get(element);
-    return upTree.findExternal(node)->size;
+    try{
+        auto node = elementMap.get(element);
+        return upTree.findExternal(node)->size;
+    }
+    catch(const std::out_of_range& e)
+    {
+        throw std::invalid_argument("Element not found in the disjoint set.");
+    }
+    return -1; // Should not reach here
+    
+    
 }
 
 template <typename ValueType, typename KeyType, typename HashFunc>
 int DisjointSet<ValueType, KeyType, HashFunc>::getRank(const KeyType& element) const {
-    auto node = elementMap.get(element);
-    return upTree.getRank(node);
+    try{
+        auto node = elementMap.get(element);
+        return upTree.getRank(node);
+    }
+    catch(const std::out_of_range& e)
+    {
+        throw std::invalid_argument("Element not found in the disjoint set.");
+    }
+    return -1; // Should not reach here
 }
 
 #endif // DISJOINTSET_H
