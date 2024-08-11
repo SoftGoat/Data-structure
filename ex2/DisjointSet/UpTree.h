@@ -34,7 +34,7 @@ public:
      * @param Xrank The rank of the first node's set.
      * @param Yrank The rank of the second node's set.
      */
-    void unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, int Xrank, int Yrank);
+    void unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y);
 
     /**
      * @brief Checks if two nodes are in the same set.
@@ -93,7 +93,7 @@ std::shared_ptr<Node<T>> UpTree<T>::findExternal(std::shared_ptr<Node<T>> node) 
 }
 
 template <typename T>
-void UpTree<T>::unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, int Xrank, int Yrank) {
+void UpTree<T>::unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y) {
     auto rootX = find(x);
     auto rootY = find(y);
 
@@ -102,7 +102,7 @@ void UpTree<T>::unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, in
     }
 
     if (rootX->size < rootY->size) { // Y becomes the new root
-        rootX->parent = rootY;
+        rootX->parent = rootY; 
         rootY->size += rootX->size;
         
         if(rootX->abs_rank <= rootY->abs_rank){ // Y has more pirates

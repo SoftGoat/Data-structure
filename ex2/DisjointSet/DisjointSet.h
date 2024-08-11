@@ -135,7 +135,7 @@ bool DisjointSet<ValueType, KeyType, HashFunc>::unite(const KeyType& element1, c
 
     auto node1 = elementMap.get(element1);
     auto node2 = elementMap.get(element2);
-    upTree.unite(node1, node2, node1->data->get_rank(), node2->data->get_rank());
+    upTree.unite(node1, node2);
     return true;
 }
 
