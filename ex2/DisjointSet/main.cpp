@@ -1101,12 +1101,13 @@ void stressTestUpTree() {
         printf("node4 rank: %d\n", ut.getRank(node4));
         assert(ut.getRank(node4) == 4); // Rank should consider node5's higher rank
         printf("node5 rank: %d\n", ut.getRank(node5));
-        assert(ut.getRank(node5) == 5);
+        assert(ut.getRank(node5) == 9);
 
         // Edge case: Unite an entire chain of nodes and check the ranks
         ut.unite(node1, node6, node1->rank, node6->rank);
-        assert(ut.getRank(node6) == 1);
-        assert(ut.getRank(node1) == 6); // Rank should now reflect the total depth
+        printf("node6 rank: %d\n", ut.getRank(node6));
+        assert(ut.getRank(node6) == 10);
+        assert(ut.getRank(node1) == 1); // Rank should now reflect the total depth
 
         // Edge case: Unite two large trees and verify rank calculations
         auto node7 = createNode(7);
@@ -1116,7 +1117,7 @@ void stressTestUpTree() {
 
         ut.unite(node7, node8, node7->rank, node8->rank);
         assert(ut.getRank(node7) == 3); // Check the ranks after union
-        assert(ut.getRank(node8) == 5);
+        assert(ut.getRank(node8) == 7);
 
         ut.unite(node6, node7, node6->rank, node7->rank);
         assert(ut.getRank(node6) == 6); // Combined tree rank check
@@ -1130,7 +1131,7 @@ void stressTestUpTree() {
 
         ut.unite(node9, node10, node9->rank, node10->rank);
         assert(ut.getRank(node9) == 3);
-        assert(ut.getRank(node10) == 4);
+        assert(ut.getRank(node10) == 6);
 
         // Edge case: Attempting to get the rank of a node not part of any union
         auto node11 = createNode(11);
