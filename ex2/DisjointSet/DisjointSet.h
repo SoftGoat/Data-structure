@@ -31,7 +31,7 @@ public:
      * @param element The element to add to the disjoint set.
      * @return True if the element was successfully added, false otherwise.
      */
-    bool makeSet(const ValueType& element);
+    bool makeSet(const ValueType& element, const KeyType& key);
 
     /**
      * @brief Finds the representative of the set containing the given element.
@@ -51,7 +51,7 @@ public:
      * @param element1 The first element to unite.
      * @param element2 The second element to unite.
      */
-    bool unite(const KeyType& element1, const KeyType& element2);
+    bool unite(const KeyType& element1, const KeyType& element2, int rank1, int rank2);
 
     /**
      * @brief Checks if two elements are in the same set.
@@ -83,18 +83,6 @@ public:
      * @return The rank of the set containing the given element.
      */
     int getRank(const KeyType& element) const;
-
-
-    /**
-     * @brief Adds a rank to the element.
-     * 
-     * Adds a rank to the element.
-     * 
-     * @param element The element whose rank is being updated.
-     * @param rank The rank to add to the element.
-     * @return True if the rank was added, false otherwise.
-     */
-    bool addAbsRank(const KeyType& element, int rank);
 };
 
 // Implementation of DisjointSet
@@ -104,13 +92,9 @@ DisjointSet<ValueType, KeyType, HashFunc>::DisjointSet(size_t initialCapacity)
     : elementMap(initialCapacity, HashFunc()) {}
 
 template <typename ValueType, typename KeyType, typename HashFunc>
-bool DisjointSet<ValueType, KeyType, HashFunc>::makeSet(const ValueType& element) {
-    if (!element) {
-        return false;
-    }  
-    KeyType key = element->get_key();
+bool DisjointSet<ValueType, KeyType, HashFunc>::makeSet(const ValueType& element, const KeyType& key) {
     if (elementMap.contains(key)) {
-        return false;
+        throw std::invalid_argument("Element already exists.");
     }
 
     auto newNode = std::make_shared<Node<ValueType>>(element);
@@ -128,14 +112,14 @@ ValueType& DisjointSet<ValueType, KeyType, HashFunc>::find(const KeyType& elemen
 }
 
 template <typename ValueType, typename KeyType, typename HashFunc>
-bool DisjointSet<ValueType, KeyType, HashFunc>::unite(const KeyType& element1, const KeyType& element2) {
+bool DisjointSet<ValueType, KeyType, HashFunc>::unite(const KeyType& element1, const KeyType& element2, int rank1, int rank2) {
     if (!elementMap.contains(element1) || !elementMap.contains(element2) || connected(element1, element2)) {
         return false;
     }
 
     auto node1 = elementMap.get(element1);
     auto node2 = elementMap.get(element2);
-    upTree.unite(node1, node2);
+    upTree.unite(node1, node2, rank1, rank2);
     return true;
 }
 
@@ -184,18 +168,5 @@ int DisjointSet<ValueType, KeyType, HashFunc>::getRank(const KeyType& element) c
     }
     return -1; // Should not reach here
 }
-
-template <typename ValueType, typename KeyType, typename HashFunc>
-    bool DisjointSet<ValueType, KeyType, HashFunc>::addAbsRank(const KeyType& element, int rank){
-        try{
-            auto node = elementMap.get(element);
-            node->abs_rank += rank;
-            return true;
-        }
-        catch(const std::out_of_range& e)
-        {
-            return false;
-        }
-    }
 
 #endif // DISJOINTSET_H
