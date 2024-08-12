@@ -6,6 +6,7 @@ class fleet{
     int m_id;
     int m_num_of_ships;
     int m_num_of_pirates;
+    bool m_is_accessible;
 
 
     public:
@@ -19,6 +20,8 @@ class fleet{
     void set_id(int id);
     void set_num_of_ships(int ships);
     void set_num_of_pirates(int pirates);
+    void disable();
+    bool is_accessible() const;
 
 };
 
