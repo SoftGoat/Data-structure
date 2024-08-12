@@ -16,7 +16,10 @@ class fleet{
     int get_num_of_pirates() const;
     void increase_pirate_count();
     int get_key() const;
-    int get_rank() const;
+    void set_id(int id);
+    void set_num_of_ships(int ships);
+    void set_num_of_pirates(int pirates);
+
 };
 
 #endif // FLEET_H
