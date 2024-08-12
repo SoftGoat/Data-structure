@@ -17,8 +17,8 @@
 
 #include <memory>
 #include "wet2util.h"
-#include "./DisjointSet/DisjointSet.h"
-#include "./DisjointSet/HashTable.h"
+#include "DisjointSet.h" 
+#include "HashTable.h"
 #include "fleet.h"
 #include "pirate.h"
 
@@ -27,10 +27,11 @@ private:
     /**
      *  @return pirate rank.
      */
+    output_t<int> get_pirate_rank(int pirateId) const;
     int getPirateRank(int pirateId) const;
 
-    DisjointSet<std::shared_ptr<fleet>> m_fleet;
-    HashTable<int,std::shared_ptr<pirate>> m_pirates;
+    DisjointSet<std::shared_ptr<fleet>, int> m_fleet;
+    HashTable<int, std::shared_ptr<pirate>> m_pirates;
     
 public:
 	// <DO-NOT-MODIFY> {
@@ -38,8 +39,6 @@ public:
     oceans_t();
 
 	virtual ~oceans_t();
-
-    output_t<int> get_pirate_rank(int pirateId) const; // need to be deleted before submission
 
     StatusType add_fleet(int fleetId);
 
