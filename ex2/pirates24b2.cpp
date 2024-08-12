@@ -12,6 +12,14 @@ output_t<int> oceans_t::get_pirate_rank(int pirateId) const
 	return output_t<int>(getPirateRank(pirateId));
 }
 
+std::shared_ptr<fleet> oceans_t::find_fleet(int fleetId){
+	std::shared_ptr<fleet> leaf_fleet = m_fleet.find_leaf(fleetId); // This will throw an excaption if not found.
+	if(!leaf_fleet->is_accessible()){
+		throw std::invalid_argument("Fleet is Not Accessible");
+	}
+	return m_fleet.find(fleetId);
+}
+
 int oceans_t::getPirateRank(int pirateId) const{
 	// We will assume that the pirate exsits.
 	std::shared_ptr<pirate> pirate = m_pirates.get(pirateId);
@@ -63,7 +71,7 @@ StatusType oceans_t::add_pirate(int pirateId, int fleetId)
 	}
 	std::shared_ptr<fleet> new_pirate_fleet;
 	try{
-		new_pirate_fleet = m_fleet.find(fleetId);
+		new_pirate_fleet = find_fleet(fleetId);
 	} catch(const std::invalid_argument& e){
 		// There is no fleet with id fleetID.
 		return StatusType::FAILURE;
@@ -98,7 +106,7 @@ output_t<int> oceans_t::num_ships_for_fleet(int fleetId)
 	
 	std::shared_ptr<fleet> our_fleet;
 	try{
-		our_fleet = m_fleet.find(fleetId);
+		our_fleet = find_fleet(fleetId);
 	} catch(const std::invalid_argument& e){
 		// There is no fleet with id fleetId.
 		return output_t<int>(StatusType::FAILURE);
@@ -129,8 +137,8 @@ StatusType oceans_t::unite_fleets(int fleetId1, int fleetId2)
 
 	// Check if fleets exist.
 	try{
-		fleet_1 = m_fleet.find(fleetId1);
-		fleet_2 = m_fleet.find(fleetId2);
+		fleet_1 = find_fleet(fleetId1);
+		fleet_2 = find_fleet(fleetId2);
 	} catch(const std::invalid_argument &e){
 		return StatusType::FAILURE;
 	}
@@ -151,11 +159,14 @@ StatusType oceans_t::unite_fleets(int fleetId1, int fleetId2)
 	// Change the fields of the new fleet.
 	new_fleet->set_num_of_ships(fleet_1->get_num_of_ships() + fleet_2->get_num_of_ships());
 	new_fleet->set_num_of_pirates(pirates_1 + pirates_2);
-	if(pirates_1 > pirates_2){ // The fleet with fleetId1 should be at the top of the Up Tree.
+	if(pirates_1 >= pirates_2){ // The fleet with fleetId1 should be at the top of the Up Tree.
 		new_fleet->set_id(fleet_1->get_id());
+		// Set the other fleet as uneccesible.
+		fleet_2->disable();
 	}
-	else{
+	else{	// The fleet with fleetId2 should be at the top of the Up Tree.
 		new_fleet->set_id(fleet_2->get_id());
+		fleet_1->disable();
 	}
     return StatusType::SUCCESS;
 }
@@ -176,6 +187,7 @@ StatusType oceans_t::pirate_argument(int pirateId1, int pirateId2)
 	std::shared_ptr<fleet> true_fleet_1;
 	std::shared_ptr<fleet> true_fleet_2;
 	try{
+		// We will find the true fleets of the pirates, therefore we will not care if the leaf fleet is not accessible.
 		true_fleet_1 = m_fleet.find(pirate_1->get_fleet()->get_id());
 		true_fleet_2 = m_fleet.find(pirate_2->get_fleet()->get_id());
 	} catch(const std::invalid_argument &e){
