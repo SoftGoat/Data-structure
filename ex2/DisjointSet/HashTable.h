@@ -125,7 +125,7 @@ public:
 template <typename KeyType, typename ValueType, typename HashFunc>
 HashTable<KeyType, ValueType, HashFunc>::HashTable(size_t initialCapacity, HashFunc hashFunc, float loadFactorThreshold)
     : capacity(initialCapacity), size(0), hashFunc(hashFunc), loadFactorThreshold(loadFactorThreshold) {
-    table = std::make_unique<HashEntry[]>(capacity);
+    table = std::unique_ptr<HashEntry[]>(new HashEntry[capacity]);
 }
 
 
@@ -156,7 +156,7 @@ size_t HashTable<KeyType, ValueType, HashFunc>::hash(const KeyType& key, size_t 
 template <typename KeyType, typename ValueType, typename HashFunc>
 void HashTable<KeyType, ValueType, HashFunc>::resize() {
     size_t newCapacity = closestPrime(2 * capacity);
-    auto newTable = std::make_unique<HashEntry[]>(newCapacity);
+    auto newTable = std::unique_ptr<HashEntry[]>(new HashEntry[newCapacity]);
 
     // Rehash all existing keys
     for (size_t i = 0; i < capacity; ++i) {
