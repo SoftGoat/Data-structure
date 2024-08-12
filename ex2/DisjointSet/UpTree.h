@@ -107,6 +107,9 @@ void UpTree<T>::unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, in
     auto rootX = find(x);
     auto rootY = find(y);
 
+    int actual_rank_x = rootX->rank;
+    int actual_rank_y = rootY->rank;
+
     if (rootX == rootY) {
         return;
     }
@@ -118,6 +121,9 @@ void UpTree<T>::unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, in
         } else {
             rootY->rank += Xrank;
             rootX->rank -= Yrank;
+            // Also swap the ranks of nodes.
+            rootX->rank = actual_rank_y;
+            rootY->rank = actual_rank_x;
         }
         rootY->size += rootX->size;
     } else {
@@ -127,6 +133,9 @@ void UpTree<T>::unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y, in
         } else {
             rootX->rank += Yrank;
             rootY->rank -= Yrank;
+
+            rootX->rank = actual_rank_y;
+            rootY->rank = actual_rank_x;
         }
         rootX->size += rootY->size;
     }
