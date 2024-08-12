@@ -35,7 +35,9 @@ StatusType oceans_t::add_fleet(int fleetId)
 	}
 	
 	// Try to add the new fleet, return failure and delete the fleet if faild.
-	if(!m_fleet.makeSet(newFleet)){
+	try{
+		m_fleet.makeSet(newFleet, fleetId);
+	} catch(const std::invalid_argument& e){
 		return StatusType::FAILURE;
 	}
 
@@ -72,7 +74,6 @@ StatusType oceans_t::add_pirate(int pirateId, int fleetId)
 	newPirate->set_fleet(new_pirate_fleet);
 	newPirate->set_rank(new_pirate_fleet->get_num_of_pirates() + 1);
 	new_pirate_fleet->increase_pirate_count();
-	m_fleet.addAbsRank(fleetId, 1);
 	return StatusType::SUCCESS;
 }
 
@@ -103,7 +104,7 @@ output_t<int> oceans_t::num_ships_for_fleet(int fleetId)
 		return output_t<int>(StatusType::FAILURE);
 	}
 
-	return output_t<int>(m_fleet.getSize(fleetId));
+	return output_t<int>(our_fleet->get_num_of_ships());
 }
 
 output_t<int> oceans_t::get_pirate_money(int pirateId)
@@ -133,12 +134,29 @@ StatusType oceans_t::unite_fleets(int fleetId1, int fleetId2)
 	} catch(const std::invalid_argument &e){
 		return StatusType::FAILURE;
 	}
+
+	int pirates_1 = fleet_1->get_num_of_pirates();
+	int pirates_2 = fleet_2->get_num_of_pirates();
+
 	// Check if fleets are empty.
-	if(fleet_1->get_num_of_pirates() == 0 || fleet_2->get_num_of_pirates() == 0){
+	if( pirates_1 == 0 || pirates_2 == 0){
 		return StatusType::FAILURE;
 	}
 	// else, unite!
-	m_fleet.unite(fleetId1, fleetId2);
+	m_fleet.unite(fleetId1, fleetId2, pirates_1, pirates_2);
+
+	// Change the fleet that is at the top of the Up Tree containing the fleets -
+	// to be the fleet with the most pirates.
+	std::shared_ptr<fleet> new_fleet = m_fleet.find(fleetId1);
+	// Change the fields of the new fleet.
+	new_fleet->set_num_of_ships(fleet_1->get_num_of_ships() + fleet_2->get_num_of_ships());
+	new_fleet->set_num_of_pirates(pirates_1 + pirates_2);
+	if(pirates_1 > pirates_2){ // The fleet with fleetId1 should be at the top of the Up Tree.
+		new_fleet->set_id(fleet_1->get_id());
+	}
+	else{
+		new_fleet->set_id(fleet_2->get_id());
+	}
     return StatusType::SUCCESS;
 }
 
@@ -155,7 +173,15 @@ StatusType oceans_t::pirate_argument(int pirateId1, int pirateId2)
 	std::shared_ptr<pirate> pirate_1 = m_pirates.get(pirateId1);
 	std::shared_ptr<pirate> pirate_2 = m_pirates.get(pirateId2);
 	// Check if are on the same fleet.
-	if(pirate_1->get_fleet() != pirate_2->get_fleet()){
+	std::shared_ptr<fleet> true_fleet_1;
+	std::shared_ptr<fleet> true_fleet_2;
+	try{
+		true_fleet_1 = m_fleet.find(pirate_1->get_fleet()->get_id());
+		true_fleet_2 = m_fleet.find(pirate_2->get_fleet()->get_id());
+	} catch(const std::invalid_argument &e){
+		return StatusType::FAILURE; // Fleets do not exists.
+	}
+	if(true_fleet_1 != true_fleet_2){ // Check if on the same fleet.
 		return StatusType::FAILURE;
 	}
 
