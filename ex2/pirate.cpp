@@ -1,3 +1,4 @@
+
 #include "pirate.h"
 
 pirate::pirate(int id) : m_id(id), m_coins(0), m_fleet(nullptr){};
