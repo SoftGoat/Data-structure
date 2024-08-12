@@ -43,6 +43,8 @@ public:
      */
     ValueType& find(const KeyType& element);
 
+    ValueType& find_leaf(const KeyType& element);
+
     /**
      * @brief Unites the sets containing two elements.
      * 
@@ -109,6 +111,15 @@ ValueType& DisjointSet<ValueType, KeyType, HashFunc>::find(const KeyType& elemen
     }
     auto node = elementMap.get(element);
     return upTree.findExternal(node)->data;
+}
+
+template <typename ValueType, typename KeyType, typename HashFunc>
+ValueType& DisjointSet<ValueType, KeyType, HashFunc>::find_leaf(const KeyType& element) {
+    if (!elementMap.contains(element)) {
+        throw std::invalid_argument("Element not found in the disjoint set.");
+    }
+    auto node = elementMap.get(element); 
+    return node->data;
 }
 
 template <typename ValueType, typename KeyType, typename HashFunc>
