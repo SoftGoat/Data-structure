@@ -1,6 +1,6 @@
 #include "fleet.h"
 
-fleet::fleet(int id) : m_id(id), m_num_of_ships(1), m_num_of_pirates(0) {}
+fleet::fleet(int id) : m_id(id), m_num_of_ships(1), m_num_of_pirates(0), m_is_accessible(true) {}
 
 int fleet::get_id() const {
     return m_id;
@@ -34,4 +34,12 @@ void fleet::set_num_of_ships(int ships){
 }
 void fleet::set_num_of_pirates(int pirates){
     m_num_of_pirates = pirates;
+}
+
+void fleet::disable(){
+    m_is_accessible = false;
+}
+
+bool fleet::is_accessible() const{
+    return m_is_accessible;
 }
