@@ -26,6 +26,12 @@ int fleet::get_key() const {
     return m_id;
 }
 
-int fleet::get_rank() const {
-    return m_num_of_pirates;
+void fleet::set_id(int id){
+    m_id = id;
+}
+void fleet::set_num_of_ships(int ships){
+    m_num_of_ships = ships;
+}
+void fleet::set_num_of_pirates(int pirates){
+    m_num_of_pirates = pirates;
 }
