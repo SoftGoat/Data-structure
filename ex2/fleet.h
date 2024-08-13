@@ -4,6 +4,7 @@
 class fleet{
     private:
     int m_id;
+    int m_original_id;
     int m_num_of_ships;
     int m_num_of_pirates;
     bool m_is_accessible;
@@ -22,6 +23,7 @@ class fleet{
     void set_num_of_pirates(int pirates);
     void disable();
     bool is_accessible() const;
+    int get_original_id() const;
 
 };
 

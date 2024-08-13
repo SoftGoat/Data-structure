@@ -1,6 +1,6 @@
 #include "fleet.h"
 
-fleet::fleet(int id) : m_id(id), m_num_of_ships(1), m_num_of_pirates(0), m_is_accessible(true) {}
+fleet::fleet(int id) : m_id(id), m_original_id(id), m_num_of_ships(1), m_num_of_pirates(0), m_is_accessible(true) {}
 
 int fleet::get_id() const {
     return m_id;
@@ -42,4 +42,8 @@ void fleet::disable(){
 
 bool fleet::is_accessible() const{
     return m_is_accessible;
+}
+
+int fleet::get_original_id() const{
+    return m_original_id;
 }
