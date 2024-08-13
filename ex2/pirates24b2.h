@@ -29,6 +29,7 @@ private:
      */
     output_t<int> get_pirate_rank(int pirateId) const;
     int getPirateRank(int pirateId) const;
+    std::shared_ptr<fleet> find_fleet(int fleetId);
 
     DisjointSet<std::shared_ptr<fleet>, int> m_fleet;
     HashTable<int, std::shared_ptr<pirate>> m_pirates;
