@@ -79,6 +79,7 @@ StatusType oceans_t::add_pirate(int pirateId, int fleetId)
 
 	// Insert the pirate with his ID as a key.
 	m_pirates.insert(newPirate->get_id(), newPirate);
+	m_fleet.addAbsRank(fleetId, 1);
 	newPirate->set_fleet(new_pirate_fleet);
 	newPirate->set_rank(new_pirate_fleet->get_num_of_pirates() + 1);
 	new_pirate_fleet->increase_pirate_count();
