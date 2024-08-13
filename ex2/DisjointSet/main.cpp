@@ -792,7 +792,7 @@ namespace TestUpTree {
     template <typename T>
     std::shared_ptr<Node<T>> createNode(T value) {
         auto node = std::make_shared<Node<T>>(value); // Pass the value to the constructor
-        node->parent = node; // Initially, a node is its own parent
+        node->parent = nullptr; // Initially, a node is its own parent
         node->size = 1;
         node->rank = 1;
         return node;
