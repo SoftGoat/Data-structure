@@ -23,7 +23,7 @@ std::shared_ptr<fleet> oceans_t::find_fleet(int fleetId){
 int oceans_t::getPirateRank(int pirateId) const{
 	// We will assume that the pirate exsits.
 	std::shared_ptr<pirate> pirate = m_pirates.get(pirateId);
-	int fleet_rank = m_fleet.getRank(pirate->get_fleet()->get_id());
+	int fleet_rank = m_fleet.getRank(pirate->get_fleet()->get_original_id());
 	int pirate_rank = pirate->get_rank();
 	return pirate_rank + fleet_rank;
 }
