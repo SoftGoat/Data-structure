@@ -58,6 +58,8 @@ public:
      */
     int getRank(std::shared_ptr<Node<T>> x) const;
 
+    int getRootRank(std::shared_ptr<Node<T>> x) const;
+
     /**
      * @brief Finds the representative of the set containing the given node.
      * 
@@ -115,7 +117,7 @@ void UpTree<T>::unite(std::shared_ptr<Node<T>> x, std::shared_ptr<Node<T>> y) {
         rootX->parent = rootY; 
         rootY->size += rootX->size;
         
-        if(rootX->abs_rank <= rootY->abs_rank){ // Y has more pirates
+        if(rootX->abs_rank < rootY->abs_rank){ // Y has more pirates
             rootX->rank += rootY->abs_rank - rootY->rank;
             rootY->abs_rank += rootX->abs_rank;
             //rootY rank stays the same
@@ -161,6 +163,15 @@ int UpTree<T>::getRank(std::shared_ptr<Node<T>> x) const {
     }
     find(x); // path compression
     return x->rank+x->parent->rank;
+}
+
+template <typename T>
+int UpTree<T>::getRootRank(std::shared_ptr<Node<T>> x) const {
+    if(x->parent == nullptr){
+        return x->rank;
+    }
+    find(x); // path compression
+    return x->parent->rank;
 }
 
 #endif // UPTREE_H

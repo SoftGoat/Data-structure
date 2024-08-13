@@ -98,6 +98,8 @@ public:
      */
     int getRank(const KeyType& element) const;
 
+    int getRootRank(const KeyType& element) const;
+
     /**
      * @brief Adds a rank to the element.
      * 
@@ -225,6 +227,19 @@ int DisjointSet<ValueType, KeyType, HashFunc>::getRank(const KeyType& element) c
     try{
         auto node = elementMap.get(element);
         return upTree.getRank(node);
+    }
+    catch(const std::out_of_range& e)
+    {
+        throw std::invalid_argument("Element not found in the disjoint set.");
+    }
+    return -1; // Should not reach here
+}
+
+template <typename ValueType, typename KeyType, typename HashFunc>
+int DisjointSet<ValueType, KeyType, HashFunc>::getRootRank(const KeyType& element) const {
+    try{
+        auto node = elementMap.get(element);
+        return upTree.getRootRank(node);
     }
     catch(const std::out_of_range& e)
     {
