@@ -151,7 +151,7 @@ StatusType oceans_t::unite_fleets(int fleetId1, int fleetId2)
 		return StatusType::FAILURE;
 	}
 	// else, unite!
-	m_fleet.unite(fleetId1, fleetId2, pirates_1, pirates_2);
+	m_fleet.unite(fleetId1, fleetId2);
 
 	// Change the fleet that is at the top of the Up Tree containing the fleets -
 	// to be the fleet with the most pirates.
