@@ -1,12 +1,21 @@
+add_fleet 7
+add_pirate 2 7
+add_fleet 6
+add_fleet 4
 add_fleet 10
-add_fleet 8
-add_fleet 2
-add_pirate 3 10
-add_pirate 8 2
-add_pirate 1 2
-add_pirate 6 8
-unite_fleets 8 2
-unite_fleets 2 10
-add_pirate 5 2
-pirate_argument 5 3
-get_pirate_money 5
+pay_pirate 2 15
+add_pirate 6 7
+add_pirate 9 6
+add_pirate 4 10
+unite_fleets 6 7
+unite_fleets 7 10
+pay_pirate 2 70
+pirate_argument 2 6
+add_pirate 7 4
+add_pirate 10 7
+pay_pirate 2 82
+pirate_argument 10 2
+pirate_argument 2 4
+unite_fleets 4 7
+pirate_argument 2 7
+get_pirate_money 2

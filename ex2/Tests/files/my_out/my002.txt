@@ -27646,7 +27646,7 @@ pay_pirate: SUCCESS
 pirate_argument: INVALID_INPUT
 pirate_argument: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 4253
+get_pirate_money: SUCCESS, 4249
 num_ships_for_fleet: SUCCESS, 1
 get_pirate_money: SUCCESS, 986
 get_pirate_money: SUCCESS, 3161
@@ -27815,7 +27815,7 @@ add_pirate: INVALID_INPUT
 num_ships_for_fleet: INVALID_INPUT
 get_pirate_money: SUCCESS, 16416
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 5482
+get_pirate_money: SUCCESS, 5486
 add_pirate: FAILURE
 num_ships_for_fleet: FAILURE
 pay_pirate: SUCCESS
@@ -27886,7 +27886,7 @@ pay_pirate: SUCCESS
 add_fleet: FAILURE
 add_pirate: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 4352
+get_pirate_money: SUCCESS, 4348
 num_ships_for_fleet: FAILURE
 unite_fleets: FAILURE
 add_pirate: FAILURE
@@ -28877,7 +28877,7 @@ pirate_argument: SUCCESS
 unite_fleets: INVALID_INPUT
 pirate_argument: SUCCESS
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 6848
+get_pirate_money: SUCCESS, 6852
 unite_fleets: INVALID_INPUT
 add_pirate: FAILURE
 add_pirate: FAILURE
@@ -30139,7 +30139,7 @@ unite_fleets: FAILURE
 add_pirate: FAILURE
 pirate_argument: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 5148
+get_pirate_money: SUCCESS, 5144
 add_fleet: FAILURE
 unite_fleets: FAILURE
 pirate_argument: FAILURE
@@ -30890,7 +30890,7 @@ get_pirate_money: SUCCESS, 4378
 add_fleet: FAILURE
 add_fleet: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 6848
+get_pirate_money: SUCCESS, 6852
 pirate_argument: FAILURE
 get_pirate_money: SUCCESS, 7182
 add_fleet: FAILURE
@@ -30909,7 +30909,7 @@ unite_fleets: FAILURE
 get_pirate_money: SUCCESS, 5415
 add_pirate: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 6113
+get_pirate_money: SUCCESS, 6109
 pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 5245
 get_pirate_money: SUCCESS, 8716
@@ -30937,7 +30937,7 @@ pay_pirate: SUCCESS
 pay_pirate: SUCCESS
 add_pirate: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 6113
+get_pirate_money: SUCCESS, 6109
 num_ships_for_fleet: SUCCESS, 1
 get_pirate_money: SUCCESS, 7794
 get_pirate_money: INVALID_INPUT
@@ -31937,7 +31937,7 @@ pirate_argument: FAILURE
 pirate_argument: FAILURE
 pirate_argument: FAILURE
 get_pirate_money: SUCCESS, 10514
-get_pirate_money: SUCCESS, 7123
+get_pirate_money: SUCCESS, 7119
 unite_fleets: FAILURE
 pay_pirate: SUCCESS
 add_fleet: FAILURE
@@ -32072,7 +32072,7 @@ pirate_argument: FAILURE
 add_fleet: FAILURE
 num_ships_for_fleet: FAILURE
 get_pirate_money: SUCCESS, 4379
-get_pirate_money: SUCCESS, 7865
+get_pirate_money: SUCCESS, 7869
 pirate_argument: SUCCESS
 pay_pirate: SUCCESS
 num_ships_for_fleet: FAILURE
@@ -32108,7 +32108,7 @@ num_ships_for_fleet: FAILURE
 add_fleet: FAILURE
 add_fleet: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 7123
+get_pirate_money: SUCCESS, 7119
 get_pirate_money: SUCCESS, 6418
 pay_pirate: SUCCESS
 pirate_argument: FAILURE
@@ -32355,7 +32355,7 @@ get_pirate_money: SUCCESS, 16038
 add_fleet: FAILURE
 pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 10456
-get_pirate_money: SUCCESS, 7865
+get_pirate_money: SUCCESS, 7869
 add_fleet: INVALID_INPUT
 add_pirate: FAILURE
 unite_fleets: FAILURE
@@ -32430,7 +32430,7 @@ pirate_argument: SUCCESS
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 7123
+get_pirate_money: SUCCESS, 7119
 unite_fleets: FAILURE
 add_fleet: FAILURE
 add_pirate: FAILURE
@@ -32722,7 +32722,7 @@ pirate_argument: FAILURE
 pirate_argument: FAILURE
 num_ships_for_fleet: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 8470
+get_pirate_money: SUCCESS, 8474
 pirate_argument: FAILURE
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
@@ -33404,7 +33404,7 @@ pirate_argument: FAILURE
 add_fleet: FAILURE
 unite_fleets: FAILURE
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 7685
+get_pirate_money: SUCCESS, 7681
 pay_pirate: SUCCESS
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 11241
@@ -33622,7 +33622,7 @@ pirate_argument: FAILURE
 add_pirate: FAILURE
 pirate_argument: FAILURE
 num_ships_for_fleet: SUCCESS, 1
-get_pirate_money: SUCCESS, 8095
+get_pirate_money: SUCCESS, 8091
 pay_pirate: SUCCESS
 num_ships_for_fleet: SUCCESS, 1
 add_pirate: FAILURE
@@ -33726,7 +33726,7 @@ pay_pirate: SUCCESS
 num_ships_for_fleet: SUCCESS, 1
 add_pirate: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 8095
+get_pirate_money: SUCCESS, 8091
 pay_pirate: SUCCESS
 num_ships_for_fleet: FAILURE
 unite_fleets: FAILURE
@@ -33867,7 +33867,7 @@ pirate_argument: FAILURE
 num_ships_for_fleet: FAILURE
 add_pirate: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 8095
+get_pirate_money: SUCCESS, 8091
 num_ships_for_fleet: FAILURE
 pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 4404
@@ -34114,7 +34114,7 @@ pay_pirate: SUCCESS
 unite_fleets: FAILURE
 pay_pirate: SUCCESS
 num_ships_for_fleet: SUCCESS, 1
-get_pirate_money: SUCCESS, 8124
+get_pirate_money: SUCCESS, 8120
 pay_pirate: SUCCESS
 pirate_argument: INVALID_INPUT
 add_pirate: INVALID_INPUT
@@ -34184,7 +34184,7 @@ pay_pirate: SUCCESS
 pay_pirate: SUCCESS
 add_fleet: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 9153
+get_pirate_money: SUCCESS, 9157
 unite_fleets: FAILURE
 unite_fleets: FAILURE
 get_pirate_money: SUCCESS, 10175
@@ -34550,7 +34550,7 @@ pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 21719
 add_fleet: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 9153
+get_pirate_money: SUCCESS, 9157
 num_ships_for_fleet: FAILURE
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 20312
@@ -34679,7 +34679,7 @@ num_ships_for_fleet: FAILURE
 get_pirate_money: INVALID_INPUT
 unite_fleets: INVALID_INPUT
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 9140
+get_pirate_money: SUCCESS, 9146
 get_pirate_money: SUCCESS, 11086
 num_ships_for_fleet: FAILURE
 add_pirate: FAILURE
@@ -34931,7 +34931,7 @@ get_pirate_money: SUCCESS, 10350
 pirate_argument: FAILURE
 add_fleet: FAILURE
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 8118
+get_pirate_money: SUCCESS, 8112
 unite_fleets: FAILURE
 pirate_argument: FAILURE
 get_pirate_money: SUCCESS, 11567
@@ -35115,7 +35115,7 @@ pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 7742
 pay_pirate: SUCCESS
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 13674
+get_pirate_money: SUCCESS, 13672
 unite_fleets: INVALID_INPUT
 unite_fleets: FAILURE
 add_pirate: FAILURE
@@ -35551,7 +35551,7 @@ pay_pirate: SUCCESS
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 7742
-get_pirate_money: SUCCESS, 9214
+get_pirate_money: SUCCESS, 9220
 pirate_argument: INVALID_INPUT
 unite_fleets: FAILURE
 pay_pirate: SUCCESS
@@ -35753,7 +35753,7 @@ add_fleet: FAILURE
 pirate_argument: FAILURE
 num_ships_for_fleet: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 11119
+get_pirate_money: SUCCESS, 11117
 num_ships_for_fleet: FAILURE
 num_ships_for_fleet: FAILURE
 unite_fleets: FAILURE
@@ -35843,7 +35843,7 @@ pirate_argument: FAILURE
 num_ships_for_fleet: SUCCESS, 1
 add_pirate: FAILURE
 pirate_argument: SUCCESS
-get_pirate_money: SUCCESS, 9921
+get_pirate_money: SUCCESS, 9929
 add_fleet: FAILURE
 add_fleet: FAILURE
 num_ships_for_fleet: SUCCESS, 1
@@ -35976,7 +35976,7 @@ unite_fleets: FAILURE
 pirate_argument: FAILURE
 add_pirate: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 10366
+get_pirate_money: SUCCESS, 10368
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
 num_ships_for_fleet: SUCCESS, 7
@@ -36069,7 +36069,7 @@ add_pirate: FAILURE
 get_pirate_money: SUCCESS, 7981
 pirate_argument: SUCCESS
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 14475
+get_pirate_money: SUCCESS, 14473
 unite_fleets: FAILURE
 unite_fleets: FAILURE
 pay_pirate: SUCCESS
@@ -36208,7 +36208,7 @@ add_fleet: FAILURE
 num_ships_for_fleet: SUCCESS, 1
 add_pirate: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 9508
+get_pirate_money: SUCCESS, 9500
 add_fleet: FAILURE
 pay_pirate: SUCCESS
 pirate_argument: SUCCESS
@@ -36280,7 +36280,7 @@ pirate_argument: FAILURE
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 9921
+get_pirate_money: SUCCESS, 9929
 get_pirate_money: SUCCESS, 7620
 pay_pirate: SUCCESS
 add_pirate: FAILURE
@@ -36299,7 +36299,7 @@ num_ships_for_fleet: FAILURE
 pay_pirate: SUCCESS
 pirate_argument: SUCCESS
 unite_fleets: INVALID_INPUT
-get_pirate_money: SUCCESS, 11507
+get_pirate_money: SUCCESS, 11505
 add_fleet: FAILURE
 pirate_argument: FAILURE
 get_pirate_money: SUCCESS, 12198
@@ -36322,7 +36322,7 @@ unite_fleets: FAILURE
 add_fleet: FAILURE
 pay_pirate: SUCCESS
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 10366
+get_pirate_money: SUCCESS, 10368
 num_ships_for_fleet: FAILURE
 pirate_argument: SUCCESS
 add_pirate: FAILURE
@@ -36347,7 +36347,7 @@ add_fleet: FAILURE
 pirate_argument: FAILURE
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 9612
-get_pirate_money: SUCCESS, 6601
+get_pirate_money: SUCCESS, 6603
 unite_fleets: FAILURE
 add_pirate: FAILURE
 get_pirate_money: SUCCESS, 13938
@@ -36394,14 +36394,14 @@ add_fleet: FAILURE
 add_fleet: FAILURE
 unite_fleets: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 6601
+get_pirate_money: SUCCESS, 6603
 pirate_argument: INVALID_INPUT
 num_ships_for_fleet: SUCCESS, 1
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 19773
 pay_pirate: SUCCESS
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 9508
+get_pirate_money: SUCCESS, 9500
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 14077
 add_pirate: FAILURE
@@ -36471,7 +36471,7 @@ add_fleet: FAILURE
 add_pirate: FAILURE
 unite_fleets: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 9921
+get_pirate_money: SUCCESS, 9929
 add_fleet: FAILURE
 add_fleet: FAILURE
 add_pirate: FAILURE
@@ -36518,7 +36518,7 @@ add_fleet: FAILURE
 add_fleet: INVALID_INPUT
 num_ships_for_fleet: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 14475
+get_pirate_money: SUCCESS, 14473
 pirate_argument: FAILURE
 add_pirate: FAILURE
 get_pirate_money: SUCCESS, 12085
@@ -36572,7 +36572,7 @@ pay_pirate: SUCCESS
 pirate_argument: INVALID_INPUT
 pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 11566
-get_pirate_money: SUCCESS, 10688
+get_pirate_money: SUCCESS, 10690
 num_ships_for_fleet: SUCCESS, 1
 pirate_argument: FAILURE
 get_pirate_money: SUCCESS, 4757
@@ -36656,7 +36656,7 @@ unite_fleets: FAILURE
 pirate_argument: FAILURE
 unite_fleets: FAILURE
 add_pirate: INVALID_INPUT
-get_pirate_money: SUCCESS, 10398
+get_pirate_money: SUCCESS, 10406
 pirate_argument: SUCCESS
 pirate_argument: SUCCESS
 unite_fleets: FAILURE
@@ -36697,7 +36697,7 @@ pay_pirate: SUCCESS
 unite_fleets: FAILURE
 pay_pirate: INVALID_INPUT
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 14475
+get_pirate_money: SUCCESS, 14473
 num_ships_for_fleet: FAILURE
 add_fleet: FAILURE
 pirate_argument: FAILURE
@@ -36853,7 +36853,7 @@ add_fleet: FAILURE
 pirate_argument: FAILURE
 add_pirate: INVALID_INPUT
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 9199
+get_pirate_money: SUCCESS, 9201
 unite_fleets: FAILURE
 unite_fleets: FAILURE
 num_ships_for_fleet: SUCCESS, 1
@@ -36879,7 +36879,7 @@ unite_fleets: FAILURE
 pirate_argument: SUCCESS
 pay_pirate: SUCCESS
 pirate_argument: SUCCESS
-get_pirate_money: SUCCESS, 14490
+get_pirate_money: SUCCESS, 14488
 num_ships_for_fleet: FAILURE
 add_fleet: FAILURE
 add_pirate: FAILURE
@@ -36920,7 +36920,7 @@ add_pirate: FAILURE
 num_ships_for_fleet: FAILURE
 pay_pirate: SUCCESS
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 9199
+get_pirate_money: SUCCESS, 9201
 add_fleet: FAILURE
 unite_fleets: INVALID_INPUT
 pay_pirate: SUCCESS
@@ -36946,7 +36946,7 @@ num_ships_for_fleet: FAILURE
 pirate_argument: SUCCESS
 add_fleet: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 10480
+get_pirate_money: SUCCESS, 10490
 num_ships_for_fleet: SUCCESS, 1
 unite_fleets: FAILURE
 add_pirate: FAILURE
@@ -36964,7 +36964,7 @@ pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 7841
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 8772
-get_pirate_money: SUCCESS, 11981
+get_pirate_money: SUCCESS, 11979
 pirate_argument: FAILURE
 pirate_argument: FAILURE
 add_fleet: FAILURE
@@ -36990,7 +36990,7 @@ add_fleet: FAILURE
 pirate_argument: SUCCESS
 pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 25064
-get_pirate_money: SUCCESS, 9199
+get_pirate_money: SUCCESS, 9201
 num_ships_for_fleet: SUCCESS, 1
 pay_pirate: SUCCESS
 pirate_argument: SUCCESS
@@ -37095,7 +37095,7 @@ pay_pirate: SUCCESS
 add_pirate: FAILURE
 unite_fleets: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 9168
+get_pirate_money: SUCCESS, 9166
 unite_fleets: FAILURE
 add_pirate: FAILURE
 add_fleet: FAILURE
@@ -37104,7 +37104,7 @@ add_fleet: FAILURE
 num_ships_for_fleet: SUCCESS, 1
 num_ships_for_fleet: SUCCESS, 1
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 9782
+get_pirate_money: SUCCESS, 9788
 pay_pirate: SUCCESS
 unite_fleets: FAILURE
 pay_pirate: SUCCESS
@@ -37150,7 +37150,7 @@ add_fleet: INVALID_INPUT
 pirate_argument: FAILURE
 get_pirate_money: SUCCESS, 7312
 get_pirate_money: SUCCESS, 25064
-get_pirate_money: SUCCESS, 14490
+get_pirate_money: SUCCESS, 14488
 add_fleet: FAILURE
 add_fleet: FAILURE
 unite_fleets: FAILURE
@@ -37235,7 +37235,7 @@ pay_pirate: INVALID_INPUT
 pay_pirate: SUCCESS
 num_ships_for_fleet: SUCCESS, 1
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 8001
+get_pirate_money: SUCCESS, 8003
 pirate_argument: SUCCESS
 pay_pirate: SUCCESS
 pay_pirate: SUCCESS
@@ -37343,7 +37343,7 @@ add_pirate: FAILURE
 add_fleet: FAILURE
 pirate_argument: INVALID_INPUT
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 14490
+get_pirate_money: SUCCESS, 14488
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 22259
 unite_fleets: FAILURE
@@ -37433,7 +37433,7 @@ unite_fleets: FAILURE
 pirate_argument: FAILURE
 pirate_argument: FAILURE
 num_ships_for_fleet: SUCCESS, 1
-get_pirate_money: SUCCESS, 10301
+get_pirate_money: SUCCESS, 10299
 unite_fleets: FAILURE
 unite_fleets: FAILURE
 pirate_argument: FAILURE
@@ -37471,7 +37471,7 @@ pirate_argument: SUCCESS
 num_ships_for_fleet: SUCCESS, 1
 pay_pirate: SUCCESS
 unite_fleets: INVALID_INPUT
-get_pirate_money: SUCCESS, 11996
+get_pirate_money: SUCCESS, 11994
 pirate_argument: SUCCESS
 pay_pirate: SUCCESS
 pay_pirate: SUCCESS
@@ -37488,7 +37488,7 @@ pay_pirate: SUCCESS
 add_fleet: FAILURE
 num_ships_for_fleet: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 9644
+get_pirate_money: SUCCESS, 9636
 add_pirate: FAILURE
 add_pirate: FAILURE
 get_pirate_money: SUCCESS, 20985
@@ -37500,10 +37500,10 @@ unite_fleets: FAILURE
 unite_fleets: FAILURE
 pay_pirate: SUCCESS
 add_pirate: INVALID_INPUT
-get_pirate_money: SUCCESS, 8454
+get_pirate_money: SUCCESS, 8456
 pay_pirate: INVALID_INPUT
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 10688
+get_pirate_money: SUCCESS, 10690
 pay_pirate: SUCCESS
 num_ships_for_fleet: SUCCESS, 1
 add_fleet: FAILURE
@@ -37520,7 +37520,7 @@ unite_fleets: FAILURE
 num_ships_for_fleet: FAILURE
 pirate_argument: FAILURE
 num_ships_for_fleet: SUCCESS, 1
-get_pirate_money: SUCCESS, 10301
+get_pirate_money: SUCCESS, 10299
 add_pirate: FAILURE
 add_fleet: FAILURE
 add_fleet: FAILURE
@@ -37594,7 +37594,7 @@ pirate_argument: SUCCESS
 pay_pirate: SUCCESS
 unite_fleets: FAILURE
 pirate_argument: INVALID_INPUT
-get_pirate_money: SUCCESS, 12039
+get_pirate_money: SUCCESS, 12037
 pirate_argument: SUCCESS
 unite_fleets: INVALID_INPUT
 add_pirate: FAILURE
@@ -37624,7 +37624,7 @@ unite_fleets: FAILURE
 num_ships_for_fleet: FAILURE
 unite_fleets: INVALID_INPUT
 get_pirate_money: SUCCESS, 15057
-get_pirate_money: SUCCESS, 11996
+get_pirate_money: SUCCESS, 11994
 num_ships_for_fleet: SUCCESS, 1
 pirate_argument: SUCCESS
 unite_fleets: FAILURE
@@ -37636,7 +37636,7 @@ pay_pirate: SUCCESS
 add_pirate: FAILURE
 pirate_argument: INVALID_INPUT
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 12039
+get_pirate_money: SUCCESS, 12037
 num_ships_for_fleet: FAILURE
 pirate_argument: SUCCESS
 pay_pirate: SUCCESS
@@ -37645,7 +37645,7 @@ num_ships_for_fleet: FAILURE
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 12065
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 8448
+get_pirate_money: SUCCESS, 8450
 num_ships_for_fleet: FAILURE
 add_pirate: FAILURE
 pay_pirate: SUCCESS
@@ -37658,7 +37658,7 @@ add_pirate: FAILURE
 add_fleet: FAILURE
 add_pirate: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 14716
+get_pirate_money: SUCCESS, 14714
 pay_pirate: SUCCESS
 pirate_argument: SUCCESS
 unite_fleets: FAILURE
@@ -37697,7 +37697,7 @@ pay_pirate: SUCCESS
 unite_fleets: FAILURE
 pirate_argument: SUCCESS
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 8448
+get_pirate_money: SUCCESS, 8450
 pirate_argument: SUCCESS
 add_pirate: FAILURE
 get_pirate_money: SUCCESS, 20491
@@ -37710,7 +37710,7 @@ num_ships_for_fleet: SUCCESS, 1
 pay_pirate: SUCCESS
 pay_pirate: SUCCESS
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 11782
+get_pirate_money: SUCCESS, 11780
 pay_pirate: SUCCESS
 unite_fleets: FAILURE
 add_fleet: FAILURE
@@ -37771,7 +37771,7 @@ pirate_argument: SUCCESS
 pay_pirate: SUCCESS
 add_fleet: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 11704
+get_pirate_money: SUCCESS, 11714
 add_pirate: FAILURE
 add_pirate: FAILURE
 num_ships_for_fleet: SUCCESS, 1
@@ -37810,7 +37810,7 @@ pay_pirate: SUCCESS
 pirate_argument: INVALID_INPUT
 pay_pirate: SUCCESS
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 10688
+get_pirate_money: SUCCESS, 10690
 add_fleet: INVALID_INPUT
 add_fleet: FAILURE
 pay_pirate: SUCCESS
@@ -38045,7 +38045,7 @@ pay_pirate: SUCCESS
 unite_fleets: FAILURE
 add_fleet: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 11704
+get_pirate_money: SUCCESS, 11714
 get_pirate_money: SUCCESS, 13036
 pirate_argument: FAILURE
 pirate_argument: SUCCESS
@@ -38093,7 +38093,7 @@ pay_pirate: SUCCESS
 unite_fleets: FAILURE
 unite_fleets: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 11787
+get_pirate_money: SUCCESS, 11785
 pay_pirate: SUCCESS
 add_pirate: FAILURE
 pirate_argument: SUCCESS
@@ -38106,7 +38106,7 @@ get_pirate_money: SUCCESS, 12417
 get_pirate_money: SUCCESS, 13412
 pay_pirate: SUCCESS
 pirate_argument: SUCCESS
-get_pirate_money: SUCCESS, 11872
+get_pirate_money: SUCCESS, 11870
 unite_fleets: FAILURE
 num_ships_for_fleet: FAILURE
 add_pirate: FAILURE
@@ -38150,7 +38150,7 @@ add_pirate: FAILURE
 add_fleet: FAILURE
 num_ships_for_fleet: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 11872
+get_pirate_money: SUCCESS, 11870
 pirate_argument: INVALID_INPUT
 pay_pirate: SUCCESS
 add_pirate: FAILURE
@@ -38237,11 +38237,11 @@ add_pirate: FAILURE
 unite_fleets: FAILURE
 pirate_argument: SUCCESS
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 11787
+get_pirate_money: SUCCESS, 11785
 add_fleet: FAILURE
 add_pirate: INVALID_INPUT
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 11984
+get_pirate_money: SUCCESS, 11980
 add_fleet: FAILURE
 add_fleet: FAILURE
 add_fleet: FAILURE
@@ -38326,7 +38326,7 @@ pay_pirate: SUCCESS
 pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 10281
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 10235
+get_pirate_money: SUCCESS, 10227
 add_pirate: INVALID_INPUT
 pirate_argument: FAILURE
 add_fleet: FAILURE
@@ -38346,7 +38346,7 @@ add_fleet: FAILURE
 pay_pirate: SUCCESS
 pay_pirate: SUCCESS
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 11755
+get_pirate_money: SUCCESS, 11767
 num_ships_for_fleet: SUCCESS, 1
 pay_pirate: SUCCESS
 add_pirate: FAILURE
@@ -38422,7 +38422,7 @@ add_fleet: FAILURE
 pirate_argument: INVALID_INPUT
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 26281
-get_pirate_money: SUCCESS, 12054
+get_pirate_money: SUCCESS, 12050
 pirate_argument: SUCCESS
 add_fleet: FAILURE
 num_ships_for_fleet: FAILURE
@@ -38439,7 +38439,7 @@ num_ships_for_fleet: SUCCESS, 2
 unite_fleets: INVALID_INPUT
 add_fleet: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 10237
+get_pirate_money: SUCCESS, 10225
 pirate_argument: SUCCESS
 pay_pirate: SUCCESS
 num_ships_for_fleet: FAILURE
@@ -38471,7 +38471,7 @@ add_fleet: FAILURE
 add_pirate: FAILURE
 add_fleet: FAILURE
 num_ships_for_fleet: SUCCESS, 1
-get_pirate_money: SUCCESS, 12576
+get_pirate_money: SUCCESS, 12574
 num_ships_for_fleet: FAILURE
 pirate_argument: SUCCESS
 add_pirate: FAILURE
@@ -38583,7 +38583,7 @@ get_pirate_money: SUCCESS, 8417
 get_pirate_money: SUCCESS, 16835
 add_pirate: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 12576
+get_pirate_money: SUCCESS, 12574
 add_pirate: FAILURE
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 10795
@@ -38595,7 +38595,7 @@ add_pirate: FAILURE
 pirate_argument: FAILURE
 get_pirate_money: SUCCESS, 6562
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 10258
+get_pirate_money: SUCCESS, 10246
 get_pirate_money: SUCCESS, 14261
 add_fleet: FAILURE
 unite_fleets: FAILURE
@@ -38713,11 +38713,11 @@ num_ships_for_fleet: FAILURE
 unite_fleets: FAILURE
 get_pirate_money: SUCCESS, 10184
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 10258
+get_pirate_money: SUCCESS, 10246
 add_fleet: FAILURE
 pirate_argument: SUCCESS
 pirate_argument: INVALID_INPUT
-get_pirate_money: SUCCESS, 10258
+get_pirate_money: SUCCESS, 10246
 get_pirate_money: SUCCESS, 7556
 pay_pirate: SUCCESS
 pay_pirate: SUCCESS
@@ -38775,7 +38775,7 @@ pay_pirate: SUCCESS
 add_pirate: FAILURE
 unite_fleets: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 10258
+get_pirate_money: SUCCESS, 10246
 num_ships_for_fleet: SUCCESS, 1
 num_ships_for_fleet: FAILURE
 pirate_argument: FAILURE
@@ -38849,7 +38849,7 @@ pay_pirate: SUCCESS
 add_pirate: FAILURE
 add_fleet: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 11274
+get_pirate_money: SUCCESS, 11284
 get_pirate_money: SUCCESS, 15604
 add_fleet: FAILURE
 num_ships_for_fleet: SUCCESS, 1
@@ -38894,7 +38894,7 @@ pirate_argument: SUCCESS
 num_ships_for_fleet: SUCCESS, 1
 num_ships_for_fleet: FAILURE
 num_ships_for_fleet: SUCCESS, 1
-get_pirate_money: SUCCESS, 11262
+get_pirate_money: SUCCESS, 11264
 add_fleet: FAILURE
 add_pirate: FAILURE
 pirate_argument: FAILURE
@@ -38992,7 +38992,7 @@ add_pirate: FAILURE
 add_pirate: FAILURE
 pirate_argument: FAILURE
 pirate_argument: SUCCESS
-get_pirate_money: SUCCESS, 12553
+get_pirate_money: SUCCESS, 12549
 add_pirate: FAILURE
 pay_pirate: SUCCESS
 add_fleet: FAILURE
@@ -39029,7 +39029,7 @@ unite_fleets: INVALID_INPUT
 add_fleet: FAILURE
 pirate_argument: FAILURE
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 9501
+get_pirate_money: SUCCESS, 9503
 unite_fleets: FAILURE
 pirate_argument: FAILURE
 get_pirate_money: SUCCESS, 10609
@@ -39186,7 +39186,7 @@ unite_fleets: FAILURE
 unite_fleets: FAILURE
 unite_fleets: FAILURE
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 11274
+get_pirate_money: SUCCESS, 11284
 add_fleet: FAILURE
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 12125
@@ -39242,9 +39242,9 @@ unite_fleets: INVALID_INPUT
 add_pirate: INVALID_INPUT
 add_fleet: FAILURE
 add_pirate: INVALID_INPUT
-get_pirate_money: SUCCESS, 12966
+get_pirate_money: SUCCESS, 12964
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 12966
+get_pirate_money: SUCCESS, 12964
 unite_fleets: FAILURE
 add_fleet: FAILURE
 add_fleet: FAILURE
@@ -39285,7 +39285,7 @@ unite_fleets: FAILURE
 num_ships_for_fleet: SUCCESS, 1
 num_ships_for_fleet: FAILURE
 pirate_argument: SUCCESS
-get_pirate_money: SUCCESS, 12544
+get_pirate_money: SUCCESS, 12560
 pay_pirate: SUCCESS
 add_fleet: FAILURE
 num_ships_for_fleet: FAILURE
@@ -39382,7 +39382,7 @@ num_ships_for_fleet: SUCCESS, 29
 add_pirate: FAILURE
 add_pirate: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 12186
+get_pirate_money: SUCCESS, 12188
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
 add_fleet: INVALID_INPUT
@@ -39419,7 +39419,7 @@ pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 24585
 unite_fleets: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 12049
+get_pirate_money: SUCCESS, 12045
 unite_fleets: FAILURE
 add_fleet: FAILURE
 pirate_argument: SUCCESS
@@ -39501,7 +39501,7 @@ get_pirate_money: SUCCESS, 14181
 unite_fleets: INVALID_INPUT
 unite_fleets: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 13270
+get_pirate_money: SUCCESS, 13268
 add_fleet: FAILURE
 unite_fleets: FAILURE
 pirate_argument: FAILURE
@@ -39513,7 +39513,7 @@ pirate_argument: FAILURE
 pirate_argument: FAILURE
 pirate_argument: SUCCESS
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 12049
+get_pirate_money: SUCCESS, 12045
 pay_pirate: SUCCESS
 num_ships_for_fleet: FAILURE
 get_pirate_money: SUCCESS, 11670
@@ -39585,7 +39585,7 @@ get_pirate_money: SUCCESS, 15677
 get_pirate_money: SUCCESS, 10082
 add_fleet: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 14244
+get_pirate_money: SUCCESS, 14242
 pirate_argument: INVALID_INPUT
 num_ships_for_fleet: SUCCESS, 10
 unite_fleets: FAILURE
@@ -39598,7 +39598,7 @@ unite_fleets: INVALID_INPUT
 pay_pirate: INVALID_INPUT
 pirate_argument: SUCCESS
 add_pirate: INVALID_INPUT
-get_pirate_money: SUCCESS, 13270
+get_pirate_money: SUCCESS, 13268
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
 unite_fleets: FAILURE
@@ -39617,7 +39617,7 @@ pay_pirate: SUCCESS
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 14055
 pirate_argument: SUCCESS
-get_pirate_money: SUCCESS, 13819
+get_pirate_money: SUCCESS, 13815
 add_fleet: FAILURE
 pirate_argument: FAILURE
 num_ships_for_fleet: FAILURE
@@ -39817,7 +39817,7 @@ num_ships_for_fleet: SUCCESS, 1
 get_pirate_money: SUCCESS, 14963
 unite_fleets: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 14241
+get_pirate_money: SUCCESS, 14239
 get_pirate_money: SUCCESS, 12789
 pirate_argument: SUCCESS
 add_fleet: FAILURE
@@ -39828,7 +39828,7 @@ add_pirate: FAILURE
 add_pirate: FAILURE
 add_pirate: FAILURE
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 11700
+get_pirate_money: SUCCESS, 11712
 unite_fleets: FAILURE
 add_pirate: FAILURE
 num_ships_for_fleet: SUCCESS, 7
@@ -39872,7 +39872,7 @@ num_ships_for_fleet: FAILURE
 num_ships_for_fleet: FAILURE
 pirate_argument: FAILURE
 pirate_argument: SUCCESS
-get_pirate_money: SUCCESS, 14241
+get_pirate_money: SUCCESS, 14239
 add_pirate: FAILURE
 add_pirate: FAILURE
 num_ships_for_fleet: FAILURE
@@ -39983,7 +39983,7 @@ get_pirate_money: SUCCESS, 8488
 pay_pirate: SUCCESS
 pirate_argument: FAILURE
 num_ships_for_fleet: SUCCESS, 1
-get_pirate_money: SUCCESS, 13270
+get_pirate_money: SUCCESS, 13268
 pirate_argument: FAILURE
 get_pirate_money: SUCCESS, 10450
 pirate_argument: SUCCESS
@@ -40014,7 +40014,7 @@ num_ships_for_fleet: SUCCESS, 1
 pay_pirate: FAILURE
 get_pirate_money: FAILURE
 get_pirate_money: FAILURE
-get_pirate_money: SUCCESS, 12049
+get_pirate_money: SUCCESS, 12045
 add_pirate: FAILURE
 pirate_argument: FAILURE
 pirate_argument: FAILURE
@@ -40355,7 +40355,7 @@ pay_pirate: FAILURE
 unite_fleets: FAILURE
 unite_fleets: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 10873
+get_pirate_money: SUCCESS, 10875
 unite_fleets: FAILURE
 add_fleet: FAILURE
 get_pirate_money: FAILURE
@@ -40679,7 +40679,7 @@ num_ships_for_fleet: SUCCESS, 1
 get_pirate_money: FAILURE
 add_fleet: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 10497
+get_pirate_money: SUCCESS, 10499
 pirate_argument: FAILURE
 get_pirate_money: FAILURE
 pirate_argument: FAILURE
@@ -40823,7 +40823,7 @@ add_fleet: SUCCESS
 num_ships_for_fleet: FAILURE
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 18064
+get_pirate_money: SUCCESS, 18060
 unite_fleets: FAILURE
 pirate_argument: FAILURE
 pirate_argument: FAILURE
@@ -40846,7 +40846,7 @@ num_ships_for_fleet: FAILURE
 unite_fleets: FAILURE
 add_pirate: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 14241
+get_pirate_money: SUCCESS, 14239
 num_ships_for_fleet: FAILURE
 pirate_argument: FAILURE
 pay_pirate: FAILURE
@@ -40875,7 +40875,7 @@ unite_fleets: FAILURE
 unite_fleets: FAILURE
 num_ships_for_fleet: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 13819
+get_pirate_money: SUCCESS, 13815
 get_pirate_money: INVALID_INPUT
 unite_fleets: FAILURE
 unite_fleets: FAILURE
@@ -40951,11 +40951,11 @@ pirate_argument: FAILURE
 get_pirate_money: FAILURE
 get_pirate_money: FAILURE
 pay_pirate: FAILURE
-get_pirate_money: SUCCESS, 13819
+get_pirate_money: SUCCESS, 13815
 pay_pirate: FAILURE
 add_pirate: FAILURE
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 12721
+get_pirate_money: SUCCESS, 12723
 num_ships_for_fleet: FAILURE
 pay_pirate: FAILURE
 add_fleet: SUCCESS
@@ -41374,7 +41374,7 @@ pirate_argument: FAILURE
 pay_pirate: FAILURE
 add_pirate: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 18064
+get_pirate_money: SUCCESS, 18060
 num_ships_for_fleet: FAILURE
 pay_pirate: FAILURE
 num_ships_for_fleet: FAILURE
@@ -41424,7 +41424,7 @@ add_fleet: SUCCESS
 add_fleet: SUCCESS
 get_pirate_money: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 13800
+get_pirate_money: SUCCESS, 13820
 get_pirate_money: FAILURE
 add_fleet: FAILURE
 pay_pirate: FAILURE
@@ -41626,7 +41626,7 @@ get_pirate_money: FAILURE
 get_pirate_money: FAILURE
 pay_pirate: FAILURE
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 18113
+get_pirate_money: SUCCESS, 18111
 pirate_argument: FAILURE
 num_ships_for_fleet: FAILURE
 add_fleet: SUCCESS
@@ -41973,7 +41973,7 @@ num_ships_for_fleet: FAILURE
 unite_fleets: FAILURE
 num_ships_for_fleet: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 12721
+get_pirate_money: SUCCESS, 12723
 add_fleet: SUCCESS
 num_ships_for_fleet: FAILURE
 unite_fleets: FAILURE
@@ -42170,7 +42170,7 @@ add_pirate: FAILURE
 num_ships_for_fleet: FAILURE
 get_pirate_money: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 18113
+get_pirate_money: SUCCESS, 18111
 get_pirate_money: FAILURE
 get_pirate_money: FAILURE
 num_ships_for_fleet: SUCCESS, 1
@@ -42321,7 +42321,7 @@ add_pirate: FAILURE
 pirate_argument: FAILURE
 pirate_argument: FAILURE
 num_ships_for_fleet: SUCCESS, 1
-get_pirate_money: SUCCESS, 13230
+get_pirate_money: SUCCESS, 13226
 add_pirate: SUCCESS
 get_pirate_money: SUCCESS, 0
 unite_fleets: FAILURE
@@ -42433,7 +42433,7 @@ pirate_argument: FAILURE
 unite_fleets: FAILURE
 add_fleet: SUCCESS
 add_fleet: SUCCESS
-get_pirate_money: SUCCESS, 12462
+get_pirate_money: SUCCESS, 12464
 pirate_argument: FAILURE
 pay_pirate: FAILURE
 unite_fleets: FAILURE
@@ -42521,7 +42521,7 @@ pirate_argument: FAILURE
 add_fleet: SUCCESS
 pay_pirate: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 18064
+get_pirate_money: SUCCESS, 18060
 add_pirate: SUCCESS
 pay_pirate: FAILURE
 add_pirate: FAILURE
@@ -43405,7 +43405,7 @@ unite_fleets: INVALID_INPUT
 pirate_argument: FAILURE
 add_fleet: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 18064
+get_pirate_money: SUCCESS, 18060
 num_ships_for_fleet: FAILURE
 get_pirate_money: FAILURE
 num_ships_for_fleet: SUCCESS, 1
@@ -43860,7 +43860,7 @@ pay_pirate: FAILURE
 get_pirate_money: FAILURE
 num_ships_for_fleet: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 8649
+get_pirate_money: SUCCESS, 8647
 unite_fleets: FAILURE
 add_fleet: FAILURE
 add_pirate: FAILURE
@@ -43933,7 +43933,7 @@ add_pirate: FAILURE
 get_pirate_money: FAILURE
 num_ships_for_fleet: SUCCESS, 1
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 12462
+get_pirate_money: SUCCESS, 12464
 get_pirate_money: FAILURE
 get_pirate_money: FAILURE
 unite_fleets: FAILURE
@@ -44287,7 +44287,7 @@ add_fleet: FAILURE
 pay_pirate: FAILURE
 pirate_argument: FAILURE
 add_pirate: SUCCESS
-get_pirate_money: SUCCESS, 12721
+get_pirate_money: SUCCESS, 12723
 add_fleet: FAILURE
 pirate_argument: FAILURE
 unite_fleets: FAILURE
@@ -44638,7 +44638,7 @@ add_pirate: FAILURE
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 13819
+get_pirate_money: SUCCESS, 13815
 num_ships_for_fleet: SUCCESS, 1
 get_pirate_money: FAILURE
 unite_fleets: FAILURE
@@ -44813,7 +44813,7 @@ add_fleet: FAILURE
 add_pirate: FAILURE
 add_pirate: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 12721
+get_pirate_money: SUCCESS, 12723
 num_ships_for_fleet: SUCCESS, 1
 num_ships_for_fleet: FAILURE
 num_ships_for_fleet: INVALID_INPUT
@@ -45211,7 +45211,7 @@ add_fleet: FAILURE
 get_pirate_money: SUCCESS, 0
 add_pirate: SUCCESS
 get_pirate_money: FAILURE
-get_pirate_money: SUCCESS, 10497
+get_pirate_money: SUCCESS, 10499
 add_fleet: FAILURE
 pirate_argument: FAILURE
 get_pirate_money: FAILURE
@@ -45405,7 +45405,7 @@ pay_pirate: FAILURE
 pay_pirate: FAILURE
 pay_pirate: SUCCESS
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 15641
+get_pirate_money: SUCCESS, 15643
 pirate_argument: FAILURE
 add_fleet: FAILURE
 num_ships_for_fleet: FAILURE
@@ -45956,7 +45956,7 @@ add_pirate: SUCCESS
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 27681
 add_pirate: SUCCESS
-get_pirate_money: SUCCESS, 13230
+get_pirate_money: SUCCESS, 13226
 add_fleet: FAILURE
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
@@ -46163,7 +46163,7 @@ get_pirate_money: SUCCESS, 2833
 pirate_argument: FAILURE
 add_fleet: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 21118
+get_pirate_money: SUCCESS, 21120
 unite_fleets: FAILURE
 pirate_argument: FAILURE
 pirate_argument: FAILURE
@@ -46384,7 +46384,7 @@ add_fleet: SUCCESS
 pay_pirate: FAILURE
 num_ships_for_fleet: SUCCESS, 1
 add_pirate: SUCCESS
-get_pirate_money: SUCCESS, 12462
+get_pirate_money: SUCCESS, 12464
 add_fleet: FAILURE
 pirate_argument: FAILURE
 add_pirate: SUCCESS
@@ -47270,7 +47270,7 @@ add_fleet: FAILURE
 num_ships_for_fleet: SUCCESS, 1
 num_ships_for_fleet: SUCCESS, 1
 get_pirate_money: SUCCESS, 14550
-get_pirate_money: SUCCESS, 24270
+get_pirate_money: SUCCESS, 24272
 pay_pirate: FAILURE
 add_fleet: FAILURE
 get_pirate_money: FAILURE
@@ -47335,7 +47335,7 @@ unite_fleets: FAILURE
 pirate_argument: FAILURE
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 13468
+get_pirate_money: SUCCESS, 13446
 add_pirate: FAILURE
 pirate_argument: FAILURE
 add_pirate: FAILURE
@@ -48068,7 +48068,7 @@ get_pirate_money: SUCCESS, 0
 num_ships_for_fleet: SUCCESS, 1
 add_fleet: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 12339
+get_pirate_money: SUCCESS, 12337
 num_ships_for_fleet: SUCCESS, 1
 add_pirate: FAILURE
 unite_fleets: FAILURE
@@ -49402,7 +49402,7 @@ unite_fleets: FAILURE
 add_pirate: FAILURE
 num_ships_for_fleet: SUCCESS, 1
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 26095
+get_pirate_money: SUCCESS, 26115
 get_pirate_money: SUCCESS, 5107
 num_ships_for_fleet: SUCCESS, 1
 pay_pirate: SUCCESS
@@ -50286,7 +50286,7 @@ unite_fleets: FAILURE
 add_fleet: FAILURE
 pirate_argument: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 24644
+get_pirate_money: SUCCESS, 24640
 add_fleet: FAILURE
 pay_pirate: SUCCESS
 num_ships_for_fleet: FAILURE
@@ -50462,7 +50462,7 @@ pirate_argument: FAILURE
 unite_fleets: FAILURE
 unite_fleets: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 29940
+get_pirate_money: SUCCESS, 29938
 pirate_argument: FAILURE
 add_pirate: SUCCESS
 add_fleet: FAILURE
@@ -50519,7 +50519,7 @@ add_fleet: FAILURE
 pirate_argument: FAILURE
 add_pirate: SUCCESS
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 18519
+get_pirate_money: SUCCESS, 18517
 pay_pirate: FAILURE
 pirate_argument: FAILURE
 num_ships_for_fleet: SUCCESS, 1
@@ -50624,7 +50624,7 @@ pay_pirate: SUCCESS
 pay_pirate: SUCCESS
 unite_fleets: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 18719
+get_pirate_money: SUCCESS, 18715
 get_pirate_money: SUCCESS, 463
 add_pirate: SUCCESS
 pirate_argument: FAILURE
@@ -50920,7 +50920,7 @@ pay_pirate: SUCCESS
 num_ships_for_fleet: SUCCESS, 1
 add_pirate: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 26039
+get_pirate_money: SUCCESS, 26041
 add_fleet: FAILURE
 add_pirate: FAILURE
 get_pirate_money: SUCCESS, 5571
@@ -51143,7 +51143,7 @@ pirate_argument: FAILURE
 add_pirate: FAILURE
 unite_fleets: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 18519
+get_pirate_money: SUCCESS, 18517
 num_ships_for_fleet: SUCCESS, 2
 add_fleet: FAILURE
 num_ships_for_fleet: SUCCESS, 1
@@ -51179,7 +51179,7 @@ unite_fleets: FAILURE
 add_fleet: FAILURE
 pay_pirate: FAILURE
 get_pirate_money: FAILURE
-get_pirate_money: SUCCESS, 18719
+get_pirate_money: SUCCESS, 18715
 add_pirate: FAILURE
 pay_pirate: SUCCESS
 add_pirate: FAILURE
@@ -51839,7 +51839,7 @@ pay_pirate: SUCCESS
 pirate_argument: INVALID_INPUT
 add_fleet: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 11305
+get_pirate_money: SUCCESS, 11307
 get_pirate_money: SUCCESS, 0
 pay_pirate: SUCCESS
 add_fleet: FAILURE
@@ -52955,7 +52955,7 @@ add_pirate: FAILURE
 pirate_argument: FAILURE
 get_pirate_money: SUCCESS, 1394
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 23651
+get_pirate_money: SUCCESS, 23649
 pay_pirate: FAILURE
 add_pirate: FAILURE
 pay_pirate: SUCCESS
@@ -53318,11 +53318,11 @@ pirate_argument: FAILURE
 add_fleet: FAILURE
 add_fleet: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 29940
+get_pirate_money: SUCCESS, 29938
 add_pirate: FAILURE
 add_pirate: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 18519
+get_pirate_money: SUCCESS, 18517
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 2775
 unite_fleets: FAILURE
@@ -53536,7 +53536,7 @@ get_pirate_money: FAILURE
 add_pirate: FAILURE
 pay_pirate: SUCCESS
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 23022
+get_pirate_money: SUCCESS, 23018
 add_fleet: FAILURE
 add_pirate: FAILURE
 pirate_argument: FAILURE
@@ -53846,7 +53846,7 @@ num_ships_for_fleet: FAILURE
 pay_pirate: SUCCESS
 unite_fleets: FAILURE
 get_pirate_money: SUCCESS, 8730
-get_pirate_money: SUCCESS, 26162
+get_pirate_money: SUCCESS, 26164
 num_ships_for_fleet: SUCCESS, 1
 pay_pirate: SUCCESS
 add_fleet: FAILURE
@@ -54245,7 +54245,7 @@ num_ships_for_fleet: SUCCESS, 1
 num_ships_for_fleet: SUCCESS, 2
 num_ships_for_fleet: SUCCESS, 1
 get_pirate_money: SUCCESS, 0
-get_pirate_money: SUCCESS, 24644
+get_pirate_money: SUCCESS, 24640
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 8008
 add_fleet: FAILURE
@@ -54314,7 +54314,7 @@ unite_fleets: FAILURE
 pirate_argument: FAILURE
 add_pirate: FAILURE
 num_ships_for_fleet: FAILURE
-get_pirate_money: SUCCESS, 24545
+get_pirate_money: SUCCESS, 24543
 pirate_argument: FAILURE
 add_pirate: FAILURE
 unite_fleets: FAILURE
@@ -55030,7 +55030,7 @@ pay_pirate: SUCCESS
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, 18519
+get_pirate_money: SUCCESS, 18517
 num_ships_for_fleet: FAILURE
 unite_fleets: FAILURE
 num_ships_for_fleet: SUCCESS, 1
@@ -55581,7 +55581,7 @@ num_ships_for_fleet: FAILURE
 pirate_argument: FAILURE
 add_fleet: FAILURE
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 18719
+get_pirate_money: SUCCESS, 18715
 unite_fleets: FAILURE
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
@@ -56615,7 +56615,7 @@ unite_fleets: FAILURE
 num_ships_for_fleet: SUCCESS, 1
 pirate_argument: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 13766
+get_pirate_money: SUCCESS, 13744
 unite_fleets: FAILURE
 get_pirate_money: SUCCESS, 5402
 num_ships_for_fleet: SUCCESS, 1
@@ -56970,7 +56970,7 @@ get_pirate_money: SUCCESS, 8208
 add_fleet: FAILURE
 num_ships_for_fleet: FAILURE
 pay_pirate: SUCCESS
-get_pirate_money: SUCCESS, 18353
+get_pirate_money: SUCCESS, 18365
 add_fleet: FAILURE
 add_pirate: FAILURE
 add_fleet: FAILURE
@@ -58785,7 +58785,7 @@ num_ships_for_fleet: SUCCESS, 1
 pirate_argument: FAILURE
 add_fleet: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 18519
+get_pirate_money: SUCCESS, 18517
 unite_fleets: FAILURE
 add_pirate: FAILURE
 num_ships_for_fleet: SUCCESS, 1
@@ -59151,7 +59151,7 @@ num_ships_for_fleet: SUCCESS, 1
 get_pirate_money: SUCCESS, 0
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 6401
-get_pirate_money: SUCCESS, 30615
+get_pirate_money: SUCCESS, 30635
 unite_fleets: FAILURE
 add_pirate: FAILURE
 unite_fleets: FAILURE
@@ -59428,7 +59428,7 @@ get_pirate_money: SUCCESS, 1669
 unite_fleets: FAILURE
 add_fleet: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 18719
+get_pirate_money: SUCCESS, 18715
 add_pirate: FAILURE
 pirate_argument: FAILURE
 get_pirate_money: SUCCESS, 3214
@@ -59676,7 +59676,7 @@ pay_pirate: SUCCESS
 add_fleet: FAILURE
 get_pirate_money: SUCCESS, 27476
 add_fleet: FAILURE
-get_pirate_money: SUCCESS, 29995
+get_pirate_money: SUCCESS, 29997
 num_ships_for_fleet: FAILURE
 unite_fleets: FAILURE
 add_pirate: FAILURE
@@ -68225,7 +68225,7 @@ pay_pirate: FAILURE
 get_pirate_money: FAILURE
 get_pirate_money: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 34928
+get_pirate_money: SUCCESS, 34906
 pirate_argument: FAILURE
 num_ships_for_fleet: FAILURE
 add_pirate: FAILURE
@@ -71009,7 +71009,7 @@ add_fleet: FAILURE
 pirate_argument: FAILURE
 unite_fleets: FAILURE
 pirate_argument: FAILURE
-get_pirate_money: SUCCESS, 11305
+get_pirate_money: SUCCESS, 11307
 pay_pirate: FAILURE
 pay_pirate: FAILURE
 unite_fleets: FAILURE
@@ -72169,7 +72169,7 @@ pirate_argument: FAILURE
 add_fleet: SUCCESS
 unite_fleets: FAILURE
 get_pirate_money: FAILURE
-get_pirate_money: SUCCESS, 29995
+get_pirate_money: SUCCESS, 29997
 add_fleet: FAILURE
 add_pirate: FAILURE
 num_ships_for_fleet: FAILURE
@@ -72839,7 +72839,7 @@ pay_pirate: FAILURE
 get_pirate_money: FAILURE
 num_ships_for_fleet: SUCCESS, 1
 add_fleet: SUCCESS
-get_pirate_money: SUCCESS, 52536
+get_pirate_money: SUCCESS, 52534
 add_fleet: SUCCESS
 add_pirate: FAILURE
 pirate_argument: FAILURE
@@ -77664,7 +77664,7 @@ unite_fleets: FAILURE
 get_pirate_money: FAILURE
 unite_fleets: FAILURE
 add_fleet: SUCCESS
-get_pirate_money: SUCCESS, 52722
+get_pirate_money: SUCCESS, 52718
 add_fleet: SUCCESS
 pay_pirate: SUCCESS
 pirate_argument: FAILURE

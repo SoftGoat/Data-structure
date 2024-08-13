@@ -1836,10 +1836,6 @@
 < get_pirate_money: SUCCESS, 27527
 ---
 > get_pirate_money: SUCCESS, 27533
-47038c47038
-< get_pirate_money: SUCCESS, -2
----
-> get_pirate_money: SUCCESS, 2
 47218c47218
 < get_pirate_money: SUCCESS, 17714
 ---
@@ -1860,10 +1856,6 @@
 < get_pirate_money: SUCCESS, 11636
 ---
 > get_pirate_money: SUCCESS, 11612
-48177c48177
-< get_pirate_money: SUCCESS, 3807
----
-> get_pirate_money: SUCCESS, 3811
 48245c48245
 < get_pirate_money: SUCCESS, 16897
 ---
@@ -1888,26 +1880,14 @@
 < get_pirate_money: SUCCESS, 15234
 ---
 > get_pirate_money: SUCCESS, 15238
-48758c48758
-< get_pirate_money: SUCCESS, 3522
----
-> get_pirate_money: SUCCESS, 3518
 48829c48829
 < get_pirate_money: SUCCESS, 18532
 ---
 > get_pirate_money: SUCCESS, 18538
-48973c48973
-< get_pirate_money: SUCCESS, 3807
----
-> get_pirate_money: SUCCESS, 3811
 49026c49026
 < get_pirate_money: SUCCESS, 19104
 ---
 > get_pirate_money: SUCCESS, 19108
-49470c49470
-< get_pirate_money: SUCCESS, 8717
----
-> get_pirate_money: SUCCESS, 8721
 49553c49553
 < get_pirate_money: SUCCESS, 15234
 ---
@@ -1980,10 +1960,6 @@
 < get_pirate_money: SUCCESS, 37725
 ---
 > get_pirate_money: SUCCESS, 37731
-52412c52412
-< get_pirate_money: SUCCESS, 8717
----
-> get_pirate_money: SUCCESS, 8721
 52460c52460
 < get_pirate_money: SUCCESS, 37725
 ---
@@ -2032,14 +2008,6 @@
 < get_pirate_money: SUCCESS, 21870
 ---
 > get_pirate_money: SUCCESS, 21874
-55053c55053
-< get_pirate_money: SUCCESS, 14983
----
-> get_pirate_money: SUCCESS, 14987
-55071c55071
-< get_pirate_money: SUCCESS, 14983
----
-> get_pirate_money: SUCCESS, 14987
 55253c55253
 < get_pirate_money: SUCCESS, 41867
 ---
@@ -2072,10 +2040,6 @@
 < get_pirate_money: SUCCESS, 19571
 ---
 > get_pirate_money: SUCCESS, 19553
-55842c55842
-< get_pirate_money: SUCCESS, 14983
----
-> get_pirate_money: SUCCESS, 14987
 55910c55910
 < get_pirate_money: SUCCESS, 28082
 ---
@@ -2152,14 +2116,6 @@
 < get_pirate_money: SUCCESS, 21947
 ---
 > get_pirate_money: SUCCESS, 21951
-59759c59759
-< get_pirate_money: SUCCESS, 15048
----
-> get_pirate_money: SUCCESS, 15052
-60543c60543
-< get_pirate_money: SUCCESS, 15048
----
-> get_pirate_money: SUCCESS, 15052
 60763c60763
 < get_pirate_money: SUCCESS, 26864
 ---
@@ -2188,7 +2144,3 @@
 < get_pirate_money: SUCCESS, 27325
 ---
 > get_pirate_money: SUCCESS, 27329
-79562c79562
-< get_pirate_money: SUCCESS, 8602
----
-> get_pirate_money: SUCCESS, 8598

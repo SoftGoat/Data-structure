@@ -1,51 +1,7 @@
-23026c23026
-< get_pirate_money: SUCCESS, 1281
----
-> get_pirate_money: SUCCESS, 1275
-23382c23382
-< get_pirate_money: SUCCESS, 712
----
-> get_pirate_money: SUCCESS, 718
-23607c23607
-< get_pirate_money: SUCCESS, 712
----
-> get_pirate_money: SUCCESS, 718
-23687c23687
-< get_pirate_money: SUCCESS, 1092
----
-> get_pirate_money: SUCCESS, 1098
-23750c23750
-< get_pirate_money: SUCCESS, 2368
----
-> get_pirate_money: SUCCESS, 2364
-23785c23785
-< get_pirate_money: SUCCESS, 1281
----
-> get_pirate_money: SUCCESS, 1275
-23926c23926
-< get_pirate_money: SUCCESS, 2368
----
-> get_pirate_money: SUCCESS, 2364
 24435c24435
 < get_pirate_money: SUCCESS, 3473
 ---
 > get_pirate_money: SUCCESS, 3472
-24609c24609
-< get_pirate_money: SUCCESS, 3735
----
-> get_pirate_money: SUCCESS, 3732
-24827c24827
-< get_pirate_money: SUCCESS, 527
----
-> get_pirate_money: SUCCESS, 530
-24836c24836
-< get_pirate_money: SUCCESS, 3096
----
-> get_pirate_money: SUCCESS, 3100
-24945c24945
-< get_pirate_money: SUCCESS, 3176
----
-> get_pirate_money: SUCCESS, 3180
 24968c24968
 < get_pirate_money: SUCCESS, 2973
 ---
@@ -54,18 +10,6 @@
 < get_pirate_money: SUCCESS, 5487
 ---
 > get_pirate_money: SUCCESS, 5488
-24994c24994
-< get_pirate_money: SUCCESS, 527
----
-> get_pirate_money: SUCCESS, 530
-25000c25000
-< get_pirate_money: SUCCESS, 1898
----
-> get_pirate_money: SUCCESS, 1904
-25071c25071
-< get_pirate_money: SUCCESS, 3735
----
-> get_pirate_money: SUCCESS, 3732
 25092c25092
 < get_pirate_money: SUCCESS, 3473
 ---
@@ -90,104 +34,22 @@
 < get_pirate_money: SUCCESS, 5940
 ---
 > get_pirate_money: SUCCESS, 5942
-25351c25351
-< get_pirate_money: SUCCESS, 928
----
-> get_pirate_money: SUCCESS, 931
-25425c25425
-< get_pirate_money: SUCCESS, 928
----
-> get_pirate_money: SUCCESS, 931
-25494c25494
-< get_pirate_money: SUCCESS, 4291
----
-> get_pirate_money: SUCCESS, 4294
-25552c25552
-< get_pirate_money: SUCCESS, 3595
----
-> get_pirate_money: SUCCESS, 3601
 25625c25625
 < get_pirate_money: SUCCESS, 5391
 ---
 > get_pirate_money: SUCCESS, 5390
-25700c25700
-< get_pirate_money: SUCCESS, 6102
----
-> get_pirate_money: SUCCESS, 6098
 25725c25725
 < get_pirate_money: SUCCESS, 5940
 ---
 > get_pirate_money: SUCCESS, 5942
-25753c25753
-< get_pirate_money: SUCCESS, 1786
----
-> get_pirate_money: SUCCESS, 1774
-25860c25860
-< get_pirate_money: SUCCESS, 2730
----
-> get_pirate_money: SUCCESS, 2728
-25945c25945
-< get_pirate_money: SUCCESS, 3808
----
-> get_pirate_money: SUCCESS, 3805
-25958,25959c25958,25959
+25958c25958
 < get_pirate_money: SUCCESS, 5483
-< get_pirate_money: SUCCESS, 6102
 ---
 > get_pirate_money: SUCCESS, 5484
-> get_pirate_money: SUCCESS, 6098
-25969c25969
-< get_pirate_money: SUCCESS, 1264
----
-> get_pirate_money: SUCCESS, 1267
-25974c25974
-< get_pirate_money: SUCCESS, 1264
----
-> get_pirate_money: SUCCESS, 1267
-26127c26127
-< get_pirate_money: SUCCESS, 3808
----
-> get_pirate_money: SUCCESS, 3805
-26249c26249
-< get_pirate_money: SUCCESS, 2730
----
-> get_pirate_money: SUCCESS, 2728
-26268c26268
-< get_pirate_money: SUCCESS, 3808
----
-> get_pirate_money: SUCCESS, 3805
-26280c26280
-< get_pirate_money: SUCCESS, 3201
----
-> get_pirate_money: SUCCESS, 3195
-26319c26319
-< get_pirate_money: SUCCESS, 4808
----
-> get_pirate_money: SUCCESS, 4811
-26329c26329
-< get_pirate_money: SUCCESS, 3770
----
-> get_pirate_money: SUCCESS, 3776
-26331c26331
-< get_pirate_money: SUCCESS, 3770
----
-> get_pirate_money: SUCCESS, 3776
 26379c26379
 < get_pirate_money: SUCCESS, 6061
 ---
 > get_pirate_money: SUCCESS, 6062
-26386c26386
-< get_pirate_money: SUCCESS, 1264
----
-> get_pirate_money: SUCCESS, 1267
-26390c26390
-< get_pirate_money: SUCCESS, 3770
----
-> get_pirate_money: SUCCESS, 3776
-26409c26409
-< get_pirate_money: SUCCESS, 3595
----
-> get_pirate_money: SUCCESS, 3601
 26478c26478
 < get_pirate_money: SUCCESS, 5391
 ---
@@ -200,162 +62,30 @@
 < get_pirate_money: SUCCESS, 7195
 ---
 > get_pirate_money: SUCCESS, 7196
-26565c26565
-< get_pirate_money: SUCCESS, 2456
----
-> get_pirate_money: SUCCESS, 2444
-26571c26571
-< get_pirate_money: SUCCESS, 3595
----
-> get_pirate_money: SUCCESS, 3601
-26604c26604
-< get_pirate_money: SUCCESS, 1259
----
-> get_pirate_money: SUCCESS, 1262
-26616c26616
-< get_pirate_money: SUCCESS, 1972
----
-> get_pirate_money: SUCCESS, 1975
-26653c26653
-< get_pirate_money: SUCCESS, 1972
----
-> get_pirate_money: SUCCESS, 1975
-26688c26688
-< get_pirate_money: SUCCESS, 6102
----
-> get_pirate_money: SUCCESS, 6098
-26816c26816
-< get_pirate_money: SUCCESS, 4800
----
-> get_pirate_money: SUCCESS, 4806
-26824c26824
-< get_pirate_money: SUCCESS, 3201
----
-> get_pirate_money: SUCCESS, 3195
-26864c26864
-< get_pirate_money: SUCCESS, 4238
----
-> get_pirate_money: SUCCESS, 4244
 26895c26895
 < get_pirate_money: SUCCESS, 7925
 ---
 > get_pirate_money: SUCCESS, 7924
-26930c26930
-< get_pirate_money: SUCCESS, 3218
----
-> get_pirate_money: SUCCESS, 3206
-26940c26940
-< get_pirate_money: SUCCESS, 4800
----
-> get_pirate_money: SUCCESS, 4806
-27009c27009
-< get_pirate_money: SUCCESS, 3808
----
-> get_pirate_money: SUCCESS, 3805
-27027c27027
-< get_pirate_money: SUCCESS, 4693
----
-> get_pirate_money: SUCCESS, 4699
 27093c27093
 < get_pirate_money: SUCCESS, 6743
 ---
 > get_pirate_money: SUCCESS, 6745
-27139c27139
-< get_pirate_money: SUCCESS, 2730
----
-> get_pirate_money: SUCCESS, 2728
-27195c27195
-< get_pirate_money: SUCCESS, 3201
----
-> get_pirate_money: SUCCESS, 3195
 27246c27246
 < get_pirate_money: SUCCESS, 7195
 ---
 > get_pirate_money: SUCCESS, 7196
-27267c27267
-< get_pirate_money: SUCCESS, 6102
----
-> get_pirate_money: SUCCESS, 6098
-27352c27352
-< get_pirate_money: SUCCESS, 3305
----
-> get_pirate_money: SUCCESS, 3308
-27364c27364
-< get_pirate_money: SUCCESS, 5114
----
-> get_pirate_money: SUCCESS, 5120
-27377c27377
-< get_pirate_money: SUCCESS, 2582
----
-> get_pirate_money: SUCCESS, 2588
-27412c27412
-< get_pirate_money: SUCCESS, 8680
----
-> get_pirate_money: SUCCESS, 8683
-27451c27451
-< get_pirate_money: SUCCESS, 6102
----
-> get_pirate_money: SUCCESS, 6098
 27503c27503
 < get_pirate_money: SUCCESS, 8406
 ---
 > get_pirate_money: SUCCESS, 8407
-27575c27575
-< get_pirate_money: SUCCESS, 3797
----
-> get_pirate_money: SUCCESS, 3788
-27591c27591
-< get_pirate_money: SUCCESS, 8680
----
-> get_pirate_money: SUCCESS, 8683
-27622c27622
-< get_pirate_money: SUCCESS, 5371
----
-> get_pirate_money: SUCCESS, 5377
 27648c27648
 < get_pirate_money: SUCCESS, 8014
 ---
 > get_pirate_money: SUCCESS, 8013
-27660c27660
-< get_pirate_money: SUCCESS, 2591
----
-> get_pirate_money: SUCCESS, 2597
-27664c27664
-< get_pirate_money: SUCCESS, 3305
----
-> get_pirate_money: SUCCESS, 3308
-27676c27676
-< get_pirate_money: SUCCESS, 5339
----
-> get_pirate_money: SUCCESS, 5345
-27729c27729
-< get_pirate_money: SUCCESS, 6102
----
-> get_pirate_money: SUCCESS, 6098
-27754c27754
-< get_pirate_money: SUCCESS, 2591
----
-> get_pirate_money: SUCCESS, 2597
-27772c27772
-< get_pirate_money: SUCCESS, 5520
----
-> get_pirate_money: SUCCESS, 5526
-27824c27824
-< get_pirate_money: SUCCESS, 6102
----
-> get_pirate_money: SUCCESS, 6098
-27853c27853
-< get_pirate_money: SUCCESS, 6044
----
-> get_pirate_money: SUCCESS, 6050
 27867c27867
 < get_pirate_money: SUCCESS, 6883
 ---
 > get_pirate_money: SUCCESS, 6885
-28004c28004
-< get_pirate_money: SUCCESS, 2735
----
-> get_pirate_money: SUCCESS, 2733
 28065c28065
 < get_pirate_money: SUCCESS, 6883
 ---
@@ -364,162 +94,38 @@
 < get_pirate_money: SUCCESS, 6883
 ---
 > get_pirate_money: SUCCESS, 6885
-28146c28146
-< get_pirate_money: SUCCESS, 3318
----
-> get_pirate_money: SUCCESS, 3321
-28148c28148
-< get_pirate_money: SUCCESS, 3318
----
-> get_pirate_money: SUCCESS, 3321
 28156c28156
 < get_pirate_money: SUCCESS, 2129
 ---
 > get_pirate_money: SUCCESS, 2130
-28158c28158
-< get_pirate_money: SUCCESS, 6176
----
-> get_pirate_money: SUCCESS, 6182
-28180c28180
-< get_pirate_money: SUCCESS, 6044
----
-> get_pirate_money: SUCCESS, 6050
-28204c28204
-< get_pirate_money: SUCCESS, 5464
----
-> get_pirate_money: SUCCESS, 5473
-28228c28228
-< get_pirate_money: SUCCESS, 3318
----
-> get_pirate_money: SUCCESS, 3321
-28235c28235
-< get_pirate_money: SUCCESS, 4044
----
-> get_pirate_money: SUCCESS, 4035
-28237c28237
-< get_pirate_money: SUCCESS, 4044
----
-> get_pirate_money: SUCCESS, 4035
-28266c28266
-< get_pirate_money: SUCCESS, 3318
----
-> get_pirate_money: SUCCESS, 3321
 28351c28351
 < get_pirate_money: SUCCESS, 6883
 ---
 > get_pirate_money: SUCCESS, 6885
-28409c28409
-< get_pirate_money: SUCCESS, 3318
----
-> get_pirate_money: SUCCESS, 3321
 28415c28415
 < get_pirate_money: SUCCESS, 9276
 ---
 > get_pirate_money: SUCCESS, 9275
-28480c28480
-< get_pirate_money: SUCCESS, 6044
----
-> get_pirate_money: SUCCESS, 6050
-28552c28552
-< get_pirate_money: SUCCESS, 3942
----
-> get_pirate_money: SUCCESS, 3927
-28599c28599
-< get_pirate_money: SUCCESS, 7324
----
-> get_pirate_money: SUCCESS, 7321
-28603c28603
-< get_pirate_money: SUCCESS, 6617
----
-> get_pirate_money: SUCCESS, 6623
-28605c28605
-< get_pirate_money: SUCCESS, 6580
----
-> get_pirate_money: SUCCESS, 6589
 28707c28707
 < get_pirate_money: SUCCESS, 9214
 ---
 > get_pirate_money: SUCCESS, 9215
-28715,28716c28715,28716
-< get_pirate_money: SUCCESS, 4693
-< get_pirate_money: SUCCESS, 6762
----
-> get_pirate_money: SUCCESS, 4699
-> get_pirate_money: SUCCESS, 6768
-28722c28722
-< get_pirate_money: SUCCESS, 6762
----
-> get_pirate_money: SUCCESS, 6768
-28727c28727
-< get_pirate_money: SUCCESS, 4693
----
-> get_pirate_money: SUCCESS, 4699
 28762c28762
 < get_pirate_money: SUCCESS, 9276
 ---
 > get_pirate_money: SUCCESS, 9275
-28840c28840
-< get_pirate_money: SUCCESS, 4044
----
-> get_pirate_money: SUCCESS, 4035
-28851c28851
-< get_pirate_money: SUCCESS, 7611
----
-> get_pirate_money: SUCCESS, 7608
-28860c28860
-< get_pirate_money: SUCCESS, 6887
----
-> get_pirate_money: SUCCESS, 6896
-28865c28865
-< get_pirate_money: SUCCESS, 6762
----
-> get_pirate_money: SUCCESS, 6768
-28954c28954
-< get_pirate_money: SUCCESS, 9569
----
-> get_pirate_money: SUCCESS, 9572
-28983c28983
-< get_pirate_money: SUCCESS, 3707
----
-> get_pirate_money: SUCCESS, 3710
-28986c28986
-< get_pirate_money: SUCCESS, 6887
----
-> get_pirate_money: SUCCESS, 6896
-28988c28988
-< get_pirate_money: SUCCESS, 4051
----
-> get_pirate_money: SUCCESS, 4060
-29033c29033
-< get_pirate_money: SUCCESS, 3942
----
-> get_pirate_money: SUCCESS, 3927
 29143c29143
 < get_pirate_money: SUCCESS, 5601
 ---
 > get_pirate_money: SUCCESS, 5600
-29150c29150
-< get_pirate_money: SUCCESS, 4693
----
-> get_pirate_money: SUCCESS, 4699
-29156c29156
-< get_pirate_money: SUCCESS, 6033
----
-> get_pirate_money: SUCCESS, 6021
 29183c29183
 < get_pirate_money: SUCCESS, 7441
 ---
 > get_pirate_money: SUCCESS, 7443
-29188c29188
-< get_pirate_money: SUCCESS, 6479
----
-> get_pirate_money: SUCCESS, 6482
-29262,29263c29262,29263
+29262c29262
 < get_pirate_money: SUCCESS, 9773
-< get_pirate_money: SUCCESS, 4236
 ---
 > get_pirate_money: SUCCESS, 9774
-> get_pirate_money: SUCCESS, 4239
 29335c29335
 < get_pirate_money: SUCCESS, 9773
 ---
@@ -528,92 +134,22 @@
 < get_pirate_money: SUCCESS, 5601
 ---
 > get_pirate_money: SUCCESS, 5600
-29416c29416
-< get_pirate_money: SUCCESS, 8941
----
-> get_pirate_money: SUCCESS, 8937
 29419c29419
 < get_pirate_money: SUCCESS, 10054
 ---
 > get_pirate_money: SUCCESS, 10053
-29431c29431
-< get_pirate_money: SUCCESS, 4236
----
-> get_pirate_money: SUCCESS, 4239
-29435c29435
-< get_pirate_money: SUCCESS, 4327
----
-> get_pirate_money: SUCCESS, 4312
-29525c29525
-< get_pirate_money: SUCCESS, 9984
----
-> get_pirate_money: SUCCESS, 9987
-29546c29546
-< get_pirate_money: SUCCESS, 6723
----
-> get_pirate_money: SUCCESS, 6729
 29561c29561
 < get_pirate_money: SUCCESS, 6217
 ---
 > get_pirate_money: SUCCESS, 6216
-29603c29603
-< get_pirate_money: SUCCESS, 4327
----
-> get_pirate_money: SUCCESS, 4312
-29623c29623
-< get_pirate_money: SUCCESS, 9787
----
-> get_pirate_money: SUCCESS, 9784
-29664c29664
-< get_pirate_money: SUCCESS, 7073
----
-> get_pirate_money: SUCCESS, 7079
-29704c29704
-< get_pirate_money: SUCCESS, 9984
----
-> get_pirate_money: SUCCESS, 9987
-29781c29781
-< get_pirate_money: SUCCESS, 7073
----
-> get_pirate_money: SUCCESS, 7079
-29799c29799
-< get_pirate_money: SUCCESS, 6723
----
-> get_pirate_money: SUCCESS, 6729
-29807c29807
-< get_pirate_money: SUCCESS, 4693
----
-> get_pirate_money: SUCCESS, 4699
 29818c29818
 < get_pirate_money: SUCCESS, 10122
 ---
 > get_pirate_money: SUCCESS, 10123
-29860c29860
-< get_pirate_money: SUCCESS, 6965
----
-> get_pirate_money: SUCCESS, 6953
-29866,29867c29866,29867
+29866c29866
 < get_pirate_money: SUCCESS, 7441
-< get_pirate_money: SUCCESS, 4693
 ---
 > get_pirate_money: SUCCESS, 7443
-> get_pirate_money: SUCCESS, 4699
-29894c29894
-< get_pirate_money: SUCCESS, 4693
----
-> get_pirate_money: SUCCESS, 4699
-29903c29903
-< get_pirate_money: SUCCESS, 6602
----
-> get_pirate_money: SUCCESS, 6605
-29918c29918
-< get_pirate_money: SUCCESS, 4180
----
-> get_pirate_money: SUCCESS, 4171
-29960c29960
-< get_pirate_money: SUCCESS, 7061
----
-> get_pirate_money: SUCCESS, 7064
 29963c29963
 < get_pirate_money: SUCCESS, 8108
 ---
@@ -622,30 +158,6 @@
 < get_pirate_money: SUCCESS, 6792
 ---
 > get_pirate_money: SUCCESS, 6791
-30012c30012
-< get_pirate_money: SUCCESS, 6965
----
-> get_pirate_money: SUCCESS, 6953
-30021c30021
-< get_pirate_money: SUCCESS, 9984
----
-> get_pirate_money: SUCCESS, 9987
-30024c30024
-< get_pirate_money: SUCCESS, 10422
----
-> get_pirate_money: SUCCESS, 10418
-30040c30040
-< get_pirate_money: SUCCESS, 10422
----
-> get_pirate_money: SUCCESS, 10418
-30049c30049
-< get_pirate_money: SUCCESS, 4999
----
-> get_pirate_money: SUCCESS, 4984
-30063c30063
-< get_pirate_money: SUCCESS, 5386
----
-> get_pirate_money: SUCCESS, 5388
 30071c30071
 < get_pirate_money: SUCCESS, 10334
 ---
@@ -662,14 +174,6 @@
 < get_pirate_money: SUCCESS, 5589
 ---
 > get_pirate_money: SUCCESS, 5590
-30178c30178
-< get_pirate_money: SUCCESS, 10585
----
-> get_pirate_money: SUCCESS, 10588
-30226c30226
-< get_pirate_money: SUCCESS, 10585
----
-> get_pirate_money: SUCCESS, 10588
 30249c30249
 < get_pirate_money: SUCCESS, 7871
 ---
@@ -678,134 +182,30 @@
 < get_pirate_money: SUCCESS, 10133
 ---
 > get_pirate_money: SUCCESS, 10134
-30318c30318
-< get_pirate_money: SUCCESS, 7134
----
-> get_pirate_money: SUCCESS, 7140
-30322c30322
-< get_pirate_money: SUCCESS, 4994
----
-> get_pirate_money: SUCCESS, 4976
-30327c30327
-< get_pirate_money: SUCCESS, 10152
----
-> get_pirate_money: SUCCESS, 10146
-30338c30338
-< get_pirate_money: SUCCESS, 3378
----
-> get_pirate_money: SUCCESS, 3376
-30353c30353
-< get_pirate_money: SUCCESS, 10589
----
-> get_pirate_money: SUCCESS, 10595
-30385c30385
-< get_pirate_money: SUCCESS, 7434
----
-> get_pirate_money: SUCCESS, 7440
-30431c30431
-< get_pirate_money: SUCCESS, 7434
----
-> get_pirate_money: SUCCESS, 7440
-30443c30443
-< get_pirate_money: SUCCESS, 3338
----
-> get_pirate_money: SUCCESS, 3336
 30471c30471
 < get_pirate_money: SUCCESS, 7426
 ---
 > get_pirate_money: SUCCESS, 7425
-30477c30477
-< get_pirate_money: SUCCESS, 5063
----
-> get_pirate_money: SUCCESS, 5066
-30526,30527c30526,30527
-< get_pirate_money: SUCCESS, 10422
-< get_pirate_money: SUCCESS, 3338
----
-> get_pirate_money: SUCCESS, 10418
-> get_pirate_money: SUCCESS, 3336
-30598,30599c30598,30599
-< get_pirate_money: SUCCESS, 7434
-< get_pirate_money: SUCCESS, 7680
----
-> get_pirate_money: SUCCESS, 7440
-> get_pirate_money: SUCCESS, 7695
 30646c30646
 < get_pirate_money: SUCCESS, 10133
 ---
 > get_pirate_money: SUCCESS, 10134
-30668c30668
-< get_pirate_money: SUCCESS, 10585
----
-> get_pirate_money: SUCCESS, 10591
-30694c30694
-< get_pirate_money: SUCCESS, 10152
----
-> get_pirate_money: SUCCESS, 10146
 30699c30699
 < get_pirate_money: SUCCESS, 7872
 ---
 > get_pirate_money: SUCCESS, 7874
 30715c30715
-< get_pirate_money: SUCCESS, 3537
+< get_pirate_money: SUCCESS, 3534
 ---
 > get_pirate_money: SUCCESS, 3535
-30734c30734
-< get_pirate_money: SUCCESS, 7434
----
-> get_pirate_money: SUCCESS, 7440
-30794c30794
-< get_pirate_money: SUCCESS, 4546
----
-> get_pirate_money: SUCCESS, 4537
-30801c30801
-< get_pirate_money: SUCCESS, 7687
----
-> get_pirate_money: SUCCESS, 7672
-30821c30821
-< get_pirate_money: SUCCESS, 7998
----
-> get_pirate_money: SUCCESS, 8004
 30879c30879
-< get_pirate_money: SUCCESS, 3537
+< get_pirate_money: SUCCESS, 3534
 ---
 > get_pirate_money: SUCCESS, 3535
-30881c30881
-< get_pirate_money: SUCCESS, 5063
----
-> get_pirate_money: SUCCESS, 5066
-30889c30889
-< get_pirate_money: SUCCESS, 10152
----
-> get_pirate_money: SUCCESS, 10146
-30942c30942
-< get_pirate_money: SUCCESS, 10152
----
-> get_pirate_money: SUCCESS, 10146
-30961c30961
-< get_pirate_money: SUCCESS, 5704
----
-> get_pirate_money: SUCCESS, 5710
-30973c30973
-< get_pirate_money: SUCCESS, 5659
----
-> get_pirate_money: SUCCESS, 5641
 31003c31003
 < get_pirate_money: SUCCESS, 8008
 ---
 > get_pirate_money: SUCCESS, 8007
-31017c31017
-< get_pirate_money: SUCCESS, 4546
----
-> get_pirate_money: SUCCESS, 4537
-31107c31107
-< get_pirate_money: SUCCESS, 7206
----
-> get_pirate_money: SUCCESS, 7215
-31153c31153
-< get_pirate_money: SUCCESS, 7108
----
-> get_pirate_money: SUCCESS, 7111
 31174c31174
 < get_pirate_money: SUCCESS, 7941
 ---
@@ -814,18 +214,6 @@
 < get_pirate_money: SUCCESS, 11569
 ---
 > get_pirate_money: SUCCESS, 11570
-31216c31216
-< get_pirate_money: SUCCESS, 5871
----
-> get_pirate_money: SUCCESS, 5873
-31308c31308
-< get_pirate_money: SUCCESS, 5704
----
-> get_pirate_money: SUCCESS, 5710
-31326c31326
-< get_pirate_money: SUCCESS, 9186
----
-> get_pirate_money: SUCCESS, 9201
 31335c31335
 < get_pirate_money: SUCCESS, 7941
 ---
@@ -834,58 +222,26 @@
 < get_pirate_money: SUCCESS, 10972
 ---
 > get_pirate_money: SUCCESS, 10971
-31369c31369
-< get_pirate_money: SUCCESS, 8054
----
-> get_pirate_money: SUCCESS, 8060
 31390c31390
-< get_pirate_money: SUCCESS, 3537
+< get_pirate_money: SUCCESS, 3534
 ---
 > get_pirate_money: SUCCESS, 3535
 31444c31444
 < get_pirate_money: SUCCESS, 7588
 ---
 > get_pirate_money: SUCCESS, 7586
-31446c31446
-< get_pirate_money: SUCCESS, 9186
----
-> get_pirate_money: SUCCESS, 9201
-31471c31471
-< get_pirate_money: SUCCESS, 11393
----
-> get_pirate_money: SUCCESS, 11389
 31479c31479
 < get_pirate_money: SUCCESS, 6181
 ---
 > get_pirate_money: SUCCESS, 6182
 31506c31506
-< get_pirate_money: SUCCESS, 3537
+< get_pirate_money: SUCCESS, 3534
 ---
 > get_pirate_money: SUCCESS, 3535
-31538c31538
-< get_pirate_money: SUCCESS, 10412
----
-> get_pirate_money: SUCCESS, 10406
-31551c31551
-< get_pirate_money: SUCCESS, 11393
----
-> get_pirate_money: SUCCESS, 11389
-31561c31561
-< get_pirate_money: SUCCESS, 6031
----
-> get_pirate_money: SUCCESS, 6033
 31568c31568
-< get_pirate_money: SUCCESS, 7217
+< get_pirate_money: SUCCESS, 7226
 ---
 > get_pirate_money: SUCCESS, 7227
-31588c31588
-< get_pirate_money: SUCCESS, 3922
----
-> get_pirate_money: SUCCESS, 3920
-31604c31604
-< get_pirate_money: SUCCESS, 11393
----
-> get_pirate_money: SUCCESS, 11389
 31649c31649
 < get_pirate_money: SUCCESS, 12027
 ---
@@ -894,72 +250,18 @@
 < get_pirate_money: SUCCESS, 11103
 ---
 > get_pirate_money: SUCCESS, 11104
-31774c31774
-< get_pirate_money: SUCCESS, 4644
----
-> get_pirate_money: SUCCESS, 4635
 31787c31787
 < get_pirate_money: SUCCESS, 12341
 ---
 > get_pirate_money: SUCCESS, 12340
-31802c31802
-< get_pirate_money: SUCCESS, 11355
----
-> get_pirate_money: SUCCESS, 11358
-31808,31809c31808,31809
-< get_pirate_money: SUCCESS, 11355
-< get_pirate_money: SUCCESS, 8054
----
-> get_pirate_money: SUCCESS, 11358
-> get_pirate_money: SUCCESS, 8060
-31892c31892
-< get_pirate_money: SUCCESS, 6205
----
-> get_pirate_money: SUCCESS, 6187
 31908c31908
 < get_pirate_money: SUCCESS, 11614
 ---
 > get_pirate_money: SUCCESS, 11615
 31928c31928
-< get_pirate_money: SUCCESS, 3523
+< get_pirate_money: SUCCESS, 3520
 ---
 > get_pirate_money: SUCCESS, 3521
-31959c31959
-< get_pirate_money: SUCCESS, 3922
----
-> get_pirate_money: SUCCESS, 3920
-32019c32019
-< get_pirate_money: SUCCESS, 8338
----
-> get_pirate_money: SUCCESS, 8323
-32071c32071
-< get_pirate_money: SUCCESS, 6205
----
-> get_pirate_money: SUCCESS, 6187
-32085c32085
-< get_pirate_money: SUCCESS, 6205
----
-> get_pirate_money: SUCCESS, 6187
-32101c32101
-< get_pirate_money: SUCCESS, 4884
----
-> get_pirate_money: SUCCESS, 4875
-32130c32130
-< get_pirate_money: SUCCESS, 9242
----
-> get_pirate_money: SUCCESS, 9257
-32154c32154
-< get_pirate_money: SUCCESS, 8338
----
-> get_pirate_money: SUCCESS, 8323
-32192c32192
-< get_pirate_money: SUCCESS, 11768
----
-> get_pirate_money: SUCCESS, 11771
-32241c32241
-< get_pirate_money: SUCCESS, 10519
----
-> get_pirate_money: SUCCESS, 10513
 32307c32307
 < get_pirate_money: SUCCESS, 7974
 ---
@@ -972,10 +274,6 @@
 < get_pirate_money: SUCCESS, 14102
 ---
 > get_pirate_money: SUCCESS, 14101
-32380c32380
-< get_pirate_money: SUCCESS, 4981
----
-> get_pirate_money: SUCCESS, 4972
 32457c32457
 < get_pirate_money: SUCCESS, 7075
 ---
@@ -984,10 +282,6 @@
 < get_pirate_money: SUCCESS, 12027
 ---
 > get_pirate_money: SUCCESS, 12028
-32480c32480
-< get_pirate_money: SUCCESS, 9647
----
-> get_pirate_money: SUCCESS, 9662
 32483c32483
 < get_pirate_money: SUCCESS, 6943
 ---
@@ -1001,7 +295,7 @@
 ---
 > get_pirate_money: SUCCESS, 7970
 32555c32555
-< get_pirate_money: SUCCESS, 7217
+< get_pirate_money: SUCCESS, 7226
 ---
 > get_pirate_money: SUCCESS, 7227
 32561c32561
@@ -1014,54 +308,18 @@
 ---
 > get_pirate_money: SUCCESS, 7966
 > get_pirate_money: SUCCESS, 11606
-32627c32627
-< get_pirate_money: SUCCESS, 6435
----
-> get_pirate_money: SUCCESS, 6437
 32651c32651
 < get_pirate_money: SUCCESS, 7967
 ---
 > get_pirate_money: SUCCESS, 7966
-32695c32695
-< get_pirate_money: SUCCESS, 10519
----
-> get_pirate_money: SUCCESS, 10513
-32741c32741
-< get_pirate_money: SUCCESS, 9284
----
-> get_pirate_money: SUCCESS, 9290
-32754c32754
-< get_pirate_money: SUCCESS, 8332
----
-> get_pirate_money: SUCCESS, 8314
-32787c32787
-< get_pirate_money: SUCCESS, 7075
----
-> get_pirate_money: SUCCESS, 7057
-32820c32820
-< get_pirate_money: SUCCESS, 9649
----
-> get_pirate_money: SUCCESS, 9664
-32836,32838c32836,32838
+32836c32836
 < get_pirate_money: SUCCESS, 7347
-< get_pirate_money: SUCCESS, 4981
-< get_pirate_money: SUCCESS, 8587
 ---
 > get_pirate_money: SUCCESS, 7345
-> get_pirate_money: SUCCESS, 4972
-> get_pirate_money: SUCCESS, 8590
-32844c32844
-< get_pirate_money: SUCCESS, 8054
----
-> get_pirate_money: SUCCESS, 8060
 32862c32862
 < get_pirate_money: SUCCESS, 8951
 ---
 > get_pirate_money: SUCCESS, 8950
-32864c32864
-< get_pirate_money: SUCCESS, 9649
----
-> get_pirate_money: SUCCESS, 9664
 32884c32884
 < get_pirate_money: SUCCESS, 10497
 ---
@@ -1071,23 +329,19 @@
 ---
 > get_pirate_money: SUCCESS, 9067
 32936c32936
-< get_pirate_money: SUCCESS, 7963
+< get_pirate_money: SUCCESS, 7972
 ---
 > get_pirate_money: SUCCESS, 7973
 32970c32970
 < get_pirate_money: SUCCESS, 10498
 ---
 > get_pirate_money: SUCCESS, 10499
-32974c32974
-< get_pirate_money: SUCCESS, 4459
----
-> get_pirate_money: SUCCESS, 4457
 32997c32997
 < get_pirate_money: SUCCESS, 14448
 ---
 > get_pirate_money: SUCCESS, 14445
 33028c33028
-< get_pirate_money: SUCCESS, 8039
+< get_pirate_money: SUCCESS, 8047
 ---
 > get_pirate_money: SUCCESS, 8046
 33037c33037
@@ -1102,74 +356,34 @@
 < get_pirate_money: SUCCESS, 6941
 ---
 > get_pirate_money: SUCCESS, 6942
-33107c33107
-< get_pirate_money: SUCCESS, 8332
----
-> get_pirate_money: SUCCESS, 8314
 33112c33112
 < get_pirate_money: SUCCESS, 7897
 ---
 > get_pirate_money: SUCCESS, 7896
 33142c33142
-< get_pirate_money: SUCCESS, 13919
+< get_pirate_money: SUCCESS, 13924
 ---
 > get_pirate_money: SUCCESS, 13926
-33150c33150
-< get_pirate_money: SUCCESS, 8332
----
-> get_pirate_money: SUCCESS, 8314
 33177c33177
-< get_pirate_money: SUCCESS, 8263
+< get_pirate_money: SUCCESS, 8271
 ---
 > get_pirate_money: SUCCESS, 8270
-33180c33180
-< get_pirate_money: SUCCESS, 9760
----
-> get_pirate_money: SUCCESS, 9766
 33196c33196
-< get_pirate_money: SUCCESS, 8263
+< get_pirate_money: SUCCESS, 8271
 ---
 > get_pirate_money: SUCCESS, 8270
 33225c33225
-< get_pirate_money: SUCCESS, 4941
+< get_pirate_money: SUCCESS, 4938
 ---
 > get_pirate_money: SUCCESS, 4939
-33229c33229
-< get_pirate_money: SUCCESS, 5698
----
-> get_pirate_money: SUCCESS, 5707
 33238c33238
 < get_pirate_money: SUCCESS, 12027
 ---
 > get_pirate_money: SUCCESS, 12028
-33252c33252
-< get_pirate_money: SUCCESS, 8533
----
-> get_pirate_money: SUCCESS, 8509
 33258c33258
 < get_pirate_money: SUCCESS, 7887
 ---
 > get_pirate_money: SUCCESS, 7885
-33266c33266
-< get_pirate_money: SUCCESS, 8266
----
-> get_pirate_money: SUCCESS, 8269
-33273c33273
-< get_pirate_money: SUCCESS, 3361
----
-> get_pirate_money: SUCCESS, 3364
-33295c33295
-< get_pirate_money: SUCCESS, 5698
----
-> get_pirate_money: SUCCESS, 5707
-33323c33323
-< get_pirate_money: SUCCESS, 5566
----
-> get_pirate_money: SUCCESS, 5554
-33348c33348
-< get_pirate_money: SUCCESS, 5118
----
-> get_pirate_money: SUCCESS, 5124
 33360c33360
 < get_pirate_money: SUCCESS, 7052
 ---
@@ -1182,10 +396,6 @@
 < get_pirate_money: SUCCESS, 9179
 ---
 > get_pirate_money: SUCCESS, 9176
-33440c33440
-< get_pirate_money: SUCCESS, 3648
----
-> get_pirate_money: SUCCESS, 3651
 33443c33443
 < get_pirate_money: SUCCESS, 8170
 ---
@@ -1194,32 +404,20 @@
 < get_pirate_money: SUCCESS, 9179
 ---
 > get_pirate_money: SUCCESS, 9176
-33458c33458
-< get_pirate_money: SUCCESS, 10163
----
-> get_pirate_money: SUCCESS, 10172
 33488c33488
 < get_pirate_money: SUCCESS, 7887
 ---
 > get_pirate_money: SUCCESS, 7885
-33505c33505
-< get_pirate_money: SUCCESS, 3648
----
-> get_pirate_money: SUCCESS, 3651
 33518c33518
 < get_pirate_money: SUCCESS, 8170
 ---
 > get_pirate_money: SUCCESS, 8171
 33522c33522
-< get_pirate_money: SUCCESS, 7269
+< get_pirate_money: SUCCESS, 7275
 ---
 > get_pirate_money: SUCCESS, 7273
-33525c33525
-< get_pirate_money: SUCCESS, 6438
----
-> get_pirate_money: SUCCESS, 6447
 33530c33530
-< get_pirate_money: SUCCESS, 8263
+< get_pirate_money: SUCCESS, 8271
 ---
 > get_pirate_money: SUCCESS, 8270
 33533c33533
@@ -1231,7 +429,7 @@
 ---
 > get_pirate_money: SUCCESS, 7237
 33599c33599
-< get_pirate_money: SUCCESS, 7674
+< get_pirate_money: SUCCESS, 7650
 ---
 > get_pirate_money: SUCCESS, 7652
 33614c33614
@@ -1243,13 +441,9 @@
 ---
 > get_pirate_money: SUCCESS, 9165
 33668c33668
-< get_pirate_money: SUCCESS, 7978
+< get_pirate_money: SUCCESS, 7985
 ---
 > get_pirate_money: SUCCESS, 7987
-33673c33673
-< get_pirate_money: SUCCESS, 8533
----
-> get_pirate_money: SUCCESS, 8509
 33677c33677
 < get_pirate_money: SUCCESS, 7962
 ---
@@ -1264,7 +458,7 @@
 > get_pirate_money: SUCCESS, 8478
 33740,33741c33740,33741
 < get_pirate_money: SUCCESS, 8481
-< get_pirate_money: SUCCESS, 14009
+< get_pirate_money: SUCCESS, 14014
 ---
 > get_pirate_money: SUCCESS, 8478
 > get_pirate_money: SUCCESS, 14017
@@ -1293,11 +487,11 @@
 ---
 > get_pirate_money: SUCCESS, 4886
 33845c33845
-< get_pirate_money: SUCCESS, 10312
+< get_pirate_money: SUCCESS, 10310
 ---
 > get_pirate_money: SUCCESS, 10309
 33849c33849
-< get_pirate_money: SUCCESS, 5760
+< get_pirate_money: SUCCESS, 5754
 ---
 > get_pirate_money: SUCCESS, 5755
 33888c33888
@@ -1305,35 +499,27 @@
 ---
 > get_pirate_money: SUCCESS, 9559
 33892c33892
-< get_pirate_money: SUCCESS, 8602
+< get_pirate_money: SUCCESS, 8603
 ---
 > get_pirate_money: SUCCESS, 8604
 33915c33915
-< get_pirate_money: SUCCESS, 5510
+< get_pirate_money: SUCCESS, 5508
 ---
 > get_pirate_money: SUCCESS, 5507
 33928c33928
-< get_pirate_money: SUCCESS, 8880
+< get_pirate_money: SUCCESS, 8888
 ---
 > get_pirate_money: SUCCESS, 8887
-33934c33934
-< get_pirate_money: SUCCESS, 8533
----
-> get_pirate_money: SUCCESS, 8509
 33956c33956
-< get_pirate_money: SUCCESS, 5510
+< get_pirate_money: SUCCESS, 5508
 ---
 > get_pirate_money: SUCCESS, 5507
 33960c33960
-< get_pirate_money: SUCCESS, 3689
+< get_pirate_money: SUCCESS, 3692
 ---
 > get_pirate_money: SUCCESS, 3693
-33973c33973
-< get_pirate_money: SUCCESS, 9648
----
-> get_pirate_money: SUCCESS, 9669
 33980c33980
-< get_pirate_money: SUCCESS, 11147
+< get_pirate_money: SUCCESS, 11144
 ---
 > get_pirate_money: SUCCESS, 11145
 33987c33987
@@ -1344,12 +530,8 @@
 < get_pirate_money: SUCCESS, 9748
 ---
 > get_pirate_money: SUCCESS, 9749
-34000c34000
-< get_pirate_money: SUCCESS, 8266
----
-> get_pirate_money: SUCCESS, 8269
 34029c34029
-< get_pirate_money: SUCCESS, 11147
+< get_pirate_money: SUCCESS, 11144
 ---
 > get_pirate_money: SUCCESS, 11145
 34041c34041
@@ -1357,8 +539,8 @@
 ---
 > get_pirate_money: SUCCESS, 9559
 34065,34066c34065,34066
-< get_pirate_money: SUCCESS, 8524
-< get_pirate_money: SUCCESS, 11147
+< get_pirate_money: SUCCESS, 8531
+< get_pirate_money: SUCCESS, 11144
 ---
 > get_pirate_money: SUCCESS, 8533
 > get_pirate_money: SUCCESS, 11145
@@ -1367,11 +549,11 @@
 ---
 > get_pirate_money: SUCCESS, 9749
 34092c34092
-< get_pirate_money: SUCCESS, 3705
+< get_pirate_money: SUCCESS, 3706
 ---
 > get_pirate_money: SUCCESS, 3708
 34099c34099
-< get_pirate_money: SUCCESS, 5510
+< get_pirate_money: SUCCESS, 5508
 ---
 > get_pirate_money: SUCCESS, 5507
 34105c34105
@@ -1379,11 +561,11 @@
 ---
 > get_pirate_money: SUCCESS, 13051
 34108c34108
-< get_pirate_money: SUCCESS, 5760
+< get_pirate_money: SUCCESS, 5754
 ---
 > get_pirate_money: SUCCESS, 5755
 34127c34127
-< get_pirate_money: SUCCESS, 14006
+< get_pirate_money: SUCCESS, 14014
 ---
 > get_pirate_money: SUCCESS, 14017
 34129c34129
@@ -1394,10 +576,6 @@
 < get_pirate_money: SUCCESS, 15045
 ---
 > get_pirate_money: SUCCESS, 15042
-34144c34144
-< get_pirate_money: SUCCESS, 8533
----
-> get_pirate_money: SUCCESS, 8509
 34147c34147
 < get_pirate_money: SUCCESS, 9948
 ---
@@ -1406,12 +584,16 @@
 < get_pirate_money: SUCCESS, 7111
 ---
 > get_pirate_money: SUCCESS, 7112
+34158c34158
+< get_pirate_money: SUCCESS, 5422
+---
+> get_pirate_money: SUCCESS, 5421
 34182c34182
 < get_pirate_money: SUCCESS, 11128
 ---
 > get_pirate_money: SUCCESS, 11122
 34188c34188
-< get_pirate_money: SUCCESS, 11537
+< get_pirate_money: SUCCESS, 11531
 ---
 > get_pirate_money: SUCCESS, 11530
 34208c34208
@@ -1423,25 +605,23 @@
 ---
 > get_pirate_money: SUCCESS, 9529
 34245c34245
-< get_pirate_money: SUCCESS, 6285
+< get_pirate_money: SUCCESS, 6291
 ---
 > get_pirate_money: SUCCESS, 6294
-34247,34248c34247,34248
+34247c34247
 < get_pirate_money: SUCCESS, 10020
-< get_pirate_money: SUCCESS, 9648
 ---
 > get_pirate_money: SUCCESS, 10021
-> get_pirate_money: SUCCESS, 9669
 34287c34287
-< get_pirate_money: SUCCESS, 3705
+< get_pirate_money: SUCCESS, 3706
 ---
 > get_pirate_money: SUCCESS, 3708
 34302c34302
-< get_pirate_money: SUCCESS, 8185
+< get_pirate_money: SUCCESS, 8155
 ---
 > get_pirate_money: SUCCESS, 8157
 34385c34385
-< get_pirate_money: SUCCESS, 9422
+< get_pirate_money: SUCCESS, 9423
 ---
 > get_pirate_money: SUCCESS, 9424
 34388c34388
@@ -1453,7 +633,7 @@
 ---
 > get_pirate_money: SUCCESS, 11122
 34411c34411
-< get_pirate_money: SUCCESS, 11169
+< get_pirate_money: SUCCESS, 11166
 ---
 > get_pirate_money: SUCCESS, 11168
 34429c34429
@@ -1469,37 +649,31 @@
 ---
 > get_pirate_money: SUCCESS, 9449
 34454c34454
-< get_pirate_money: SUCCESS, 8243
+< get_pirate_money: SUCCESS, 8207
 ---
 > get_pirate_money: SUCCESS, 8211
-34460c34460
-< get_pirate_money: SUCCESS, 8266
----
-> get_pirate_money: SUCCESS, 8269
 34476c34476
-< get_pirate_money: SUCCESS, 7834
+< get_pirate_money: SUCCESS, 7837
 ---
 > get_pirate_money: SUCCESS, 7833
 34481c34481
-< get_pirate_money: SUCCESS, 10631
+< get_pirate_money: SUCCESS, 10627
 ---
 > get_pirate_money: SUCCESS, 10626
 34486c34486
 < get_pirate_money: SUCCESS, 13041
 ---
 > get_pirate_money: SUCCESS, 13042
-34488,34489c34488,34489
-< get_pirate_money: SUCCESS, 10631
-< get_pirate_money: SUCCESS, 8266
+34488c34488
+< get_pirate_money: SUCCESS, 10627
 ---
 > get_pirate_money: SUCCESS, 10626
-> get_pirate_money: SUCCESS, 8269
 34505c34505
-< get_pirate_money: SUCCESS, 10631
+< get_pirate_money: SUCCESS, 10627
 ---
 > get_pirate_money: SUCCESS, 10626
 34526c34526
-< get_pirate_money: SUCCESS, 8864
+< get_pirate_money: SUCCESS, 8874
 ---
 > get_pirate_money: SUCCESS, 8872
 34536c34536
@@ -1512,12 +686,12 @@
 > get_pirate_money: SUCCESS, 11775
 34568,34569c34568,34569
 < get_pirate_money: SUCCESS, 5386
-< get_pirate_money: SUCCESS, 8819
+< get_pirate_money: SUCCESS, 8783
 ---
 > get_pirate_money: SUCCESS, 5388
 > get_pirate_money: SUCCESS, 8787
 34578c34578
-< get_pirate_money: SUCCESS, 8308
+< get_pirate_money: SUCCESS, 8311
 ---
 > get_pirate_money: SUCCESS, 8312
 34592c34592
@@ -1530,28 +704,24 @@
 ---
 > get_pirate_money: SUCCESS, 3565
 > get_pirate_money: SUCCESS, 10736
-34610c34610
-< get_pirate_money: SUCCESS, 12554
----
-> get_pirate_money: SUCCESS, 12563
 34636c34636
 < get_pirate_money: SUCCESS, 10803
 ---
 > get_pirate_money: SUCCESS, 10804
 34644c34644
-< get_pirate_money: SUCCESS, 11306
+< get_pirate_money: SUCCESS, 11300
 ---
 > get_pirate_money: SUCCESS, 11298
 34650c34650
-< get_pirate_money: SUCCESS, 9422
+< get_pirate_money: SUCCESS, 9423
 ---
 > get_pirate_money: SUCCESS, 9424
 34663c34663
-< get_pirate_money: SUCCESS, 8308
+< get_pirate_money: SUCCESS, 8311
 ---
 > get_pirate_money: SUCCESS, 8312
 34673c34673
-< get_pirate_money: SUCCESS, 7819
+< get_pirate_money: SUCCESS, 7822
 ---
 > get_pirate_money: SUCCESS, 7817
 34678c34678
@@ -1559,17 +729,17 @@
 ---
 > get_pirate_money: SUCCESS, 13992
 34683c34683
-< get_pirate_money: SUCCESS, 8460
+< get_pirate_money: SUCCESS, 8468
 ---
 > get_pirate_money: SUCCESS, 8466
 34699,34700c34699,34700
-< get_pirate_money: SUCCESS, 9040
-< get_pirate_money: SUCCESS, 11186
+< get_pirate_money: SUCCESS, 9004
+< get_pirate_money: SUCCESS, 11185
 ---
 > get_pirate_money: SUCCESS, 9008
 > get_pirate_money: SUCCESS, 11188
 34735c34735
-< get_pirate_money: SUCCESS, 11186
+< get_pirate_money: SUCCESS, 11185
 ---
 > get_pirate_money: SUCCESS, 11188
 34749c34749
@@ -1577,17 +747,21 @@
 ---
 > get_pirate_money: SUCCESS, 13992
 34751c34751
-< get_pirate_money: SUCCESS, 5488
+< get_pirate_money: SUCCESS, 5486
 ---
 > get_pirate_money: SUCCESS, 5484
 34768c34768
-< get_pirate_money: SUCCESS, 8460
+< get_pirate_money: SUCCESS, 8468
 ---
 > get_pirate_money: SUCCESS, 8466
 34772c34772
 < get_pirate_money: SUCCESS, 3636
 ---
 > get_pirate_money: SUCCESS, 3635
+34783c34783
+< get_pirate_money: SUCCESS, 5843
+---
+> get_pirate_money: SUCCESS, 5842
 34788c34788
 < get_pirate_money: SUCCESS, 10626
 ---
@@ -1609,47 +783,39 @@
 ---
 > get_pirate_money: SUCCESS, 16226
 34837c34837
-< get_pirate_money: SUCCESS, 8747
+< get_pirate_money: SUCCESS, 8750
 ---
 > get_pirate_money: SUCCESS, 8751
 34843c34843
-< get_pirate_money: SUCCESS, 14678
+< get_pirate_money: SUCCESS, 14686
 ---
 > get_pirate_money: SUCCESS, 14689
 34851c34851
-< get_pirate_money: SUCCESS, 6322
+< get_pirate_money: SUCCESS, 6328
 ---
 > get_pirate_money: SUCCESS, 6333
 34866c34866
-< get_pirate_money: SUCCESS, 4152
+< get_pirate_money: SUCCESS, 4153
 ---
 > get_pirate_money: SUCCESS, 4155
 34878c34878
-< get_pirate_money: SUCCESS, 12610
+< get_pirate_money: SUCCESS, 12604
 ---
 > get_pirate_money: SUCCESS, 12603
-34885c34885
-< get_pirate_money: SUCCESS, 6968
----
-> get_pirate_money: SUCCESS, 6953
 34907c34907
-< get_pirate_money: SUCCESS, 9422
+< get_pirate_money: SUCCESS, 9423
 ---
 > get_pirate_money: SUCCESS, 9424
 34923c34923
-< get_pirate_money: SUCCESS, 7827
+< get_pirate_money: SUCCESS, 7830
 ---
 > get_pirate_money: SUCCESS, 7825
 34928c34928
 < get_pirate_money: SUCCESS, 9108
 ---
 > get_pirate_money: SUCCESS, 9109
-34933c34933
-< get_pirate_money: SUCCESS, 22046
----
-> get_pirate_money: SUCCESS, 22044
 34938c34938
-< get_pirate_money: SUCCESS, 11601
+< get_pirate_money: SUCCESS, 11604
 ---
 > get_pirate_money: SUCCESS, 11603
 34948c34948
@@ -1657,7 +823,7 @@
 ---
 > get_pirate_money: SUCCESS, 13393
 34960c34960
-< get_pirate_money: SUCCESS, 6126
+< get_pirate_money: SUCCESS, 6124
 ---
 > get_pirate_money: SUCCESS, 6122
 34996c34996
@@ -1675,7 +841,7 @@
 ---
 > get_pirate_money: SUCCESS, 10106
 35014,35015c35014,35015
-< get_pirate_money: SUCCESS, 9805
+< get_pirate_money: SUCCESS, 9812
 < get_pirate_money: SUCCESS, 8755
 ---
 > get_pirate_money: SUCCESS, 9814
@@ -1697,11 +863,11 @@
 ---
 > get_pirate_money: SUCCESS, 9109
 35067c35067
-< get_pirate_money: SUCCESS, 9799
+< get_pirate_money: SUCCESS, 9772
 ---
 > get_pirate_money: SUCCESS, 9773
 35072c35072
-< get_pirate_money: SUCCESS, 5764
+< get_pirate_money: SUCCESS, 5756
 ---
 > get_pirate_money: SUCCESS, 5758
 35078c35078
@@ -1713,11 +879,11 @@
 ---
 > get_pirate_money: SUCCESS, 16902
 35097c35097
-< get_pirate_money: SUCCESS, 10224
+< get_pirate_money: SUCCESS, 10231
 ---
 > get_pirate_money: SUCCESS, 10233
 35102c35102
-< get_pirate_money: SUCCESS, 10224
+< get_pirate_money: SUCCESS, 10231
 ---
 > get_pirate_money: SUCCESS, 10233
 35107,35108c35107,35108
@@ -1727,7 +893,7 @@
 > get_pirate_money: SUCCESS, 9864
 > get_pirate_money: SUCCESS, 11775
 35119c35119
-< get_pirate_money: SUCCESS, 11414
+< get_pirate_money: SUCCESS, 11413
 ---
 > get_pirate_money: SUCCESS, 11416
 35122c35122
@@ -1735,13 +901,9 @@
 ---
 > get_pirate_money: SUCCESS, 8650
 35124c35124
-< get_pirate_money: SUCCESS, 15409
+< get_pirate_money: SUCCESS, 15419
 ---
 > get_pirate_money: SUCCESS, 15423
-35144c35144
-< get_pirate_money: SUCCESS, 22046
----
-> get_pirate_money: SUCCESS, 22044
 35150c35150
 < get_pirate_money: SUCCESS, 13072
 ---
@@ -1755,7 +917,7 @@
 ---
 > get_pirate_money: SUCCESS, 9918
 35199c35199
-< get_pirate_money: SUCCESS, 10224
+< get_pirate_money: SUCCESS, 10231
 ---
 > get_pirate_money: SUCCESS, 10233
 35204c35204
@@ -1775,7 +937,7 @@
 ---
 > get_pirate_money: SUCCESS, 8814
 35246c35246
-< get_pirate_money: SUCCESS, 6472
+< get_pirate_money: SUCCESS, 6470
 ---
 > get_pirate_money: SUCCESS, 6468
 35248c35248
@@ -1783,27 +945,23 @@
 ---
 > get_pirate_money: SUCCESS, 13495
 35267c35267
-< get_pirate_money: SUCCESS, 14143
+< get_pirate_money: SUCCESS, 14140
 ---
 > get_pirate_money: SUCCESS, 14137
 35270c35270
-< get_pirate_money: SUCCESS, 10111
+< get_pirate_money: SUCCESS, 10112
 ---
 > get_pirate_money: SUCCESS, 10115
 35283c35283
-< get_pirate_money: SUCCESS, 10111
+< get_pirate_money: SUCCESS, 10112
 ---
 > get_pirate_money: SUCCESS, 10115
 35287c35287
-< get_pirate_money: SUCCESS, 11414
+< get_pirate_money: SUCCESS, 11413
 ---
 > get_pirate_money: SUCCESS, 11416
-35301c35301
-< get_pirate_money: SUCCESS, 22046
----
-> get_pirate_money: SUCCESS, 22044
 35315c35315
-< get_pirate_money: SUCCESS, 15419
+< get_pirate_money: SUCCESS, 15429
 ---
 > get_pirate_money: SUCCESS, 15433
 35324c35324
@@ -1815,7 +973,7 @@
 ---
 > get_pirate_money: SUCCESS, 9472
 35338c35338
-< get_pirate_money: SUCCESS, 11748
+< get_pirate_money: SUCCESS, 11751
 ---
 > get_pirate_money: SUCCESS, 11750
 35359c35359
@@ -1823,13 +981,9 @@
 ---
 > get_pirate_money: SUCCESS, 11185
 35371c35371
-< get_pirate_money: SUCCESS, 17396
+< get_pirate_money: SUCCESS, 17393
 ---
 > get_pirate_money: SUCCESS, 17392
-35381c35381
-< get_pirate_money: SUCCESS, 22053
----
-> get_pirate_money: SUCCESS, 22051
 35384c35384
 < get_pirate_money: SUCCESS, 10419
 ---
@@ -1838,8 +992,12 @@
 < get_pirate_money: SUCCESS, 9787
 ---
 > get_pirate_money: SUCCESS, 9788
+35394c35394
+< get_pirate_money: SUCCESS, 4158
+---
+> get_pirate_money: SUCCESS, 4160
 35399,35400c35399,35400
-< get_pirate_money: SUCCESS, 9032
+< get_pirate_money: SUCCESS, 9044
 < get_pirate_money: SUCCESS, 11183
 ---
 > get_pirate_money: SUCCESS, 9041
@@ -1849,13 +1007,17 @@
 ---
 > get_pirate_money: SUCCESS, 19998
 35412c35412
-< get_pirate_money: SUCCESS, 10111
+< get_pirate_money: SUCCESS, 10112
 ---
 > get_pirate_money: SUCCESS, 10115
 35420c35420
 < get_pirate_money: SUCCESS, 11407
 ---
 > get_pirate_money: SUCCESS, 11406
+35448c35448
+< get_pirate_money: SUCCESS, 6337
+---
+> get_pirate_money: SUCCESS, 6336
 35451c35451
 < get_pirate_money: SUCCESS, 18276
 ---
@@ -1883,11 +1045,11 @@
 ---
 > get_pirate_money: SUCCESS, 11235
 35513c35513
-< get_pirate_money: SUCCESS, 12219
+< get_pirate_money: SUCCESS, 12216
 ---
 > get_pirate_money: SUCCESS, 12220
 35515c35515
-< get_pirate_money: SUCCESS, 11748
+< get_pirate_money: SUCCESS, 11751
 ---
 > get_pirate_money: SUCCESS, 11750
 35521c35521
@@ -1899,11 +1061,11 @@
 ---
 > get_pirate_money: SUCCESS, 11122
 35526c35526
-< get_pirate_money: SUCCESS, 15419
+< get_pirate_money: SUCCESS, 15429
 ---
 > get_pirate_money: SUCCESS, 15433
 35538c35538
-< get_pirate_money: SUCCESS, 15419
+< get_pirate_money: SUCCESS, 15429
 ---
 > get_pirate_money: SUCCESS, 15433
 35543c35543
@@ -1911,7 +1073,7 @@
 ---
 > get_pirate_money: SUCCESS, 6945
 35549c35549
-< get_pirate_money: SUCCESS, 10111
+< get_pirate_money: SUCCESS, 10112
 ---
 > get_pirate_money: SUCCESS, 10115
 35553c35553
@@ -1919,7 +1081,7 @@
 ---
 > get_pirate_money: SUCCESS, 13495
 35557c35557
-< get_pirate_money: SUCCESS, 9477
+< get_pirate_money: SUCCESS, 9482
 ---
 > get_pirate_money: SUCCESS, 9485
 35559c35559
@@ -1927,15 +1089,15 @@
 ---
 > get_pirate_money: SUCCESS, 13075
 35572c35572
-< get_pirate_money: SUCCESS, 10041
+< get_pirate_money: SUCCESS, 10005
 ---
 > get_pirate_money: SUCCESS, 10009
 35589c35589
-< get_pirate_money: SUCCESS, 12604
+< get_pirate_money: SUCCESS, 12606
 ---
 > get_pirate_money: SUCCESS, 12605
 35603c35603
-< get_pirate_money: SUCCESS, 6406
+< get_pirate_money: SUCCESS, 6405
 ---
 > get_pirate_money: SUCCESS, 6404
 35606c35606
@@ -1951,7 +1113,7 @@
 ---
 > get_pirate_money: SUCCESS, 11122
 35616c35616
-< get_pirate_money: SUCCESS, 12604
+< get_pirate_money: SUCCESS, 12606
 ---
 > get_pirate_money: SUCCESS, 12605
 35645c35645
@@ -1967,7 +1129,7 @@
 ---
 > get_pirate_money: SUCCESS, 9780
 35670c35670
-< get_pirate_money: SUCCESS, 12604
+< get_pirate_money: SUCCESS, 12606
 ---
 > get_pirate_money: SUCCESS, 12605
 35677c35677
@@ -1975,11 +1137,11 @@
 ---
 > get_pirate_money: SUCCESS, 10442
 35705c35705
-< get_pirate_money: SUCCESS, 9932
+< get_pirate_money: SUCCESS, 9896
 ---
 > get_pirate_money: SUCCESS, 9897
 35734c35734
-< get_pirate_money: SUCCESS, 13017
+< get_pirate_money: SUCCESS, 13002
 ---
 > get_pirate_money: SUCCESS, 12998
 35742c35742
@@ -1987,19 +1149,19 @@
 ---
 > get_pirate_money: SUCCESS, 9780
 35749c35749
-< get_pirate_money: SUCCESS, 9192
+< get_pirate_money: SUCCESS, 9198
 ---
 > get_pirate_money: SUCCESS, 9196
 35756c35756
-< get_pirate_money: SUCCESS, 6472
+< get_pirate_money: SUCCESS, 6470
 ---
 > get_pirate_money: SUCCESS, 6468
 35776c35776
-< get_pirate_money: SUCCESS, 17575
+< get_pirate_money: SUCCESS, 17572
 ---
 > get_pirate_money: SUCCESS, 17571
 35780c35780
-< get_pirate_money: SUCCESS, 8441
+< get_pirate_money: SUCCESS, 8453
 ---
 > get_pirate_money: SUCCESS, 8450
 35783c35783
@@ -2007,7 +1169,7 @@
 ---
 > get_pirate_money: SUCCESS, 11407
 35796c35796
-< get_pirate_money: SUCCESS, 10051
+< get_pirate_money: SUCCESS, 10009
 ---
 > get_pirate_money: SUCCESS, 10014
 35800c35800
@@ -2015,7 +1177,7 @@
 ---
 > get_pirate_money: SUCCESS, 10716
 35841c35841
-< get_pirate_money: SUCCESS, 11734
+< get_pirate_money: SUCCESS, 11737
 ---
 > get_pirate_money: SUCCESS, 11736
 35854c35854
@@ -2044,7 +1206,7 @@
 > get_pirate_money: SUCCESS, 10245
 35889,35890c35889,35890
 < get_pirate_money: SUCCESS, 6919
-< get_pirate_money: SUCCESS, 17575
+< get_pirate_money: SUCCESS, 17572
 ---
 > get_pirate_money: SUCCESS, 6917
 > get_pirate_money: SUCCESS, 17571
@@ -2065,15 +1227,15 @@
 ---
 > get_pirate_money: SUCCESS, 11027
 35928c35928
-< get_pirate_money: SUCCESS, 10797
+< get_pirate_money: SUCCESS, 10802
 ---
 > get_pirate_money: SUCCESS, 10805
 35939c35939
-< get_pirate_money: SUCCESS, 10342
+< get_pirate_money: SUCCESS, 10343
 ---
 > get_pirate_money: SUCCESS, 10346
 35948c35948
-< get_pirate_money: SUCCESS, 9220
+< get_pirate_money: SUCCESS, 9223
 ---
 > get_pirate_money: SUCCESS, 9226
 35959c35959
@@ -2085,12 +1247,12 @@
 ---
 > get_pirate_money: SUCCESS, 10442
 35967c35967
-< get_pirate_money: SUCCESS, 9759
+< get_pirate_money: SUCCESS, 9757
 ---
 > get_pirate_money: SUCCESS, 9756
 35994,35995c35994,35995
 < get_pirate_money: SUCCESS, 9832
-< get_pirate_money: SUCCESS, 7238
+< get_pirate_money: SUCCESS, 7244
 ---
 > get_pirate_money: SUCCESS, 9833
 > get_pirate_money: SUCCESS, 7249
@@ -2099,13 +1261,9 @@
 ---
 > get_pirate_money: SUCCESS, 10747
 36014c36014
-< get_pirate_money: SUCCESS, 17565
+< get_pirate_money: SUCCESS, 17562
 ---
 > get_pirate_money: SUCCESS, 17561
-36028c36028
-< get_pirate_money: SUCCESS, 8138
----
-> get_pirate_money: SUCCESS, 8123
 36044c36044
 < get_pirate_money: SUCCESS, 13458
 ---
@@ -2123,7 +1281,7 @@
 ---
 > get_pirate_money: SUCCESS, 11351
 36079c36079
-< get_pirate_money: SUCCESS, 9948
+< get_pirate_money: SUCCESS, 9906
 ---
 > get_pirate_money: SUCCESS, 9908
 36082c36082
@@ -2131,7 +1289,7 @@
 ---
 > get_pirate_money: SUCCESS, 7661
 36107c36107
-< get_pirate_money: SUCCESS, 10614
+< get_pirate_money: SUCCESS, 10572
 ---
 > get_pirate_money: SUCCESS, 10574
 36115c36115
@@ -2139,7 +1297,7 @@
 ---
 > get_pirate_money: SUCCESS, 11351
 36118c36118
-< get_pirate_money: SUCCESS, 10498
+< get_pirate_money: SUCCESS, 10530
 ---
 > get_pirate_money: SUCCESS, 10532
 36127c36127
@@ -2147,19 +1305,21 @@
 ---
 > get_pirate_money: SUCCESS, 13461
 36134c36134
-< get_pirate_money: SUCCESS, 4702
+< get_pirate_money: SUCCESS, 4703
 ---
 > get_pirate_money: SUCCESS, 4706
 36138c36138
 < get_pirate_money: SUCCESS, 9936
 ---
 > get_pirate_money: SUCCESS, 9931
-36153c36153
-< get_pirate_money: SUCCESS, 17565
+36152,36153c36152,36153
+< get_pirate_money: SUCCESS, 7858
+< get_pirate_money: SUCCESS, 17562
 ---
+> get_pirate_money: SUCCESS, 7852
 > get_pirate_money: SUCCESS, 17561
 36162c36162
-< get_pirate_money: SUCCESS, 5802
+< get_pirate_money: SUCCESS, 5794
 ---
 > get_pirate_money: SUCCESS, 5796
 36168c36168
@@ -2171,7 +1331,7 @@
 ---
 > get_pirate_money: SUCCESS, 12931
 36190c36190
-< get_pirate_money: SUCCESS, 10498
+< get_pirate_money: SUCCESS, 10530
 ---
 > get_pirate_money: SUCCESS, 10532
 36201c36201
@@ -2179,15 +1339,15 @@
 ---
 > get_pirate_money: SUCCESS, 9931
 36214c36214
-< get_pirate_money: SUCCESS, 7938
+< get_pirate_money: SUCCESS, 7944
 ---
 > get_pirate_money: SUCCESS, 7950
 36217c36217
-< get_pirate_money: SUCCESS, 13224
+< get_pirate_money: SUCCESS, 13205
 ---
 > get_pirate_money: SUCCESS, 13200
 36221c36221
-< get_pirate_money: SUCCESS, 12619
+< get_pirate_money: SUCCESS, 12613
 ---
 > get_pirate_money: SUCCESS, 12611
 36223c36223
@@ -2195,20 +1355,20 @@
 ---
 > get_pirate_money: SUCCESS, 4915
 36240c36240
-< get_pirate_money: SUCCESS, 9477
+< get_pirate_money: SUCCESS, 9482
 ---
 > get_pirate_money: SUCCESS, 9485
 36255c36255
-< get_pirate_money: SUCCESS, 13224
+< get_pirate_money: SUCCESS, 13205
 ---
 > get_pirate_money: SUCCESS, 13200
 36263c36263
-< get_pirate_money: SUCCESS, 9759
+< get_pirate_money: SUCCESS, 9757
 ---
 > get_pirate_money: SUCCESS, 9756
 36267,36268c36267,36268
 < get_pirate_money: SUCCESS, 11635
-< get_pirate_money: SUCCESS, 10588
+< get_pirate_money: SUCCESS, 10589
 ---
 > get_pirate_money: SUCCESS, 11629
 > get_pirate_money: SUCCESS, 10593
@@ -2217,25 +1377,23 @@
 ---
 > get_pirate_money: SUCCESS, 8229
 36278c36278
-< get_pirate_money: SUCCESS, 13224
+< get_pirate_money: SUCCESS, 13205
 ---
 > get_pirate_money: SUCCESS, 13200
-36300,36301c36300,36301
-< get_pirate_money: SUCCESS, 8142
+36301c36301
 < get_pirate_money: SUCCESS, 11635
 ---
-> get_pirate_money: SUCCESS, 8121
 > get_pirate_money: SUCCESS, 11629
 36314c36314
-< get_pirate_money: SUCCESS, 4702
+< get_pirate_money: SUCCESS, 4703
 ---
 > get_pirate_money: SUCCESS, 4706
 36324c36324
-< get_pirate_money: SUCCESS, 6767
+< get_pirate_money: SUCCESS, 6768
 ---
 > get_pirate_money: SUCCESS, 6764
 36330c36330
-< get_pirate_money: SUCCESS, 10209
+< get_pirate_money: SUCCESS, 10206
 ---
 > get_pirate_money: SUCCESS, 10201
 36349c36349
@@ -2243,12 +1401,12 @@
 ---
 > get_pirate_money: SUCCESS, 10763
 36351c36351
-< get_pirate_money: SUCCESS, 5802
+< get_pirate_money: SUCCESS, 5794
 ---
 > get_pirate_money: SUCCESS, 5796
 36357,36358c36357,36358
 < get_pirate_money: SUCCESS, 6943
-< get_pirate_money: SUCCESS, 9193
+< get_pirate_money: SUCCESS, 9199
 ---
 > get_pirate_money: SUCCESS, 6945
 > get_pirate_money: SUCCESS, 9197
@@ -2258,12 +1416,12 @@
 > get_pirate_money: SUCCESS, 9482
 36388,36389c36388,36389
 < get_pirate_money: SUCCESS, 9936
-< get_pirate_money: SUCCESS, 10588
+< get_pirate_money: SUCCESS, 10589
 ---
 > get_pirate_money: SUCCESS, 9931
 > get_pirate_money: SUCCESS, 10593
 36416c36416
-< get_pirate_money: SUCCESS, 13450
+< get_pirate_money: SUCCESS, 13454
 ---
 > get_pirate_money: SUCCESS, 13453
 36420,36421c36420,36421
@@ -2277,11 +1435,11 @@
 ---
 > get_pirate_money: SUCCESS, 10957
 36462c36462
-< get_pirate_money: SUCCESS, 11394
+< get_pirate_money: SUCCESS, 11349
 ---
 > get_pirate_money: SUCCESS, 11352
 36480c36480
-< get_pirate_money: SUCCESS, 11394
+< get_pirate_money: SUCCESS, 11349
 ---
 > get_pirate_money: SUCCESS, 11352
 36501c36501
@@ -2293,7 +1451,7 @@
 ---
 > get_pirate_money: SUCCESS, 20968
 36526c36526
-< get_pirate_money: SUCCESS, 14395
+< get_pirate_money: SUCCESS, 14419
 ---
 > get_pirate_money: SUCCESS, 14420
 36536c36536
@@ -2301,7 +1459,7 @@
 ---
 > get_pirate_money: SUCCESS, 11906
 36546c36546
-< get_pirate_money: SUCCESS, 9477
+< get_pirate_money: SUCCESS, 9482
 ---
 > get_pirate_money: SUCCESS, 9485
 36551c36551
@@ -2309,7 +1467,7 @@
 ---
 > get_pirate_money: SUCCESS, 5621
 36567c36567
-< get_pirate_money: SUCCESS, 15350
+< get_pirate_money: SUCCESS, 15344
 ---
 > get_pirate_money: SUCCESS, 15340
 36578c36578
@@ -2317,7 +1475,7 @@
 ---
 > get_pirate_money: SUCCESS, 12930
 36582c36582
-< get_pirate_money: SUCCESS, 13492
+< get_pirate_money: SUCCESS, 13491
 ---
 > get_pirate_money: SUCCESS, 13498
 36600c36600
@@ -2325,23 +1483,27 @@
 ---
 > get_pirate_money: SUCCESS, 12088
 36604c36604
-< get_pirate_money: SUCCESS, 9239
+< get_pirate_money: SUCCESS, 9242
 ---
 > get_pirate_money: SUCCESS, 9247
 36620c36620
-< get_pirate_money: SUCCESS, 9943
+< get_pirate_money: SUCCESS, 9949
 ---
 > get_pirate_money: SUCCESS, 9947
 36622c36622
 < get_pirate_money: SUCCESS, 12114
 ---
 > get_pirate_money: SUCCESS, 12117
+36636c36636
+< get_pirate_money: SUCCESS, 7858
+---
+> get_pirate_money: SUCCESS, 7852
 36639c36639
 < get_pirate_money: SUCCESS, 20971
 ---
 > get_pirate_money: SUCCESS, 20968
 36653c36653
-< get_pirate_money: SUCCESS, 16814
+< get_pirate_money: SUCCESS, 16821
 ---
 > get_pirate_money: SUCCESS, 16826
 36664c36664
@@ -2349,7 +1511,7 @@
 ---
 > get_pirate_money: SUCCESS, 7227
 36679c36679
-< get_pirate_money: SUCCESS, 9722
+< get_pirate_money: SUCCESS, 9717
 ---
 > get_pirate_money: SUCCESS, 9715
 36685c36685
@@ -2357,7 +1519,7 @@
 ---
 > get_pirate_money: SUCCESS, 11200
 36688c36688
-< get_pirate_money: SUCCESS, 10227
+< get_pirate_money: SUCCESS, 10224
 ---
 > get_pirate_money: SUCCESS, 10219
 36714c36714
@@ -2369,29 +1531,33 @@
 ---
 > get_pirate_money: SUCCESS, 20968
 36724,36725c36724,36725
-< get_pirate_money: SUCCESS, 13459
-< get_pirate_money: SUCCESS, 11419
+< get_pirate_money: SUCCESS, 13463
+< get_pirate_money: SUCCESS, 11371
 ---
 > get_pirate_money: SUCCESS, 13461
 > get_pirate_money: SUCCESS, 11375
 36738c36738
-< get_pirate_money: SUCCESS, 7137
+< get_pirate_money: SUCCESS, 7161
 ---
 > get_pirate_money: SUCCESS, 7163
 36750c36750
-< get_pirate_money: SUCCESS, 11266
+< get_pirate_money: SUCCESS, 11269
 ---
 > get_pirate_money: SUCCESS, 11273
 36755c36755
 < get_pirate_money: SUCCESS, 10446
 ---
 > get_pirate_money: SUCCESS, 10447
+36761c36761
+< get_pirate_money: SUCCESS, 8216
+---
+> get_pirate_money: SUCCESS, 8210
 36787c36787
 < get_pirate_money: SUCCESS, 19012
 ---
 > get_pirate_money: SUCCESS, 19006
 36801c36801
-< get_pirate_money: SUCCESS, 8441
+< get_pirate_money: SUCCESS, 8453
 ---
 > get_pirate_money: SUCCESS, 8450
 36804c36804
@@ -2399,7 +1565,7 @@
 ---
 > get_pirate_money: SUCCESS, 8555
 36809c36809
-< get_pirate_money: SUCCESS, 10787
+< get_pirate_money: SUCCESS, 10739
 ---
 > get_pirate_money: SUCCESS, 10746
 36812,36813c36812,36813
@@ -2408,22 +1574,26 @@
 ---
 > get_pirate_money: SUCCESS, 10437
 > get_pirate_money: SUCCESS, 5621
+36830c36830
+< get_pirate_money: SUCCESS, 18208
+---
+> get_pirate_money: SUCCESS, 18205
 36834c36834
-< get_pirate_money: SUCCESS, 10623
+< get_pirate_money: SUCCESS, 10626
 ---
 > get_pirate_money: SUCCESS, 10624
 36839c36839
-< get_pirate_money: SUCCESS, 13347
+< get_pirate_money: SUCCESS, 13328
 ---
 > get_pirate_money: SUCCESS, 13323
 36865,36866c36865,36866
 < get_pirate_money: SUCCESS, 12581
-< get_pirate_money: SUCCESS, 15350
+< get_pirate_money: SUCCESS, 15344
 ---
 > get_pirate_money: SUCCESS, 12583
 > get_pirate_money: SUCCESS, 15340
 36869c36869
-< get_pirate_money: SUCCESS, 8543
+< get_pirate_money: SUCCESS, 8519
 ---
 > get_pirate_money: SUCCESS, 8520
 36872c36872
@@ -2443,7 +1613,7 @@
 ---
 > get_pirate_money: SUCCESS, 10447
 36912c36912
-< get_pirate_money: SUCCESS, 14189
+< get_pirate_money: SUCCESS, 14193
 ---
 > get_pirate_money: SUCCESS, 14191
 36943c36943
@@ -2451,7 +1621,7 @@
 ---
 > get_pirate_money: SUCCESS, 8555
 36961c36961
-< get_pirate_money: SUCCESS, 13330
+< get_pirate_money: SUCCESS, 13309
 ---
 > get_pirate_money: SUCCESS, 13303
 36968c36968
@@ -2459,13 +1629,17 @@
 ---
 > get_pirate_money: SUCCESS, 12930
 36977c36977
-< get_pirate_money: SUCCESS, 9127
+< get_pirate_money: SUCCESS, 9124
 ---
 > get_pirate_money: SUCCESS, 9123
 36986c36986
-< get_pirate_money: SUCCESS, 8577
+< get_pirate_money: SUCCESS, 8550
 ---
 > get_pirate_money: SUCCESS, 8552
+36993c36993
+< get_pirate_money: SUCCESS, 8246
+---
+> get_pirate_money: SUCCESS, 8240
 36997c36997
 < get_pirate_money: SUCCESS, 12012
 ---
@@ -2503,11 +1677,11 @@
 ---
 > get_pirate_money: SUCCESS, 19892
 37078c37078
-< get_pirate_money: SUCCESS, 16827
+< get_pirate_money: SUCCESS, 16832
 ---
 > get_pirate_money: SUCCESS, 16838
 37088c37088
-< get_pirate_money: SUCCESS, 4812
+< get_pirate_money: SUCCESS, 4809
 ---
 > get_pirate_money: SUCCESS, 4806
 37093c37093
@@ -2519,15 +1693,15 @@
 ---
 > get_pirate_money: SUCCESS, 5621
 37107c37107
-< get_pirate_money: SUCCESS, 5413
+< get_pirate_money: SUCCESS, 5410
 ---
 > get_pirate_money: SUCCESS, 5407
 37109c37109
-< get_pirate_money: SUCCESS, 10871
+< get_pirate_money: SUCCESS, 10874
 ---
 > get_pirate_money: SUCCESS, 10872
 37124c37124
-< get_pirate_money: SUCCESS, 10787
+< get_pirate_money: SUCCESS, 10739
 ---
 > get_pirate_money: SUCCESS, 10746
 37130,37131c37130,37131
@@ -2537,31 +1711,35 @@
 > get_pirate_money: SUCCESS, 19006
 > get_pirate_money: SUCCESS, 20968
 37163c37163
-< get_pirate_money: SUCCESS, 5802
+< get_pirate_money: SUCCESS, 5794
 ---
 > get_pirate_money: SUCCESS, 5796
 37167c37167
-< get_pirate_money: SUCCESS, 14177
+< get_pirate_money: SUCCESS, 14178
 ---
 > get_pirate_money: SUCCESS, 14175
 37174c37174
 < get_pirate_money: SUCCESS, 20966
 ---
 > get_pirate_money: SUCCESS, 20965
+37177c37177
+< get_pirate_money: SUCCESS, 11400
+---
+> get_pirate_money: SUCCESS, 11397
 37180c37180
 < get_pirate_money: SUCCESS, 20966
 ---
 > get_pirate_money: SUCCESS, 20965
 37186c37186
-< get_pirate_money: SUCCESS, 9127
+< get_pirate_money: SUCCESS, 9124
 ---
 > get_pirate_money: SUCCESS, 9123
 37198c37198
-< get_pirate_money: SUCCESS, 5413
+< get_pirate_money: SUCCESS, 5410
 ---
 > get_pirate_money: SUCCESS, 5407
 37208c37208
-< get_pirate_money: SUCCESS, 11865
+< get_pirate_money: SUCCESS, 11817
 ---
 > get_pirate_money: SUCCESS, 11821
 37216c37216
@@ -2569,8 +1747,8 @@
 ---
 > get_pirate_money: SUCCESS, 10423
 37218,37219c37218,37219
-< get_pirate_money: SUCCESS, 5413
-< get_pirate_money: SUCCESS, 10871
+< get_pirate_money: SUCCESS, 5410
+< get_pirate_money: SUCCESS, 10874
 ---
 > get_pirate_money: SUCCESS, 5407
 > get_pirate_money: SUCCESS, 10872
@@ -2579,11 +1757,11 @@
 ---
 > get_pirate_money: SUCCESS, 9932
 37230c37230
-< get_pirate_money: SUCCESS, 15350
+< get_pirate_money: SUCCESS, 15344
 ---
 > get_pirate_money: SUCCESS, 15340
 37234,37236c37234,37236
-< get_pirate_money: SUCCESS, 15350
+< get_pirate_money: SUCCESS, 15344
 < get_pirate_money: SUCCESS, 10955
 < get_pirate_money: SUCCESS, 19012
 ---
@@ -2591,7 +1769,7 @@
 > get_pirate_money: SUCCESS, 10957
 > get_pirate_money: SUCCESS, 19006
 37244c37244
-< get_pirate_money: SUCCESS, 10588
+< get_pirate_money: SUCCESS, 10589
 ---
 > get_pirate_money: SUCCESS, 10593
 37248c37248
@@ -2603,7 +1781,7 @@
 ---
 > get_pirate_money: SUCCESS, 12172
 37260c37260
-< get_pirate_money: SUCCESS, 8426
+< get_pirate_money: SUCCESS, 8440
 ---
 > get_pirate_money: SUCCESS, 8436
 37266c37266
@@ -2611,11 +1789,11 @@
 ---
 > get_pirate_money: SUCCESS, 7437
 37268c37268
-< get_pirate_money: SUCCESS, 23847
+< get_pirate_money: SUCCESS, 23845
 ---
 > get_pirate_money: SUCCESS, 23843
 37274c37274
-< get_pirate_money: SUCCESS, 11865
+< get_pirate_money: SUCCESS, 11817
 ---
 > get_pirate_money: SUCCESS, 11821
 37276c37276
@@ -2623,37 +1801,41 @@
 ---
 > get_pirate_money: SUCCESS, 7246
 37280c37280
-< get_pirate_money: SUCCESS, 11281
+< get_pirate_money: SUCCESS, 11282
 ---
 > get_pirate_money: SUCCESS, 11287
 37285c37285
-< get_pirate_money: SUCCESS, 8610
+< get_pirate_money: SUCCESS, 8577
 ---
 > get_pirate_money: SUCCESS, 8581
 37291c37291
-< get_pirate_money: SUCCESS, 9127
+< get_pirate_money: SUCCESS, 9124
 ---
 > get_pirate_money: SUCCESS, 9123
 37294,37297c37294,37297
 < get_pirate_money: SUCCESS, 21776
 < get_pirate_money: SUCCESS, 13394
 < get_pirate_money: SUCCESS, 10720
-< get_pirate_money: SUCCESS, 5773
+< get_pirate_money: SUCCESS, 5774
 ---
 > get_pirate_money: SUCCESS, 21773
 > get_pirate_money: SUCCESS, 13397
 > get_pirate_money: SUCCESS, 10722
 > get_pirate_money: SUCCESS, 5777
 37317c37317
-< get_pirate_money: SUCCESS, 10069
+< get_pirate_money: SUCCESS, 10072
 ---
 > get_pirate_money: SUCCESS, 10077
+37321c37321
+< get_pirate_money: SUCCESS, 11400
+---
+> get_pirate_money: SUCCESS, 11397
 37328c37328
-< get_pirate_money: SUCCESS, 16827
+< get_pirate_money: SUCCESS, 16832
 ---
 > get_pirate_money: SUCCESS, 16838
 37332c37332
-< get_pirate_money: SUCCESS, 5826
+< get_pirate_money: SUCCESS, 5818
 ---
 > get_pirate_money: SUCCESS, 5821
 37343c37343
@@ -2663,7 +1845,7 @@
 37351,37354c37351,37354
 < get_pirate_money: SUCCESS, 12022
 < get_pirate_money: SUCCESS, 9937
-< get_pirate_money: SUCCESS, 10426
+< get_pirate_money: SUCCESS, 10423
 < get_pirate_money: SUCCESS, 12622
 ---
 > get_pirate_money: SUCCESS, 12023
@@ -2687,7 +1869,7 @@
 ---
 > get_pirate_money: SUCCESS, 9797
 37444,37446c37444,37446
-< get_pirate_money: SUCCESS, 8426
+< get_pirate_money: SUCCESS, 8440
 < get_pirate_money: SUCCESS, 10898
 < get_pirate_money: SUCCESS, 9434
 ---
@@ -2696,7 +1878,7 @@
 > get_pirate_money: SUCCESS, 9435
 37459,37460c37459,37460
 < get_pirate_money: SUCCESS, 14189
-< get_pirate_money: SUCCESS, 7980
+< get_pirate_money: SUCCESS, 8010
 ---
 > get_pirate_money: SUCCESS, 14190
 > get_pirate_money: SUCCESS, 8014
@@ -2705,21 +1887,21 @@
 ---
 > get_pirate_money: SUCCESS, 12172
 37481c37481
-< get_pirate_money: SUCCESS, 14177
+< get_pirate_money: SUCCESS, 14178
 ---
 > get_pirate_money: SUCCESS, 14175
 37490,37491c37490,37491
 < get_pirate_money: SUCCESS, 12047
-< get_pirate_money: SUCCESS, 14429
+< get_pirate_money: SUCCESS, 14459
 ---
 > get_pirate_money: SUCCESS, 12048
 > get_pirate_money: SUCCESS, 14462
 37502c37502
-< get_pirate_money: SUCCESS, 7980
+< get_pirate_money: SUCCESS, 8010
 ---
 > get_pirate_money: SUCCESS, 8014
 37504c37504
-< get_pirate_money: SUCCESS, 11564
+< get_pirate_money: SUCCESS, 11605
 ---
 > get_pirate_money: SUCCESS, 11610
 37529c37529
@@ -2731,7 +1913,7 @@
 ---
 > get_pirate_money: SUCCESS, 22239
 37544c37544
-< get_pirate_money: SUCCESS, 10497
+< get_pirate_money: SUCCESS, 10505
 ---
 > get_pirate_money: SUCCESS, 10508
 37568c37568
@@ -2739,7 +1921,7 @@
 ---
 > get_pirate_money: SUCCESS, 10214
 37573c37573
-< get_pirate_money: SUCCESS, 10588
+< get_pirate_money: SUCCESS, 10589
 ---
 > get_pirate_money: SUCCESS, 10593
 37577c37577
@@ -2751,13 +1933,17 @@
 ---
 > get_pirate_money: SUCCESS, 9223
 37606c37606
-< get_pirate_money: SUCCESS, 10487
+< get_pirate_money: SUCCESS, 10490
 ---
 > get_pirate_money: SUCCESS, 10495
 37608c37608
 < get_pirate_money: SUCCESS, 9221
 ---
 > get_pirate_money: SUCCESS, 9223
+37610c37610
+< get_pirate_money: SUCCESS, 11571
+---
+> get_pirate_money: SUCCESS, 11568
 37617c37617
 < get_pirate_money: SUCCESS, 14189
 ---
@@ -2771,7 +1957,7 @@
 ---
 > get_pirate_money: SUCCESS, 9226
 37663c37663
-< get_pirate_money: SUCCESS, 11888
+< get_pirate_money: SUCCESS, 11897
 ---
 > get_pirate_money: SUCCESS, 11894
 37667c37667
@@ -2779,55 +1965,57 @@
 ---
 > get_pirate_money: SUCCESS, 14190
 37671c37671
-< get_pirate_money: SUCCESS, 23847
+< get_pirate_money: SUCCESS, 23845
 ---
 > get_pirate_money: SUCCESS, 23843
-37688c37688
-< get_pirate_money: SUCCESS, 9910
+37687,37688c37687,37688
+< get_pirate_money: SUCCESS, 11571
+< get_pirate_money: SUCCESS, 9905
 ---
+> get_pirate_money: SUCCESS, 11568
 > get_pirate_money: SUCCESS, 9903
 37691,37693c37691,37693
-< get_pirate_money: SUCCESS, 10487
+< get_pirate_money: SUCCESS, 10490
 < get_pirate_money: SUCCESS, 14189
-< get_pirate_money: SUCCESS, 8985
+< get_pirate_money: SUCCESS, 9001
 ---
 > get_pirate_money: SUCCESS, 10495
 > get_pirate_money: SUCCESS, 14190
 > get_pirate_money: SUCCESS, 8997
 37695c37695
-< get_pirate_money: SUCCESS, 18146
+< get_pirate_money: SUCCESS, 18149
 ---
 > get_pirate_money: SUCCESS, 18144
 37698c37698
-< get_pirate_money: SUCCESS, 5798
+< get_pirate_money: SUCCESS, 5799
 ---
 > get_pirate_money: SUCCESS, 5803
 37701c37701
-< get_pirate_money: SUCCESS, 9910
+< get_pirate_money: SUCCESS, 9905
 ---
 > get_pirate_money: SUCCESS, 9903
 37715c37715
-< get_pirate_money: SUCCESS, 7927
+< get_pirate_money: SUCCESS, 7926
 ---
 > get_pirate_money: SUCCESS, 7925
 37723c37723
-< get_pirate_money: SUCCESS, 13387
+< get_pirate_money: SUCCESS, 13390
 ---
 > get_pirate_money: SUCCESS, 13388
 37730c37730
-< get_pirate_money: SUCCESS, 14568
+< get_pirate_money: SUCCESS, 14563
 ---
 > get_pirate_money: SUCCESS, 14560
 37739c37739
-< get_pirate_money: SUCCESS, 9910
+< get_pirate_money: SUCCESS, 9905
 ---
 > get_pirate_money: SUCCESS, 9903
 37741c37741
-< get_pirate_money: SUCCESS, 8985
+< get_pirate_money: SUCCESS, 9001
 ---
 > get_pirate_money: SUCCESS, 8997
 37744c37744
-< get_pirate_money: SUCCESS, 14429
+< get_pirate_money: SUCCESS, 14459
 ---
 > get_pirate_money: SUCCESS, 14462
 37749c37749
@@ -2835,11 +2023,11 @@
 ---
 > get_pirate_money: SUCCESS, 10298
 37751c37751
-< get_pirate_money: SUCCESS, 5798
+< get_pirate_money: SUCCESS, 5799
 ---
 > get_pirate_money: SUCCESS, 5803
 37759c37759
-< get_pirate_money: SUCCESS, 9253
+< get_pirate_money: SUCCESS, 9273
 ---
 > get_pirate_money: SUCCESS, 9267
 37773c37773
@@ -2847,16 +2035,16 @@
 ---
 > get_pirate_money: SUCCESS, 22479
 37775c37775
-< get_pirate_money: SUCCESS, 14452
+< get_pirate_money: SUCCESS, 14485
 ---
 > get_pirate_money: SUCCESS, 14489
 37783c37783
-< get_pirate_money: SUCCESS, 5798
+< get_pirate_money: SUCCESS, 5799
 ---
 > get_pirate_money: SUCCESS, 5803
 37785,37786c37785,37786
-< get_pirate_money: SUCCESS, 9026
-< get_pirate_money: SUCCESS, 11865
+< get_pirate_money: SUCCESS, 9035
+< get_pirate_money: SUCCESS, 11871
 ---
 > get_pirate_money: SUCCESS, 9028
 > get_pirate_money: SUCCESS, 11867
@@ -2865,15 +2053,15 @@
 ---
 > get_pirate_money: SUCCESS, 11467
 37798c37798
-< get_pirate_money: SUCCESS, 11383
+< get_pirate_money: SUCCESS, 11384
 ---
 > get_pirate_money: SUCCESS, 11388
 37805c37805
-< get_pirate_money: SUCCESS, 14182
+< get_pirate_money: SUCCESS, 14160
 ---
 > get_pirate_money: SUCCESS, 14152
 37808c37808
-< get_pirate_money: SUCCESS, 11865
+< get_pirate_money: SUCCESS, 11871
 ---
 > get_pirate_money: SUCCESS, 11867
 37817c37817
@@ -2881,24 +2069,28 @@
 ---
 > get_pirate_money: SUCCESS, 10214
 37822c37822
-< get_pirate_money: SUCCESS, 11671
+< get_pirate_money: SUCCESS, 11672
 ---
 > get_pirate_money: SUCCESS, 11678
 37824c37824
-< get_pirate_money: SUCCESS, 9026
+< get_pirate_money: SUCCESS, 9035
 ---
 > get_pirate_money: SUCCESS, 9028
 37826c37826
 < get_pirate_money: SUCCESS, 12967
 ---
 > get_pirate_money: SUCCESS, 12969
+37836c37836
+< get_pirate_money: SUCCESS, 11592
+---
+> get_pirate_money: SUCCESS, 11589
 37838c37838
-< get_pirate_money: SUCCESS, 5826
+< get_pirate_money: SUCCESS, 5818
 ---
 > get_pirate_money: SUCCESS, 5821
 37846,37847c37846,37847
 < get_pirate_money: SUCCESS, 12397
-< get_pirate_money: SUCCESS, 14185
+< get_pirate_money: SUCCESS, 14186
 ---
 > get_pirate_money: SUCCESS, 12390
 > get_pirate_money: SUCCESS, 14183
@@ -2907,17 +2099,17 @@
 ---
 > get_pirate_money: SUCCESS, 19637
 37877,37878c37877,37878
-< get_pirate_money: SUCCESS, 14182
-< get_pirate_money: SUCCESS, 11141
+< get_pirate_money: SUCCESS, 14160
+< get_pirate_money: SUCCESS, 11138
 ---
 > get_pirate_money: SUCCESS, 14152
 > get_pirate_money: SUCCESS, 11133
 37908c37908
-< get_pirate_money: SUCCESS, 23839
+< get_pirate_money: SUCCESS, 23837
 ---
 > get_pirate_money: SUCCESS, 23835
 37933c37933
-< get_pirate_money: SUCCESS, 6567
+< get_pirate_money: SUCCESS, 6559
 ---
 > get_pirate_money: SUCCESS, 6562
 37936c37936
@@ -2929,7 +2121,7 @@
 ---
 > get_pirate_money: SUCCESS, 12645
 37963c37963
-< get_pirate_money: SUCCESS, 23839
+< get_pirate_money: SUCCESS, 23837
 ---
 > get_pirate_money: SUCCESS, 23835
 37975c37975
@@ -2937,7 +2129,7 @@
 ---
 > get_pirate_money: SUCCESS, 12782
 37977c37977
-< get_pirate_money: SUCCESS, 12726
+< get_pirate_money: SUCCESS, 12767
 ---
 > get_pirate_money: SUCCESS, 12772
 37982c37982
@@ -2945,47 +2137,47 @@
 ---
 > get_pirate_money: SUCCESS, 5756
 37986c37986
-< get_pirate_money: SUCCESS, 6567
+< get_pirate_money: SUCCESS, 6559
 ---
 > get_pirate_money: SUCCESS, 6562
 37994c37994
-< get_pirate_money: SUCCESS, 9175
+< get_pirate_money: SUCCESS, 9205
 ---
 > get_pirate_money: SUCCESS, 9209
 37997c37997
-< get_pirate_money: SUCCESS, 7597
+< get_pirate_money: SUCCESS, 7600
 ---
 > get_pirate_money: SUCCESS, 7595
 38004c38004
-< get_pirate_money: SUCCESS, 16639
+< get_pirate_money: SUCCESS, 16631
 ---
 > get_pirate_money: SUCCESS, 16627
 38008c38008
-< get_pirate_money: SUCCESS, 11865
+< get_pirate_money: SUCCESS, 11871
 ---
 > get_pirate_money: SUCCESS, 11867
 38032c38032
-< get_pirate_money: SUCCESS, 11383
+< get_pirate_money: SUCCESS, 11384
 ---
 > get_pirate_money: SUCCESS, 11388
 38047c38047
-< get_pirate_money: SUCCESS, 11531
+< get_pirate_money: SUCCESS, 11534
 ---
 > get_pirate_money: SUCCESS, 11530
 38063c38063
-< get_pirate_money: SUCCESS, 14457
+< get_pirate_money: SUCCESS, 14495
 ---
 > get_pirate_money: SUCCESS, 14500
 38067c38067
-< get_pirate_money: SUCCESS, 14181
+< get_pirate_money: SUCCESS, 14182
 ---
 > get_pirate_money: SUCCESS, 14179
 38069c38069
-< get_pirate_money: SUCCESS, 11258
+< get_pirate_money: SUCCESS, 11255
 ---
 > get_pirate_money: SUCCESS, 11250
 38074c38074
-< get_pirate_money: SUCCESS, 10512
+< get_pirate_money: SUCCESS, 10515
 ---
 > get_pirate_money: SUCCESS, 10521
 38086c38086
@@ -2993,24 +2185,24 @@
 ---
 > get_pirate_money: SUCCESS, 10966
 38095c38095
-< get_pirate_money: SUCCESS, 13225
+< get_pirate_money: SUCCESS, 13173
 ---
 > get_pirate_money: SUCCESS, 13179
 38102,38103c38102,38103
 < get_pirate_money: SUCCESS, 20581
-< get_pirate_money: SUCCESS, 9253
+< get_pirate_money: SUCCESS, 9273
 ---
 > get_pirate_money: SUCCESS, 20580
 > get_pirate_money: SUCCESS, 9267
 38113,38114c38113,38114
 < get_pirate_money: SUCCESS, 10652
-< get_pirate_money: SUCCESS, 14208
+< get_pirate_money: SUCCESS, 14205
 ---
 > get_pirate_money: SUCCESS, 10654
 > get_pirate_money: SUCCESS, 14204
 38116,38117c38116,38117
-< get_pirate_money: SUCCESS, 14826
-< get_pirate_money: SUCCESS, 11531
+< get_pirate_money: SUCCESS, 14825
+< get_pirate_money: SUCCESS, 11534
 ---
 > get_pirate_money: SUCCESS, 14833
 > get_pirate_money: SUCCESS, 11530
@@ -3023,7 +2215,7 @@
 ---
 > get_pirate_money: SUCCESS, 18683
 38132c38132
-< get_pirate_money: SUCCESS, 14916
+< get_pirate_money: SUCCESS, 14954
 ---
 > get_pirate_money: SUCCESS, 14959
 38141c38141
@@ -3046,20 +2238,19 @@
 < get_pirate_money: SUCCESS, 16681
 ---
 > get_pirate_money: SUCCESS, 16685
-38186,38188c38186,38188
-< get_pirate_money: SUCCESS, 9253
-< get_pirate_money: SUCCESS, 7930
-< get_pirate_money: SUCCESS, 7931
+38186c38186,38187
+< get_pirate_money: SUCCESS, 9273
 ---
 > get_pirate_money: SUCCESS, 9267
 > get_pirate_money: SUCCESS, 7926
-> get_pirate_money: SUCCESS, 7933
+38188d38188
+< get_pirate_money: SUCCESS, 7931
 38201c38201
-< get_pirate_money: SUCCESS, 10966
+< get_pirate_money: SUCCESS, 10974
 ---
 > get_pirate_money: SUCCESS, 10977
 38203c38203
-< get_pirate_money: SUCCESS, 13663
+< get_pirate_money: SUCCESS, 13666
 ---
 > get_pirate_money: SUCCESS, 13664
 38210c38210
@@ -3067,13 +2258,13 @@
 ---
 > get_pirate_money: SUCCESS, 10654
 38212,38213c38212,38213
-< get_pirate_money: SUCCESS, 23839
+< get_pirate_money: SUCCESS, 23837
 < get_pirate_money: SUCCESS, 9495
 ---
 > get_pirate_money: SUCCESS, 23835
 > get_pirate_money: SUCCESS, 9497
 38231c38231
-< get_pirate_money: SUCCESS, 6567
+< get_pirate_money: SUCCESS, 6559
 ---
 > get_pirate_money: SUCCESS, 6562
 38237c38237
@@ -3081,7 +2272,7 @@
 ---
 > get_pirate_money: SUCCESS, 20589
 38244c38244
-< get_pirate_money: SUCCESS, 17933
+< get_pirate_money: SUCCESS, 17940
 ---
 > get_pirate_money: SUCCESS, 17949
 38255c38255
@@ -3089,7 +2280,7 @@
 ---
 > get_pirate_money: SUCCESS, 20589
 38265c38265
-< get_pirate_money: SUCCESS, 14916
+< get_pirate_money: SUCCESS, 14954
 ---
 > get_pirate_money: SUCCESS, 14959
 38276c38276
@@ -3097,11 +2288,11 @@
 ---
 > get_pirate_money: SUCCESS, 9497
 38284c38284
-< get_pirate_money: SUCCESS, 11671
+< get_pirate_money: SUCCESS, 11672
 ---
 > get_pirate_money: SUCCESS, 11678
 38300c38300
-< get_pirate_money: SUCCESS, 5798
+< get_pirate_money: SUCCESS, 5799
 ---
 > get_pirate_money: SUCCESS, 5803
 38312c38312
@@ -3113,7 +2304,7 @@
 ---
 > get_pirate_money: SUCCESS, 12091
 38326c38326
-< get_pirate_money: SUCCESS, 12339
+< get_pirate_money: SUCCESS, 12347
 ---
 > get_pirate_money: SUCCESS, 12343
 38331c38331
@@ -3125,15 +2316,15 @@
 ---
 > get_pirate_money: SUCCESS, 12942
 38345c38345
-< get_pirate_money: SUCCESS, 23375
+< get_pirate_money: SUCCESS, 23378
 ---
 > get_pirate_money: SUCCESS, 23377
 38348c38348
-< get_pirate_money: SUCCESS, 13578
+< get_pirate_money: SUCCESS, 13523
 ---
 > get_pirate_money: SUCCESS, 13529
 38355c38355
-< get_pirate_money: SUCCESS, 10512
+< get_pirate_money: SUCCESS, 10515
 ---
 > get_pirate_money: SUCCESS, 10521
 38358c38358
@@ -3141,7 +2332,7 @@
 ---
 > get_pirate_money: SUCCESS, 10654
 38367c38367
-< get_pirate_money: SUCCESS, 9009
+< get_pirate_money: SUCCESS, 9027
 ---
 > get_pirate_money: SUCCESS, 9023
 38370c38370
@@ -3149,8 +2340,8 @@
 ---
 > get_pirate_money: SUCCESS, 10654
 38376,38377c38376,38377
-< get_pirate_money: SUCCESS, 9979
-< get_pirate_money: SUCCESS, 5798
+< get_pirate_money: SUCCESS, 9974
+< get_pirate_money: SUCCESS, 5799
 ---
 > get_pirate_money: SUCCESS, 9972
 > get_pirate_money: SUCCESS, 5803
@@ -3163,11 +2354,11 @@
 ---
 > get_pirate_money: SUCCESS, 10810
 38387c38387
-< get_pirate_money: SUCCESS, 10827
+< get_pirate_money: SUCCESS, 10770
 ---
 > get_pirate_money: SUCCESS, 10779
 38390c38390
-< get_pirate_money: SUCCESS, 5977
+< get_pirate_money: SUCCESS, 5972
 ---
 > get_pirate_money: SUCCESS, 5969
 38401,38402c38401,38402
@@ -3181,19 +2372,19 @@
 ---
 > get_pirate_money: SUCCESS, 25419
 38430c38430
-< get_pirate_money: SUCCESS, 14916
+< get_pirate_money: SUCCESS, 14954
 ---
 > get_pirate_money: SUCCESS, 14959
 38459c38459
-< get_pirate_money: SUCCESS, 7354
+< get_pirate_money: SUCCESS, 7349
 ---
 > get_pirate_money: SUCCESS, 7353
 38465c38465
-< get_pirate_money: SUCCESS, 18237
+< get_pirate_money: SUCCESS, 18240
 ---
 > get_pirate_money: SUCCESS, 18235
 38467c38467
-< get_pirate_money: SUCCESS, 14292
+< get_pirate_money: SUCCESS, 14263
 ---
 > get_pirate_money: SUCCESS, 14254
 38469c38469
@@ -3201,17 +2392,17 @@
 ---
 > get_pirate_money: SUCCESS, 12091
 38474c38474
-< get_pirate_money: SUCCESS, 9263
+< get_pirate_money: SUCCESS, 9285
 ---
 > get_pirate_money: SUCCESS, 9279
 38482,38483c38482,38483
-< get_pirate_money: SUCCESS, 10512
+< get_pirate_money: SUCCESS, 10515
 < get_pirate_money: SUCCESS, 14634
 ---
 > get_pirate_money: SUCCESS, 10521
 > get_pirate_money: SUCCESS, 14637
 38486c38486
-< get_pirate_money: SUCCESS, 21622
+< get_pirate_money: SUCCESS, 21620
 ---
 > get_pirate_money: SUCCESS, 21619
 38499c38499
@@ -3219,7 +2410,7 @@
 ---
 > get_pirate_money: SUCCESS, 20564
 38513,38514c38513,38514
-< get_pirate_money: SUCCESS, 17589
+< get_pirate_money: SUCCESS, 17581
 < get_pirate_money: SUCCESS, 10807
 ---
 > get_pirate_money: SUCCESS, 17577
@@ -3229,43 +2420,49 @@
 ---
 > get_pirate_money: SUCCESS, 10654
 38530c38530
-< get_pirate_money: SUCCESS, 24849
+< get_pirate_money: SUCCESS, 24847
 ---
 > get_pirate_money: SUCCESS, 24845
 38543c38543
 < get_pirate_money: SUCCESS, 8158
 ---
 > get_pirate_money: SUCCESS, 8160
-38552c38552
-< get_pirate_money: SUCCESS, 9175
+38552,38553c38552,38553
+< get_pirate_money: SUCCESS, 9205
+< get_pirate_money: SUCCESS, 9288
 ---
 > get_pirate_money: SUCCESS, 9209
+> get_pirate_money: SUCCESS, 9279
 38556c38556
-< get_pirate_money: SUCCESS, 11468
+< get_pirate_money: SUCCESS, 11465
 ---
 > get_pirate_money: SUCCESS, 11459
 38564c38564
-< get_pirate_money: SUCCESS, 13578
+< get_pirate_money: SUCCESS, 13523
 ---
 > get_pirate_money: SUCCESS, 13529
 38566c38566
-< get_pirate_money: SUCCESS, 9175
+< get_pirate_money: SUCCESS, 9205
 ---
 > get_pirate_money: SUCCESS, 9209
+38573c38573
+< get_pirate_money: SUCCESS, 9288
+---
+> get_pirate_money: SUCCESS, 9279
 38575c38575
-< get_pirate_money: SUCCESS, 5798
+< get_pirate_money: SUCCESS, 5799
 ---
 > get_pirate_money: SUCCESS, 5803
 38579c38579
-< get_pirate_money: SUCCESS, 12726
+< get_pirate_money: SUCCESS, 12767
 ---
 > get_pirate_money: SUCCESS, 12772
 38592c38592
-< get_pirate_money: SUCCESS, 18237
+< get_pirate_money: SUCCESS, 18240
 ---
 > get_pirate_money: SUCCESS, 18235
 38595c38595
-< get_pirate_money: SUCCESS, 16645
+< get_pirate_money: SUCCESS, 16640
 ---
 > get_pirate_money: SUCCESS, 16637
 38597,38598c38597,38598
@@ -3279,11 +2476,11 @@
 ---
 > get_pirate_money: SUCCESS, 11230
 38627c38627
-< get_pirate_money: SUCCESS, 10499
+< get_pirate_money: SUCCESS, 10498
 ---
 > get_pirate_money: SUCCESS, 10497
 38642c38642
-< get_pirate_money: SUCCESS, 10771
+< get_pirate_money: SUCCESS, 10766
 ---
 > get_pirate_money: SUCCESS, 10764
 38676c38676
@@ -3295,15 +2492,15 @@
 ---
 > get_pirate_money: SUCCESS, 9776
 38690c38690
-< get_pirate_money: SUCCESS, 11514
+< get_pirate_money: SUCCESS, 11457
 ---
 > get_pirate_money: SUCCESS, 11466
 38694c38694
-< get_pirate_money: SUCCESS, 16645
+< get_pirate_money: SUCCESS, 16640
 ---
 > get_pirate_money: SUCCESS, 16637
 38697c38697
-< get_pirate_money: SUCCESS, 13752
+< get_pirate_money: SUCCESS, 13755
 ---
 > get_pirate_money: SUCCESS, 13753
 38704c38704
@@ -3311,7 +2508,7 @@
 ---
 > get_pirate_money: SUCCESS, 23166
 38714c38714
-< get_pirate_money: SUCCESS, 6122
+< get_pirate_money: SUCCESS, 6117
 ---
 > get_pirate_money: SUCCESS, 6113
 38736c38736
@@ -3323,11 +2520,11 @@
 ---
 > get_pirate_money: SUCCESS, 10629
 38743c38743
-< get_pirate_money: SUCCESS, 9704
+< get_pirate_money: SUCCESS, 9702
 ---
 > get_pirate_money: SUCCESS, 9700
 38762c38762
-< get_pirate_money: SUCCESS, 12726
+< get_pirate_money: SUCCESS, 12767
 ---
 > get_pirate_money: SUCCESS, 12772
 38764c38764
@@ -3339,19 +2536,19 @@
 ---
 > get_pirate_money: SUCCESS, 23038
 38786c38786
-< get_pirate_money: SUCCESS, 10658
+< get_pirate_money: SUCCESS, 10655
 ---
 > get_pirate_money: SUCCESS, 10653
 38793c38793
-< get_pirate_money: SUCCESS, 8302
+< get_pirate_money: SUCCESS, 8305
 ---
 > get_pirate_money: SUCCESS, 8297
 38801c38801
-< get_pirate_money: SUCCESS, 21622
+< get_pirate_money: SUCCESS, 21620
 ---
 > get_pirate_money: SUCCESS, 21619
 38811c38811
-< get_pirate_money: SUCCESS, 12434
+< get_pirate_money: SUCCESS, 12435
 ---
 > get_pirate_money: SUCCESS, 12441
 38814c38814
@@ -3359,7 +2556,7 @@
 ---
 > get_pirate_money: SUCCESS, 7952
 38819c38819
-< get_pirate_money: SUCCESS, 18775
+< get_pirate_money: SUCCESS, 18778
 ---
 > get_pirate_money: SUCCESS, 18786
 38823c38823
@@ -3371,7 +2568,7 @@
 ---
 > get_pirate_money: SUCCESS, 10835
 38833c38833
-< get_pirate_money: SUCCESS, 16645
+< get_pirate_money: SUCCESS, 16640
 ---
 > get_pirate_money: SUCCESS, 16637
 38841c38841
@@ -3379,11 +2576,11 @@
 ---
 > get_pirate_money: SUCCESS, 12530
 38853c38853
-< get_pirate_money: SUCCESS, 18775
+< get_pirate_money: SUCCESS, 18778
 ---
 > get_pirate_money: SUCCESS, 18786
 38857c38857
-< get_pirate_money: SUCCESS, 9203
+< get_pirate_money: SUCCESS, 9157
 ---
 > get_pirate_money: SUCCESS, 9165
 38861c38861
@@ -3395,12 +2592,12 @@
 ---
 > get_pirate_money: SUCCESS, 7952
 38884c38884
-< get_pirate_money: SUCCESS, 9203
+< get_pirate_money: SUCCESS, 9157
 ---
 > get_pirate_money: SUCCESS, 9165
 38901,38902c38901,38902
-< get_pirate_money: SUCCESS, 12841
-< get_pirate_money: SUCCESS, 10752
+< get_pirate_money: SUCCESS, 12784
+< get_pirate_money: SUCCESS, 10747
 ---
 > get_pirate_money: SUCCESS, 12793
 > get_pirate_money: SUCCESS, 10745
@@ -3417,7 +2614,7 @@
 ---
 > get_pirate_money: SUCCESS, 16685
 38940c38940
-< get_pirate_money: SUCCESS, 14313
+< get_pirate_money: SUCCESS, 14282
 ---
 > get_pirate_money: SUCCESS, 14273
 38946c38946
@@ -3425,11 +2622,11 @@
 ---
 > get_pirate_money: SUCCESS, 12530
 38952c38952
-< get_pirate_money: SUCCESS, 12334
+< get_pirate_money: SUCCESS, 12342
 ---
 > get_pirate_money: SUCCESS, 12338
 38961c38961
-< get_pirate_money: SUCCESS, 11097
+< get_pirate_money: SUCCESS, 11096
 ---
 > get_pirate_money: SUCCESS, 11095
 38963c38963
@@ -3445,11 +2642,11 @@
 ---
 > get_pirate_money: SUCCESS, 9776
 38977c38977
-< get_pirate_money: SUCCESS, 12334
+< get_pirate_money: SUCCESS, 12342
 ---
 > get_pirate_money: SUCCESS, 12338
 38982c38982
-< get_pirate_money: SUCCESS, 6860
+< get_pirate_money: SUCCESS, 6855
 ---
 > get_pirate_money: SUCCESS, 6851
 38987c38987
@@ -3457,7 +2654,7 @@
 ---
 > get_pirate_money: SUCCESS, 12628
 39004c39004
-< get_pirate_money: SUCCESS, 18075
+< get_pirate_money: SUCCESS, 18067
 ---
 > get_pirate_money: SUCCESS, 18063
 39008c39008
@@ -3479,11 +2676,11 @@
 ---
 > get_pirate_money: SUCCESS, 14231
 39029c39029
-< get_pirate_money: SUCCESS, 12988
+< get_pirate_money: SUCCESS, 12991
 ---
 > get_pirate_money: SUCCESS, 12987
 39037c39037
-< get_pirate_money: SUCCESS, 12334
+< get_pirate_money: SUCCESS, 12342
 ---
 > get_pirate_money: SUCCESS, 12338
 39045c39045
@@ -3491,7 +2688,7 @@
 ---
 > get_pirate_money: SUCCESS, 14295
 39049,39050c39049,39050
-< get_pirate_money: SUCCESS, 25574
+< get_pirate_money: SUCCESS, 25572
 < get_pirate_money: SUCCESS, 10975
 ---
 > get_pirate_money: SUCCESS, 25570
@@ -3505,11 +2702,11 @@
 ---
 > get_pirate_money: SUCCESS, 11846
 39070c39070
-< get_pirate_money: SUCCESS, 9704
+< get_pirate_money: SUCCESS, 9702
 ---
 > get_pirate_money: SUCCESS, 9700
 39080c39080
-< get_pirate_money: SUCCESS, 19629
+< get_pirate_money: SUCCESS, 19636
 ---
 > get_pirate_money: SUCCESS, 19648
 39083c39083
@@ -3517,19 +2714,19 @@
 ---
 > get_pirate_money: SUCCESS, 11072
 39099c39099
-< get_pirate_money: SUCCESS, 5841
+< get_pirate_money: SUCCESS, 5842
 ---
 > get_pirate_money: SUCCESS, 5847
 39109c39109
-< get_pirate_money: SUCCESS, 11000
+< get_pirate_money: SUCCESS, 11003
 ---
 > get_pirate_money: SUCCESS, 11009
 39113c39113
-< get_pirate_money: SUCCESS, 11060
+< get_pirate_money: SUCCESS, 11068
 ---
 > get_pirate_money: SUCCESS, 11077
 39115c39115
-< get_pirate_money: SUCCESS, 11097
+< get_pirate_money: SUCCESS, 11096
 ---
 > get_pirate_money: SUCCESS, 11095
 39121c39121
@@ -3537,7 +2734,7 @@
 ---
 > get_pirate_money: SUCCESS, 21272
 39123c39123
-< get_pirate_money: SUCCESS, 14310
+< get_pirate_money: SUCCESS, 14277
 ---
 > get_pirate_money: SUCCESS, 14268
 39126c39126
@@ -3545,7 +2742,7 @@
 ---
 > get_pirate_money: SUCCESS, 23166
 39129c39129
-< get_pirate_money: SUCCESS, 14536
+< get_pirate_money: SUCCESS, 14544
 ---
 > get_pirate_money: SUCCESS, 14541
 39133,39134c39133,39134
@@ -3558,12 +2755,16 @@
 < get_pirate_money: SUCCESS, 11012
 ---
 > get_pirate_money: SUCCESS, 11006
+39166c39166
+< get_pirate_money: SUCCESS, 12125
+---
+> get_pirate_money: SUCCESS, 12122
 39183c39183
-< get_pirate_money: SUCCESS, 14202
+< get_pirate_money: SUCCESS, 14203
 ---
 > get_pirate_money: SUCCESS, 14200
 39199c39199
-< get_pirate_money: SUCCESS, 9269
+< get_pirate_money: SUCCESS, 9295
 ---
 > get_pirate_money: SUCCESS, 9289
 39222c39222
@@ -3575,9 +2776,13 @@
 ---
 > get_pirate_money: SUCCESS, 14463
 39226c39226
-< get_pirate_money: SUCCESS, 18237
+< get_pirate_money: SUCCESS, 18240
 ---
 > get_pirate_money: SUCCESS, 18235
+39247c39247
+< get_pirate_money: SUCCESS, 7361
+---
+> get_pirate_money: SUCCESS, 7366
 39250c39250
 < get_pirate_money: SUCCESS, 11184
 ---
@@ -3587,9 +2792,13 @@
 ---
 > get_pirate_money: SUCCESS, 25406
 39261c39261
-< get_pirate_money: SUCCESS, 13924
+< get_pirate_money: SUCCESS, 13927
 ---
 > get_pirate_money: SUCCESS, 13925
+39266c39266
+< get_pirate_money: SUCCESS, 7361
+---
+> get_pirate_money: SUCCESS, 7366
 39273c39273
 < get_pirate_money: SUCCESS, 23169
 ---
@@ -3599,11 +2808,11 @@
 ---
 > get_pirate_money: SUCCESS, 23070
 39281c39281
-< get_pirate_money: SUCCESS, 14480
+< get_pirate_money: SUCCESS, 14422
 ---
 > get_pirate_money: SUCCESS, 14429
 39284c39284
-< get_pirate_money: SUCCESS, 9638
+< get_pirate_money: SUCCESS, 9668
 ---
 > get_pirate_money: SUCCESS, 9672
 39299c39299
@@ -3611,21 +2820,21 @@
 ---
 > get_pirate_money: SUCCESS, 11236
 39305c39305
-< get_pirate_money: SUCCESS, 10721
+< get_pirate_money: SUCCESS, 10719
 ---
 > get_pirate_money: SUCCESS, 10716
 39308c39308
-< get_pirate_money: SUCCESS, 13924
+< get_pirate_money: SUCCESS, 13927
 ---
 > get_pirate_money: SUCCESS, 13925
 39317,39318c39317,39318
 < get_pirate_money: SUCCESS, 10353
-< get_pirate_money: SUCCESS, 10721
+< get_pirate_money: SUCCESS, 10719
 ---
 > get_pirate_money: SUCCESS, 10354
 > get_pirate_money: SUCCESS, 10716
 39321c39321
-< get_pirate_money: SUCCESS, 10136
+< get_pirate_money: SUCCESS, 10134
 ---
 > get_pirate_money: SUCCESS, 10132
 39326c39326
@@ -3633,23 +2842,31 @@
 ---
 > get_pirate_money: SUCCESS, 8285
 39331c39331
-< get_pirate_money: SUCCESS, 11066
+< get_pirate_money: SUCCESS, 11074
 ---
 > get_pirate_money: SUCCESS, 11083
+39336c39336
+< get_pirate_money: SUCCESS, 24304
+---
+> get_pirate_money: SUCCESS, 24301
 39340c39340
-< get_pirate_money: SUCCESS, 9286
+< get_pirate_money: SUCCESS, 9289
 ---
 > get_pirate_money: SUCCESS, 9283
+39348c39348
+< get_pirate_money: SUCCESS, 12125
+---
+> get_pirate_money: SUCCESS, 12122
 39372c39372
 < get_pirate_money: SUCCESS, 8228
 ---
 > get_pirate_money: SUCCESS, 8230
 39380c39380
-< get_pirate_money: SUCCESS, 12507
+< get_pirate_money: SUCCESS, 12508
 ---
 > get_pirate_money: SUCCESS, 12515
 39382c39382
-< get_pirate_money: SUCCESS, 11066
+< get_pirate_money: SUCCESS, 11074
 ---
 > get_pirate_money: SUCCESS, 11083
 39401c39401
@@ -3657,15 +2874,15 @@
 ---
 > get_pirate_money: SUCCESS, 14549
 39408c39408
-< get_pirate_money: SUCCESS, 12143
+< get_pirate_money: SUCCESS, 12144
 ---
 > get_pirate_money: SUCCESS, 12150
 39411c39411
-< get_pirate_money: SUCCESS, 24284
+< get_pirate_money: SUCCESS, 24289
 ---
 > get_pirate_money: SUCCESS, 24286
 39413c39413
-< get_pirate_money: SUCCESS, 11066
+< get_pirate_money: SUCCESS, 11074
 ---
 > get_pirate_money: SUCCESS, 11083
 39416c39416
@@ -3677,7 +2894,7 @@
 ---
 > get_pirate_money: SUCCESS, 20218
 39447c39447
-< get_pirate_money: SUCCESS, 10041
+< get_pirate_money: SUCCESS, 9995
 ---
 > get_pirate_money: SUCCESS, 10003
 39458c39458
@@ -3685,9 +2902,13 @@
 ---
 > get_pirate_money: SUCCESS, 21272
 39468c39468
-< get_pirate_money: SUCCESS, 14548
+< get_pirate_money: SUCCESS, 14545
 ---
 > get_pirate_money: SUCCESS, 14544
+39477c39477
+< get_pirate_money: SUCCESS, 12125
+---
+> get_pirate_money: SUCCESS, 12122
 39482,39483c39482,39483
 < get_pirate_money: SUCCESS, 14645
 < get_pirate_money: SUCCESS, 11069
@@ -3695,19 +2916,19 @@
 > get_pirate_money: SUCCESS, 14648
 > get_pirate_money: SUCCESS, 11072
 39491c39491
-< get_pirate_money: SUCCESS, 12145
+< get_pirate_money: SUCCESS, 12146
 ---
 > get_pirate_money: SUCCESS, 12152
 39496c39496
-< get_pirate_money: SUCCESS, 7383
+< get_pirate_money: SUCCESS, 7375
 ---
 > get_pirate_money: SUCCESS, 7381
 39509c39509
-< get_pirate_money: SUCCESS, 22128
+< get_pirate_money: SUCCESS, 22129
 ---
 > get_pirate_money: SUCCESS, 22126
 39511c39511
-< get_pirate_money: SUCCESS, 10763
+< get_pirate_money: SUCCESS, 10760
 ---
 > get_pirate_money: SUCCESS, 10757
 39521c39521
@@ -3723,17 +2944,17 @@
 ---
 > get_pirate_money: SUCCESS, 20218
 39548,39549c39548,39549
-< get_pirate_money: SUCCESS, 14548
-< get_pirate_money: SUCCESS, 9286
+< get_pirate_money: SUCCESS, 14545
+< get_pirate_money: SUCCESS, 9289
 ---
 > get_pirate_money: SUCCESS, 14544
 > get_pirate_money: SUCCESS, 9283
 39559c39559
-< get_pirate_money: SUCCESS, 12724
+< get_pirate_money: SUCCESS, 12721
 ---
 > get_pirate_money: SUCCESS, 12715
 39570,39571c39570,39571
-< get_pirate_money: SUCCESS, 25751
+< get_pirate_money: SUCCESS, 25749
 < get_pirate_money: SUCCESS, 8245
 ---
 > get_pirate_money: SUCCESS, 25747
@@ -3747,7 +2968,7 @@
 ---
 > get_pirate_money: SUCCESS, 12248
 39600c39600
-< get_pirate_money: SUCCESS, 8805
+< get_pirate_money: SUCCESS, 8810
 ---
 > get_pirate_money: SUCCESS, 8802
 39605c39605
@@ -3755,7 +2976,7 @@
 ---
 > get_pirate_money: SUCCESS, 8635
 39607c39607
-< get_pirate_money: SUCCESS, 10041
+< get_pirate_money: SUCCESS, 9995
 ---
 > get_pirate_money: SUCCESS, 10003
 39630c39630
@@ -3769,13 +2990,13 @@
 > get_pirate_money: SUCCESS, 15147
 > get_pirate_money: SUCCESS, 12248
 39639,39640c39639,39640
-< get_pirate_money: SUCCESS, 8805
+< get_pirate_money: SUCCESS, 8810
 < get_pirate_money: SUCCESS, 16767
 ---
 > get_pirate_money: SUCCESS, 8802
 > get_pirate_money: SUCCESS, 16772
 39654,39655c39654,39655
-< get_pirate_money: SUCCESS, 7383
+< get_pirate_money: SUCCESS, 7375
 < get_pirate_money: SUCCESS, 12521
 ---
 > get_pirate_money: SUCCESS, 7381
@@ -3785,23 +3006,27 @@
 ---
 > get_pirate_money: SUCCESS, 10976
 39682c39682
-< get_pirate_money: SUCCESS, 16243
+< get_pirate_money: SUCCESS, 16284
 ---
 > get_pirate_money: SUCCESS, 16290
 39714c39714
-< get_pirate_money: SUCCESS, 25751
+< get_pirate_money: SUCCESS, 25749
 ---
 > get_pirate_money: SUCCESS, 25747
 39721c39721
-< get_pirate_money: SUCCESS, 12114
+< get_pirate_money: SUCCESS, 12122
 ---
 > get_pirate_money: SUCCESS, 12128
+39726c39726
+< get_pirate_money: SUCCESS, 12142
+---
+> get_pirate_money: SUCCESS, 12139
 39729c39729
-< get_pirate_money: SUCCESS, 13905
+< get_pirate_money: SUCCESS, 13906
 ---
 > get_pirate_money: SUCCESS, 13904
 39746c39746
-< get_pirate_money: SUCCESS, 25751
+< get_pirate_money: SUCCESS, 25749
 ---
 > get_pirate_money: SUCCESS, 25747
 39752c39752
@@ -3831,19 +3056,23 @@
 ---
 > get_pirate_money: SUCCESS, 14629
 39809c39809
-< get_pirate_money: SUCCESS, 7383
+< get_pirate_money: SUCCESS, 7375
 ---
 > get_pirate_money: SUCCESS, 7381
 39812c39812
-< get_pirate_money: SUCCESS, 11100
+< get_pirate_money: SUCCESS, 11108
 ---
 > get_pirate_money: SUCCESS, 11117
 39838c39838
-< get_pirate_money: SUCCESS, 7383
+< get_pirate_money: SUCCESS, 7375
 ---
 > get_pirate_money: SUCCESS, 7381
+39844c39844
+< get_pirate_money: SUCCESS, 12735
+---
+> get_pirate_money: SUCCESS, 12732
 39853c39853
-< get_pirate_money: SUCCESS, 12187
+< get_pirate_money: SUCCESS, 12190
 ---
 > get_pirate_money: SUCCESS, 12196
 39860,39861c39860,39861
@@ -3853,8 +3082,8 @@
 > get_pirate_money: SUCCESS, 23166
 > get_pirate_money: SUCCESS, 16748
 39870,39873c39870,39873
-< get_pirate_money: SUCCESS, 20225
-< get_pirate_money: SUCCESS, 12114
+< get_pirate_money: SUCCESS, 20232
+< get_pirate_money: SUCCESS, 12122
 < get_pirate_money: SUCCESS, 16906
 < get_pirate_money: SUCCESS, 15491
 ---
@@ -3867,7 +3096,7 @@
 ---
 > get_pirate_money: SUCCESS, 14669
 39884c39884
-< get_pirate_money: SUCCESS, 20225
+< get_pirate_money: SUCCESS, 20232
 ---
 > get_pirate_money: SUCCESS, 20244
 39904c39904
@@ -3887,7 +3116,7 @@
 ---
 > get_pirate_money: SUCCESS, 25582
 39963c39963
-< get_pirate_money: SUCCESS, 7402
+< get_pirate_money: SUCCESS, 7394
 ---
 > get_pirate_money: SUCCESS, 7401
 39970c39970
@@ -3895,7 +3124,7 @@
 ---
 > get_pirate_money: SUCCESS, 15328
 39976c39976
-< get_pirate_money: SUCCESS, 13369
+< get_pirate_money: SUCCESS, 13368
 ---
 > get_pirate_money: SUCCESS, 13375
 39984,39985c39984,39985
@@ -3905,24 +3134,24 @@
 > get_pirate_money: SUCCESS, 12676
 > get_pirate_money: SUCCESS, 10933
 39996c39996
-< get_pirate_money: SUCCESS, 9775
+< get_pirate_money: SUCCESS, 9778
 ---
 > get_pirate_money: SUCCESS, 9772
 40090c40090
-< get_pirate_money: SUCCESS, 20225
+< get_pirate_money: SUCCESS, 20232
 ---
 > get_pirate_money: SUCCESS, 20244
 40119c40119
-< get_pirate_money: SUCCESS, 9217
+< get_pirate_money: SUCCESS, 9243
 ---
 > get_pirate_money: SUCCESS, 9238
 40140c40140
-< get_pirate_money: SUCCESS, 17273
+< get_pirate_money: SUCCESS, 17263
 ---
 > get_pirate_money: SUCCESS, 17259
 40173,40174c40173,40174
 < get_pirate_money: SUCCESS, 12335
-< get_pirate_money: SUCCESS, 11361
+< get_pirate_money: SUCCESS, 11357
 ---
 > get_pirate_money: SUCCESS, 12337
 > get_pirate_money: SUCCESS, 11354
@@ -3931,19 +3160,19 @@
 ---
 > get_pirate_money: SUCCESS, 10438
 40236c40236
-< get_pirate_money: SUCCESS, 10763
+< get_pirate_money: SUCCESS, 10760
 ---
 > get_pirate_money: SUCCESS, 10757
 40472c40472
-< get_pirate_money: SUCCESS, 11361
+< get_pirate_money: SUCCESS, 11357
 ---
 > get_pirate_money: SUCCESS, 11354
 40475c40475
-< get_pirate_money: SUCCESS, 11100
+< get_pirate_money: SUCCESS, 11108
 ---
 > get_pirate_money: SUCCESS, 11117
 40536c40536
-< get_pirate_money: SUCCESS, 18469
+< get_pirate_money: SUCCESS, 18472
 ---
 > get_pirate_money: SUCCESS, 18466
 40541c40541
@@ -3951,7 +3180,7 @@
 ---
 > get_pirate_money: SUCCESS, 12337
 40556c40556
-< get_pirate_money: SUCCESS, 9720
+< get_pirate_money: SUCCESS, 9762
 ---
 > get_pirate_money: SUCCESS, 9768
 40565c40565
@@ -3959,7 +3188,7 @@
 ---
 > get_pirate_money: SUCCESS, 13252
 40592c40592
-< get_pirate_money: SUCCESS, 12712
+< get_pirate_money: SUCCESS, 12706
 ---
 > get_pirate_money: SUCCESS, 12699
 40719c40719
@@ -3967,15 +3196,19 @@
 ---
 > get_pirate_money: SUCCESS, 10438
 40864c40864
-< get_pirate_money: SUCCESS, 12176
+< get_pirate_money: SUCCESS, 12177
 ---
 > get_pirate_money: SUCCESS, 12182
+40990c40990
+< get_pirate_money: SUCCESS, 23465
+---
+> get_pirate_money: SUCCESS, 23463
 41041c41041
 < get_pirate_money: SUCCESS, 25584
 ---
 > get_pirate_money: SUCCESS, 25582
 41047c41047
-< get_pirate_money: SUCCESS, 7525
+< get_pirate_money: SUCCESS, 7520
 ---
 > get_pirate_money: SUCCESS, 7516
 41097c41097
@@ -3983,19 +3216,19 @@
 ---
 > get_pirate_money: SUCCESS, 14629
 41106c41106
-< get_pirate_money: SUCCESS, 19432
+< get_pirate_money: SUCCESS, 19435
 ---
 > get_pirate_money: SUCCESS, 19443
 41250c41250
-< get_pirate_money: SUCCESS, 9775
+< get_pirate_money: SUCCESS, 9778
 ---
 > get_pirate_money: SUCCESS, 9772
 41362c41362
-< get_pirate_money: SUCCESS, 13351
+< get_pirate_money: SUCCESS, 13377
 ---
 > get_pirate_money: SUCCESS, 13372
 41366c41366
-< get_pirate_money: SUCCESS, 13369
+< get_pirate_money: SUCCESS, 13368
 ---
 > get_pirate_money: SUCCESS, 13375
 41392c41392
@@ -4003,11 +3236,11 @@
 ---
 > get_pirate_money: SUCCESS, 15242
 41394c41394
-< get_pirate_money: SUCCESS, 15829
+< get_pirate_money: SUCCESS, 15832
 ---
 > get_pirate_money: SUCCESS, 15828
 41459c41459
-< get_pirate_money: SUCCESS, 15005
+< get_pirate_money: SUCCESS, 15013
 ---
 > get_pirate_money: SUCCESS, 15009
 41463c41463
@@ -4015,23 +3248,27 @@
 ---
 > get_pirate_money: SUCCESS, 14666
 41486c41486
-< get_pirate_money: SUCCESS, 13605
+< get_pirate_money: SUCCESS, 13604
 ---
 > get_pirate_money: SUCCESS, 13602
 41498c41498
-< get_pirate_money: SUCCESS, 11100
+< get_pirate_money: SUCCESS, 11108
 ---
 > get_pirate_money: SUCCESS, 11117
 41556c41556
 < get_pirate_money: SUCCESS, 10436
 ---
 > get_pirate_money: SUCCESS, 10438
+41581c41581
+< get_pirate_money: SUCCESS, 12735
+---
+> get_pirate_money: SUCCESS, 12732
 41623c41623
-< get_pirate_money: SUCCESS, 17854
+< get_pirate_money: SUCCESS, 17862
 ---
 > get_pirate_money: SUCCESS, 17858
 41627c41627
-< get_pirate_money: SUCCESS, 13182
+< get_pirate_money: SUCCESS, 13223
 ---
 > get_pirate_money: SUCCESS, 13228
 41659c41659
@@ -4039,7 +3276,7 @@
 ---
 > get_pirate_money: SUCCESS, 9384
 41738c41738
-< get_pirate_money: SUCCESS, 18469
+< get_pirate_money: SUCCESS, 18472
 ---
 > get_pirate_money: SUCCESS, 18466
 41752c41752
@@ -4051,7 +3288,7 @@
 ---
 > get_pirate_money: SUCCESS, 14666
 42027c42027
-< get_pirate_money: SUCCESS, 16013
+< get_pirate_money: SUCCESS, 16018
 ---
 > get_pirate_money: SUCCESS, 16010
 42042c42042
@@ -4059,7 +3296,7 @@
 ---
 > get_pirate_money: SUCCESS, 16468
 42046c42046
-< get_pirate_money: SUCCESS, 13605
+< get_pirate_money: SUCCESS, 13604
 ---
 > get_pirate_money: SUCCESS, 13602
 42184c42184
@@ -4067,7 +3304,7 @@
 ---
 > get_pirate_money: SUCCESS, 14931
 42186c42186
-< get_pirate_money: SUCCESS, 20225
+< get_pirate_money: SUCCESS, 20232
 ---
 > get_pirate_money: SUCCESS, 20244
 42261c42261
@@ -4083,11 +3320,11 @@
 ---
 > get_pirate_money: SUCCESS, 19260
 42531c42531
-< get_pirate_money: SUCCESS, 11100
+< get_pirate_money: SUCCESS, 11108
 ---
 > get_pirate_money: SUCCESS, 11117
 42598c42598
-< get_pirate_money: SUCCESS, 17068
+< get_pirate_money: SUCCESS, 17064
 ---
 > get_pirate_money: SUCCESS, 17061
 42736c42736
@@ -4099,27 +3336,31 @@
 ---
 > get_pirate_money: SUCCESS, 11213
 42855c42855
-< get_pirate_money: SUCCESS, 14661
+< get_pirate_money: SUCCESS, 14706
 ---
 > get_pirate_money: SUCCESS, 14712
 42915c42915
-< get_pirate_money: SUCCESS, 17740
+< get_pirate_money: SUCCESS, 17781
 ---
 > get_pirate_money: SUCCESS, 17787
+42970c42970
+< get_pirate_money: SUCCESS, 23465
+---
+> get_pirate_money: SUCCESS, 23463
 43004c43004
-< get_pirate_money: SUCCESS, 19440
+< get_pirate_money: SUCCESS, 19443
 ---
 > get_pirate_money: SUCCESS, 19451
 43130c43130
-< get_pirate_money: SUCCESS, 13207
+< get_pirate_money: SUCCESS, 13215
 ---
 > get_pirate_money: SUCCESS, 13221
 43459c43459
-< get_pirate_money: SUCCESS, 17273
+< get_pirate_money: SUCCESS, 17263
 ---
 > get_pirate_money: SUCCESS, 17259
 43514c43514
-< get_pirate_money: SUCCESS, 14531
+< get_pirate_money: SUCCESS, 14528
 ---
 > get_pirate_money: SUCCESS, 14527
 43554c43554
@@ -4139,7 +3380,7 @@
 ---
 > get_pirate_money: SUCCESS, 23071
 43905c43905
-< get_pirate_money: SUCCESS, 18469
+< get_pirate_money: SUCCESS, 18472
 ---
 > get_pirate_money: SUCCESS, 18466
 43995c43995
@@ -4155,7 +3396,7 @@
 ---
 > get_pirate_money: SUCCESS, 16307
 44334c44334
-< get_pirate_money: SUCCESS, 17740
+< get_pirate_money: SUCCESS, 17781
 ---
 > get_pirate_money: SUCCESS, 17787
 44387c44387
@@ -4163,15 +3404,15 @@
 ---
 > get_pirate_money: SUCCESS, 19260
 44406c44406
-< get_pirate_money: SUCCESS, 17745
+< get_pirate_money: SUCCESS, 17741
 ---
 > get_pirate_money: SUCCESS, 17738
 44419c44419
-< get_pirate_money: SUCCESS, 24398
+< get_pirate_money: SUCCESS, 24397
 ---
 > get_pirate_money: SUCCESS, 24395
 44444c44444
-< get_pirate_money: SUCCESS, 18469
+< get_pirate_money: SUCCESS, 18472
 ---
 > get_pirate_money: SUCCESS, 18466
 44448c44448
@@ -4191,7 +3432,7 @@
 ---
 > get_pirate_money: SUCCESS, 12524
 44644c44644
-< get_pirate_money: SUCCESS, 19953
+< get_pirate_money: SUCCESS, 19956
 ---
 > get_pirate_money: SUCCESS, 19952
 44728c44728
@@ -4223,7 +3464,7 @@
 ---
 > get_pirate_money: SUCCESS, 25950
 45231c45231
-< get_pirate_money: SUCCESS, 18316
+< get_pirate_money: SUCCESS, 18312
 ---
 > get_pirate_money: SUCCESS, 18309
 45240c45240
@@ -4251,7 +3492,7 @@
 ---
 > get_pirate_money: SUCCESS, 28064
 45292c45292
-< get_pirate_money: SUCCESS, 17273
+< get_pirate_money: SUCCESS, 17263
 ---
 > get_pirate_money: SUCCESS, 17259
 45413c45413
@@ -4259,7 +3500,7 @@
 ---
 > get_pirate_money: SUCCESS, 13341
 45472c45472
-< get_pirate_money: SUCCESS, 17047
+< get_pirate_money: SUCCESS, 16983
 ---
 > get_pirate_money: SUCCESS, 16995
 45503c45503
@@ -4271,11 +3512,11 @@
 ---
 > get_pirate_money: SUCCESS, 13581
 45585c45585
-< get_pirate_money: SUCCESS, 18120
+< get_pirate_money: SUCCESS, 18086
 ---
 > get_pirate_money: SUCCESS, 18076
 45675c45675
-< get_pirate_money: SUCCESS, 21765
+< get_pirate_money: SUCCESS, 21791
 ---
 > get_pirate_money: SUCCESS, 21786
 45678c45678
@@ -4283,7 +3524,7 @@
 ---
 > get_pirate_money: SUCCESS, 13341
 45712c45712
-< get_pirate_money: SUCCESS, 21765
+< get_pirate_money: SUCCESS, 21791
 ---
 > get_pirate_money: SUCCESS, 21786
 45740c45740
@@ -4299,11 +3540,11 @@
 ---
 > get_pirate_money: SUCCESS, 29375
 45841c45841
-< get_pirate_money: SUCCESS, 21765
+< get_pirate_money: SUCCESS, 21791
 ---
 > get_pirate_money: SUCCESS, 21786
 45968c45968
-< get_pirate_money: SUCCESS, 17273
+< get_pirate_money: SUCCESS, 17263
 ---
 > get_pirate_money: SUCCESS, 17259
 45979c45979
@@ -4315,11 +3556,11 @@
 ---
 > get_pirate_money: SUCCESS, 13973
 46097c46097
-< get_pirate_money: SUCCESS, 24635
+< get_pirate_money: SUCCESS, 24676
 ---
 > get_pirate_money: SUCCESS, 24681
 46242c46242
-< get_pirate_money: SUCCESS, 14749
+< get_pirate_money: SUCCESS, 14746
 ---
 > get_pirate_money: SUCCESS, 14745
 46284c46284
@@ -4331,15 +3572,15 @@
 ---
 > get_pirate_money: SUCCESS, 30735
 46416c46416
-< get_pirate_money: SUCCESS, 18307
+< get_pirate_money: SUCCESS, 18306
 ---
 > get_pirate_money: SUCCESS, 18313
 46438c46438
-< get_pirate_money: SUCCESS, 32928
+< get_pirate_money: SUCCESS, 32926
 ---
 > get_pirate_money: SUCCESS, 32924
 46461c46461
-< get_pirate_money: SUCCESS, 12712
+< get_pirate_money: SUCCESS, 12706
 ---
 > get_pirate_money: SUCCESS, 12699
 46482c46482
@@ -4351,7 +3592,7 @@
 ---
 > get_pirate_money: SUCCESS, 16468
 46537c46537
-< get_pirate_money: SUCCESS, 24398
+< get_pirate_money: SUCCESS, 24397
 ---
 > get_pirate_money: SUCCESS, 24395
 46552c46552
@@ -4367,11 +3608,11 @@
 ---
 > get_pirate_money: SUCCESS, 20866
 46872c46872
-< get_pirate_money: SUCCESS, 17846
+< get_pirate_money: SUCCESS, 17891
 ---
 > get_pirate_money: SUCCESS, 17897
 46890c46890
-< get_pirate_money: SUCCESS, 28246
+< get_pirate_money: SUCCESS, 28243
 ---
 > get_pirate_money: SUCCESS, 28240
 46921c46921
@@ -4379,11 +3620,11 @@
 ---
 > get_pirate_money: SUCCESS, 10104
 46956c46956
-< get_pirate_money: SUCCESS, 18945
+< get_pirate_money: SUCCESS, 18946
 ---
 > get_pirate_money: SUCCESS, 18944
 46985c46985
-< get_pirate_money: SUCCESS, 15091
+< get_pirate_money: SUCCESS, 15092
 ---
 > get_pirate_money: SUCCESS, 15100
 47072c47072
@@ -4391,7 +3632,7 @@
 ---
 > get_pirate_money: SUCCESS, 17160
 47122c47122
-< get_pirate_money: SUCCESS, 28675
+< get_pirate_money: SUCCESS, 28683
 ---
 > get_pirate_money: SUCCESS, 28679
 47198c47198
@@ -4399,19 +3640,19 @@
 ---
 > get_pirate_money: SUCCESS, 26171
 47244c47244
-< get_pirate_money: SUCCESS, 11100
+< get_pirate_money: SUCCESS, 11108
 ---
 > get_pirate_money: SUCCESS, 11117
 47287c47287
-< get_pirate_money: SUCCESS, 23269
+< get_pirate_money: SUCCESS, 23267
 ---
 > get_pirate_money: SUCCESS, 23272
 47437c47437
-< get_pirate_money: SUCCESS, 24692
+< get_pirate_money: SUCCESS, 24691
 ---
 > get_pirate_money: SUCCESS, 24701
 47510c47510
-< get_pirate_money: SUCCESS, 22371
+< get_pirate_money: SUCCESS, 22372
 ---
 > get_pirate_money: SUCCESS, 22368
 47516c47516
@@ -4431,11 +3672,11 @@
 ---
 > get_pirate_money: SUCCESS, 36841
 47810c47810
-< get_pirate_money: SUCCESS, 23269
+< get_pirate_money: SUCCESS, 23267
 ---
 > get_pirate_money: SUCCESS, 23272
 47835c47835
-< get_pirate_money: SUCCESS, 19771
+< get_pirate_money: SUCCESS, 19767
 ---
 > get_pirate_money: SUCCESS, 19764
 47930c47930
@@ -4447,7 +3688,7 @@
 ---
 > get_pirate_money: SUCCESS, 36841
 47987c47987
-< get_pirate_money: SUCCESS, 23269
+< get_pirate_money: SUCCESS, 23267
 ---
 > get_pirate_money: SUCCESS, 23272
 48029c48029
@@ -4467,7 +3708,7 @@
 ---
 > get_pirate_money: SUCCESS, 15039
 48251c48251
-< get_pirate_money: SUCCESS, 20439
+< get_pirate_money: SUCCESS, 20405
 ---
 > get_pirate_money: SUCCESS, 20395
 48274c48274
@@ -4475,8 +3716,8 @@
 ---
 > get_pirate_money: SUCCESS, 26671
 48278,48279c48278,48279
-< get_pirate_money: SUCCESS, 14963
-< get_pirate_money: SUCCESS, 20913
+< get_pirate_money: SUCCESS, 14902
+< get_pirate_money: SUCCESS, 20922
 ---
 > get_pirate_money: SUCCESS, 14910
 > get_pirate_money: SUCCESS, 20917
@@ -4488,8 +3729,12 @@
 < get_pirate_money: SUCCESS, 26667
 ---
 > get_pirate_money: SUCCESS, 26671
+48380c48380
+< get_pirate_money: SUCCESS, 33726
+---
+> get_pirate_money: SUCCESS, 33724
 48458c48458
-< get_pirate_money: SUCCESS, 18736
+< get_pirate_money: SUCCESS, 18730
 ---
 > get_pirate_money: SUCCESS, 18723
 48504c48504
@@ -4501,17 +3746,17 @@
 ---
 > get_pirate_money: SUCCESS, 31156
 48768c48768
-< get_pirate_money: SUCCESS, 17846
+< get_pirate_money: SUCCESS, 17891
 ---
 > get_pirate_money: SUCCESS, 17897
 48775,48776c48775,48776
-< get_pirate_money: SUCCESS, 34391
+< get_pirate_money: SUCCESS, 34396
 < get_pirate_money: SUCCESS, 15814
 ---
 > get_pirate_money: SUCCESS, 34388
 > get_pirate_money: SUCCESS, 15815
 48798c48798
-< get_pirate_money: SUCCESS, 14963
+< get_pirate_money: SUCCESS, 14902
 ---
 > get_pirate_money: SUCCESS, 14910
 48856c48856
@@ -4523,7 +3768,7 @@
 ---
 > get_pirate_money: SUCCESS, 15815
 48931c48931
-< get_pirate_money: SUCCESS, 28675
+< get_pirate_money: SUCCESS, 28683
 ---
 > get_pirate_money: SUCCESS, 28679
 48984c48984
@@ -4531,7 +3776,7 @@
 ---
 > get_pirate_money: SUCCESS, 13859
 49026c49026
-< get_pirate_money: SUCCESS, 21765
+< get_pirate_money: SUCCESS, 21791
 ---
 > get_pirate_money: SUCCESS, 21786
 49141c49141
@@ -4547,11 +3792,11 @@
 ---
 > get_pirate_money: SUCCESS, 25912
 49378c49378
-< get_pirate_money: SUCCESS, 28821
+< get_pirate_money: SUCCESS, 28829
 ---
 > get_pirate_money: SUCCESS, 28824
 49380c49380
-< get_pirate_money: SUCCESS, 16018
+< get_pirate_money: SUCCESS, 16026
 ---
 > get_pirate_money: SUCCESS, 16033
 49578c49578
@@ -4579,7 +3824,7 @@
 ---
 > get_pirate_money: SUCCESS, 20866
 49908c49908
-< get_pirate_money: SUCCESS, 28821
+< get_pirate_money: SUCCESS, 28829
 ---
 > get_pirate_money: SUCCESS, 28824
 50056c50056
@@ -4587,7 +3832,7 @@
 ---
 > get_pirate_money: SUCCESS, 18617
 50098c50098
-< get_pirate_money: SUCCESS, 24726
+< get_pirate_money: SUCCESS, 24727
 ---
 > get_pirate_money: SUCCESS, 24725
 50225c50225
@@ -4595,19 +3840,19 @@
 ---
 > get_pirate_money: SUCCESS, 36841
 50303c50303
-< get_pirate_money: SUCCESS, 19941
+< get_pirate_money: SUCCESS, 19944
 ---
 > get_pirate_money: SUCCESS, 19952
 50365c50365
-< get_pirate_money: SUCCESS, 24692
+< get_pirate_money: SUCCESS, 24691
 ---
 > get_pirate_money: SUCCESS, 24701
 50382c50382
-< get_pirate_money: SUCCESS, 14963
+< get_pirate_money: SUCCESS, 14902
 ---
 > get_pirate_money: SUCCESS, 14910
 50406c50406
-< get_pirate_money: SUCCESS, 19941
+< get_pirate_money: SUCCESS, 19944
 ---
 > get_pirate_money: SUCCESS, 19952
 50418c50418
@@ -4615,7 +3860,7 @@
 ---
 > get_pirate_money: SUCCESS, 36841
 50464c50464
-< get_pirate_money: SUCCESS, 23283
+< get_pirate_money: SUCCESS, 23249
 ---
 > get_pirate_money: SUCCESS, 23239
 50468c50468
@@ -4627,11 +3872,11 @@
 ---
 > get_pirate_money: SUCCESS, 21304
 50626c50626
-< get_pirate_money: SUCCESS, 24083
+< get_pirate_money: SUCCESS, 24090
 ---
 > get_pirate_money: SUCCESS, 24102
 50650c50650
-< get_pirate_money: SUCCESS, 19941
+< get_pirate_money: SUCCESS, 19944
 ---
 > get_pirate_money: SUCCESS, 19952
 50673c50673
@@ -4643,11 +3888,11 @@
 ---
 > get_pirate_money: SUCCESS, 30407
 50692c50692
-< get_pirate_money: SUCCESS, 29505
+< get_pirate_money: SUCCESS, 29504
 ---
 > get_pirate_money: SUCCESS, 29502
 50740c50740
-< get_pirate_money: SUCCESS, 29166
+< get_pirate_money: SUCCESS, 29174
 ---
 > get_pirate_money: SUCCESS, 29170
 50743c50743
@@ -4655,7 +3900,7 @@
 ---
 > get_pirate_money: SUCCESS, 30407
 50839c50839
-< get_pirate_money: SUCCESS, 32928
+< get_pirate_money: SUCCESS, 32926
 ---
 > get_pirate_money: SUCCESS, 32924
 50849c50849
@@ -4663,7 +3908,7 @@
 ---
 > get_pirate_money: SUCCESS, 25976
 50859c50859
-< get_pirate_money: SUCCESS, 22127
+< get_pirate_money: SUCCESS, 22126
 ---
 > get_pirate_money: SUCCESS, 22133
 51035c51035
@@ -4671,7 +3916,7 @@
 ---
 > get_pirate_money: SUCCESS, 20108
 51216c51216
-< get_pirate_money: SUCCESS, 30483
+< get_pirate_money: SUCCESS, 30509
 ---
 > get_pirate_money: SUCCESS, 30504
 51222c51222
@@ -4683,11 +3928,11 @@
 ---
 > get_pirate_money: SUCCESS, 20866
 51348c51348
-< get_pirate_money: SUCCESS, 18058
+< get_pirate_money: SUCCESS, 18048
 ---
 > get_pirate_money: SUCCESS, 18044
 51362c51362
-< get_pirate_money: SUCCESS, 35898
+< get_pirate_money: SUCCESS, 35896
 ---
 > get_pirate_money: SUCCESS, 35901
 51500c51500
@@ -4695,7 +3940,7 @@
 ---
 > get_pirate_money: SUCCESS, 20108
 51600c51600
-< get_pirate_money: SUCCESS, 15091
+< get_pirate_money: SUCCESS, 15092
 ---
 > get_pirate_money: SUCCESS, 15100
 51684c51684
@@ -4707,7 +3952,7 @@
 ---
 > get_pirate_money: SUCCESS, 24257
 51773c51773
-< get_pirate_money: SUCCESS, 30438
+< get_pirate_money: SUCCESS, 30439
 ---
 > get_pirate_money: SUCCESS, 30436
 51831c51831
@@ -4715,15 +3960,15 @@
 ---
 > get_pirate_money: SUCCESS, 16485
 51936c51936
-< get_pirate_money: SUCCESS, 24635
+< get_pirate_money: SUCCESS, 24676
 ---
 > get_pirate_money: SUCCESS, 24681
 51995c51995
-< get_pirate_money: SUCCESS, 29166
+< get_pirate_money: SUCCESS, 29174
 ---
 > get_pirate_money: SUCCESS, 29170
 52086c52086
-< get_pirate_money: SUCCESS, 18863
+< get_pirate_money: SUCCESS, 18866
 ---
 > get_pirate_money: SUCCESS, 18862
 52176c52176
@@ -4735,7 +3980,7 @@
 ---
 > get_pirate_money: SUCCESS, 22996
 52338c52338
-< get_pirate_money: SUCCESS, 21419
+< get_pirate_money: SUCCESS, 21447
 ---
 > get_pirate_money: SUCCESS, 21441
 52428c52428
@@ -4743,11 +3988,11 @@
 ---
 > get_pirate_money: SUCCESS, 13859
 52506c52506
-< get_pirate_money: SUCCESS, 21419
+< get_pirate_money: SUCCESS, 21447
 ---
 > get_pirate_money: SUCCESS, 21441
 52567c52567
-< get_pirate_money: SUCCESS, 29505
+< get_pirate_money: SUCCESS, 29504
 ---
 > get_pirate_money: SUCCESS, 29502
 52582c52582
@@ -4755,15 +4000,15 @@
 ---
 > get_pirate_money: SUCCESS, 39840
 52585c52585
-< get_pirate_money: SUCCESS, 29903
+< get_pirate_money: SUCCESS, 29900
 ---
 > get_pirate_money: SUCCESS, 29898
 52614c52614
-< get_pirate_money: SUCCESS, 24635
+< get_pirate_money: SUCCESS, 24676
 ---
 > get_pirate_money: SUCCESS, 24681
 52622,52623c52622,52623
-< get_pirate_money: SUCCESS, 33623
+< get_pirate_money: SUCCESS, 33626
 < get_pirate_money: SUCCESS, 41991
 ---
 > get_pirate_money: SUCCESS, 33620
@@ -4773,23 +4018,23 @@
 ---
 > get_pirate_money: SUCCESS, 19421
 52647c52647
-< get_pirate_money: SUCCESS, 15796
+< get_pirate_money: SUCCESS, 15735
 ---
 > get_pirate_money: SUCCESS, 15743
 52779c52779
-< get_pirate_money: SUCCESS, 35888
+< get_pirate_money: SUCCESS, 35932
 ---
 > get_pirate_money: SUCCESS, 35939
 52788c52788
-< get_pirate_money: SUCCESS, 17846
+< get_pirate_money: SUCCESS, 17891
 ---
 > get_pirate_money: SUCCESS, 17897
 52902c52902
-< get_pirate_money: SUCCESS, 28992
+< get_pirate_money: SUCCESS, 28958
 ---
 > get_pirate_money: SUCCESS, 28948
 52944c52944
-< get_pirate_money: SUCCESS, 20405
+< get_pirate_money: SUCCESS, 20341
 ---
 > get_pirate_money: SUCCESS, 20353
 52953c52953
@@ -4801,11 +4046,11 @@
 ---
 > get_pirate_money: SUCCESS, 29720
 53106c53106
-< get_pirate_money: SUCCESS, 29505
+< get_pirate_money: SUCCESS, 29504
 ---
 > get_pirate_money: SUCCESS, 29502
 53136c53136
-< get_pirate_money: SUCCESS, 32928
+< get_pirate_money: SUCCESS, 32926
 ---
 > get_pirate_money: SUCCESS, 32924
 53188c53188
@@ -4813,7 +4058,7 @@
 ---
 > get_pirate_money: SUCCESS, 39840
 53265c53265
-< get_pirate_money: SUCCESS, 17244
+< get_pirate_money: SUCCESS, 17240
 ---
 > get_pirate_money: SUCCESS, 17238
 53461c53461
@@ -4821,19 +4066,23 @@
 ---
 > get_pirate_money: SUCCESS, 28064
 53504c53504
-< get_pirate_money: SUCCESS, 39917
+< get_pirate_money: SUCCESS, 39922
 ---
 > get_pirate_money: SUCCESS, 39914
 53613c53613
-< get_pirate_money: SUCCESS, 7667
+< get_pirate_money: SUCCESS, 7662
 ---
 > get_pirate_money: SUCCESS, 7658
 53651c53651
 < get_pirate_money: SUCCESS, 19420
 ---
 > get_pirate_money: SUCCESS, 19421
+53706c53706
+< get_pirate_money: SUCCESS, 52120
+---
+> get_pirate_money: SUCCESS, 52118
 53743c53743
-< get_pirate_money: SUCCESS, 29166
+< get_pirate_money: SUCCESS, 29174
 ---
 > get_pirate_money: SUCCESS, 29170
 53767c53767
@@ -4845,7 +4094,7 @@
 ---
 > get_pirate_money: SUCCESS, 15039
 53863c53863
-< get_pirate_money: SUCCESS, 30483
+< get_pirate_money: SUCCESS, 30509
 ---
 > get_pirate_money: SUCCESS, 30504
 53955c53955
@@ -4857,11 +4106,11 @@
 ---
 > get_pirate_money: SUCCESS, 26809
 54018c54018
-< get_pirate_money: SUCCESS, 29505
+< get_pirate_money: SUCCESS, 29504
 ---
 > get_pirate_money: SUCCESS, 29502
 54024c54024
-< get_pirate_money: SUCCESS, 17244
+< get_pirate_money: SUCCESS, 17240
 ---
 > get_pirate_money: SUCCESS, 17238
 54094c54094
@@ -4869,11 +4118,11 @@
 ---
 > get_pirate_money: SUCCESS, 22935
 54139c54139
-< get_pirate_money: SUCCESS, 28992
+< get_pirate_money: SUCCESS, 28958
 ---
 > get_pirate_money: SUCCESS, 28948
 54409c54409
-< get_pirate_money: SUCCESS, 20960
+< get_pirate_money: SUCCESS, 20954
 ---
 > get_pirate_money: SUCCESS, 20947
 54656c54656
@@ -4881,16 +4130,18 @@
 ---
 > get_pirate_money: SUCCESS, 39840
 54663c54663
-< get_pirate_money: SUCCESS, 42364
+< get_pirate_money: SUCCESS, 42369
 ---
 > get_pirate_money: SUCCESS, 42361
 54677c54677
-< get_pirate_money: SUCCESS, 22572
+< get_pirate_money: SUCCESS, 22568
 ---
 > get_pirate_money: SUCCESS, 22565
-54722c54722
-< get_pirate_money: SUCCESS, 35258
+54721,54722c54721,54722
+< get_pirate_money: SUCCESS, 52120
+< get_pirate_money: SUCCESS, 35255
 ---
+> get_pirate_money: SUCCESS, 52118
 > get_pirate_money: SUCCESS, 35253
 54737c54737
 < get_pirate_money: SUCCESS, 23356
@@ -4905,15 +4156,15 @@
 ---
 > get_pirate_money: SUCCESS, 23384
 55005c55005
-< get_pirate_money: SUCCESS, 35898
+< get_pirate_money: SUCCESS, 35896
 ---
 > get_pirate_money: SUCCESS, 35901
 55041c55041
-< get_pirate_money: SUCCESS, 7667
+< get_pirate_money: SUCCESS, 7662
 ---
 > get_pirate_money: SUCCESS, 7658
 55066c55066
-< get_pirate_money: SUCCESS, 24807
+< get_pirate_money: SUCCESS, 24848
 ---
 > get_pirate_money: SUCCESS, 24853
 55081c55081
@@ -4921,15 +4172,15 @@
 ---
 > get_pirate_money: SUCCESS, 20938
 55250c55250
-< get_pirate_money: SUCCESS, 18013
+< get_pirate_money: SUCCESS, 18022
 ---
 > get_pirate_money: SUCCESS, 18012
 55505c55505
-< get_pirate_money: SUCCESS, 26101
+< get_pirate_money: SUCCESS, 26104
 ---
 > get_pirate_money: SUCCESS, 26100
 55671c55671
-< get_pirate_money: SUCCESS, 29346
+< get_pirate_money: SUCCESS, 29347
 ---
 > get_pirate_money: SUCCESS, 29345
 55699c55699
@@ -4937,7 +4188,7 @@
 ---
 > get_pirate_money: SUCCESS, 24892
 55714c55714
-< get_pirate_money: SUCCESS, 34027
+< get_pirate_money: SUCCESS, 34028
 ---
 > get_pirate_money: SUCCESS, 34024
 55751c55751
@@ -4945,7 +4196,7 @@
 ---
 > get_pirate_money: SUCCESS, 19421
 55756c55756
-< get_pirate_money: SUCCESS, 30483
+< get_pirate_money: SUCCESS, 30509
 ---
 > get_pirate_money: SUCCESS, 30504
 55770c55770
@@ -4953,7 +4204,7 @@
 ---
 > get_pirate_money: SUCCESS, 51604
 55784c55784
-< get_pirate_money: SUCCESS, 28992
+< get_pirate_money: SUCCESS, 28958
 ---
 > get_pirate_money: SUCCESS, 28948
 55835c55835
@@ -4961,11 +4212,11 @@
 ---
 > get_pirate_money: SUCCESS, 15730
 55902c55902
-< get_pirate_money: SUCCESS, 7667
+< get_pirate_money: SUCCESS, 7662
 ---
 > get_pirate_money: SUCCESS, 7658
 55909c55909
-< get_pirate_money: SUCCESS, 18235
+< get_pirate_money: SUCCESS, 18225
 ---
 > get_pirate_money: SUCCESS, 18221
 55918c55918
@@ -4973,7 +4224,7 @@
 ---
 > get_pirate_money: SUCCESS, 29844
 55923c55923
-< get_pirate_money: SUCCESS, 35888
+< get_pirate_money: SUCCESS, 35932
 ---
 > get_pirate_money: SUCCESS, 35939
 55989c55989
@@ -5001,11 +4252,11 @@
 ---
 > get_pirate_money: SUCCESS, 24892
 56582c56582
-< get_pirate_money: SUCCESS, 36514
+< get_pirate_money: SUCCESS, 36558
 ---
 > get_pirate_money: SUCCESS, 36565
 56689c56689
-< get_pirate_money: SUCCESS, 32908
+< get_pirate_money: SUCCESS, 32905
 ---
 > get_pirate_money: SUCCESS, 32902
 56886c56886
@@ -5013,15 +4264,15 @@
 ---
 > get_pirate_money: SUCCESS, 26809
 57040c57040
-< get_pirate_money: SUCCESS, 22572
+< get_pirate_money: SUCCESS, 22568
 ---
 > get_pirate_money: SUCCESS, 22565
 57069c57069
-< get_pirate_money: SUCCESS, 29166
+< get_pirate_money: SUCCESS, 29174
 ---
 > get_pirate_money: SUCCESS, 29170
 57130c57130
-< get_pirate_money: SUCCESS, 39217
+< get_pirate_money: SUCCESS, 39218
 ---
 > get_pirate_money: SUCCESS, 39214
 57177c57177
@@ -5029,7 +4280,7 @@
 ---
 > get_pirate_money: SUCCESS, 15039
 57320c57320
-< get_pirate_money: SUCCESS, 49543
+< get_pirate_money: SUCCESS, 49548
 ---
 > get_pirate_money: SUCCESS, 49540
 57617c57617
@@ -5037,7 +4288,7 @@
 ---
 > get_pirate_money: SUCCESS, 39851
 57761c57761
-< get_pirate_money: SUCCESS, 24713
+< get_pirate_money: SUCCESS, 24712
 ---
 > get_pirate_money: SUCCESS, 24723
 57882c57882
@@ -5045,11 +4296,11 @@
 ---
 > get_pirate_money: SUCCESS, 26004
 57887c57887
-< get_pirate_money: SUCCESS, 24713
+< get_pirate_money: SUCCESS, 24712
 ---
 > get_pirate_money: SUCCESS, 24723
 57899c57899
-< get_pirate_money: SUCCESS, 28390
+< get_pirate_money: SUCCESS, 28387
 ---
 > get_pirate_money: SUCCESS, 28386
 58120c58120
@@ -5057,7 +4308,7 @@
 ---
 > get_pirate_money: SUCCESS, 19229
 58168c58168
-< get_pirate_money: SUCCESS, 44513
+< get_pirate_money: SUCCESS, 44516
 ---
 > get_pirate_money: SUCCESS, 44510
 58190c58190
@@ -5065,7 +4316,7 @@
 ---
 > get_pirate_money: SUCCESS, 29844
 58221c58221
-< get_pirate_money: SUCCESS, 24375
+< get_pirate_money: SUCCESS, 24328
 ---
 > get_pirate_money: SUCCESS, 24337
 58267c58267
@@ -5077,11 +4328,11 @@
 ---
 > get_pirate_money: SUCCESS, 40113
 58387c58387
-< get_pirate_money: SUCCESS, 31401
+< get_pirate_money: SUCCESS, 31367
 ---
 > get_pirate_money: SUCCESS, 31357
 58421c58421
-< get_pirate_money: SUCCESS, 30009
+< get_pirate_money: SUCCESS, 30050
 ---
 > get_pirate_money: SUCCESS, 30055
 58481c58481
@@ -5089,7 +4340,7 @@
 ---
 > get_pirate_money: SUCCESS, 29844
 58502c58502
-< get_pirate_money: SUCCESS, 30784
+< get_pirate_money: SUCCESS, 30792
 ---
 > get_pirate_money: SUCCESS, 30787
 58659c58659
@@ -5097,23 +4348,27 @@
 ---
 > get_pirate_money: SUCCESS, 30408
 58701c58701
-< get_pirate_money: SUCCESS, 30784
+< get_pirate_money: SUCCESS, 30792
 ---
 > get_pirate_money: SUCCESS, 30787
+58759c58759
+< get_pirate_money: SUCCESS, 18867
+---
+> get_pirate_money: SUCCESS, 18875
 58793c58793
-< get_pirate_money: SUCCESS, 20896
+< get_pirate_money: SUCCESS, 20835
 ---
 > get_pirate_money: SUCCESS, 20843
 58834c58834
-< get_pirate_money: SUCCESS, 30450
+< get_pirate_money: SUCCESS, 30444
 ---
 > get_pirate_money: SUCCESS, 30437
 58855c58855
-< get_pirate_money: SUCCESS, 12521
+< get_pirate_money: SUCCESS, 12516
 ---
 > get_pirate_money: SUCCESS, 12512
 58885c58885
-< get_pirate_money: SUCCESS, 18235
+< get_pirate_money: SUCCESS, 18225
 ---
 > get_pirate_money: SUCCESS, 18221
 59062c59062
@@ -5125,7 +4380,7 @@
 ---
 > get_pirate_money: SUCCESS, 30326
 59261c59261
-< get_pirate_money: SUCCESS, 31933
+< get_pirate_money: SUCCESS, 31941
 ---
 > get_pirate_money: SUCCESS, 31937
 59377c59377
@@ -5141,15 +4396,15 @@
 ---
 > get_pirate_money: SUCCESS, 23097
 59652c59652
-< get_pirate_money: SUCCESS, 30483
+< get_pirate_money: SUCCESS, 30509
 ---
 > get_pirate_money: SUCCESS, 30504
 59659c59659
-< get_pirate_money: SUCCESS, 27306
+< get_pirate_money: SUCCESS, 27242
 ---
 > get_pirate_money: SUCCESS, 27254
 59664c59664
-< get_pirate_money: SUCCESS, 38674
+< get_pirate_money: SUCCESS, 38672
 ---
 > get_pirate_money: SUCCESS, 38677
 59793c59793
@@ -5158,80 +4413,84 @@
 > get_pirate_money: SUCCESS, 25744
 59953,59954c59953,59954
 < get_pirate_money: SUCCESS, 40109
-< get_pirate_money: SUCCESS, 37060
+< get_pirate_money: SUCCESS, 37057
 ---
 > get_pirate_money: SUCCESS, 40113
 > get_pirate_money: SUCCESS, 37054
 60669c60669
-< get_pirate_money: SUCCESS, 25557
+< get_pirate_money: SUCCESS, 25553
 ---
 > get_pirate_money: SUCCESS, 25550
 60744c60744
-< get_pirate_money: SUCCESS, 22142
+< get_pirate_money: SUCCESS, 22139
 ---
 > get_pirate_money: SUCCESS, 22147
 61200c61200
-< get_pirate_money: SUCCESS, 31401
+< get_pirate_money: SUCCESS, 31367
 ---
 > get_pirate_money: SUCCESS, 31357
 61389c61389
-< get_pirate_money: SUCCESS, 24713
+< get_pirate_money: SUCCESS, 24712
 ---
 > get_pirate_money: SUCCESS, 24723
 61523c61523
-< get_pirate_money: SUCCESS, 25756
+< get_pirate_money: SUCCESS, 25763
 ---
 > get_pirate_money: SUCCESS, 25775
 61550c61550
-< get_pirate_money: SUCCESS, 24713
+< get_pirate_money: SUCCESS, 24712
 ---
 > get_pirate_money: SUCCESS, 24723
 61651c61651
-< get_pirate_money: SUCCESS, 23305
+< get_pirate_money: SUCCESS, 23244
 ---
 > get_pirate_money: SUCCESS, 23252
 62728c62728
-< get_pirate_money: SUCCESS, 27563
+< get_pirate_money: SUCCESS, 27566
 ---
 > get_pirate_money: SUCCESS, 27575
 62920c62920
-< get_pirate_money: SUCCESS, 18235
+< get_pirate_money: SUCCESS, 18225
 ---
 > get_pirate_money: SUCCESS, 18221
 63112c63112
-< get_pirate_money: SUCCESS, 26101
+< get_pirate_money: SUCCESS, 26104
 ---
 > get_pirate_money: SUCCESS, 26100
 63662c63662
-< get_pirate_money: SUCCESS, 32779
+< get_pirate_money: SUCCESS, 32787
 ---
 > get_pirate_money: SUCCESS, 32783
 64088c64088
-< get_pirate_money: SUCCESS, 32779
+< get_pirate_money: SUCCESS, 32787
 ---
 > get_pirate_money: SUCCESS, 32783
 65779c65779
-< get_pirate_money: SUCCESS, 39120
+< get_pirate_money: SUCCESS, 39119
 ---
 > get_pirate_money: SUCCESS, 39116
 66464c66464
 < get_pirate_money: SUCCESS, 25742
 ---
 > get_pirate_money: SUCCESS, 25744
+67550c67550
+< get_pirate_money: SUCCESS, 106610
+---
+> get_pirate_money: SUCCESS, 106608
 67630c67630
 < get_pirate_money: SUCCESS, 19227
 ---
 > get_pirate_money: SUCCESS, 19229
 67652c67652
-< get_pirate_money: SUCCESS, 31737
+< get_pirate_money: SUCCESS, 31738
 ---
 > get_pirate_money: SUCCESS, 31734
 67766c67766
-< get_pirate_money: SUCCESS, 30450
+< get_pirate_money: SUCCESS, 30444
 ---
 > get_pirate_money: SUCCESS, 30437
 68393c68393
-< get_pirate_money: SUCCESS, 39953
+< get_pirate_money: SUCCESS, 39954
 ---
 > get_pirate_money: SUCCESS, 39950
 68593c68593
@@ -5239,15 +4498,15 @@
 ---
 > get_pirate_money: SUCCESS, 51612
 68700c68700
-< get_pirate_money: SUCCESS, 18917
+< get_pirate_money: SUCCESS, 18913
 ---
 > get_pirate_money: SUCCESS, 18911
 68738c68738
-< get_pirate_money: SUCCESS, 31401
+< get_pirate_money: SUCCESS, 31367
 ---
 > get_pirate_money: SUCCESS, 31357
 69897c69897
-< get_pirate_money: SUCCESS, 18013
+< get_pirate_money: SUCCESS, 18022
 ---
 > get_pirate_money: SUCCESS, 18012
 70129c70129
@@ -5255,15 +4514,15 @@
 ---
 > get_pirate_money: SUCCESS, 24067
 70213c70213
-< get_pirate_money: SUCCESS, 49543
+< get_pirate_money: SUCCESS, 49548
 ---
 > get_pirate_money: SUCCESS, 49540
 70263c70263
-< get_pirate_money: SUCCESS, 40574
+< get_pirate_money: SUCCESS, 40570
 ---
 > get_pirate_money: SUCCESS, 40568
 70328c70328
-< get_pirate_money: SUCCESS, 47147
+< get_pirate_money: SUCCESS, 47150
 ---
 > get_pirate_money: SUCCESS, 47144
 70331c70331
@@ -5271,23 +4530,23 @@
 ---
 > get_pirate_money: SUCCESS, 25744
 70665c70665
-< get_pirate_money: SUCCESS, 30344
+< get_pirate_money: SUCCESS, 30297
 ---
 > get_pirate_money: SUCCESS, 30306
 71283c71283
-< get_pirate_money: SUCCESS, 82943
+< get_pirate_money: SUCCESS, 82940
 ---
 > get_pirate_money: SUCCESS, 82939
 72002c72002
-< get_pirate_money: SUCCESS, 65469
+< get_pirate_money: SUCCESS, 65466
 ---
 > get_pirate_money: SUCCESS, 65464
 72232c72232
-< get_pirate_money: SUCCESS, 22484
+< get_pirate_money: SUCCESS, 22485
 ---
 > get_pirate_money: SUCCESS, 22493
 73578c73578
-< get_pirate_money: SUCCESS, 39120
+< get_pirate_money: SUCCESS, 39119
 ---
 > get_pirate_money: SUCCESS, 39116
 75071c75071
@@ -5295,15 +4554,15 @@
 ---
 > get_pirate_money: SUCCESS, 39375
 77433c77433
-< get_pirate_money: SUCCESS, 30450
+< get_pirate_money: SUCCESS, 30444
 ---
 > get_pirate_money: SUCCESS, 30437
 77739c77739
-< get_pirate_money: SUCCESS, 38547
+< get_pirate_money: SUCCESS, 38588
 ---
 > get_pirate_money: SUCCESS, 38593
 78496c78496
-< get_pirate_money: SUCCESS, 32930
+< get_pirate_money: SUCCESS, 32928
 ---
 > get_pirate_money: SUCCESS, 32926
 78519c78519
@@ -5311,15 +4570,15 @@
 ---
 > get_pirate_money: SUCCESS, 19229
 78858c78858
-< get_pirate_money: SUCCESS, 12521
+< get_pirate_money: SUCCESS, 12516
 ---
 > get_pirate_money: SUCCESS, 12512
 78865c78865
-< get_pirate_money: SUCCESS, 21566
+< get_pirate_money: SUCCESS, 21596
 ---
 > get_pirate_money: SUCCESS, 21589
 79372c79372
-< get_pirate_money: SUCCESS, 82196
+< get_pirate_money: SUCCESS, 82205
 ---
 > get_pirate_money: SUCCESS, 82200
 79738c79738
@@ -5331,6 +4590,6 @@
 ---
 > get_pirate_money: SUCCESS, 19421
 79892c79892
-< get_pirate_money: SUCCESS, 83073
+< get_pirate_money: SUCCESS, 83117
 ---
 > get_pirate_money: SUCCESS, 83124

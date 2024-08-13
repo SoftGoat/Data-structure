@@ -59718,7 +59718,7 @@ pay_pirate: SUCCESS
 add_fleet: FAILURE
 add_pirate: FAILURE
 add_pirate: FAILURE
-get_pirate_money: SUCCESS, 5919
+get_pirate_money: SUCCESS, 5921
 pay_pirate: SUCCESS
 get_pirate_money: SUCCESS, 24453
 num_ships_for_fleet: FAILURE
@@ -60069,7 +60069,7 @@ pay_pirate: FAILURE
 pirate_argument: FAILURE
 get_pirate_money: FAILURE
 unite_fleets: FAILURE
-get_pirate_money: SUCCESS, -4
+get_pirate_money: SUCCESS, -6
 pirate_argument: FAILURE
 unite_fleets: FAILURE
 add_pirate: FAILURE

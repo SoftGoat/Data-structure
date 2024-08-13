@@ -117,7 +117,7 @@ template <typename ValueType, typename KeyType, typename HashFunc>
     bool DisjointSet<ValueType, KeyType, HashFunc>::addAbsRank(const KeyType& element, int rank){
         try{
             auto node = elementMap.get(element);
-            node->abs_rank += rank;
+            upTree.find(node)->abs_rank++;
             return true;
         }
         catch(const std::out_of_range& e)
