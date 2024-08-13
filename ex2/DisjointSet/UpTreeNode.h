@@ -22,7 +22,7 @@ struct Node {
      * 
      * @param value The data to be stored in the node.
      */
-    Node(const T& value) : data(value), size(1), rank(1), abs_rank(0) {
+    Node(const T& value) : data(value), size(1), rank(0), abs_rank(0) {
         parent = nullptr;//std::shared_ptr<Node>(this, [](Node*){});  // Create a non-owning shared_ptr to this
     }
 };

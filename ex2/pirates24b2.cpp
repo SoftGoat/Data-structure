@@ -79,7 +79,6 @@ StatusType oceans_t::add_pirate(int pirateId, int fleetId)
 
 	// Insert the pirate with his ID as a key.
 	m_pirates.insert(newPirate->get_id(), newPirate);
-	m_fleet.addAbsRank(fleetId, 1);
 	newPirate->set_fleet(new_pirate_fleet);
 	newPirate->set_rank(new_pirate_fleet->get_num_of_pirates() + 1);
 	new_pirate_fleet->increase_pirate_count();
@@ -163,10 +162,12 @@ StatusType oceans_t::unite_fleets(int fleetId1, int fleetId2)
 	if(pirates_1 >= pirates_2){ // The fleet with fleetId1 should be at the top of the Up Tree.
 		new_fleet->set_id(fleet_1->get_id());
 		// Set the other fleet as uneccesible.
+		m_fleet.find_leaf(fleetId2)->disable();
 		fleet_2->disable();
 	}
 	else{	// The fleet with fleetId2 should be at the top of the Up Tree.
 		new_fleet->set_id(fleet_2->get_id());
+		m_fleet.find_leaf(fleetId1)->disable();
 		fleet_1->disable();
 	}
     return StatusType::SUCCESS;

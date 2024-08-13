@@ -1,0 +1,19 @@
+add_fleet 1
+add_fleet 9
+add_pirate 1 1
+add_pirate 2 1
+add_pirate 9 9
+unite_fleets 9 1
+add_fleet 10
+add_pirate 10 10
+add_fleet 11
+add_fleet 12
+add_pirate 11 11
+add_pirate 12 12
+unite_fleets 10 11
+unite_fleets 10 12
+unite_fleets 10 1
+num_ships_for_fleet 1
+num_ships_for_fleet 9
+num_ships_for_fleet 11
+num_ships_for_fleet 10
