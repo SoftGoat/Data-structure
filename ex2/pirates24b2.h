@@ -17,8 +17,8 @@
 
 #include <memory>
 #include "wet2util.h"
-#include "DisjointSet.h" 
-#include "HashTable.h"
+#include "./DisjointSet/DisjointSet.h"
+#include "./DisjointSet/HashTable.h"
 #include "fleet.h"
 #include "pirate.h"
 
