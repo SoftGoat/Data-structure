@@ -24,6 +24,8 @@ public:
     ~UpTree();
 
     std::shared_ptr<Node<T>> find(std::shared_ptr<Node<T>> node) const;
+
+    std::shared_ptr<Node<T>> find(std::shared_ptr<Node<T>> node, int ranks_sum) const;
     
     /**
      * @brief Unites two disjoint sets containing the given nodes.
@@ -90,8 +92,34 @@ std::shared_ptr<Node<T>> UpTree<T>::find(std::shared_ptr<Node<T>> node) const {
         // The current parent is NOT the root of the Up Tree.
         // Therefore, keep searching.
         else{
-            node->rank += node->parent->rank;
-            node->parent = find(node->parent);
+            int ranks_sum_without_root = 0;
+            std::shared_ptr<Node<T>> node_duplicate = node;
+            while(node_duplicate -> parent != nullptr){
+                ranks_sum_without_root += node_duplicate -> rank;
+                node_duplicate = node_duplicate -> parent;
+            }
+            node -> parent = find(node, ranks_sum_without_root);
+            return node ->parent;
+        }
+    }
+    // The current parent is the node, return.
+    return node;
+}
+
+template <typename T>
+std::shared_ptr<Node<T>> UpTree<T>::find(std::shared_ptr<Node<T>> node, int ranks_sum) const {
+    if (node->parent != nullptr) {
+        if (node->parent->parent == nullptr) {
+            // The current parent is the root of the Up Tree.
+            // Return the current parent.
+            return node->parent;
+        }
+        // The current parent is NOT the root of the Up Tree.
+        // Therefore, keep searching.
+        else{
+            node->rank = ranks_sum;
+            ranks_sum -= node->rank;
+            node -> parent = find(node->parent, ranks_sum);
             return node->parent;
         }
     }
