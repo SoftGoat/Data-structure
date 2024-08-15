@@ -117,8 +117,8 @@ std::shared_ptr<Node<T>> UpTree<T>::find(std::shared_ptr<Node<T>> node, int rank
         // The current parent is NOT the root of the Up Tree.
         // Therefore, keep searching.
         else{
-            node->rank = ranks_sum;
             ranks_sum -= node->rank;
+            node->rank += ranks_sum;
             node -> parent = find(node->parent, ranks_sum);
             return node->parent;
         }

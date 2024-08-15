@@ -33,7 +33,7 @@ int main()
 	while (cin >> op)
     {
         count++;
-        if(count == 34 || count == 192 ){
+        if(count == 57 || count == 192 ){
             int boaz = 3;
         }
         if (!op.compare("add_fleet")) {

@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/a.out",
-            "args": [ "<" , "test.in" /*"./Tests/files/inputs/input028.txt"*/ , ">" , "test.result"],
+            "args": [ "<" , "./test.in" , ">" , "test.result"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
